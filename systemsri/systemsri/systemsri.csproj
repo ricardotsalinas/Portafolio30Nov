@@ -128,6 +128,7 @@
     <Content Include="Vistas\JefeTransito\inicioJefe.aspx" />
     <Content Include="Vistas\LoginUsuario\loginInfractor.aspx" />
     <Content Include="Vistas\LoginUsuario\loginUsuario.aspx" />
+    <Content Include="Vistas\Maestro\Formulario web1.aspx" />
     <Content Include="Vistas\PayPal\InicioPayPal.aspx" />
     <Content Include="Vistas\PayPal\pagoPayPal.aspx" />
     <Content Include="Web.config" />
@@ -392,6 +393,13 @@
     </Compile>
     <Compile Include="Vistas\LoginUsuario\loginUsuario.aspx.designer.cs">
       <DependentUpon>loginUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Maestro\Formulario web1.aspx.cs">
+      <DependentUpon>Formulario web1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestro\Formulario web1.aspx.designer.cs">
+      <DependentUpon>Formulario web1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Maestro\Login.Master.cs">
       <DependentUpon>Login.Master</DependentUpon>

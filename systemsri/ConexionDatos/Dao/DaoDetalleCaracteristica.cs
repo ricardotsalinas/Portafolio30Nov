@@ -128,15 +128,7 @@ namespace ConexionDatos.Dao
            }
        }
 
-       public List<DETALLE_CARACTERISTICA> BuscarInfraccion(int idinfr)
-       {
-           using (SRI contex = new SRI())
-           {
-               List<DETALLE_CARACTERISTICA> lbuscar = new List<DETALLE_CARACTERISTICA>();
-               lbuscar = contex.DETALLE_CARACTERISTICA.Where(a => a.ID_DETCAR == idinfr ).ToList();
-               return lbuscar;
-           }
-       }
+     
 
 
        public List<DETALLE_CARACTERISTICA> ListarCalle()
@@ -161,7 +153,15 @@ namespace ConexionDatos.Dao
            }
        }
 
-
+       public List<DETALLE_CARACTERISTICA> BuscarInfraccion(int idinfr)
+       {
+           using (SRI contex = new SRI())
+           {
+               List<DETALLE_CARACTERISTICA> lbuscar = new List<DETALLE_CARACTERISTICA>();
+               lbuscar = contex.DETALLE_CARACTERISTICA.Where(a => a.ID_DETCAR == idinfr).ToList();
+               return lbuscar;
+           }
+       }
 
     }
 }

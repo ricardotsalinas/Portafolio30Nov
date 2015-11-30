@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Negocio;
 using ConexionDatos.Entity;
+using System.Collections.Specialized;
 
 namespace systemsri.Vistas.Administrador
 {
@@ -128,6 +129,40 @@ namespace systemsri.Vistas.Administrador
         protected void ddlistTipoMonedaAI_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void gvInfrAI_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            String dato = "";
+            int index = Convert.ToInt32(e.CommandArgument);
+            List<DETALLE_CARACTERISTICA> buscar = NegocioAdministrador.instancia.buscarInfraccion(A);
+            GridViewRow row = gvInfrAI.Rows[index];
+            String post = row.Cells[0].Text;
+           txtDescrInfraccionAI.Text =post;
+           
+            
+               
+
+
+            if (row.Cells[5].Text.Equals("NO PAGADO"))
+            {
+                HttpHelper.RedirectAndPOST(this.Page, "detallePagarMulta.aspx", data);
+            }
+
+
+
+            if (e.CommandName == "detalle")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+
+                NameValueCollection data = new NameValueCollection();
+                //GridViewRow row = gvInfrAI.Rows[index];
+                //String post = row.Cells[0].Text;
+               // data.Add("idInfraccion", post);
+                txtDescrInfraccionAI.Text = "Aqui ta";
+
+
+            }
         }
 
       

@@ -31,13 +31,22 @@ namespace systemsri.Vistas.Administrador {
         protected global::System.Web.UI.WebControls.Label lblInfoAdI;
         
         /// <summary>
-        /// Control btnBuscarAI.
+        /// Control lblcodInfraccionAI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscarAI;
+        protected global::System.Web.UI.WebControls.Label lblcodInfraccionAI;
+        
+        /// <summary>
+        /// Control txtDescrInfraccionAI.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescrInfraccionAI;
         
         /// <summary>
         /// Control ddlistGravedadAI.
@@ -65,15 +74,6 @@ namespace systemsri.Vistas.Administrador {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtValorAI;
-        
-        /// <summary>
-        /// Control txtDescrInfraccionAI.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescrInfraccionAI;
         
         /// <summary>
         /// Control chkActivoAIn.

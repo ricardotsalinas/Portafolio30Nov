@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Administrador/MPAdministrador.master" AutoEventWireup="true" CodeBehind="DatosAdmin.aspx.cs" Inherits="systemsri.Vistas.Administrador.DatosAdmin" %>
  <%@ OutputCache Location="None" NoStore="true"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="contenidoAdmin" runat="server">
+
      <form id="formDatosAdmin" runat="server">
          <div class="alinInicial">
              <h2>Datos Personales</h2>

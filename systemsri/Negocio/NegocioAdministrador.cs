@@ -87,10 +87,7 @@ namespace Negocio
             return DaoDetalleCaracteristica.instancia.BuscarCalle(calle);
         }
        
-        public List<DETALLE_CARACTERISTICA> buscarInfraccion(int idinfr)
-        {
-            return DaoDetalleCaracteristica.instancia.BuscarInfraccion(idinfr);
-        }
+       
 
         public Boolean existeRut(String rut)
         {
@@ -117,6 +114,11 @@ namespace Negocio
             return  lista;
         }
 
-       
+        
+
+        public List<DETALLE_CARACTERISTICA> buscarInfraccion(int idinfr)
+        {
+            return DaoDetalleCaracteristica.instancia.BuscarInfraccion(idinfr);
+        }
     }
 }
