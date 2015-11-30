@@ -96,7 +96,7 @@ namespace ConexionDatos.Dao
                 return lista;
             }
         }
-        public int actualizaClave(String newClave, String rut)
+        public int actualizaClaveInfr(String newClave, String rut)
         {
             using (SRI contex = new SRI())
             {
@@ -116,6 +116,26 @@ namespace ConexionDatos.Dao
             }
         }
 
+
+        public int actualizaClavePropia(String newClave, String rut)
+        {
+            using (SRI contex = new SRI())
+            {
+                try
+                {
+                    INFRACTOR lista = new INFRACTOR();
+                    lista = contex.INFRACTOR.Where(a => a.RUT_INFR == rut).FirstOrDefault();
+                    lista.PASSWORD_INFR = newClave;
+                    contex.SaveChanges();
+                    return 1;
+                }
+                catch (Exception e)
+                {
+                    return 0;
+                }
+
+            }
+        }
         public int actualizaDatosPersonales(String email, String telefono, String rut)
         {
 

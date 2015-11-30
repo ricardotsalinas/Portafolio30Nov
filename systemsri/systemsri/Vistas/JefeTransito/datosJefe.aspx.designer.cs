@@ -40,15 +40,6 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.TextBox txtNomDJ;
         
         /// <summary>
-        /// Control txtFNacDJ.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFNacDJ;
-        
-        /// <summary>
         /// Control txtDirDJ.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.TextBox txtEmailDJ;
         
         /// <summary>
+        /// Control imgEmailDJ.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton imgEmailDJ;
+        
+        /// <summary>
         /// Control txtTelefonoDJ.
         /// </summary>
         /// <remarks>
@@ -76,13 +76,13 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.TextBox txtTelefonoDJ;
         
         /// <summary>
-        /// Control txtClaseLicDJ.
+        /// Control imgTelefonoDJ.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClaseLicDJ;
+        protected global::System.Web.UI.WebControls.ImageButton imgTelefonoDJ;
         
         /// <summary>
         /// Control btnModificaPassDJ.
@@ -94,6 +94,15 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.Button btnModificaPassDJ;
         
         /// <summary>
+        /// Control lblInfoDJ.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblInfoDJ;
+        
+        /// <summary>
         /// Control tblPassDJ.
         /// </summary>
         /// <remarks>
@@ -103,22 +112,22 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.HtmlControls.HtmlTable tblPassDJ;
         
         /// <summary>
-        /// Control txtCambiaPass1DJ.
+        /// Control txtCambiaPassDJ1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCambiaPass1DJ;
+        protected global::System.Web.UI.WebControls.TextBox txtCambiaPassDJ1;
         
         /// <summary>
-        /// Control txtCambiaPassDJ.
+        /// Control txtCambiaPassDJ2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCambiaPassDJ;
+        protected global::System.Web.UI.WebControls.TextBox txtCambiaPassDJ2;
         
         /// <summary>
         /// Control btnGuardarDJ.

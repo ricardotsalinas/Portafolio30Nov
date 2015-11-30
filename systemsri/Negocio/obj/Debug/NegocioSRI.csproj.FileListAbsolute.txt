@@ -106,3 +106,13 @@ C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Nego
 C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
 C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\Negocio.dll
 C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\Negocio\obj\Debug\Negocio.pdb

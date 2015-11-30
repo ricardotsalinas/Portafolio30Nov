@@ -16,26 +16,24 @@
                     <td class="c1b"><asp:TextBox runat="server" id="txtNomDJ" CssClass="input1" Enabled="False" ></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td class="c1g">FECHA DE<br />NACIMIENTO:</td> 
-                    <td class="c1b"><asp:TextBox runat="server" id="txtFNacDJ" CssClass="input1" Enabled="False" ></asp:TextBox></td>
-                </tr>
-                <tr>
                     <td class="c1g">DIRECCIÓN:</td> 
                     <td class="c1b"><asp:TextBox runat="server" id="txtDirDJ" CssClass="input1" Enabled="False" ></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td class="c1g">EMAIL:</td> 
-                    <td class="c1b"><asp:TextBox runat="server" id="txtEmailDJ" CssClass="input1"></asp:TextBox></td>
-                   <td><img src="../../Recursos/Imagenes/editar.PNG" /></td>
+                    <td class="c1b"><asp:TextBox runat="server" id="txtEmailDJ" CssClass="input1" Enabled="False"></asp:TextBox></td>
+                   <td>
+                        <asp:ImageButton ID="imgEmailDJ" runat="server" 
+                            ImageUrl="~/Recursos/Imagenes/editar.PNG" onclick="ImageEmail_Click" />
+                    </td>
                 </tr>
                 <tr>
                     <td class="c1g">TELÉFONO:</td> 
-                    <td class="c1b"><asp:TextBox runat="server" id="txtTelefonoDJ" CssClass="input1"></asp:TextBox></td>
-                    <td><img src="../../Recursos/Imagenes/editar.PNG" /></td>
-                </tr>
-                <tr>
-                    <td class="c1g">CLASE DE<br />LICENCIA:</td> 
-                    <td class="c1b"><asp:TextBox runat="server" id="txtClaseLicDJ" Enabled="False" ></asp:TextBox></td>
+                    <td class="c1b"><asp:TextBox runat="server" id="txtTelefonoDJ" CssClass="input1" Enabled="False"></asp:TextBox></td>
+                   <td>
+                        <asp:ImageButton ID="imgTelefonoDJ" runat="server" 
+                            ImageUrl="~/Recursos/Imagenes/editar.PNG" onclick="imgTelefonoDJ_Click" />
+                    </td>
                 </tr>
                 <tr>
                     <td class="c1g">CONTRASEÑA:</td> 
@@ -44,21 +42,23 @@
                             Text="MODIFICAR" onclick="btnModificaPassDJ_Click" /></td>
                 </tr>
             </table>
-            <div><br /></div>  
-            <div><br /></div>  
+             <br/>
+           <asp:Label ID="lblInfoDJ" runat="server" CssClass="lbl" Text="label" Visible="False" 
+                    Font-Underline="False" />
+                <br/> </div>  
 
-            <table id="tblPassDJ" runat="server"  style="display:none" width="70%">
+            <table id="tblPassDJ" runat="server"  width="70%">
                  <tr>
                      <td class="c3g" colspan="2">GENERE SU NUEVA CONTRASEÑA</td>
                  </tr>
                  <tr>
                     <td class="ctxt2" >
-                        <asp:TextBox runat="server" id="txtCambiaPass1DJ" CssClass="input1"  />
+                        <asp:TextBox runat="server" id="txtCambiaPassDJ1" CssClass="input1" TextMode="Password"  />
                         <h5 style="margin:auto">*Ingrese nueva contraseña</h5>
 
                     </td>
                     <td class="ctxt2">
-                       <asp:TextBox runat="server" id="txtCambiaPassDJ" CssClass="input1"  />
+                       <asp:TextBox runat="server" id="txtCambiaPassDJ2" CssClass="input1" TextMode="Password"  />
                         <h5 style="margin:auto">*Confirme nueva contraseña</h5>
                     </td>
                 </tr>
@@ -66,9 +66,10 @@
              <div><br /></div>
              <table style="margin: 0 auto;">
                 <tr>
-                    <td><asp:Button ID="btnGuardarDJ" CssClass="boton" runat="server" Text="GUARDAR" /></td>
+                    <td><asp:Button ID="btnGuardarDJ" CssClass="boton" runat="server" Text="GUARDAR" 
+                            onclick="btnGuardarDJ_Click" /></td>
                 </tr>
              </table>
-          </div>  
+          
         </form>
 </asp:Content>

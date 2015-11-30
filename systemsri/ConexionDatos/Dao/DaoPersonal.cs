@@ -134,5 +134,48 @@ namespace ConexionDatos.Dao
                 return lista;
             }
         }
+
+      
+        public int actualizaDatosPersonales(String email, String telefono, String rut)
+        {
+
+            using (SRI contex = new SRI())
+            {
+                try
+                {
+                    PERSONAL objInfractor = new PERSONAL();
+                    objInfractor = contex.PERSONAL.Where(a => a.RUT_PER == rut).FirstOrDefault();
+                    objInfractor.EMAIL_PER = email;
+                    objInfractor.TELEFONO_PER = telefono;
+                    contex.SaveChanges();
+                    return 1;
+                }
+                catch (Exception e)
+                {
+                    return 0;
+                }
+
+            }
+        }
+        public int actualizaClavePropia(String newClave, String rut)
+        {
+            using (SRI contex = new SRI())
+            {
+                try
+                {
+                    PERSONAL lista = new PERSONAL();
+                    lista = contex.PERSONAL.Where(a => a.RUT_PER == rut).FirstOrDefault();
+                    lista.PASSWORD_PER = newClave;
+                    contex.SaveChanges();
+                    return 1;
+                }
+                catch (Exception e)
+                {
+                    return 0;
+                }
+
+            }
+        }
+      
     }
 }

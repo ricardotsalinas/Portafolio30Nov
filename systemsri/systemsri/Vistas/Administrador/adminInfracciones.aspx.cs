@@ -27,33 +27,8 @@ namespace systemsri.Vistas.Administrador
 
         protected void btnBuscarAI_Click(object sender, EventArgs e)
         {
-            if (txtCodInfraccionAI.Equals("") || txtCodInfraccionAI.Equals(null))
-            {
-                lblInfoAdI.Text = "Debe introducir un codigo o listar para buscar infraccion";
-                lblInfoAdI.Visible = true;
-            }
-            else
-            {
-                List<DETALLE_CARACTERISTICA> buscar = NegocioAdministrador.instancia.buscarInfraccion(Convert.ToInt32(txtCodInfraccionAI.Text));
-
-                if (buscar.Count == 0)
-                {
-
-                    lblInfoAdI.Text = "No existe el codigo de la infracción";
-                    lblInfoAdI.ForeColor = System.Drawing.Color.Red;
-                    txtCodInfraccionAI.Text = "";
-                    txtValorAI.Text = "";
-
-                }
-
-                foreach (var list in buscar)
-                {
-                    txtCodInfraccionAI.Text = list.ID_DETCAR.ToString();
-                    txtDescrInfraccionAI.Text = list.DETALLE_CAR.ToString();
-                    ddlistGravedadAI.SelectedValue = list.DETALLE_CAR.ToString();
-                    ddlistTipoMonedaAI.Text = list.DETALLE_CAR.ToString();
-                }
-            }
+            
+           
         }
 
         protected void btnGuardarAI_Click(object sender, EventArgs e)
@@ -62,8 +37,6 @@ namespace systemsri.Vistas.Administrador
             lblInfoAdI.Visible = true;
             lblInfoAdI.Text = "Los campos en Rojo son obligatorios";
             lblInfoAdI.ForeColor = System.Drawing.Color.Red;
-            txtCodInfraccionAI.BorderWidth = 1;
-            txtCodInfraccionAI.BorderColor = System.Drawing.Color.Red;
             ddlistGravedadAI.BorderColor = System.Drawing.Color.Red;
             ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.Red;
             txtValorAI.BorderColor = System.Drawing.Color.Red;
@@ -122,17 +95,16 @@ namespace systemsri.Vistas.Administrador
             lblInfoAdI.Visible = false;
             ddlistGravedadAI.SelectedIndex = 0;
             ddlistTipoMonedaAI.SelectedIndex = 0;
-            txtCodInfraccionAI.Text = "";
+          
             txtDescrInfraccionAI.Text = "";
             txtValorAI.Text = "";
-            ddlistGravedadAI.Items.Insert(0,new ListItem("caca",""));
-            txtCodInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
+            ddlistGravedadAI.Items.Insert(0,new ListItem("Seleccione",""));
+           
             ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
             ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
             txtValorAI.BorderColor = System.Drawing.Color.LightGray;
             txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
 
-            txtCodInfraccionAI.BorderWidth = 1;
             ddlistGravedadAI.BorderWidth = 1;
             ddlistTipoMonedaAI.BorderWidth = 1;
             txtValorAI.BorderWidth = 1;

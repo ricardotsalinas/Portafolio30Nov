@@ -31,15 +31,6 @@ namespace systemsri.Vistas.Administrador {
         protected global::System.Web.UI.WebControls.Label lblInfoAdI;
         
         /// <summary>
-        /// Control txtCodInfraccionAI.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCodInfraccionAI;
-        
-        /// <summary>
         /// Control btnBuscarAI.
         /// </summary>
         /// <remarks>

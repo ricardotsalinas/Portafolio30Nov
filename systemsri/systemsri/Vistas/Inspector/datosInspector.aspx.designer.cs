@@ -40,15 +40,6 @@ namespace systemsri.Vistas.Inspector {
         protected global::System.Web.UI.WebControls.TextBox txtNomDIn;
         
         /// <summary>
-        /// Control txtFNacDIn.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFNacDIn;
-        
-        /// <summary>
         /// Control txtDirDIn.
         /// </summary>
         /// <remarks>
@@ -67,6 +58,15 @@ namespace systemsri.Vistas.Inspector {
         protected global::System.Web.UI.WebControls.TextBox txtEmailDIn;
         
         /// <summary>
+        /// Control imgTEmailDI.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton imgTEmailDI;
+        
+        /// <summary>
         /// Control txtTelefonoDIn.
         /// </summary>
         /// <remarks>
@@ -76,13 +76,13 @@ namespace systemsri.Vistas.Inspector {
         protected global::System.Web.UI.WebControls.TextBox txtTelefonoDIn;
         
         /// <summary>
-        /// Control txtClaseLicDIn.
+        /// Control imgTelefonoDI.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClaseLicDIn;
+        protected global::System.Web.UI.WebControls.ImageButton imgTelefonoDI;
         
         /// <summary>
         /// Control btnModificaPassDIn.
@@ -92,6 +92,15 @@ namespace systemsri.Vistas.Inspector {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnModificaPassDIn;
+        
+        /// <summary>
+        /// Control lblInfoDIn.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblInfoDIn;
         
         /// <summary>
         /// Control tblPassDIn.

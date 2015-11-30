@@ -9,13 +9,7 @@
         
         <table>
             <tr>
-                <td class="c1g">
-                    CODIGO INFRACCIÓN:
-                </td>
-                <td class="c1b">
-                    <asp:TextBox type="text" ID="txtCodInfraccionAI" runat="server" class="input1"></asp:TextBox>
-                </td>
-                <td class="cbtn">
+              <td class="cbtn">
                     <asp:Button ID="btnBuscarAI" class="boton" runat="server" Text="BUSCAR" OnClick="btnBuscarAI_Click" />
                 </td>
             </tr>

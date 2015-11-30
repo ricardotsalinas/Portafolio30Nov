@@ -81,7 +81,7 @@ namespace systemsri.Vistas.Infractor
                         int resultado = NegocioInfractor.instancia.actualizaClave(txtCambiaPassDI1.Text, txtRutDI.Text);
                         if (resultado == 1)
                         {
-                            tblPassDI.Visible = true;
+                            tblPassDI.Visible = false;
                             lblInfoDI.ForeColor = System.Drawing.Color.Gray;
                             lblInfoDI.Visible = true;
                             lblInfoDI.Text = "La contraseña ha sido ingresada correctamente";
@@ -131,12 +131,16 @@ namespace systemsri.Vistas.Infractor
 
                     txtEmailDI.Enabled = false;
                     txtTelefonoDI.Enabled = false;
+                    lblInfoDI.Visible = true;
+                    lblInfoDI.Text = "Los datos han sido actualizados";
+                    lblInfoDI.ForeColor = System.Drawing.Color.LightGray;
                 }
                 else
                 {
 
                     lblInfoDI.Visible = true;
                     lblInfoDI.Text = "Ha habido un error al actualizar los datos";
+                    lblInfoDI.ForeColor = System.Drawing.Color.Red;
 
 
                 }

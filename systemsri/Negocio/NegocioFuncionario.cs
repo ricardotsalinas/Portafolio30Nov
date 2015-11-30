@@ -40,10 +40,10 @@ namespace Negocio
         {
             return DaoPersonal.instancia.BuscarUsuario(rut);
         }
-        public int actualizaClave(String clave, String rut)
+        public int actualizaClaveInfr(String clave, String rut)
         {
             clave = GeneraMd5.instancia.md5(clave);
-            return DaoInfractor.Instancia.actualizaClave(clave, rut);
+            return DaoInfractor.Instancia.actualizaClaveInfr(clave, rut);
         }
 
 
@@ -55,9 +55,13 @@ namespace Negocio
 
         public int actualizaDatosPersonales(String email, String telefono, String rut)
         {
-            return DaoInfractor.Instancia.actualizaDatosPersonales(email, telefono, rut);
+            return DaoPersonal.instancia.actualizaDatosPersonales(email, telefono, rut);
         }
-       
+        public int actualizaClavePropia(String clave, String rut)
+        {
+            clave = GeneraMd5.instancia.md5(clave);
+            return DaoPersonal.instancia.actualizaClavePropia(clave, rut);
+        }
    }
 
 }

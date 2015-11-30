@@ -85,10 +85,10 @@ namespace systemsri.Vistas.Funcionario
                 {
                     if (txtCambiaPassDF1.Text.Equals(txtCambiaPassDF2.Text))
                     {
-                        int resultado = NegocioFuncionario.instancia.actualizaClave(txtCambiaPassDF1.Text, txtRutDF.Text);
+                        int resultado = NegocioFuncionario.instancia.actualizaClavePropia(txtCambiaPassDF1.Text, txtRutDF.Text);
                         if (resultado == 1)
                         {
-                            tblPassDF.Visible = true;
+                            tblPassDF.Visible = false;
                             lblInfoDF.ForeColor = System.Drawing.Color.Gray;
                             lblInfoDF.Visible = true;
                             lblInfoDF.Text = "La contraseña ha sido ingresada correctamente";
@@ -112,7 +112,7 @@ namespace systemsri.Vistas.Funcionario
                         txtCambiaPassDF1.BorderColor = System.Drawing.Color.Red;
                         txtCambiaPassDF2.BorderColor = System.Drawing.Color.Red;
                         txtCambiaPassDF1.BorderWidth = 1;
-                        txtCambiaPassDF1.BorderWidth = 1;
+                        txtCambiaPassDF2.BorderWidth = 1;
                     }
 
                 }
@@ -124,7 +124,7 @@ namespace systemsri.Vistas.Funcionario
                     txtCambiaPassDF1.BorderColor = System.Drawing.Color.Red;
                     txtCambiaPassDF2.BorderColor = System.Drawing.Color.Red;
                     txtCambiaPassDF1.BorderWidth = 1;
-                    txtCambiaPassDF1.BorderWidth = 1;
+                    txtCambiaPassDF2.BorderWidth = 1;
                 }
             }
 
@@ -138,12 +138,15 @@ namespace systemsri.Vistas.Funcionario
 
                     txtEmailDF.Enabled = false;
                     txtTelefonoDF.Enabled = false;
+                    lblInfoDF.Text = "Los datos han sido actualizados";
+                    lblInfoDF.ForeColor = System.Drawing.Color.Gray;
                 }
                 else
                 {
 
                     lblInfoDF.Visible = true;
                     lblInfoDF.Text = "Ha habido un error al actualizar los datos";
+                    lblInfoDF.ForeColor = System.Drawing.Color.Red;
 
 
                 }
