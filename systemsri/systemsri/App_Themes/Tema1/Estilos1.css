@@ -1,0 +1,592 @@
+﻿   body
+        {
+        
+               
+        }
+      
+
+/*Cabecera*/
+
+.cabecera 
+{
+    height:100px;
+    background-color:#5a5a5a;
+    color: #5a5a5a;
+    width: 100%;
+    
+}
+#test
+{
+    background-image:url("bg.png");   
+ }
+
+
+.contenidoCabecera 
+{
+    width: 80%;
+    margin: auto;
+    height: 100px;
+}
+
+.logoTipo1 
+{
+    width: 17%;
+    float: right;
+    text-align:center;
+    margin-top:10px;
+}
+.logoTipo2 
+{
+    width: 17%;
+    float: left;
+    text-align:center;
+    margin-top:10px;
+}
+
+.titulo
+{
+    width:60%;
+    float:left;
+    text-align:center;
+    text-shadow:2px 2px 3px #000;
+
+}
+    .titulo 
+    {
+        margin-top:12px;
+    }
+
+    
+ /*Cuerpo*/
+
+.columCentro
+{
+    float:left;
+    width:75%;
+    min-height:750px;
+    background-color:#FFFFFF;
+    box-shadow:0px 0px 2px #000 inset;
+    
+}
+
+/*Menu Izquierda*/
+
+    
+.bajo
+{
+    width:80%;
+    margin:auto;
+    background-color: #828282;
+    border-radius: 0px 0px 20px 20px;
+    overflow:auto;
+    box-shadow: 0px 0px 10px #000
+}
+
+
+.columIzq
+{
+    float:left;
+    width:25%;
+    min-height:500px;
+    background-color:#828282;
+}
+
+.menuIzq
+{
+    list-style-type:none;
+    padding:0;
+    min-height:0;
+    background-color:#848484;
+}
+ 
+.menuIzq >li
+    {
+   padding:10px;
+   text-align:center;
+   background-color:#808080;
+   border: 1px outset #BDBDBD;
+   box-shadow:0px 0px 2px rgb(60, 60, 60) inset;
+   font-family:Calibri;
+   font-size:medium;
+
+   
+    }
+
+    .menuIzq >li >a
+    {
+   text-decoration:none;
+   color: white;
+    }
+
+
+
+/*Alineación Inicial para div y tablas*/
+.alinInicial {
+  margin-left:5%;
+  margin-right:5%;
+}
+
+
+
+/*Textos*/
+
+/*Fuente - Tipografia*/
+.c1g, .c2g, .c3g, .c4g, .c4b, .c5b, .c5g, .cbtn, .ctxt,.lbl, .boton,.boton2, h2, h3, h4, h5, h6 {
+font-family:'Arial';
+}
+
+/*Color Tipografias*/
+h2, h3, h4, h5 {
+     color: #828282;
+
+}
+
+
+h2{
+    font-size:20px;
+    font-style:italic;
+    font-weight:bolder;
+   
+    
+    }
+
+h3{
+    font-size:15px;
+    font-weight:bolder;
+  
+    }
+
+h4{
+    font-size:15px;
+    font-weight:normal;
+    font-style:italic;
+   
+    }
+h5{
+    font-size:12px;
+    font-weight:normal;
+    font-style:normal;
+
+    }
+
+h6{
+    font-size:12px;
+    font-weight:normal;
+    font-style:normal;
+    color: white;
+    height: 5px;
+    margin-top: 7px;
+}
+
+
+.lbl
+{
+    font-size:medium;
+    font-style:italic;
+    }
+
+/*login*/
+
+.bajo2
+{
+    width:44%;
+    margin:auto;
+    background-color:white;
+    border-radius: 0px 0px 20px 20px;
+    overflow:auto;
+    box-shadow: 0px 0px 10px #000
+}
+bg {
+ 
+}
+
+.cont_login
+{
+    float:none;
+    height:44%;
+    min-height:500px;
+    background-color:#FFFFFF;
+    box-shadow:0px 0px 2px #000 inset;
+}
+
+.input_usuario
+{
+    width:63%;
+    height:20px;
+    text-align: left;
+
+}
+
+.cr_iusuario {
+    border:2px solid red;
+    width:63%;
+    height:20px;
+    text-align: left;
+
+}
+
+.pie2
+{
+    height:35px;
+    background-color:#828282;
+    border-radius:0px 0px 10px 10px;
+    clear:both; 
+}
+
+
+.Content2 >h1 >h3 >img {
+    margin:35px;
+    }
+    
+    
+.pie
+{
+    height:35px;
+    background-color:#828282;
+    border-radius:0px 0px 10px 10px;
+    clear:both; 
+}
+
+
+/*Formatos Tablas*/
+
+
+/*c1 es estilo de celda 1 que admite solo dos columnas por pagina (colores gris y blanco respectivamente) con textbox*/
+/*c2 es estilo de celda 2 que admite cuatro columnas por pagina (colores gris y blanco respectivamente) con textbox */
+/*c3 es estilo de celda 3 que admite 1 columnas de 30% ancho y una de 70% ancho pagina (colores gris y blanco respectivamente) con textbox */
+/*c4 es estilo de celda 4 igual a c1 pero con Label (para conservar Alto)(colores gris y blanco respectivamente) */
+/*c5 es estilo de celda 5 igual a c2 pero con Label (para conservar Alto)(colores gris y blanco respectivamente) */
+
+
+
+.c1g, .c2g , .c3g{
+    color:white;
+    background:#828282;
+    font-weight:bold;
+    font-size:12px;
+    border:gray 1px;
+    padding:8px;
+}
+
+
+.c1b, .c2b{
+    background:white;
+    color:black;
+    border:gray 1px solid;
+    padding:8px;
+}
+.c1btxt{
+    background:white;
+    color:black;
+    padding:8px;
+}
+
+.c4g {
+    color:white;
+    background:#828282;
+    font-weight:bold;
+    font-size:12px;
+    border:gray 1px;
+    padding:8px;
+    height:20px;
+}
+
+
+.c4b{
+    background:white;
+    color:black;
+    border:gray 1px solid;
+    padding:8px;
+    height:30px;
+}
+
+.c5g {
+    color:white;
+    background:#828282;
+    font-weight:bold;
+    font-size:12px;
+    border:gray 1px;
+    padding:8px;
+    height:20px;
+}
+
+
+.c5b{
+    background:white;
+    color:black;
+    border:gray 1px solid;
+    padding:8px;
+    height:20px;
+    font-size:11px;
+}
+
+.c1g {
+    width:30%;
+
+}
+
+
+.c1b {        
+    width:45%;
+}
+
+.c2g {
+    width:15%;
+  
+}
+.c2b {
+    width:20%;     
+}
+
+
+.c3g {
+    width:20%;
+}
+
+.c3b {
+    width:80%;     
+}
+.c4g {
+    width:30%;
+}
+.c4b {        
+    width:45%;
+    font-size:small;
+}
+
+.c5g {
+    width:15%;
+  
+}
+.c5b {
+    width:20%;     
+}
+c1g, .c2g , .c3g{
+    color:white;
+    background:#828282;
+    font-weight:bold;
+    font-size:12px;
+    border:gray 1px;
+    padding:8px;
+}
+
+
+
+/*Prueba de espacios*/
+/*
+.c1b, .c1g, .c2b, .c2g, .cbtn, .ctxt, .boton, .input1, .input2, .input3, .input4, .ddlist, .ddlist2 {border:1px solid red;} 
+*/
+
+
+
+
+
+/*cb1 Celdas para botones*/
+.cbtn {
+        padding:8px;
+        align-content:stretch;
+        color:#828282;
+        font-size:12px;
+        font-style:italic;
+}
+
+/*texto normal dentro de tablas*/
+.ctxt {
+        padding:8px;
+        color:#828282;
+        font-size:12px;
+        font-style:italic;
+        text-align:left;
+
+}
+
+.ctxt2 {
+        padding-top:10px;
+        color:#828282;
+        font-size:12px;
+        font-style:italic;
+        text-align:center;
+        margin:inherit;
+
+}
+
+
+
+
+
+
+ /*Configuración métodos de interacción*/
+
+ 
+ .boton{
+        border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    font-size:11px;
+    text-align:center;
+        font-weight:bold;
+        color:white;
+        background:#528204;
+        width:90px;
+        border-radius: 3px;
+        box-shadow:0px 0px 10px #3e6204 inset;
+       padding-top:10px;
+       padding-bottom:10px;
+       }
+ /*boton más grande*/
+ .boton2{
+        border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    font-size:12px;
+        font-weight:bold;
+        color:white;
+        background:#528204;
+        padding:10px;
+         border-radius: 4px;
+       }
+   
+   /*boton más pequeño*/
+   .boton3
+   {
+       font-family:"Times New Roman";
+       font-style:italic;
+       font-weight:bolder;
+       border-style: none;
+    border-color: inherit;
+    border-width: 0px;
+    font-size:20px;
+    color:white;
+     background:#528204;
+       margin-left:10px;
+        width:30px;
+         padding:5px;
+         border-radius: 4px;
+       }
+
+
+/*Input común*/
+.input1 {
+    width:95%;
+    height:20px;
+    text-transform:uppercase;
+   
+
+}
+
+/*Input Textarea*/
+.input2 {
+    width:95%;
+    height:80px;
+    text-transform:uppercase;
+}
+
+/*Input mediano*/
+.input3 {
+    width:65%;
+    height:20px;
+    text-transform:uppercase;
+}
+/*Input pequeño */
+.input4 {
+    width:20%;
+    height:20px;
+    text-transform:uppercase;
+}
+/*Input Grande textos extensos*/
+.input5 {
+    width:90%;
+    height:60px;
+    text-transform:uppercase;
+}
+
+/*dropdownlist grande*/
+.ddlist{
+    width:96%;
+    margin-bottom: 0px;
+}
+
+
+/*dropdownlist pequeño*/
+.ddlist2{
+    width:50%;
+    height:26px;
+}
+
+
+.er_input1,.er_input2,.er_input3,.er_input4,.er_ddlist,.er_ddlist2 {
+ border:2px solid red;}
+
+ 
+/*input común error*/
+.er_input1 {
+    width:95%;
+    height:20px;
+    text-transform:uppercase;
+
+}
+
+/*er_input Textarea error*/
+.er_input2 {
+    width:95%;
+    height:60px;
+}
+
+/*er_input mediano para fechas error*/
+.er_input3 {
+    width:65%;
+    height:20px;
+}
+/*er_input Pequeño para horas error*/
+.er_input4 {
+    width:40%;
+    height:20px;
+}
+
+/*dropdownlist grande error*/
+.er_ddlist{
+    width:96%;
+    height:26px;
+}
+
+
+/*dropdownlist pequeño error*/
+.er_ddlist2{
+    width:50%;
+    height:26px;
+}
+
+
+
+
+
+.Grilla
+{ 
+  font-family: Arial, Helvetica, sans-serif; font-size: 12px; }
+
+.Grilla th
+{
+    background-color: #828282;
+    color: #FFFFFF;
+    border-color:White;
+    text-align:center;
+}
+
+.Grilla td
+{
+    background-color: #FFFFFF;
+    color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #C0C0C0;
+    text-align:center;
+}
+/*
+.Grilla  tr td:hover
+{
+    background-color: #CCCCCC;
+    color: #000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #C0C0C0;
+}*/

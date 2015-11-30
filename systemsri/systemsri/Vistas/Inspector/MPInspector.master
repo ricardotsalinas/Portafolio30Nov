@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Vistas/Maestro/Maestro.Master" AutoEventWireup="true" CodeBehind="MPInspector.master.cs" Inherits="systemsri.Vistas.Inspector.MPInspector" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="menuAdmin" runat="server">
+    <script src="../../JQuery/Inspector.js"></script>
+        <ul class="menuIzq">
+         <li> <a href="datosInspector.aspx">Datos Personales</a></li>
+         <li> <a href="ingresoMulta.aspx">Ingresar Multas</a></li>
+            <li><a href="../LoginUsuario/loginUsuario.aspx">          Salir</a></li>
+        </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contenidoAdmin" runat="server">
+    <asp:ContentPlaceHolder ID="contenidoAdmin" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,0 +1,138 @@
+C:\Users\JoRGe!!!\Desktop\portafolio\portafolio\systemsri\systemsri\bin\systemsri.dll
+C:\Users\JoRGe!!!\Desktop\portafolio\portafolio\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\JoRGe!!!\Desktop\portafolio\portafolio\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\JoRGe!!!\Desktop\portafolio\portafolio\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\systemsri\bin\systemsri.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\systemsri\bin\Negocio.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\bin\systemsri.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\bin\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\bin\systemsri.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\bin\Negocio.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\bin\systemsri.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\bin\Negocio.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\bin\systemsri.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\bin\Negocio.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\bin\systemsri.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\bin\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\bin\systemsri.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\bin\Negocio.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\bin\systemsri.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\bin\Negocio.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\systemsri.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\systemsri.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\Negocio.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\systemsri.dll
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\Negocio.dll
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\Negocio.pdb
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\RdlCompile.cache
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\RdlCompile.compiled
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\javier\Desktop\oooooo\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\RdlCompile.cache
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\RdlCompile.compiled
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\systemsri.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\systemsri.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\systemsri\bin\Negocio.pdb

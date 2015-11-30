@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Vistas/Maestro/Maestro.Master" AutoEventWireup="true" CodeBehind="MPJefe.master.cs" Inherits="systemsri.Vistas.JefeTransito.MPJefe" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>SRI - Jefe de Tránsito</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="menuAdmin" runat="server">
+
+        <ul id="menuIzq" class="menuIzq" style="font-family: Calibri; font-size: medium;">
+            <li> <a href="inicioJefe.aspx">Inicio</a></li>
+             <li> <a href="datosJefe.aspx">Datos Personales</a></li>
+            <li> <a href="adminApelacion.aspx">Administrar Apelaciones</a></li>
+            <li><a href="infoInfracciones.aspx">Informes Infracciones</a></li>
+            <li><a href="ConfigRestriciones.aspx">Configurar Restricciones</a></li>
+            <li><a href="../LoginUsuario/loginUsuario.aspx">Salir</a></li>
+        </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contenidoAdmin" runat="server">
+    <asp:ContentPlaceHolder ID="contenidoAdmin" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BF15477-6C50-4E40-BAF2-00E110E275BF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>systemsri</RootNamespace>
+    <AssemblyName>systemsri</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.4.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Tema1\bg.png" />
+    <Content Include="App_Themes\Tema1\Estilos1.css" />
+    <Content Include="App_Themes\Tema1\Estilos2.css" />
+    <Content Include="App_Themes\Tema1\Estilos3.css" />
+    <Content Include="Global.asax" />
+    <Content Include="JQuery\Administrador.js" />
+    <Content Include="JQuery\Funcionario.js" />
+    <Content Include="JQuery\Infractor.js" />
+    <Content Include="JQuery\Inspector.js" />
+    <Content Include="JQuery\LoginUsuario.js" />
+    <Content Include="Recursos\Imagenes\buscar.jpg" />
+    <Content Include="Recursos\Imagenes\consulta.jpg" />
+    <Content Include="Recursos\Imagenes\editar.PNG" />
+    <Content Include="Recursos\Home\imagCentro.png" />
+    <Content Include="Recursos\Home\imagDer.png" />
+    <Content Include="Recursos\Home\imagenCabecera.jpg" />
+    <Content Include="Recursos\Home\imagizq.png" />
+    <Content Include="Recursos\Home\imaglink.png" />
+    <Content Include="Recursos\Home\mastercar.png" />
+    <Content Include="Recursos\Home\PayPal-logo.png" />
+    <Content Include="Recursos\Home\paypalLogo.png" />
+    <Content Include="Recursos\Home\visa.jpg" />
+    <Content Include="Recursos\Imagenes\Image_1.png" />
+    <Content Include="Recursos\Imagenes\Image_2.png" />
+    <Content Include="Recursos\Imagenes\insoft bn.png" />
+    <Content Include="Recursos\Imagenes\insoft colores.png" />
+    <Content Include="Recursos\Imagenes\logo sn bdo.jpg" />
+    <Content Include="Recursos\Imagenes\logo sn bdo.png" />
+    <Content Include="Recursos\Imagenes\logosri.PNG" />
+    <Content Include="Recursos\Imagenes\orientacion.jpg" />
+    <Content Include="Recursos\Imagenes\ptoscard.png" />
+    <Content Include="Recursos\Imagenes\sri bn blanco.png" />
+    <Content Include="Recursos\Imagenes\sri bn.png" />
+    <Content Include="Recursos\Imagenes\sri colores blanco.png" />
+    <Content Include="Recursos\Imagenes\sri colores circulo.png" />
+    <Content Include="Recursos\Imagenes\sri colores.png" />
+    <Content Include="JQuery\jquery-1.11.3.js" />
+    <Content Include="Recursos\Imagenes\ver.jpg" />
+    <Content Include="Vistas\Administrador\adminCalles.aspx" />
+    <Content Include="Vistas\Administrador\adminInfracciones.aspx" />
+    <Content Include="Vistas\Administrador\adminUsuarios.aspx" />
+    <Content Include="Vistas\Administrador\DatosAdmin.aspx" />
+    <Content Include="Vistas\Administrador\inicioAdmin.aspx" />
+    <Content Include="JQuery\Funcionario\adminInfractor.aspx" />
+    <Content Include="JQuery\Funcionario\datosFuncionario.aspx" />
+    <Content Include="JQuery\Funcionario\generarTurno.aspx" />
+    <Content Include="JQuery\Funcionario\inicioFun.aspx" />
+    <Content Include="Vistas\Funcionario\admFun.aspx" />
+    <Content Include="Vistas\Funcionario\datosFun.aspx" />
+    <Content Include="Vistas\Funcionario\generaFun.aspx" />
+    <Content Include="Vistas\Funcionario\inicioFun.aspx" />
+    <Content Include="Vistas\homeSanBernardo.aspx" />
+    <Content Include="Vistas\Infractor\datosInfractor.aspx" />
+    <Content Include="Vistas\Infractor\detalleMultasInfractor.aspx" />
+    <Content Include="Vistas\Infractor\detallePagarMulta.aspx" />
+    <Content Include="Vistas\Infractor\historialMultasInfractor.aspx" />
+    <Content Include="Vistas\Inicio.aspx" />
+    <Content Include="Vistas\Inspector\datosInspector.aspx" />
+    <Content Include="Vistas\Inspector\ingresoMulta.aspx" />
+    <Content Include="Vistas\JefeTransito\adminApelacion.aspx" />
+    <Content Include="Vistas\JefeTransito\CasosApelacion.aspx" />
+    <Content Include="Vistas\JefeTransito\ConfigRestriciones.aspx" />
+    <Content Include="Vistas\JefeTransito\datosJefe.aspx" />
+    <Content Include="Vistas\JefeTransito\infoInfracciones.aspx" />
+    <Content Include="Vistas\JefeTransito\inicioJefe.aspx" />
+    <Content Include="Vistas\LoginUsuario\loginInfractor.aspx" />
+    <Content Include="Vistas\LoginUsuario\loginUsuario.aspx" />
+    <Content Include="Vistas\PayPal\InicioPayPal.aspx" />
+    <Content Include="Vistas\PayPal\pagoPayPal.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Administrador\adminCalles.aspx.cs">
+      <DependentUpon>adminCalles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\adminCalles.aspx.designer.cs">
+      <DependentUpon>adminCalles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\adminInfracciones.aspx.cs">
+      <DependentUpon>adminInfracciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\adminInfracciones.aspx.designer.cs">
+      <DependentUpon>adminInfracciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\adminUsuarios.aspx.cs">
+      <DependentUpon>adminUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\adminUsuarios.aspx.designer.cs">
+      <DependentUpon>adminUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\DatosAdmin.aspx.cs">
+      <DependentUpon>DatosAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\DatosAdmin.aspx.designer.cs">
+      <DependentUpon>DatosAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\inicioAdmin.aspx.cs">
+      <DependentUpon>inicioAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\inicioAdmin.aspx.designer.cs">
+      <DependentUpon>inicioAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Administrador\MPAdministrador.master.cs">
+      <DependentUpon>MPAdministrador.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administrador\MPAdministrador.master.designer.cs">
+      <DependentUpon>MPAdministrador.master</DependentUpon>
+    </Compile>
+    <Compile Include="JQuery\Funcionario\adminInfractor.aspx.cs">
+      <DependentUpon>adminInfractor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQuery\Funcionario\adminInfractor.aspx.designer.cs">
+      <DependentUpon>adminInfractor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQuery\Funcionario\datosFuncionario.aspx.cs">
+      <DependentUpon>datosFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQuery\Funcionario\datosFuncionario.aspx.designer.cs">
+      <DependentUpon>datosFuncionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQuery\Funcionario\generarTurno.aspx.cs">
+      <DependentUpon>generarTurno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQuery\Funcionario\generarTurno.aspx.designer.cs">
+      <DependentUpon>generarTurno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQuery\Funcionario\inicioFun.aspx.cs">
+      <DependentUpon>inicioFun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQuery\Funcionario\inicioFun.aspx.designer.cs">
+      <DependentUpon>inicioFun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JQuery\Funcionario\MPFuncionario.master.cs">
+      <DependentUpon>MPFuncionario.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JQuery\Funcionario\MPFuncionario.master.designer.cs">
+      <DependentUpon>MPFuncionario.master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\admFun.aspx.cs">
+      <DependentUpon>admFun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\admFun.aspx.designer.cs">
+      <DependentUpon>admFun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\datosFun.aspx.cs">
+      <DependentUpon>datosFun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\datosFun.aspx.designer.cs">
+      <DependentUpon>datosFun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\generaFun.aspx.cs">
+      <DependentUpon>generaFun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\generaFun.aspx.designer.cs">
+      <DependentUpon>generaFun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\inicioFun.aspx.cs">
+      <DependentUpon>inicioFun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\inicioFun.aspx.designer.cs">
+      <DependentUpon>inicioFun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\MPFuncionario.master.cs">
+      <DependentUpon>MPFuncionario.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\MPFuncionario.master.designer.cs">
+      <DependentUpon>MPFuncionario.master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\homeSanBernardo.aspx.cs">
+      <DependentUpon>homeSanBernardo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\homeSanBernardo.aspx.designer.cs">
+      <DependentUpon>homeSanBernardo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Infractor\datosInfractor.aspx.cs">
+      <DependentUpon>datosInfractor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Infractor\datosInfractor.aspx.designer.cs">
+      <DependentUpon>datosInfractor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Infractor\detalleMultasInfractor.aspx.cs">
+      <DependentUpon>detalleMultasInfractor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Infractor\detalleMultasInfractor.aspx.designer.cs">
+      <DependentUpon>detalleMultasInfractor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Infractor\detallePagarMulta.aspx.cs">
+      <DependentUpon>detallePagarMulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Infractor\detallePagarMulta.aspx.designer.cs">
+      <DependentUpon>detallePagarMulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Infractor\historialMultasInfractor.aspx.cs">
+      <DependentUpon>historialMultasInfractor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Infractor\historialMultasInfractor.aspx.designer.cs">
+      <DependentUpon>historialMultasInfractor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Infractor\MPInfractor.master.cs">
+      <DependentUpon>MPInfractor.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Infractor\MPInfractor.master.designer.cs">
+      <DependentUpon>MPInfractor.master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inspector\datosInspector.aspx.cs">
+      <DependentUpon>datosInspector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inspector\datosInspector.aspx.designer.cs">
+      <DependentUpon>datosInspector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inspector\ingresoMulta.aspx.cs">
+      <DependentUpon>ingresoMulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inspector\ingresoMulta.aspx.designer.cs">
+      <DependentUpon>ingresoMulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inspector\MPInspector.master.cs">
+      <DependentUpon>MPInspector.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inspector\MPInspector.master.designer.cs">
+      <DependentUpon>MPInspector.master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\adminApelacion.aspx.cs">
+      <DependentUpon>adminApelacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\adminApelacion.aspx.designer.cs">
+      <DependentUpon>adminApelacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\CasosApelacion.aspx.cs">
+      <DependentUpon>CasosApelacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\CasosApelacion.aspx.designer.cs">
+      <DependentUpon>CasosApelacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\ConfigRestriciones.aspx.cs">
+      <DependentUpon>ConfigRestriciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\ConfigRestriciones.aspx.designer.cs">
+      <DependentUpon>ConfigRestriciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\datosJefe.aspx.cs">
+      <DependentUpon>datosJefe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\datosJefe.aspx.designer.cs">
+      <DependentUpon>datosJefe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\infoInfracciones.aspx.cs">
+      <DependentUpon>infoInfracciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\infoInfracciones.aspx.designer.cs">
+      <DependentUpon>infoInfracciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\inicioJefe.aspx.cs">
+      <DependentUpon>inicioJefe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\inicioJefe.aspx.designer.cs">
+      <DependentUpon>inicioJefe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\MPJefe.master.cs">
+      <DependentUpon>MPJefe.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\JefeTransito\MPJefe.master.designer.cs">
+      <DependentUpon>MPJefe.master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\LoginUsuario\loginInfractor.aspx.cs">
+      <DependentUpon>loginInfractor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\LoginUsuario\loginInfractor.aspx.designer.cs">
+      <DependentUpon>loginInfractor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\LoginUsuario\loginUsuario.aspx.cs">
+      <DependentUpon>loginUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\LoginUsuario\loginUsuario.aspx.designer.cs">
+      <DependentUpon>loginUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Maestro\Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestro\Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Maestro\Maestro.Master.cs">
+      <DependentUpon>Maestro.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestro\Maestro.Master.designer.cs">
+      <DependentUpon>Maestro.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\PayPal\InicioPayPal.aspx.cs">
+      <DependentUpon>InicioPayPal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\PayPal\InicioPayPal.aspx.designer.cs">
+      <DependentUpon>InicioPayPal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\PayPal\pagoPayPal.aspx.cs">
+      <DependentUpon>pagoPayPal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\PayPal\pagoPayPal.aspx.designer.cs">
+      <DependentUpon>pagoPayPal.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClasesESpeciales\ClasesESpeciales.csproj">
+      <Project>{FB20BE01-6566-49F0-A38A-FD52D182DF08}</Project>
+      <Name>ClasesESpeciales</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConexionDatos\ConexionDatos.csproj">
+      <Project>{638AC9C7-4188-4659-A531-8EE62441FE71}</Project>
+      <Name>ConexionDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\NegocioSRI.csproj">
+      <Project>{9583927A-48BB-4120-85A0-37457D64DFF3}</Project>
+      <Name>NegocioSRI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vistas\Maestro\Maestro.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vistas\Maestro\Login.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vistas\Administrador\MPAdministrador.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JQuery\Funcionario\MPFuncionario.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vistas\Infractor\MPInfractor.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vistas\Inspector\MPInspector.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vistas\JefeTransito\MPJefe.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Recursos\Home\faviconmuni" />
+    <None Include="Recursos\Home\faviconsri" />
+    <Content Include="Vistas\Funcionario\MPFuncionario.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Vistas\JefeTransito\Report1.rdlc" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58948</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

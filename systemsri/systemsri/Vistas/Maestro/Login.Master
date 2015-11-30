@@ -1,0 +1,89 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="systemsri.Vistas.Maestro.Login" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<link rel="shortcut icon" href="../../Recursos/Home/faviconsri">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script src="../../JQuery/jquery-1.11.3.js" type="text/javascript"></script>
+    <title>Iniciar Sesión SRI</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+      
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+        .auto-style1 {
+            height: 52px;
+            width: 125px;
+            margin-left: 0px;
+        }
+        .auto-style2 {
+            width: 10%;
+            float: right;
+            text-align: center;
+            margin-top: 10px;
+            height: 68px;
+        }
+        .auto-style3 {
+            border-style: none;
+            border-color: inherit;
+            border-width: 0px;
+            font-size: 12px;
+            font-family: Arial;
+            font-weight: bold;
+            color: white;
+            background: #528204;
+            width: 105px;
+            height: 39px;
+            border-radius: 3px;
+            box-shadow: 0px 0px 10px #3e6204 inset;
+        }
+
+      
+       
+    </style>
+    <script language="javascript" type="text/javascript">
+    </script>
+</head>
+ <body id="test"> 
+ <div>
+        <div id="cabecera" class="cabecera">
+
+         <div id="contenidoCabecera" class="contenidoCabecera">
+
+             <div id="logoTipo1" class="logoTipo1">
+                <img alt="imgHome1" src="../../Recursos/Imagenes/sri%20colores%20blanco.png" style="height: 71px; width: 74px; margin-top: 0px; margin-left: 60px" />
+             </div>
+             <div id="logoTipo2" class="logoTipo2">
+                 <a href="../homeSanBernardo.aspx"> <img alt="imgHome2" src="../../Recursos/Imagenes/logo%20sn%20bdo.png" style="height: 41px; width: 116px; margin-top: 10px; margin-left: 60px" /></a>
+               </div>
+             </div>
+
+        </div>
+
+        <div id="bajo2" class="bajo2">
+
+             <div id="cont_login" class="cont_login">
+
+                 <asp:ContentPlaceHolder ID="contenidoLogin" runat="server">
+                     
+                 </asp:ContentPlaceHolder>
+                  
+               
+                 <div><br /><br /></div>
+                 <div style="text-align: center">
+                     <img src="../../Recursos/Imagenes/Image_2.png" />
+                 </div>
+                 
+             </div>
+
+             <div id="pie2" class="pie2">
+
+             </div>
+         </div>       
+    </div>
+   
+</body>
+</html>
+

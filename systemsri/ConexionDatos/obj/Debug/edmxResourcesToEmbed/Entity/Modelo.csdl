@@ -1,0 +1,893 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="SRI" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ADJUNTOS_APELACION" EntityType="Model.ADJUNTOS_APELACION" />
+    <EntitySet Name="APELACION" EntityType="Model.APELACION" />
+    <EntitySet Name="CARACTERISTICA" EntityType="Model.CARACTERISTICA" />
+    <EntitySet Name="DETALLE_CARACTERISTICA" EntityType="Model.DETALLE_CARACTERISTICA" />
+    <EntitySet Name="INFRACCION" EntityType="Model.INFRACCION" />
+    <EntitySet Name="INFRACTOR" EntityType="Model.INFRACTOR" />
+    <EntitySet Name="MONEDA" EntityType="Model.MONEDA" />
+    <EntitySet Name="MULTA" EntityType="Model.MULTA" />
+    <EntitySet Name="PERSONAL" EntityType="Model.PERSONAL" />
+    <EntitySet Name="PERSONAL_SECTOR" EntityType="Model.PERSONAL_SECTOR" />
+    <EntitySet Name="RESTRICCION" EntityType="Model.RESTRICCION" />
+    <EntitySet Name="SECTOR" EntityType="Model.SECTOR" />
+    <EntitySet Name="TURNO" EntityType="Model.TURNO" />
+    <EntitySet Name="VEHICULO" EntityType="Model.VEHICULO" />
+    <EntitySet Name="VIA_CIRCULACION" EntityType="Model.VIA_CIRCULACION" />
+    <AssociationSet Name="AAA" Association="Model.AAA">
+      <End Role="ADJUNTOS_APELACION" EntitySet="ADJUNTOS_APELACION" />
+      <End Role="APELACION" EntitySet="APELACION" />
+    </AssociationSet>
+    <AssociationSet Name="ADCA" Association="Model.ADCA">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="APELACION" EntitySet="APELACION" />
+    </AssociationSet>
+    <AssociationSet Name="AM" Association="Model.AM">
+      <End Role="MULTA" EntitySet="MULTA" />
+      <End Role="APELACION" EntitySet="APELACION" />
+    </AssociationSet>
+    <AssociationSet Name="DCC" Association="Model.DCC">
+      <End Role="CARACTERISTICA" EntitySet="CARACTERISTICA" />
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCA1" Association="Model.DSDCA1">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCA2" Association="Model.DSDCA2">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCB1" Association="Model.DSDCB1">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCB2" Association="Model.DSDCB2">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCC1" Association="Model.DSDCC1">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCC2" Association="Model.DSDCC2">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCD1" Association="Model.DSDCD1">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCD2" Association="Model.DSDCD2">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCE1" Association="Model.DSDCE1">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCE2" Association="Model.DSDCE2">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="DSDCS" Association="Model.DSDCS">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="SECTOR" EntitySet="SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="IDC" Association="Model.IDC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="INFRACTOR" EntitySet="INFRACTOR" />
+    </AssociationSet>
+    <AssociationSet Name="INDC" Association="Model.INDC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="INFRACCION" EntitySet="INFRACCION" />
+    </AssociationSet>
+    <AssociationSet Name="INDCMO" Association="Model.INDCMO">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="INFRACCION" EntitySet="INFRACCION" />
+    </AssociationSet>
+    <AssociationSet Name="MODC" Association="Model.MODC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="MONEDA" EntitySet="MONEDA" />
+    </AssociationSet>
+    <AssociationSet Name="PDC" Association="Model.PDC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="PERSONAL" EntitySet="PERSONAL" />
+    </AssociationSet>
+    <AssociationSet Name="RDC" Association="Model.RDC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="RESTRICCION" EntitySet="RESTRICCION" />
+    </AssociationSet>
+    <AssociationSet Name="VCDC" Association="Model.VCDC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="VIA_CIRCULACION" EntitySet="VIA_CIRCULACION" />
+    </AssociationSet>
+    <AssociationSet Name="VCDO" Association="Model.VCDO">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="VIA_CIRCULACION" EntitySet="VIA_CIRCULACION" />
+    </AssociationSet>
+    <AssociationSet Name="VCS" Association="Model.VCS">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="VIA_CIRCULACION" EntitySet="VIA_CIRCULACION" />
+    </AssociationSet>
+    <AssociationSet Name="VCTPDC" Association="Model.VCTPDC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="VIA_CIRCULACION" EntitySet="VIA_CIRCULACION" />
+    </AssociationSet>
+    <AssociationSet Name="VCVDM" Association="Model.VCVDM">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="VIA_CIRCULACION" EntitySet="VIA_CIRCULACION" />
+    </AssociationSet>
+    <AssociationSet Name="VDC" Association="Model.VDC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="VEHICULO" EntitySet="VEHICULO" />
+    </AssociationSet>
+    <AssociationSet Name="VNDC" Association="Model.VNDC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="VIA_CIRCULACION" EntitySet="VIA_CIRCULACION" />
+    </AssociationSet>
+    <AssociationSet Name="MIDC" Association="Model.MIDC">
+      <End Role="INFRACCION" EntitySet="INFRACCION" />
+      <End Role="MULTA" EntitySet="MULTA" />
+    </AssociationSet>
+    <AssociationSet Name="IV" Association="Model.IV">
+      <End Role="VEHICULO" EntitySet="VEHICULO" />
+      <End Role="INFRACTOR" EntitySet="INFRACTOR" />
+    </AssociationSet>
+    <AssociationSet Name="MI" Association="Model.MI">
+      <End Role="INFRACTOR" EntitySet="INFRACTOR" />
+      <End Role="MULTA" EntitySet="MULTA" />
+    </AssociationSet>
+    <AssociationSet Name="MUMO" Association="Model.MUMO">
+      <End Role="MONEDA" EntitySet="MONEDA" />
+      <End Role="MULTA" EntitySet="MULTA" />
+    </AssociationSet>
+    <AssociationSet Name="MP" Association="Model.MP">
+      <End Role="PERSONAL" EntitySet="PERSONAL" />
+      <End Role="MULTA" EntitySet="MULTA" />
+    </AssociationSet>
+    <AssociationSet Name="MURES" Association="Model.MURES">
+      <End Role="RESTRICCION" EntitySet="RESTRICCION" />
+      <End Role="MULTA" EntitySet="MULTA" />
+    </AssociationSet>
+    <AssociationSet Name="MVC" Association="Model.MVC">
+      <End Role="VIA_CIRCULACION" EntitySet="VIA_CIRCULACION" />
+      <End Role="MULTA" EntitySet="MULTA" />
+    </AssociationSet>
+    <AssociationSet Name="PSP" Association="Model.PSP">
+      <End Role="PERSONAL" EntitySet="PERSONAL" />
+      <End Role="PERSONAL_SECTOR" EntitySet="PERSONAL_SECTOR" />
+    </AssociationSet>
+    <AssociationSet Name="TP" Association="Model.TP">
+      <End Role="PERSONAL" EntitySet="PERSONAL" />
+      <End Role="TURNO" EntitySet="TURNO" />
+    </AssociationSet>
+    <AssociationSet Name="PSS" Association="Model.PSS">
+      <End Role="SECTOR" EntitySet="SECTOR" />
+      <End Role="PERSONAL_SECTOR" EntitySet="PERSONAL_SECTOR" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ADJUNTOS_APELACION">
+    <Key>
+      <PropertyRef Name="ID_ADJUNTO" />
+    </Key>
+    <Property Name="ID_ADJUNTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ADJUNTO" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="APELACION" Relationship="Model.AAA" FromRole="ADJUNTOS_APELACION" ToRole="APELACION" />
+  </EntityType>
+  <EntityType Name="APELACION">
+    <Key>
+      <PropertyRef Name="ID_APELACION" />
+    </Key>
+    <Property Name="ID_APELACION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="SOLICITUD_APELACION" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPCION_AP" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="ACEPTADO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ID_ADJUNTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_MULTA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ESTADO" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="ADJUNTOS_APELACION" Relationship="Model.AAA" FromRole="APELACION" ToRole="ADJUNTOS_APELACION" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.ADCA" FromRole="APELACION" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="MULTA" Relationship="Model.AM" FromRole="APELACION" ToRole="MULTA" />
+  </EntityType>
+  <EntityType Name="CARACTERISTICA">
+    <Key>
+      <PropertyRef Name="ID_CARACTERISTICA" />
+    </Key>
+    <Property Name="ID_CARACTERISTICA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NOMBRE_CARACT" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.DCC" FromRole="CARACTERISTICA" ToRole="DETALLE_CARACTERISTICA" />
+  </EntityType>
+  <EntityType Name="DETALLE_CARACTERISTICA">
+    <Key>
+      <PropertyRef Name="ID_DETCAR" />
+    </Key>
+    <Property Name="ID_DETCAR" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DETALLE_CAR" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="DET_ADIC1" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DET_ADIC2" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DET_ADIC3" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ID_CARACTERISTICA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="APELACION" Relationship="Model.ADCA" FromRole="DETALLE_CARACTERISTICA" ToRole="APELACION" />
+    <NavigationProperty Name="CARACTERISTICA" Relationship="Model.DCC" FromRole="DETALLE_CARACTERISTICA" ToRole="CARACTERISTICA" />
+    <NavigationProperty Name="SECTOR" Relationship="Model.DSDCA1" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="SECTOR1" Relationship="Model.DSDCA2" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="SECTOR2" Relationship="Model.DSDCB1" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="SECTOR3" Relationship="Model.DSDCB2" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="SECTOR4" Relationship="Model.DSDCC1" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="SECTOR5" Relationship="Model.DSDCC2" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="SECTOR6" Relationship="Model.DSDCD1" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="SECTOR7" Relationship="Model.DSDCD2" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="SECTOR8" Relationship="Model.DSDCE1" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="SECTOR9" Relationship="Model.DSDCE2" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="SECTOR10" Relationship="Model.DSDCS" FromRole="DETALLE_CARACTERISTICA" ToRole="SECTOR" />
+    <NavigationProperty Name="INFRACTOR" Relationship="Model.IDC" FromRole="DETALLE_CARACTERISTICA" ToRole="INFRACTOR" />
+    <NavigationProperty Name="INFRACCION" Relationship="Model.INDC" FromRole="DETALLE_CARACTERISTICA" ToRole="INFRACCION" />
+    <NavigationProperty Name="INFRACCION1" Relationship="Model.INDCMO" FromRole="DETALLE_CARACTERISTICA" ToRole="INFRACCION" />
+    <NavigationProperty Name="MONEDA" Relationship="Model.MODC" FromRole="DETALLE_CARACTERISTICA" ToRole="MONEDA" />
+    <NavigationProperty Name="PERSONAL" Relationship="Model.PDC" FromRole="DETALLE_CARACTERISTICA" ToRole="PERSONAL" />
+    <NavigationProperty Name="RESTRICCION" Relationship="Model.RDC" FromRole="DETALLE_CARACTERISTICA" ToRole="RESTRICCION" />
+    <NavigationProperty Name="VIA_CIRCULACION" Relationship="Model.VCDC" FromRole="DETALLE_CARACTERISTICA" ToRole="VIA_CIRCULACION" />
+    <NavigationProperty Name="VIA_CIRCULACION1" Relationship="Model.VCDO" FromRole="DETALLE_CARACTERISTICA" ToRole="VIA_CIRCULACION" />
+    <NavigationProperty Name="VIA_CIRCULACION2" Relationship="Model.VCS" FromRole="DETALLE_CARACTERISTICA" ToRole="VIA_CIRCULACION" />
+    <NavigationProperty Name="VIA_CIRCULACION3" Relationship="Model.VCTPDC" FromRole="DETALLE_CARACTERISTICA" ToRole="VIA_CIRCULACION" />
+    <NavigationProperty Name="VIA_CIRCULACION4" Relationship="Model.VCVDM" FromRole="DETALLE_CARACTERISTICA" ToRole="VIA_CIRCULACION" />
+    <NavigationProperty Name="VEHICULO" Relationship="Model.VDC" FromRole="DETALLE_CARACTERISTICA" ToRole="VEHICULO" />
+    <NavigationProperty Name="VIA_CIRCULACION5" Relationship="Model.VNDC" FromRole="DETALLE_CARACTERISTICA" ToRole="VIA_CIRCULACION" />
+  </EntityType>
+  <EntityType Name="INFRACCION">
+    <Key>
+      <PropertyRef Name="ID_INFRACCION" />
+    </Key>
+    <Property Name="ID_INFRACCION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_DETALLE_INFRACCION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_GRAVEDAD" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="MONTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_TIPO_MONEDA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PUNTAJE_GRAV" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.INDC" FromRole="INFRACCION" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA1" Relationship="Model.INDCMO" FromRole="INFRACCION" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="MULTA" Relationship="Model.MIDC" FromRole="INFRACCION" ToRole="MULTA" />
+  </EntityType>
+  <EntityType Name="INFRACTOR">
+    <Key>
+      <PropertyRef Name="ID_INFRACTOR" />
+    </Key>
+    <Property Name="ID_INFRACTOR" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="RUT_INFR" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="NOMBRE_INFR" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="APPAT_INFR" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="APMAT_INFR" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_NAC" Type="DateTime" />
+    <Property Name="PASSWORD_INFR" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="TELEFONO_INFR" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="DIRECCION_INFR" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="EMAIL_INFR" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_LICENCIA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ACTIVO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ENVIO_EMAIL" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ID_VEHICULO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CLASE_LICENCIA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PUNTAJE_INFRACCIONES" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.IDC" FromRole="INFRACTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="VEHICULO" Relationship="Model.IV" FromRole="INFRACTOR" ToRole="VEHICULO" />
+    <NavigationProperty Name="MULTA" Relationship="Model.MI" FromRole="INFRACTOR" ToRole="MULTA" />
+  </EntityType>
+  <EntityType Name="MONEDA">
+    <Key>
+      <PropertyRef Name="ID_MONEDA" />
+    </Key>
+    <Property Name="ID_MONEDA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_TIPO_MONEDA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="VALOR_PESOS" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FECHA" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.MODC" FromRole="MONEDA" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="MULTA" Relationship="Model.MUMO" FromRole="MONEDA" ToRole="MULTA" />
+  </EntityType>
+  <EntityType Name="MULTA">
+    <Key>
+      <PropertyRef Name="ID_MULTA" />
+    </Key>
+    <Property Name="ID_MULTA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Nullable="false" />
+    <Property Name="FECHA_INTEGRACION" Type="DateTime" Nullable="false" />
+    <Property Name="HORA_MULTA" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="MONTO_ADICIONAL" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="PAGADA" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ACTIVO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="RETENCION_LICENCIA" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="CARABINERO_OPC" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ID_LIC_CARAB" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="LICENCIA_ENTREGADA" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ID_PERSONAL" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_INFRACTOR" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_VIA_CIRCULACION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_INFRACCION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_MONEDA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DETALLE_ADICIONAL" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="ID_RESTRICCION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="APELACION" Relationship="Model.AM" FromRole="MULTA" ToRole="APELACION" />
+    <NavigationProperty Name="INFRACCION" Relationship="Model.MIDC" FromRole="MULTA" ToRole="INFRACCION" />
+    <NavigationProperty Name="INFRACTOR" Relationship="Model.MI" FromRole="MULTA" ToRole="INFRACTOR" />
+    <NavigationProperty Name="MONEDA" Relationship="Model.MUMO" FromRole="MULTA" ToRole="MONEDA" />
+    <NavigationProperty Name="PERSONAL" Relationship="Model.MP" FromRole="MULTA" ToRole="PERSONAL" />
+    <NavigationProperty Name="RESTRICCION" Relationship="Model.MURES" FromRole="MULTA" ToRole="RESTRICCION" />
+    <NavigationProperty Name="VIA_CIRCULACION" Relationship="Model.MVC" FromRole="MULTA" ToRole="VIA_CIRCULACION" />
+  </EntityType>
+  <EntityType Name="PERSONAL">
+    <Key>
+      <PropertyRef Name="ID_PERSONAL" />
+    </Key>
+    <Property Name="ID_PERSONAL" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="RUT_PER" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+    <Property Name="NOMBRE_PER" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="APPAT_PER" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="APMAT_PER" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="PASSWORD_PER" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="TELEFONO_PER" Type="String" MaxLength="32" Unicode="false" FixedLength="false" />
+    <Property Name="DIRECCION_PER" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="EMAIL_PER" Type="String" MaxLength="70" Unicode="false" FixedLength="false" />
+    <Property Name="ACTIVO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ID_TIPO_FUNCIONARIO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.PDC" FromRole="PERSONAL" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="MULTA" Relationship="Model.MP" FromRole="PERSONAL" ToRole="MULTA" />
+    <NavigationProperty Name="PERSONAL_SECTOR" Relationship="Model.PSP" FromRole="PERSONAL" ToRole="PERSONAL_SECTOR" />
+    <NavigationProperty Name="TURNO" Relationship="Model.TP" FromRole="PERSONAL" ToRole="TURNO" />
+  </EntityType>
+  <EntityType Name="PERSONAL_SECTOR">
+    <Key>
+      <PropertyRef Name="ID_PERSONAL_SECTOR" />
+    </Key>
+    <Property Name="ID_PERSONAL_SECTOR" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FECHA_INICIO" Type="DateTime" Nullable="false" />
+    <Property Name="FECHA_TERMINO" Type="DateTime" Nullable="false" />
+    <Property Name="ID_PERSONAL" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_SECTOR" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="PERSONAL" Relationship="Model.PSP" FromRole="PERSONAL_SECTOR" ToRole="PERSONAL" />
+    <NavigationProperty Name="SECTOR" Relationship="Model.PSS" FromRole="PERSONAL_SECTOR" ToRole="SECTOR" />
+  </EntityType>
+  <EntityType Name="RESTRICCION">
+    <Key>
+      <PropertyRef Name="ID_RESTRICCION" />
+    </Key>
+    <Property Name="ID_RESTRICCION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TIPO_PROHIBICION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DIAS_PROH" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TIPO_GRAVISIMA" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TIPO_GRAVE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TIPO_LEVE" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.RDC" FromRole="RESTRICCION" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="MULTA" Relationship="Model.MURES" FromRole="RESTRICCION" ToRole="MULTA" />
+  </EntityType>
+  <EntityType Name="SECTOR">
+    <Key>
+      <PropertyRef Name="ID_SECTOR" />
+    </Key>
+    <Property Name="ID_SECTOR" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_NOMBRE_SECTOR" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CUAD_PUNTOA1" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CUAD_PUNTOA2" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CUAD_PUNTOB1" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CUAD_PUNTOB2" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CUAD_PUNTOC1" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CUAD_PUNTOC2" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CUAD_PUNTOD1" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CUAD_PUNTOD2" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CUAD_PUNTOE1" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_CUAD_PUNTOE2" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.DSDCA1" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA1" Relationship="Model.DSDCA2" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA2" Relationship="Model.DSDCB1" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA3" Relationship="Model.DSDCB2" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA4" Relationship="Model.DSDCC1" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA5" Relationship="Model.DSDCC2" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA6" Relationship="Model.DSDCD1" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA7" Relationship="Model.DSDCD2" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA8" Relationship="Model.DSDCE1" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA9" Relationship="Model.DSDCE2" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA10" Relationship="Model.DSDCS" FromRole="SECTOR" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="PERSONAL_SECTOR" Relationship="Model.PSS" FromRole="SECTOR" ToRole="PERSONAL_SECTOR" />
+  </EntityType>
+  <EntityType Name="TURNO">
+    <Key>
+      <PropertyRef Name="ID_TURNO" />
+    </Key>
+    <Property Name="ID_TURNO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FECHA_TURNO" Type="DateTime" Nullable="false" />
+    <Property Name="HORA_INICIO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="HORA_FIN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="DETALLE_TURNO" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="ID_PERSONAL" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="PERSONAL" Relationship="Model.TP" FromRole="TURNO" ToRole="PERSONAL" />
+  </EntityType>
+  <EntityType Name="VEHICULO">
+    <Key>
+      <PropertyRef Name="ID_VEHICULO" />
+    </Key>
+    <Property Name="ID_VEHICULO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PATENTE" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="ANIO_VEHICULO" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="ID_TIPO_VEHICULO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.VDC" FromRole="VEHICULO" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="INFRACTOR" Relationship="Model.IV" FromRole="VEHICULO" ToRole="INFRACTOR" />
+  </EntityType>
+  <EntityType Name="VIA_CIRCULACION">
+    <Key>
+      <PropertyRef Name="ID_VIA_CIRCULACION" />
+    </Key>
+    <Property Name="ID_VIA_CIRCULACION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CANT_PISTAS" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ACTIVO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="ID_NOMBRE_CALLE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_SENTIDO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_ORIENTACION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_TIPO_CALLE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_VELOC_MAXIMA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ID_SECTOR" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.VCDC" FromRole="VIA_CIRCULACION" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA1" Relationship="Model.VCDO" FromRole="VIA_CIRCULACION" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA2" Relationship="Model.VCS" FromRole="VIA_CIRCULACION" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA3" Relationship="Model.VCTPDC" FromRole="VIA_CIRCULACION" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA4" Relationship="Model.VCVDM" FromRole="VIA_CIRCULACION" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA5" Relationship="Model.VNDC" FromRole="VIA_CIRCULACION" ToRole="DETALLE_CARACTERISTICA" />
+    <NavigationProperty Name="MULTA" Relationship="Model.MVC" FromRole="VIA_CIRCULACION" ToRole="MULTA" />
+  </EntityType>
+  <Association Name="AAA">
+    <End Role="ADJUNTOS_APELACION" Type="Model.ADJUNTOS_APELACION" Multiplicity="1" />
+    <End Role="APELACION" Type="Model.APELACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADJUNTOS_APELACION">
+        <PropertyRef Name="ID_ADJUNTO" />
+      </Principal>
+      <Dependent Role="APELACION">
+        <PropertyRef Name="ID_ADJUNTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ADCA">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
+    <End Role="APELACION" Type="Model.APELACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="APELACION">
+        <PropertyRef Name="ESTADO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AM">
+    <End Role="MULTA" Type="Model.MULTA" Multiplicity="1" />
+    <End Role="APELACION" Type="Model.APELACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MULTA">
+        <PropertyRef Name="ID_MULTA" />
+      </Principal>
+      <Dependent Role="APELACION">
+        <PropertyRef Name="ID_MULTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DCC">
+    <End Role="CARACTERISTICA" Type="Model.CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CARACTERISTICA">
+        <PropertyRef Name="ID_CARACTERISTICA" />
+      </Principal>
+      <Dependent Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_CARACTERISTICA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCA1">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_CUAD_PUNTOA1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCA2">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_CUAD_PUNTOA2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCB1">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_CUAD_PUNTOB1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCB2">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_CUAD_PUNTOB2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCC1">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_CUAD_PUNTOC1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCC2">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_CUAD_PUNTOC2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCD1">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_CUAD_PUNTOD1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCD2">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_CUAD_PUNTOD2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCE1">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_CUAD_PUNTOE1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCE2">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_CUAD_PUNTOE2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DSDCS">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="SECTOR">
+        <PropertyRef Name="ID_SECTOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IDC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="INFRACTOR" Type="Model.INFRACTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="INFRACTOR">
+        <PropertyRef Name="ID_CLASE_LICENCIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INDC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="INFRACCION" Type="Model.INFRACCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="INFRACCION">
+        <PropertyRef Name="ID_DETALLE_INFRACCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INDCMO">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="INFRACCION" Type="Model.INFRACCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="INFRACCION">
+        <PropertyRef Name="ID_TIPO_MONEDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MODC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="MONEDA" Type="Model.MONEDA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="MONEDA">
+        <PropertyRef Name="ID_TIPO_MONEDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PDC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="PERSONAL" Type="Model.PERSONAL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="PERSONAL">
+        <PropertyRef Name="ID_TIPO_FUNCIONARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RDC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="RESTRICCION" Type="Model.RESTRICCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="RESTRICCION">
+        <PropertyRef Name="TIPO_PROHIBICION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VCDC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="VIA_CIRCULACION" Type="Model.VIA_CIRCULACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="VIA_CIRCULACION">
+        <PropertyRef Name="ID_SENTIDO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VCDO">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="VIA_CIRCULACION" Type="Model.VIA_CIRCULACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="VIA_CIRCULACION">
+        <PropertyRef Name="ID_ORIENTACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VCS">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="VIA_CIRCULACION" Type="Model.VIA_CIRCULACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="VIA_CIRCULACION">
+        <PropertyRef Name="ID_SECTOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VCTPDC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="VIA_CIRCULACION" Type="Model.VIA_CIRCULACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="VIA_CIRCULACION">
+        <PropertyRef Name="ID_TIPO_CALLE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VCVDM">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="VIA_CIRCULACION" Type="Model.VIA_CIRCULACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="VIA_CIRCULACION">
+        <PropertyRef Name="ID_VELOC_MAXIMA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VDC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="VEHICULO" Type="Model.VEHICULO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="VEHICULO">
+        <PropertyRef Name="ID_TIPO_VEHICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VNDC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="VIA_CIRCULACION" Type="Model.VIA_CIRCULACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="VIA_CIRCULACION">
+        <PropertyRef Name="ID_NOMBRE_CALLE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MIDC">
+    <End Role="INFRACCION" Type="Model.INFRACCION" Multiplicity="1" />
+    <End Role="MULTA" Type="Model.MULTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INFRACCION">
+        <PropertyRef Name="ID_INFRACCION" />
+      </Principal>
+      <Dependent Role="MULTA">
+        <PropertyRef Name="ID_INFRACCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="IV">
+    <End Role="VEHICULO" Type="Model.VEHICULO" Multiplicity="1" />
+    <End Role="INFRACTOR" Type="Model.INFRACTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VEHICULO">
+        <PropertyRef Name="ID_VEHICULO" />
+      </Principal>
+      <Dependent Role="INFRACTOR">
+        <PropertyRef Name="ID_VEHICULO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MI">
+    <End Role="INFRACTOR" Type="Model.INFRACTOR" Multiplicity="1" />
+    <End Role="MULTA" Type="Model.MULTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INFRACTOR">
+        <PropertyRef Name="ID_INFRACTOR" />
+      </Principal>
+      <Dependent Role="MULTA">
+        <PropertyRef Name="ID_INFRACTOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MUMO">
+    <End Role="MONEDA" Type="Model.MONEDA" Multiplicity="1" />
+    <End Role="MULTA" Type="Model.MULTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MONEDA">
+        <PropertyRef Name="ID_MONEDA" />
+      </Principal>
+      <Dependent Role="MULTA">
+        <PropertyRef Name="ID_MONEDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MP">
+    <End Role="PERSONAL" Type="Model.PERSONAL" Multiplicity="1" />
+    <End Role="MULTA" Type="Model.MULTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONAL">
+        <PropertyRef Name="ID_PERSONAL" />
+      </Principal>
+      <Dependent Role="MULTA">
+        <PropertyRef Name="ID_PERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MURES">
+    <End Role="RESTRICCION" Type="Model.RESTRICCION" Multiplicity="1" />
+    <End Role="MULTA" Type="Model.MULTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESTRICCION">
+        <PropertyRef Name="ID_RESTRICCION" />
+      </Principal>
+      <Dependent Role="MULTA">
+        <PropertyRef Name="ID_RESTRICCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MVC">
+    <End Role="VIA_CIRCULACION" Type="Model.VIA_CIRCULACION" Multiplicity="1" />
+    <End Role="MULTA" Type="Model.MULTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VIA_CIRCULACION">
+        <PropertyRef Name="ID_VIA_CIRCULACION" />
+      </Principal>
+      <Dependent Role="MULTA">
+        <PropertyRef Name="ID_VIA_CIRCULACION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PSP">
+    <End Role="PERSONAL" Type="Model.PERSONAL" Multiplicity="1" />
+    <End Role="PERSONAL_SECTOR" Type="Model.PERSONAL_SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONAL">
+        <PropertyRef Name="ID_PERSONAL" />
+      </Principal>
+      <Dependent Role="PERSONAL_SECTOR">
+        <PropertyRef Name="ID_PERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TP">
+    <End Role="PERSONAL" Type="Model.PERSONAL" Multiplicity="1" />
+    <End Role="TURNO" Type="Model.TURNO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERSONAL">
+        <PropertyRef Name="ID_PERSONAL" />
+      </Principal>
+      <Dependent Role="TURNO">
+        <PropertyRef Name="ID_PERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PSS">
+    <End Role="SECTOR" Type="Model.SECTOR" Multiplicity="1" />
+    <End Role="PERSONAL_SECTOR" Type="Model.PERSONAL_SECTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SECTOR">
+        <PropertyRef Name="ID_SECTOR" />
+      </Principal>
+      <Dependent Role="PERSONAL_SECTOR">
+        <PropertyRef Name="ID_SECTOR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

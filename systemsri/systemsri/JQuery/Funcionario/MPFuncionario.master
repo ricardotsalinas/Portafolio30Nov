@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Vistas/Maestro/Maestro.Master" AutoEventWireup="true" CodeBehind="MPFuncionario.master.cs" Inherits="systemsri.Vistas.Funcionario.MPFuncionario" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<title>SRI - Funcionario</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="menuAdmin" runat="server">
+    <script src="../../JQuery/Funcionario.js"></script>
+        <ul class="menuIzq">
+            <li> <a href="inicioFun.aspx">Inicio</a></li>
+            <li> <a href="datosFuncionario.aspx">Datos Personales</a></li>
+            <li><a href="adminInfractor.aspx">Administrar Infractores</a></li>
+            <li> <a href="generarTurno.aspx">Generar Turnos</a></li>
+            <li><a>Salir</a></li>
+        </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contenidoAdmin" runat="server">
+    <asp:ContentPlaceHolder ID="contenidoAdmin" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>

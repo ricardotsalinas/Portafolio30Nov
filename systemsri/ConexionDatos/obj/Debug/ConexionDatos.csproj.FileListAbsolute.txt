@@ -1,0 +1,97 @@
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\Portafolio\Desktop\portafolio\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\portafolio\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb

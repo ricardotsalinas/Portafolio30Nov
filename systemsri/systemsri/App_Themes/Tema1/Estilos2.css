@@ -1,0 +1,133 @@
+﻿body {
+}
+
+.homeSanbeca
+{
+    width:80%; 
+    margin: 0 auto;
+    padding:5px;   
+}
+
+.contenidoCabecerahome img
+{
+    top:-10px;
+    margin-top: 15px;
+}
+
+
+/*contenidoCabecerahome*/
+.cabecerahome 
+{
+    width: 100%;
+    height:264px;
+    background-color:#5a5a5a;
+    color: white;
+    text-align: center;
+}
+
+.loginUser 
+{
+    width: 100%;
+    height:30px;
+    float: none;
+    text-align:right;
+    background-color:#5a5a5a;
+    border-radius:10px 10px 0px 0px ;
+    vertical-align:middle;
+    padding-top:10px;
+}
+
+.logoTipoHom 
+{
+    
+    float: right;
+    text-align:center;
+    margin-top:100px;    
+}
+
+
+.menuHome 
+{
+    height:30px;
+    width: 100%;
+    font-style:normal;
+    background-color:#0404B4;
+    color: white;
+    text-align:right;
+    vertical-align:middle;
+    padding-top:7px;
+}
+
+    
+ /*Cuerpo*/
+.columCentroHome
+{
+    float:left;
+    width:50%;
+    min-height:600px;
+    background-color:White;
+    text-align: center;
+}
+
+.columIzqHome
+{
+    float:left;
+    width:25%;
+    min-height:600px;
+    background-color:#F2F2F2;
+    text-align: center;
+}
+
+.columDerHome
+{
+    float:left;
+    width:25%;
+    min-height:600px;
+    background-color:#F2F2F2;
+    text-align: center;
+}
+
+.columIzqHome img
+{
+    width:220px;   
+}
+
+.columDerHome img
+{
+    width:220px;   
+}
+
+.noticias img
+{
+     width:500px; 
+     height:400px;  
+}   
+
+.direcLog img
+{
+    width:500px;
+}
+
+.textMov
+{
+    height:30px;
+    font-size:20px;
+    font-weight:normal;
+    font-style:normal;
+    color: #848484;
+    padding-top:3px;
+}
+
+.pieHome
+{
+    height:37px;
+    background-color:#5a5a5a;
+    border-radius:0px 0px 10px 10px;
+    clear:both; 
+    text-align:center;
+    padding-top:3px;
+    font-size:15px;
+    font-weight:normal;
+    font-style:normal;
+    color: White;
+}

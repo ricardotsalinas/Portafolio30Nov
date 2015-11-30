@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Maestro.master.cs" Inherits="systemsri.Vistas.Maestro.Maestro" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server" >
+
+<link rel="shortcut icon" href="../../Recursos/Home/faviconsri">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Archivo de jquery -->
+    <script src="../../JQuery/jquery-1.11.3.js" type="text/javascript"></script>
+    <title>Bienvenido a SRI</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+ <script language="javascript" type="text/javascript">
+     javascript: window.history.forward(1);
+     </script>
+
+</head>
+<body>
+ <div>
+     <div id="cabecera" class="cabecera">
+
+         <div id="contenidoCabecera" class="contenidoCabecera">
+
+             <div id="logoTipo1" class="logoTipo1">
+                <img alt="imgHome1" src="../../Recursos/Imagenes/sri%20colores%20blanco.png" style="height: 71px; width: 74px; margin-top: 0px; margin-left: 60px" />
+             </div>
+             <div id="logoTipo2" class="logoTipo2">
+                <a href="../homeSanBernardo.aspx"/><img alt="imgHome2" src="../../Recursos/Imagenes/logo%20sn%20bdo.png" style="height: 41px; width: 116px; margin-top: 10px; margin-left: 60px" />
+               </div>
+             </div>
+
+     </div>
+
+        <div id="bajo" class="bajo">
+
+             <div id="columIzq" class="columIzq">
+
+                 <asp:ContentPlaceHolder ID="menuAdmin" runat="server">
+        
+                 </asp:ContentPlaceHolder>
+                 
+             </div>
+
+             <div id="columCentro" class="columCentro">
+
+                 <asp:ContentPlaceHolder ID="contenidoAdmin" runat="server">
+        
+                 </asp:ContentPlaceHolder>
+
+             </div>
+
+             <div id="pie" class="pie">
+
+             </div>
+         </div>       
+    </div>
+</body>
+</html>

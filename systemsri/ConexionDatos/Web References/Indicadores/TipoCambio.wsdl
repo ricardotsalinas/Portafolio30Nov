@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://pkindicadores/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="TipoCambio" targetNamespace="http://pkindicadores/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/IndicadoresEconomicos/TipoCambio?xsd=1" namespace="http://pkindicadores/" />
+    </xsd:schema>
+  </types>
+  <message name="Indicador">
+    <part name="parameters" element="tns:Indicador" />
+  </message>
+  <message name="IndicadorResponse">
+    <part name="parameters" element="tns:IndicadorResponse" />
+  </message>
+  <message name="ParserConfigurationException">
+    <part name="fault" element="tns:ParserConfigurationException" />
+  </message>
+  <message name="SAXException">
+    <part name="fault" element="tns:SAXException" />
+  </message>
+  <message name="IOException">
+    <part name="fault" element="tns:IOException" />
+  </message>
+  <portType name="indicadores">
+    <operation name="Indicador">
+      <input wsam:Action="http://pkindicadores/indicadores/IndicadorRequest" message="tns:Indicador" />
+      <output wsam:Action="http://pkindicadores/indicadores/IndicadorResponse" message="tns:IndicadorResponse" />
+      <fault wsam:Action="http://pkindicadores/indicadores/Indicador/Fault/ParserConfigurationException" name="ParserConfigurationException" message="tns:ParserConfigurationException" />
+      <fault wsam:Action="http://pkindicadores/indicadores/Indicador/Fault/SAXException" name="SAXException" message="tns:SAXException" />
+      <fault wsam:Action="http://pkindicadores/indicadores/Indicador/Fault/IOException" name="IOException" message="tns:IOException" />
+    </operation>
+  </portType>
+  <binding name="indicadoresPortBinding" type="tns:indicadores">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Indicador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ParserConfigurationException">
+        <soap:fault use="literal" name="ParserConfigurationException" namespace="" />
+      </fault>
+      <fault name="SAXException">
+        <soap:fault use="literal" name="SAXException" namespace="" />
+      </fault>
+      <fault name="IOException">
+        <soap:fault use="literal" name="IOException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="TipoCambio">
+    <port name="indicadoresPort" binding="tns:indicadoresPortBinding">
+      <soap:address location="http://localhost:8080/IndicadoresEconomicos/TipoCambio" />
+    </port>
+  </service>
+</definitions>

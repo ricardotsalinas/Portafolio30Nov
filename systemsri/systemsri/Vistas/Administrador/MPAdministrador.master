@@ -1,0 +1,21 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Vistas/Maestro/Maestro.Master" AutoEventWireup="true" CodeBehind="MPAdministrador.master.cs" Inherits="systemsri.Vistas.Administrador.MPAdministrador" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+   
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="menuAdmin" runat="server">
+       <script src="../../JQuery/Administrador.js"></script>
+       <ul class="menuIzq">
+            <li> <a href="inicioAdmin.aspx" id="ia">Inicio</a></li>
+            <li> <a href="adminUsuarios.aspx" id="au">Administrador de Usuarios</a></li>
+            <li><a href="adminCalles.aspx" id="ac">Administrador de Calles</a></li>
+            <li><a href="adminInfracciones.aspx" id="ain">Administrador de Infracciones</a></li>
+            <li><a href="DatosAdmin.aspx" id="a1">Cambiar Mi Contraseña</a></li>
+           <li><a href="../LoginUsuario/loginUsuario.aspx">Salir</a></li>
+        </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contenidoAdmin" runat="server">
+    <asp:ContentPlaceHolder ID="contenidoAdmin" runat="server">
+        
+    </asp:ContentPlaceHolder>
+
+</asp:Content>

@@ -1,0 +1,37 @@
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb

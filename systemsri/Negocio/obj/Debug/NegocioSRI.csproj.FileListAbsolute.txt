@@ -1,0 +1,108 @@
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\javier\Desktop\Entity y Oracle\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\portafolio\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\portafolio\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\portafolio\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\javier\Desktop\Nueva carpeta\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\BRADY\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\BRADY\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\BRADY\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\PortafolioVistaOK\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\javier\Desktop\Portafolio\portafolio\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ClasesESpeciales.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ConexionDatos.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\Oracle.DataAccess.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ClasesESpeciales.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\bin\Debug\ConexionDatos.pdb
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\NegocioSRI.csprojResolveAssemblyReference.cache
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\Negocio.dll
+C:\Users\Portafolio\Desktop\GITHUB\BRADY\PortafolioVistaCompilado\systemsri\Negocio\obj\Debug\Negocio.pdb

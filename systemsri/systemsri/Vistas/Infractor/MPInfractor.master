@@ -1,0 +1,18 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Vistas/Maestro/Maestro.Master" AutoEventWireup="true" CodeBehind="MPInfractor.master.cs" Inherits="systemsri.Vistas.Infractor.MPInfractor" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>SRI - Infractor</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="menuAdmin" runat="server">
+     <script src="../../JQuery/Infractor.js"></script>
+       <ul class="menuIzq">
+            <li> <a href="datosInfractor.aspx">Datos Personales</a></li>
+            <li> <a href="historialMultasInfractor.aspx">Historial de Multas</a></li>
+            <li><a href="../LoginUsuario/loginInfractor.aspx">Salir</a></li>
+
+        </ul>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contenidoAdmin" runat="server">
+    <asp:ContentPlaceHolder ID="contenidoAdmin" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</asp:Content>
