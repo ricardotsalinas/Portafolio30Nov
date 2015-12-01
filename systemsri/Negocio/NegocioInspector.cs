@@ -5,6 +5,7 @@ using System.Text;
 using ConexionDatos;
 using ConexionDatos.Entity;
 using ConexionDatos.Dao;
+using System.Collections;
 
 namespace Negocio
 {
@@ -22,7 +23,9 @@ namespace Negocio
            return DaoInfractor.Instancia.buscarInfractorPat(rut);
        }
 
-      
-
+       public ArrayList datosRegistroCivil(String patente)
+       {
+           return WebService.instancia.datosRegistroCivil(patente);
+       }
     }
 }

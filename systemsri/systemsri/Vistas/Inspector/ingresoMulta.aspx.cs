@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Negocio;
 using ConexionDatos.Entity;
 using System.Data;
+using System.Collections;
 
 namespace systemsri.Vistas.Inspector
 {
@@ -15,7 +16,7 @@ namespace systemsri.Vistas.Inspector
         public List<DETALLE_CARACTERISTICA> lts = new List<DETALLE_CARACTERISTICA>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+           if (Session["usuario"].Equals("") || Session["usuario"] == null ||
                 !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 42))
             {
                 Response.Redirect("../LoginUsuario/loginUsuario.aspx");
@@ -25,16 +26,16 @@ namespace systemsri.Vistas.Inspector
            lts = NegocioAdministrador.instancia.listarMotivo();
            if (!Page.IsPostBack)
            {
-
-               
                 ddlistLugarInfIM.Items.Clear();
                 ddlistLugarInfIM.DataSource = NegocioAdministrador.instancia.listarCalle();
                 ddlistLugarInfIM.DataBind();
+                ddlistLugarInfIM.Items.Insert(0, new ListItem("Seleccionar", ""));
                 
                 ddlistMotivoIM.DataSource = NegocioAdministrador.instancia.listarMotivoddl();
                 ddlistMotivoIM.DataTextField = "DETALLE_CAR";
                 ddlistMotivoIM.DataValueField = "ID_DETCAR";
                 ddlistMotivoIM.DataBind();
+                ddlistMotivoIM.Items.Insert(0, new ListItem("Seleccionar", ""));
   
            }
 
@@ -94,22 +95,33 @@ namespace systemsri.Vistas.Inspector
 
         protected void btnBuscarRut_Click(object sender, EventArgs e)
         {
-            VEHICULO vh = NegocioInspector.instancia.buscarPatente(txtPatIM.Text);
-            INFRACTOR inf = NegocioInspector.instancia.buscarInfractor(Convert.ToInt32(vh.ID_VEHICULO));
-            txtRutIM.Text = inf.RUT_INFR;
-            txtNomIM.Text = inf.NOMBRE_INFR;
-            txtAppatIM.Text = inf.APPAT_INFR;
-            txtApmatIM.Text = inf.APMAT_INFR;
+            
+            if (!String.IsNullOrEmpty(txtPatIM.Text))
+            {
+                ArrayList datos = new ArrayList();
+                datos = NegocioInspector.instancia.datosRegistroCivil(txtPatIM.Text);
+                if (!datos[0].ToString().Equals("error"))
+                {
+                    txtRutIM.Text = datos[0].ToString();
+                    txtNomIM.Text = datos[1].ToString();
+                    txtPatIM.Text = datos[2].ToString();
+                    txtAppatIM.Text = datos[3].ToString();
+                    txtApmatIM.Text = datos[4].ToString();
+                }
+                //error datos no encotrados
+            }
+            ///////// agregar un errro al momento de no tener nada escrito 
+
 
         }
 
       
         protected void btnLimpiarIM_Click(object sender, EventArgs e)
         {
-            
-            txtPatIM.Text = "";
-            txtDetCompleto.Text = "";
-            txtDetalleAdicIM.Text = "";
+
+            txtPatIM.Text = String.Empty;
+            txtDetCompleto.Text = String.Empty;
+            txtDetalleAdicIM.Text = String.Empty;
            
         }
 

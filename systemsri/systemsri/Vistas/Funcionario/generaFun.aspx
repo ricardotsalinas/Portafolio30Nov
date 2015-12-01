@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Funcionario/MPFuncionario.master" AutoEventWireup="true" CodeBehind="generaFun.aspx.cs" Inherits="systemsri.Vistas.Funcionario.generaFun" %>
+<%@ OutputCache Location="None" NoStore="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="contenidoAdmin" runat="server">
 <form id="formGeneraFun" runat="server">
      <div class="alinInicial"> 

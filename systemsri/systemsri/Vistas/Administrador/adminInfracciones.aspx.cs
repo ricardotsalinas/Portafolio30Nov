@@ -131,7 +131,8 @@ namespace systemsri.Vistas.Administrador
 
         }
 
-        protected void gvInfrAI_RowCommand(object sender, GridViewCommandEventArgs e)
+        
+   protected void gvInfrAI_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             String dato = "";
             int index = Convert.ToInt32(e.CommandArgument);
@@ -164,7 +165,7 @@ namespace systemsri.Vistas.Administrador
 
             }
         }
-
+    
       
         
     }

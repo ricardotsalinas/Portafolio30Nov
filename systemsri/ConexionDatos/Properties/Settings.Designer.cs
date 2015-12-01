@@ -25,21 +25,21 @@ namespace ConexionDatos.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/IndicadoresEconomicos/TipoCambio")]
-        public string ConexionDatos_Indicadores_TipoCambio {
-            get {
-                return ((string)(this["ConexionDatos_Indicadores_TipoCambio"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("DATA SOURCE=XE;PASSWORD=SRI;PERSIST SECURITY INFO=True;USER ID=SRI")]
         public string RPT {
             get {
                 return ((string)(this["RPT"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:8080/RegistroCivil/RegistroCivilWS")]
+        public string ConexionDatos_RegistroCivil_RegistroCivilWS {
+            get {
+                return ((string)(this["ConexionDatos_RegistroCivil_RegistroCivilWS"]));
             }
         }
     }

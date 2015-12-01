@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Funcionario/MPFuncionario.master" AutoEventWireup="true" CodeBehind="inicioFun.aspx.cs" Inherits="systemsri.Vistas.Funcionario.inicioFun" %>
+<%@ OutputCache Location="None" NoStore="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="contenidoAdmin" runat="server">
         <h1 style="text-align: center" >&nbsp;</h1>
     <h2 style="text-align: center">Bienvenido al Sistema de Registro de Infracciones SRI.</h2>

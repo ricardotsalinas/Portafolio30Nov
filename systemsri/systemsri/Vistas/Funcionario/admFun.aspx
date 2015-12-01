@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Funcionario/MPFuncionario.master" AutoEventWireup="true" CodeBehind="admFun.aspx.cs" Inherits="systemsri.Vistas.Funcionario.admFun" %>
+<%@ OutputCache Location="None" NoStore="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="contenidoAdmin" runat="server">
 <form id="formAdmfun" runat="server" >
      <div class="alinInicial"> 

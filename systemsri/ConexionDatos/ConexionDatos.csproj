@@ -74,7 +74,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Web References\Indicadores\Reference.cs">
+    <Compile Include="Web References\RegistroCivil\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -96,12 +96,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\Indicadores\Reference.map">
+    <None Include="Web References\RegistroCivil\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Web References\Indicadores\TipoCambio.wsdl" />
-    <None Include="Web References\Indicadores\TipoCambio.xsd">
+    <None Include="Web References\RegistroCivil\RegistroCivilWS.wsdl" />
+    <None Include="Web References\RegistroCivil\RegistroCivilWS.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -109,16 +109,16 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://localhost:8080/IndicadoresEconomicos/TipoCambio%3fWSDL">
+    <WebReferenceUrl Include="http://localhost:8080/RegistroCivil/RegistroCivilWS%3fWSDL">
       <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\Indicadores\</RelPath>
-      <UpdateFromURL>http://localhost:8080/IndicadoresEconomicos/TipoCambio%3fWSDL</UpdateFromURL>
+      <RelPath>Web References\RegistroCivil\</RelPath>
+      <UpdateFromURL>http://localhost:8080/RegistroCivil/RegistroCivilWS%3fWSDL</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>ConexionDatos_Indicadores_TipoCambio</CachedSettingsPropName>
+      <CachedSettingsPropName>ConexionDatos_RegistroCivil_RegistroCivilWS</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>

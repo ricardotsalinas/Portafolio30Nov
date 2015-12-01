@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections;
 
 namespace ConexionDatos.Dao
 {
@@ -10,14 +11,27 @@ namespace ConexionDatos.Dao
 
         public static WebService instancia = new WebService();
 
-        Indicadores.TipoCambio indicador = new Indicadores.TipoCambio();
+        RegistroCivil.RegistroCivilWS registroCivil = new RegistroCivil.RegistroCivilWS();
 
 
-        public int IndicadorEconomico(String tipo)
+        public ArrayList datosRegistroCivil(String patente)
         {
-            decimal valorTipo = Convert.ToDecimal(indicador.Indicador(tipo));
-            int  valorPeso = (int)Math.Round(valorTipo);
-            return valorPeso;
+            ArrayList datosRegistros = new ArrayList();
+            var datos = registroCivil.Registro(patente);
+
+            if (datos != null)
+            {
+                foreach (var item in datos)
+                {
+                    datosRegistros.Add(item);
+                }
+            }
+            else
+            {
+                datosRegistros.Add("error");
+            }
+
+            return datosRegistros;
         }
 
 
