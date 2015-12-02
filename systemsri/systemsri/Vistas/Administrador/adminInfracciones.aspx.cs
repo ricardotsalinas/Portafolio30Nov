@@ -22,12 +22,15 @@ namespace systemsri.Vistas.Administrador
             }
             if (!Page.IsPostBack)
             {
-                ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccionar", ""));
-                ddlistGravedadAI.DataSource = NegocioAdministrador.instancia.listarOrientacion();
-                ddlistGravedadAI.DataBind();
-                ddlistTipoMonedaAI.Items.Insert(0, new ListItem("Seleccionar", ""));
-                ddlistTipoMonedaAI.DataSource = NegocioAdministrador.instancia.listarVelocidad();
-                ddlistTipoMonedaAI.DataBind();
+                
+                ddlistGravedadAI.DataSource = NegocioAdministrador.instancia.listarGravedad();
+               ddlistGravedadAI.DataBind();
+               ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccionar", ""));
+               
+                
+                ddlistTipoMonedaAI.DataSource = NegocioAdministrador.instancia.listarTipoMoneda();
+               ddlistTipoMonedaAI.DataBind();
+               ddlistTipoMonedaAI.Items.Insert(0, new ListItem("Seleccionar", ""));
                 lblInfoAdI.Visible = false;
                 chkActivoAIn.Checked = true;
             }
@@ -36,21 +39,87 @@ namespace systemsri.Vistas.Administrador
 
         protected void btnBuscarAI_Click(object sender, EventArgs e)
         {
-            
-           
+
+
         }
 
         protected void btnGuardarAI_Click(object sender, EventArgs e)
         {
 
-            lblInfoAdI.Visible = true;
-            lblInfoAdI.Text = "Los campos en Rojo son obligatorios";
-            lblInfoAdI.ForeColor = System.Drawing.Color.Red;
-            ddlistGravedadAI.BorderColor = System.Drawing.Color.Red;
-            ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.Red;
-            txtValorAI.BorderColor = System.Drawing.Color.Red;
-            txtValorAI.BorderWidth = 1;
-            txtDescrInfraccionAI.BorderColor = System.Drawing.Color.Red;
+          
+                int n = 0;
+                if (txtDescrInfraccionAI.Text == "" || txtDescrInfraccionAI.Text == null)
+                {
+                    txtDescrInfraccionAI.BorderColor = System.Drawing.Color.Red;
+                    txtDescrInfraccionAI.BorderWidth = 1;
+                    n = 1;
+                }
+                else
+                {
+                    txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
+                    txtDescrInfraccionAI.BorderWidth = 1;
+                    n = 0;
+                }
+
+                if (txtValorAI.Text == "" || txtValorAI.Text == null)
+                {
+                    txtValorAI.BorderColor = System.Drawing.Color.Red;
+                    txtValorAI.BorderWidth = 1;
+                    n = 1;
+                }
+                else
+                {
+                    txtValorAI.BorderColor = System.Drawing.Color.LightGray;
+                    txtValorAI.BorderWidth = 1;
+                    n = 0;
+                }
+                if (ddlistGravedadAI.SelectedIndex == 0)
+                {
+
+                    ddlistGravedadAI.BorderColor = System.Drawing.Color.Red;
+                    n = 1;
+                }
+                else
+                {
+                    ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
+                    ddlistGravedadAI.BorderWidth = 1;
+                    n = 0;
+                }
+
+                if (ddlistGravedadAI.SelectedIndex == 0)
+                {
+
+                    ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.Red;
+                    n = 1;
+                }
+                else
+                {
+                    ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
+                    ddlistTipoMonedaAI.BorderWidth = 1;
+                    n = 0;
+                }
+
+
+
+                if (n == 1)
+                {
+                    lblInfoAdI.Visible = true;
+                    lblInfoAdI.Text = "Los campos en Rojo son obligatorios";
+                    lblInfoAdI.ForeColor = System.Drawing.Color.Red;
+
+
+                }
+                else
+                {
+                    //CASO NO VACIOS
+                    lblInfoAdI.Visible = true;
+                    lblInfoAdI.Text = "xxxxxxxxxxxxxxxxxx";
+                    lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
+
+
+                }
+   
+
 
         }
 
@@ -104,11 +173,11 @@ namespace systemsri.Vistas.Administrador
             lblInfoAdI.Visible = false;
             ddlistGravedadAI.SelectedIndex = 0;
             ddlistTipoMonedaAI.SelectedIndex = 0;
-          
+
             txtDescrInfraccionAI.Text = "";
             txtValorAI.Text = "";
-            ddlistGravedadAI.Items.Insert(0,new ListItem("Seleccione",""));
-           
+            ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccione", ""));
+
             ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
             ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
             txtValorAI.BorderColor = System.Drawing.Color.LightGray;
@@ -139,21 +208,41 @@ namespace systemsri.Vistas.Administrador
 
         }
 
-        
-   protected void gvInfrAI_RowCommand(object sender, GridViewCommandEventArgs e)
+
+        protected void gvInfrAI_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            int index = Convert.ToInt32(e.CommandArgument);
-            GridViewRow row = gvInfrAI.Rows[index];
-            txtDescrInfraccionAI.Text = row.Cells[4].Text;
-            txtValorAI.Text = row.Cells[2].Text;
             
-            
-               
+            int contador = 0;
+            if (e.CommandName == "BotonGV")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = gvInfrAI.Rows[index];
+                txtDescrInfraccionAI.Text = row.Cells[4].Text;
+                txtValorAI.Text = row.Cells[2].Text;
+
+                foreach (var item in ddlistGravedadAI.Items)
+                {
+                    if (item.ToString().Equals(row.Cells[1].Text))
+                        ddlistGravedadAI.SelectedIndex = contador;
+                    contador = contador + 1;
+                }
+                contador = 0;
+                foreach (var item in ddlistTipoMonedaAI.Items)
+                {
+                    if (item.ToString().Equals(row.Cells[3].Text))
+                        ddlistTipoMonedaAI.SelectedIndex = contador;
+                    contador = contador + 1;
+                }
+                contador = 0;
+
+
+
+
+
+            }
+
 
 
         }
-    
-      
-        
     }
 }

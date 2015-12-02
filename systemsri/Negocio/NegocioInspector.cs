@@ -6,6 +6,7 @@ using ConexionDatos;
 using ConexionDatos.Entity;
 using ConexionDatos.Dao;
 using System.Collections;
+using ClasesESpeciales.Helper;
 
 namespace Negocio
 {
@@ -26,6 +27,12 @@ namespace Negocio
        public ArrayList datosRegistroCivil(String patente)
        {
            return WebService.instancia.datosRegistroCivil(patente);
+       }
+
+       public int actualizaClavePropia(String clave, String rut)
+       {
+           clave = GeneraMd5.instancia.md5(clave);
+           return DaoPersonal.instancia.actualizaClavePropia(clave, rut);
        }
     }
 }

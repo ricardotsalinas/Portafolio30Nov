@@ -191,6 +191,8 @@
     <NavigationProperty Name="ADJUNTOS_APELACION" Relationship="Model.AAA" FromRole="APELACION" ToRole="ADJUNTOS_APELACION" />
     <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.ADCA" FromRole="APELACION" ToRole="DETALLE_CARACTERISTICA" />
     <NavigationProperty Name="MULTA" Relationship="Model.AM" FromRole="APELACION" ToRole="MULTA" />
+    <Property Type="Decimal" Name="MONTO_AP" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="ROL_CAUSA" Nullable="false" Precision="38" Scale="0" />
   </EntityType>
   <EntityType Name="CARACTERISTICA">
     <Key>

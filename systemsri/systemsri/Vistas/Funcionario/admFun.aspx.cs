@@ -136,10 +136,8 @@ namespace systemsri.Vistas.Funcionario
                 if (n == 1)
                 {
                     lblInfoAF.Visible = true;
-                    lblInfoAF.Text = "Los campos en Rojo son obligatorios";
+                    lblInfoAF.Text = "No se pueden guardar datos sin agregar el Rut";
                     lblInfoAF.ForeColor = System.Drawing.Color.Red;
-
-
                 }
             }
 

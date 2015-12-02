@@ -606,13 +606,17 @@ namespace ConexionDatos.Entity
         /// <param name="aCEPTADO">Valor inicial de la propiedad ACEPTADO.</param>
         /// <param name="iD_ADJUNTO">Valor inicial de la propiedad ID_ADJUNTO.</param>
         /// <param name="iD_MULTA">Valor inicial de la propiedad ID_MULTA.</param>
-        public static APELACION CreateAPELACION(global::System.Decimal iD_APELACION, global::System.String aCEPTADO, global::System.Decimal iD_ADJUNTO, global::System.Decimal iD_MULTA)
+        /// <param name="mONTO_AP">Valor inicial de la propiedad MONTO_AP.</param>
+        /// <param name="rOL_CAUSA">Valor inicial de la propiedad ROL_CAUSA.</param>
+        public static APELACION CreateAPELACION(global::System.Decimal iD_APELACION, global::System.String aCEPTADO, global::System.Decimal iD_ADJUNTO, global::System.Decimal iD_MULTA, global::System.Decimal mONTO_AP, global::System.Decimal rOL_CAUSA)
         {
             APELACION aPELACION = new APELACION();
             aPELACION.ID_APELACION = iD_APELACION;
             aPELACION.ACEPTADO = aCEPTADO;
             aPELACION.ID_ADJUNTO = iD_ADJUNTO;
             aPELACION.ID_MULTA = iD_MULTA;
+            aPELACION.MONTO_AP = mONTO_AP;
+            aPELACION.ROL_CAUSA = rOL_CAUSA;
             return aPELACION;
         }
 
@@ -790,6 +794,54 @@ namespace ConexionDatos.Entity
         private Nullable<global::System.Decimal> _ESTADO;
         partial void OnESTADOChanging(Nullable<global::System.Decimal> value);
         partial void OnESTADOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal MONTO_AP
+        {
+            get
+            {
+                return _MONTO_AP;
+            }
+            set
+            {
+                OnMONTO_APChanging(value);
+                ReportPropertyChanging("MONTO_AP");
+                _MONTO_AP = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("MONTO_AP");
+                OnMONTO_APChanged();
+            }
+        }
+        private global::System.Decimal _MONTO_AP;
+        partial void OnMONTO_APChanging(global::System.Decimal value);
+        partial void OnMONTO_APChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal ROL_CAUSA
+        {
+            get
+            {
+                return _ROL_CAUSA;
+            }
+            set
+            {
+                OnROL_CAUSAChanging(value);
+                ReportPropertyChanging("ROL_CAUSA");
+                _ROL_CAUSA = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ROL_CAUSA");
+                OnROL_CAUSAChanged();
+            }
+        }
+        private global::System.Decimal _ROL_CAUSA;
+        partial void OnROL_CAUSAChanging(global::System.Decimal value);
+        partial void OnROL_CAUSAChanged();
 
         #endregion
 

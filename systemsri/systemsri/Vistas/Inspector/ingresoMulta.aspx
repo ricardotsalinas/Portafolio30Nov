@@ -52,7 +52,8 @@
                              <td style="width:2%"></td>
                     <td class="c2g">LUGAR DE <br/> LA INFRACCIÓN:</td> 
                     <td class="c2b"><asp:DropDownList id="ddlistLugarInfIM" runat="server" 
-                    CssClass="input1" DataTextField="DETALLE_CAR" DataValueField="ID_DETCAR"></asp:DropDownList></td>
+                    CssClass="input1" DataTextField="DETALLE_CAR" DataValueField="ID_DETCAR" 
+                            onselectedindexchanged="ddlistLugarInfIM_SelectedIndexChanged"></asp:DropDownList></td>
                  </tr>
                   
               </table>

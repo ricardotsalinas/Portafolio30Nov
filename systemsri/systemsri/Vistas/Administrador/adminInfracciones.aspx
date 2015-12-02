@@ -4,6 +4,7 @@
 <%@ OutputCache Location="None" NoStore="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="contenidoAdmin" runat="server">
     <form id="formAdminInfracciones" runat="server">
+    
     <div class="alinInicial">
         <h2>
             Crear y/o Editar Infracciones</h2>
@@ -84,8 +85,8 @@
                         <asp:BoundField HeaderText="VALOR" DataField="VALOR" />
                         <asp:BoundField HeaderText="TIPO MONEDA" DataField="TIPO_MONEDA" />
                         <asp:BoundField HeaderText="DESCRIPCION INFRACCION" DataField="DESCR_INF" />
-                        <asp:ButtonField HeaderText="MODIFICAR" ButtonType="Image" ImageUrl="../../Recursos/Imagenes/buscar.jpg"
-                            CommandName="detalle">
+                        <asp:ButtonField HeaderText="VER" ButtonType="Image" ImageUrl="../../Recursos/Imagenes/buscar.jpg"
+                            CommandName="BotonGV">
                             <ItemStyle Width="10%"></ItemStyle>
                         </asp:ButtonField>
                     </Columns>

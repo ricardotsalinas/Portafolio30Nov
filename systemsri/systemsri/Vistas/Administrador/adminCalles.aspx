@@ -113,7 +113,7 @@
                 <asp:BoundField HeaderText="SENTIDO" DataField="SENTIDO" />
                 <asp:BoundField HeaderText="SECTOR" DataField="SECTOR" />
                 <asp:ButtonField ButtonType="Image" CommandName="botonGV" 
-                    ImageUrl="~/Recursos/Imagenes/buscar.jpg" />
+                    ImageUrl="~/Recursos/Imagenes/buscar.jpg" HeaderText="VER" />
 
 
             </Columns>

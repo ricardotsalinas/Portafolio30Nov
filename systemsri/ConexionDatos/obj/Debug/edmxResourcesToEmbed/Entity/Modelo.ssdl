@@ -183,7 +183,9 @@
     <Property Name="ID_APELACION" Type="number" Nullable="false" />
     <Property Name="SOLICITUD_APELACION" Type="varchar2" MaxLength="250" />
     <Property Name="DESCRIPCION_AP" Type="varchar2" MaxLength="250" />
+    <Property Name="MONTO_AP" Type="number" Nullable="false" />
     <Property Name="ACEPTADO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="ROL_CAUSA" Type="number" Nullable="false" />
     <Property Name="ID_ADJUNTO" Type="number" Nullable="false" />
     <Property Name="ID_MULTA" Type="number" Nullable="false" />
     <Property Name="ESTADO" Type="number" />

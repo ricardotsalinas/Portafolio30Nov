@@ -22,13 +22,13 @@ namespace systemsri.Vistas.Administrador {
         protected global::System.Web.UI.HtmlControls.HtmlForm formDatosAdmin;
         
         /// <summary>
-        /// Control validar.
+        /// Control lblInfoDA.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label validar;
+        protected global::System.Web.UI.WebControls.Label lblInfoDA;
         
         /// <summary>
         /// Control tblPassDA.

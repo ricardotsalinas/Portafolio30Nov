@@ -9,7 +9,7 @@
              <li> <a href="datosFun.aspx">Datos Personales</a></li>
             <li><a href="admFun.aspx">Administrar Infractores</a></li>
             <li> <a href="generaFun.aspx">Generar Turnos</a></li>
-            <li><a href="../LoginUsuario/loginInfractor.aspx">Salir</a></li>
+            <li><a href="../LoginUsuario/loginUsuario.aspx">Salir</a></li>
             
         </ul>
 </asp:Content>

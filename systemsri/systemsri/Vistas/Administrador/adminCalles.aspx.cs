@@ -44,7 +44,7 @@ namespace systemsri.Vistas.Administrador
         protected void btnGuardarAC_Click(object sender, EventArgs e)
         {
             lblInfoAC.Text = "La calle ha sido ingresada";
-            lblInfoAC.ForeColor = System.Drawing.Color.Red;
+            lblInfoAC.ForeColor = System.Drawing.Color.Gray;
 
             int n = 0;
             if (txtNombreCalle.Text == "" || txtNombreCalle.Text == null)

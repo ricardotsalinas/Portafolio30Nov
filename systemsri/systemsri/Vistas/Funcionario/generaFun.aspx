@@ -23,30 +23,55 @@
                  </tr>
                  <tr>
                     <td class="c1g">FECHA DEL TURNO:</td> 
-                    <td class="c1b"><asp:TextBox ID="txtFechaGF" runat="server" CssClass="input1"/></td>
+                    <td class="c1b"><asp:TextBox ID="txtFechaGF" runat="server" CssClass="input1" 
+                            TextMode="Date"/></td>
                  </tr>
                  <tr>
                     <td class="c1g">HORA INICIO TURNO:</td> 
-                    <td class="c1b"><asp:TextBox ID="txtHoraIniGF" runat="server" CssClass="input3"/></td>
+                    <td class="c1b"><asp:TextBox ID="txtHoraIniGF" runat="server" CssClass="input3" 
+                            TextMode="Time"/></td>
                  </tr>
                  <tr>
                     <td class="c1g">HORA TÉRMINO TURNO:</td>
-                    <td class="c1b"><asp:TextBox ID="txtHoraTermGF" runat="server" CssClass="input3"/></td>
+                    <td class="c1b"><asp:TextBox ID="txtHoraTermGF" runat="server" CssClass="input3" 
+                            TextMode="Time"/></td>
                  </tr>
                  <tr>
                     <td class="c1g">DETALLE ADICIONAL <br/> (OPCIONAL):</td> 
-                    <td class="c1b"><asp:TextBox ID="txtDetAdicGF" CssClass="input2" runat="server" placeholder="Ingrese detalle adicional"/></td>
+                    <td class="c1b"><asp:TextBox ID="txtDetAdicGF" CssClass="input2" runat="server" 
+                            placeholder="Ingrese detalle adicional" MaxLength="2" TextMode="MultiLine"/></td>
                  </tr>
               </table>
-              <table>
+              <table style="height: 61px">
                  <tr>
                     <td style="text-align: center; width: 22%;"></td>
                     <td class="cbtn">
                     <asp:Button ID="btnGuardarGF" class="boton" runat="server" Text="GUARDAR" onclick="btnGuardarGF_Click"/></td>
                     <td class="cbtn">
-                    <asp:Button ID="btnBorrarGF" class="boton" runat="server" Text="BORRAR"  /></td>
+                    <asp:Button ID="btnBorrarGF" class="boton" runat="server" Text="BORRAR" onclick="btnBorrarGF_Click"  /></td>
+                             <td class="cbtn">
+                    <asp:Button ID="btnListarGF" class="boton2" runat="server" Text="LISTAR TURNOS" onclick="btnListarGF_Click"  /></td>
                  </tr>
               </table>
+              <asp:GridView ID="gvTurnos" runat="server" AutoGenerateColumns="False" 
+             CssClass="Grilla" OnSelectedIndexChanged="gvTurnos_SelectedIndexChanged" 
+             AllowPaging="True" ondatabound="gvTurnos_DataBound" Visible="true"
+             OnPageIndexChanging="gvTurnos_PageIndexChanging" 
+             onrowcommand="gvTurnos_RowCommand" onrowdatabound="gvTurnos_RowDataBound" 
+             PageSize="20" CellPadding="5">
+                  <Columns>
+                      <asp:BoundField HeaderText="ID"          DataField="ID_TUR"/>
+                      <asp:BoundField HeaderText="RUT"         DataField="RUT_PER"/>
+                      <asp:BoundField HeaderText="NOMBRE"      DataField="NOMBRE_PER"/>
+                      <asp:BoundField HeaderText="SECTOR"      DataField="SECTOR"/>
+                      <asp:BoundField HeaderText="FECHA"       DataField="FECHA_TUR"/>
+                      <asp:BoundField HeaderText="DESCRIPCION" DataField="DESCRIPCION_TUR"/>
+                  </Columns>
+                    <PagerSettings Mode="NumericFirstLast" PageButtonCount="30" />
+         </asp:GridView>
+
+                          <br/>
+
            </div> 
         </form>
 </asp:Content>

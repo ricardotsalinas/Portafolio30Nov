@@ -28,7 +28,7 @@
                         ItemStyle-Width="16%">
 <ItemStyle Width="16%"></ItemStyle>
                     </asp:BoundField>
-                    <asp:BoundField HeaderText="VALOR" DataField="VALOR_PESO" ItemStyle-Width="16%">
+                    <asp:BoundField HeaderText="VALOR" DataField="VALOR_PESO" ItemStyle-Width="16%" DataFormatString="${0:N0}" HtmlEncode="false">
 <ItemStyle Width="16%"></ItemStyle>
                     </asp:BoundField>
                     <asp:BoundField HeaderText="ESTADO" DataField="PAGADA" ItemStyle-Width="16%">

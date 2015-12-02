@@ -5,9 +5,8 @@
      <form id="formDatosAdmin" runat="server">
          <div class="alinInicial">
              <h2>Datos Personales</h2>
-             <h2><a href="../homeSanBernardo.aspx"/>
-                    <asp:Label ID="validar" runat="server" Visible="False" CssClass="lbl"></asp:Label>
-                    </h2>
+             <asp:Label ID="lblInfoDA" runat="server" Visible="False" CssClass="lbl"></asp:Label>
+                   
                <table id="tblPassDA" runat="server" width="70%">
                  <tr>
                      <td class="c3g" colspan="2">GENERE SU NUEVA CONTRASEÑA</td>

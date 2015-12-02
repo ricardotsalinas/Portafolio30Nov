@@ -130,7 +130,7 @@ namespace systemsri.Vistas.Infractor
                         txtCambiaPassDI1.BorderColor = System.Drawing.Color.Red;
                         txtCambiaPassDI2.BorderColor = System.Drawing.Color.Red;
                         txtCambiaPassDI1.BorderWidth = 1;
-                        txtCambiaPassDI1.BorderWidth = 1;
+                        txtCambiaPassDI2.BorderWidth = 1;
                     }
                 
             }

@@ -26,5 +26,12 @@ namespace Negocio
         {
             return ReportesDAO.Instancia.ReporteInfracciones();
         }
+
+
+        public List<ReporteTurnos> ListarTurnos()
+        {
+            return ReportesDAO.Instancia.ReporteTurnos();
+        }
+
     }
 }

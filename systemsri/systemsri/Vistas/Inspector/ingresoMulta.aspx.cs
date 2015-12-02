@@ -135,6 +135,11 @@ namespace systemsri.Vistas.Inspector
 
         }
 
+        protected void ddlistLugarInfIM_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         
      
     }

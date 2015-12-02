@@ -37,7 +37,7 @@
                     <td class="c1b"><asp:TextBox runat="server" id="txtTelefonoDIn" CssClass="input1"  Enabled="False"></asp:TextBox></td>
                     <td>
                         <asp:ImageButton ID="imgTelefonoDI" runat="server" 
-                            ImageUrl="~/Recursos/Imagenes/editar.PNG" onclick="ImageTelefono_Click" />
+                        ImageUrl="~/Recursos/Imagenes/editar.PNG" onclick="ImageTelefono_Click" />
                     </td>
                 </tr>
                
@@ -50,9 +50,9 @@
             </table>
                <asp:Label ID="lblInfoDIn" runat="server" CssClass="lbl" Text="label" Visible="False" 
                     Font-Underline="False" />
-                <br/> </div>  
+                <br/> 
 
-             <div><br /></div>
+             <br/>
                <table id="tblPassDIn" runat="server" width="70%">
                  <tr>
                      <td class="c3g" colspan="2">GENERE SU NUEVA CONTRASEÑA</td>

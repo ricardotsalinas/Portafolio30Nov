@@ -49,5 +49,64 @@ namespace ConexionDatos.Dao
                 return lbuscar;
             }
         }
+
+
+        public Boolean existeCalle(String nombre)
+        {
+            List<DETALLE_CARACTERISTICA> list = new List<DETALLE_CARACTERISTICA>();
+            using (SRI sri = new SRI())
+            {
+                list = sri.DETALLE_CARACTERISTICA.Where(p => p.DETALLE_CAR== nombre).ToList();
+            }
+
+            if (list.Count > 0)
+                return false;
+            else
+                return true;
+
+        }
+
+       /* public int CrearPersonal(PERSONAL dto, int tipo)
+        {
+            try
+            {
+                using (SRI sri = new SRI())
+                {
+                    if (!existeRut(dto.RUT_PER.ToString()) && tipo == 2)
+                    {
+                        PERSONAL per = new PERSONAL();
+                        per = sri.PERSONAL.Where(a => a.RUT_PER == dto.RUT_PER).FirstOrDefault();
+                        per.RUT_PER = dto.RUT_PER;
+                        per.NOMBRE_PER = dto.NOMBRE_PER;
+                        per.ACTIVO = dto.ACTIVO;
+                        per.APMAT_PER = dto.APMAT_PER;
+                        per.APPAT_PER = dto.APPAT_PER;
+                        per.TELEFONO_PER = dto.TELEFONO_PER;
+                        per.DIRECCION_PER = dto.DIRECCION_PER;
+                        per.EMAIL_PER = per.EMAIL_PER;
+                        per.ID_TIPO_FUNCIONARIO = dto.ID_TIPO_FUNCIONARIO;
+                        sri.SaveChanges();
+                        return 2;
+                    }
+                    else
+                    {
+                        if (tipo == 1)
+                        {
+                            dto.ID_PERSONAL = retornarNuevoId();
+                            sri.PERSONAL.AddObject(dto);
+                            sri.SaveChanges();
+                            return 1;
+                        }
+                        else
+                            return 0;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+        }*/
+
     }
 }

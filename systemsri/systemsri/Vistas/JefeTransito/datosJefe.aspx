@@ -21,7 +21,8 @@
                 </tr>
                 <tr>
                     <td class="c1g">EMAIL:</td> 
-                    <td class="c1b"><asp:TextBox runat="server" id="txtEmailDJ" CssClass="input1" Enabled="False"></asp:TextBox></td>
+                    <td class="c1b"><asp:TextBox runat="server" id="txtEmailDJ" CssClass="input1" 
+                            Enabled="False" MaxLength="70"></asp:TextBox></td>
                    <td>
                         <asp:ImageButton ID="imgEmailDJ" runat="server" 
                             ImageUrl="~/Recursos/Imagenes/editar.PNG" onclick="ImageEmail_Click" />
@@ -29,7 +30,8 @@
                 </tr>
                 <tr>
                     <td class="c1g">TELÉFONO:</td> 
-                    <td class="c1b"><asp:TextBox runat="server" id="txtTelefonoDJ" CssClass="input1" Enabled="False"></asp:TextBox></td>
+                    <td class="c1b"><asp:TextBox runat="server" id="txtTelefonoDJ" CssClass="input1" 
+                            Enabled="False" MaxLength="15"></asp:TextBox></td>
                    <td>
                         <asp:ImageButton ID="imgTelefonoDJ" runat="server" 
                             ImageUrl="~/Recursos/Imagenes/editar.PNG" onclick="imgTelefonoDJ_Click" />
@@ -43,9 +45,9 @@
                 </tr>
             </table>
              <br/>
-           <asp:Label ID="lblInfoDJ" runat="server" CssClass="lbl" Text="label" Visible="False" 
+           <asp:Label ID="lblInfoDJ" runat="server" CssClass="lbl" Visible="False" 
                     Font-Underline="False" />
-                <br/> </div>  
+                <br/>  
 
             <table id="tblPassDJ" runat="server"  width="70%">
                  <tr>
@@ -53,23 +55,25 @@
                  </tr>
                  <tr>
                     <td class="ctxt2" >
-                        <asp:TextBox runat="server" id="txtCambiaPassDJ1" CssClass="input1" TextMode="Password"  />
+                        <asp:TextBox runat="server" id="txtCambiaPassDJ1" CssClass="input1" 
+                            TextMode="Password" MaxLength="25"  />
                         <h5 style="margin:auto">*Ingrese nueva contraseña</h5>
 
                     </td>
                     <td class="ctxt2">
-                       <asp:TextBox runat="server" id="txtCambiaPassDJ2" CssClass="input1" TextMode="Password"  />
+                       <asp:TextBox runat="server" id="txtCambiaPassDJ2" CssClass="input1" 
+                            TextMode="Password" MaxLength="25"  />
                         <h5 style="margin:auto">*Confirme nueva contraseña</h5>
                     </td>
                 </tr>
              </table>
-             <div><br /></div>
+           <br />
              <table style="margin: 0 auto;">
                 <tr>
                     <td><asp:Button ID="btnGuardarDJ" CssClass="boton" runat="server" Text="GUARDAR" 
                             onclick="btnGuardarDJ_Click" /></td>
                 </tr>
              </table>
-          
+          </div>
         </form>
 </asp:Content>

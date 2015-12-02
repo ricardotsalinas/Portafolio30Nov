@@ -35,7 +35,7 @@ namespace systemsri.Vistas.Funcionario
                         txtDirDF.Text = item.DIRECCION;
                         txtEmailDF.Text = item.EMAIL;
                         txtTelefonoDF.Text = item.TELEFONO;
-                  
+
                     }
                 }
                 else
@@ -47,7 +47,7 @@ namespace systemsri.Vistas.Funcionario
             }
         }
 
-      
+
         protected void btnModificaPassDF_Click(object sender, EventArgs e)
         {
             if (tblPassDF.Visible)
@@ -81,13 +81,15 @@ namespace systemsri.Vistas.Funcionario
 
             if (tblPassDF.Visible)
             {
-                if (txtCambiaPassDF1.Text.Length > 25 && txtCambiaPassDF2.Text.Length > 25)
-                {
-                    if (txtCambiaPassDF1.Text.Length > 3 && txtCambiaPassDF2.Text.Length > 3)
+                if (txtCambiaPassDF1.Text.Length > 3 && txtCambiaPassDF2.Text.Length > 3)
                     {
+                        if (txtCambiaPassDF1.Text.Length < 25 && txtCambiaPassDF2.Text.Length < 25)
+                        {
+                    
                         if (txtCambiaPassDF1.Text.Equals(txtCambiaPassDF2.Text))
                         {
                             int resultado = NegocioFuncionario.instancia.actualizaClavePropia(txtCambiaPassDF1.Text, txtRutDF.Text);
+
                             if (resultado == 1)
                             {
                                 tblPassDF.Visible = false;
@@ -95,7 +97,6 @@ namespace systemsri.Vistas.Funcionario
                                 lblInfoDF.Visible = true;
                                 lblInfoDF.Text = "La contraseña ha sido ingresada correctamente";
                                 btnModificaPassDF.Text = "MODIFICAR";
-                                txtCambiaPassDF1.Text = String.Empty;
                                 txtCambiaPassDF2.Text = String.Empty;
                                 txtCambiaPassDF1.BorderColor = System.Drawing.Color.LightGray;
                                 txtCambiaPassDF2.BorderColor = System.Drawing.Color.LightGray;
@@ -116,13 +117,12 @@ namespace systemsri.Vistas.Funcionario
                             txtCambiaPassDF1.BorderWidth = 1;
                             txtCambiaPassDF2.BorderWidth = 1;
                         }
-
                     }
                     else
                     {
                         lblInfoDF.ForeColor = System.Drawing.Color.Red;
                         lblInfoDF.Visible = true;
-                        lblInfoDF.Text = "La contraseña es demasiado corta";
+                        lblInfoDF.Text = "La Contraseña debe contener menos de 25 caracteres";
                         txtCambiaPassDF1.BorderColor = System.Drawing.Color.Red;
                         txtCambiaPassDF2.BorderColor = System.Drawing.Color.Red;
                         txtCambiaPassDF1.BorderWidth = 1;
@@ -133,13 +133,15 @@ namespace systemsri.Vistas.Funcionario
                 {
                     lblInfoDF.ForeColor = System.Drawing.Color.Red;
                     lblInfoDF.Visible = true;
-                    lblInfoDF.Text = "La contraseña es demasiado larga";
+                    lblInfoDF.Text = "La contraseña debe contener al menos 4 caracteres";
                     txtCambiaPassDF1.BorderColor = System.Drawing.Color.Red;
                     txtCambiaPassDF2.BorderColor = System.Drawing.Color.Red;
                     txtCambiaPassDF1.BorderWidth = 1;
                     txtCambiaPassDF2.BorderWidth = 1;
                 }
+
             }
+
 
             if (txtEmailDF.Enabled || txtTelefonoDF.Enabled)
             {
@@ -166,3 +168,4 @@ namespace systemsri.Vistas.Funcionario
         }
     }
 }
+    

@@ -22,32 +22,71 @@ namespace systemsri.Vistas.Administrador
 
         protected void btnGuardarDA_Click(object sender, EventArgs e)
         {
-            if (txtCambiaPass1DA.Text.Equals(txtCambiaPass2DA.Text))
-            {
-                if (txtCambiaPass1DA.Text.Length > 3)
+
+          
+                if (txtCambiaPass1DA.Text.Length > 3 && txtCambiaPass2DA.Text.Length > 3)
                 {
-                    int cambio = Negocio.NegocioAdministrador.instancia.ReiniciarClave(txtCambiaPass1DA.Text, Session["usuario"].ToString());
-                    if (cambio == 1)
+                    if (txtCambiaPass1DA.Text.Length < 25 && txtCambiaPass2DA.Text.Length < 25)
                     {
-                        validar.Text = "La Contraseña ha sido cambiada exitosamente";
-                        validar.ForeColor = System.Drawing.Color.LightGray;
-                        validar.Visible = true;
-                        Response.AddHeader("REFRESH", "1;URL=../LoginUsuario/loginUsuario.aspx");
+
+                        if (txtCambiaPass1DA.Text.Equals(txtCambiaPass2DA.Text))
+                        {
+                            int resultado = Negocio.NegocioAdministrador.instancia.ReiniciarClave(txtCambiaPass1DA.Text, Session["usuario"].ToString());
+                            if (resultado == 1)
+                            {
+                               
+                                lblInfoDA.ForeColor = System.Drawing.Color.Gray;
+                                lblInfoDA.Visible = true;
+                                lblInfoDA.Text = "La contraseña ha sido ingresada correctamente";
+                                btnGuardarDA.Text = "MODIFICAR";
+                                txtCambiaPass1DA.Text = String.Empty;
+                                txtCambiaPass2DA.Text = String.Empty;
+                                txtCambiaPass1DA.BorderColor = System.Drawing.Color.LightGray;
+                                txtCambiaPass2DA.BorderColor = System.Drawing.Color.LightGray;
+                                txtCambiaPass1DA.BorderWidth = 1;
+                                txtCambiaPass2DA.BorderWidth = 1;
+
+
+
+                            }
+                        }
+                        else
+                        {
+                            lblInfoDA.ForeColor = System.Drawing.Color.Red;
+                            lblInfoDA.Visible = true;
+                            lblInfoDA.Text = "Las contraseñas no coinciden";
+                            txtCambiaPass1DA.BorderColor = System.Drawing.Color.Red;
+                            txtCambiaPass2DA.BorderColor = System.Drawing.Color.Red;
+                            txtCambiaPass1DA.BorderWidth = 1;
+                            txtCambiaPass2DA.BorderWidth = 1;
+                        }
+                    }
+                    else
+                    {
+                        lblInfoDA.ForeColor = System.Drawing.Color.Red;
+                        lblInfoDA.Visible = true;
+                        lblInfoDA.Text = "La Contraseña debe contener menos de 25 caracteres";
+                        txtCambiaPass1DA.BorderColor = System.Drawing.Color.Red;
+                        txtCambiaPass2DA.BorderColor = System.Drawing.Color.Red;
+                        txtCambiaPass1DA.BorderWidth = 1;
+                        txtCambiaPass2DA.BorderWidth = 1;
                     }
                 }
                 else
                 {
-                    validar.Text = "La Contraseña es demasiado corta";
-                    validar.ForeColor = System.Drawing.Color.Red;
-                    validar.Visible = true;
+                    lblInfoDA.ForeColor = System.Drawing.Color.Red;
+                    lblInfoDA.Visible = true;
+                    lblInfoDA.Text = "La contraseña debe contener al menos 4 caracteres";
+                    txtCambiaPass1DA.BorderColor = System.Drawing.Color.Red;
+                    txtCambiaPass2DA.BorderColor = System.Drawing.Color.Red;
+                    txtCambiaPass1DA.BorderWidth = 1;
+                    txtCambiaPass2DA.BorderWidth = 1;
                 }
-            }
-            else
-            {
-                validar.Text = "Las Contraseñas no coinciden";
-                validar.ForeColor = System.Drawing.Color.Red;
-                validar.Visible = true;
-            }
+
+            
+
+
+
         }
 
         protected void txtCambiaPass1DA_TextChanged(object sender, EventArgs e)

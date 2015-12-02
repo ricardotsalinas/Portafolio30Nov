@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="Model.Store" Alias="Self" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="10.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="ADJUNTOS_APELACION" EntityType="Model.Store.ADJUNTOS_APELACION" store:Type="Tables" Schema="SRI" />
           <EntitySet Name="APELACION" EntityType="Model.Store.APELACION" store:Type="Tables" Schema="SRI" />
@@ -188,7 +188,9 @@
           <Property Name="ID_APELACION" Type="number" Nullable="false" />
           <Property Name="SOLICITUD_APELACION" Type="varchar2" MaxLength="250" />
           <Property Name="DESCRIPCION_AP" Type="varchar2" MaxLength="250" />
+          <Property Name="MONTO_AP" Type="number" Nullable="false" />
           <Property Name="ACEPTADO" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="ROL_CAUSA" Type="number" Nullable="false" />
           <Property Name="ID_ADJUNTO" Type="number" Nullable="false" />
           <Property Name="ID_MULTA" Type="number" Nullable="false" />
           <Property Name="ESTADO" Type="number" />
@@ -819,8 +821,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -1015,6 +1016,8 @@
           <NavigationProperty Name="ADJUNTOS_APELACION" Relationship="Model.AAA" FromRole="APELACION" ToRole="ADJUNTOS_APELACION" />
           <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.ADCA" FromRole="APELACION" ToRole="DETALLE_CARACTERISTICA" />
           <NavigationProperty Name="MULTA" Relationship="Model.AM" FromRole="APELACION" ToRole="MULTA" />
+          <Property Type="Decimal" Name="MONTO_AP" Nullable="false" Precision="38" Scale="0" />
+          <Property Type="Decimal" Name="ROL_CAUSA" Nullable="false" Precision="38" Scale="0" />
         </EntityType>
         <EntityType Name="CARACTERISTICA">
           <Key>
@@ -1731,6 +1734,8 @@
           <EntitySetMapping Name="APELACION">
             <EntityTypeMapping TypeName="Model.APELACION">
               <MappingFragment StoreEntitySet="APELACION">
+                <ScalarProperty Name="ROL_CAUSA" ColumnName="ROL_CAUSA" />
+                <ScalarProperty Name="MONTO_AP" ColumnName="MONTO_AP" />
                 <ScalarProperty Name="ID_APELACION" ColumnName="ID_APELACION" />
                 <ScalarProperty Name="SOLICITUD_APELACION" ColumnName="SOLICITUD_APELACION" />
                 <ScalarProperty Name="DESCRIPCION_AP" ColumnName="DESCRIPCION_AP" />

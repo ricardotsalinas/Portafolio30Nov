@@ -32,22 +32,14 @@ namespace systemsri.Vistas.Funcionario
                 lblInfoGF.Text = "El rut consultado no existe";
                 lblInfoGF.Visible = true;
                 lblInfoGF.ForeColor = System.Drawing.Color.Red;
-                txtRutGF.Text = "";
-                txtNomGF.Text = "";
                 ddlistSectorGF.Items.Insert(0, new ListItem("Seleccionar", ""));
-                txtFechaGF.Text = "";
-                txtHoraIniGF.Text = "";
-                txtHoraTermGF.Text = "";
-                txtDetAdicGF.Text = "";
-
+            
             }
-
-
+            
             foreach (var list in buscar)
             {
                 txtRutGF.Text = list.RUT_PER.ToString();
                 txtNomGF.Text = list.NOMBRE_PER + " " + list.APPAT_PER;
-
             }
 
         }
@@ -55,6 +47,50 @@ namespace systemsri.Vistas.Funcionario
         protected void ddlistSectorGF_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnBorrarGF_Click(object sender, EventArgs e)
+        {
+            txtRutGF.Text = "";
+            txtNomGF.Text = "";
+            ddlistSectorGF.SelectedIndex = 0;
+            txtFechaGF.Text = "";
+            txtHoraIniGF.Text = "";
+            txtHoraTermGF.Text = "";
+            txtDetAdicGF.Text = "";
+        }
+
+        protected void btnListarGF_Click(object sender, EventArgs e)
+        {
+            gvTurnos.DataSource = NegocioReporteria.Instancia.ListarTurnos();
+            gvTurnos.DataBind();
+        }
+
+        protected void gvTurnos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gvTurnos_DataBound(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gvTurnos_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+        }
+
+        protected void gvTurnos_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+
+        }
+
+        protected void gvTurnos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            //gvTurnos.PageIndex = e.NewPageIndex;
+            //gvTurnos.DataSource = NegocioReporteria.Instancia.ListarTurnos();
+            //gvTurnos.DataBind();
         }
 
        

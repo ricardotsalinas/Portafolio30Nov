@@ -8,40 +8,42 @@ using ClasesESpeciales;
 
 namespace ConexionDatos.Dao
 {
-    public  class ReportesDAO
+    public class ReportesDAO
     {
         public static ReportesDAO Instancia = new ReportesDAO();
 
         public List<ReporteInfractor> ReporteInfractores(String rut)
         {
 
-          
-           using (SRI con = new SRI())
+
+            using (SRI con = new SRI())
             {
-                List<ReporteInfractor> lista = (from m in con.MULTA  
-                                    join a in con.APELACION  on  m.ID_MULTA equals  a.ID_MULTA
-                                     join i in  con.INFRACTOR  on m.ID_INFRACTOR equals i.ID_INFRACTOR
-                                     join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
-                                     join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
-                                     where i.RUT_INFR == rut
-                                       select  new ReporteInfractor { 
-                                                    ESTADO =     a.ESTADO??0,
+                List<ReporteInfractor> lista = (from m in con.MULTA
+                                                join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                                join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                                join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                                join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                                where i.RUT_INFR == rut
+                                                select new ReporteInfractor
+                                                {
+                                                    ESTADO = a.ESTADO ?? 0,
                                                     RUT_INF = i.RUT_INFR,
-                                                    INFR =  i.NOMBRE_INFR+" "+i.APPAT_INFR+" "+i.APMAT_INFR,
-                                                    GRAVEDAD =  inf.ID_GRAVEDAD,
-                                                    VALOR  = m.MONTO_ADICIONAL ?? 0  + mm.VALOR_PESOS,
-                                                    FECHA = m.FECHA_INTEGRACION
-                                                   }
-                                    
+                                                    INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                                    GRAVEDAD = inf.ID_GRAVEDAD,
+                                                    VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS*inf.MONTO,
+                                                    FECHA = m.FECHA_CREACION
+                                                }
+
                     ).ToList();
 
                 return lista;
 
-            
+
             }
 
 
         }
+
 
         public List<ReporteCalles> ReporteCalles()
         {
@@ -104,7 +106,42 @@ namespace ConexionDatos.Dao
 
             }
         }
+
+        public List<ReporteTurnos> ReporteTurnos()
+        {
+            {
+                using (SRI con = new SRI())
+                {
+                    List<ReporteTurnos> lista = (from tu in con.TURNO
+                                                 join pe in con.PERSONAL on tu.ID_PERSONAL equals pe.ID_PERSONAL
+                                                 join ps in con.PERSONAL_SECTOR on pe.ID_PERSONAL equals ps.ID_PERSONAL
+                                                 join se in con.SECTOR on ps.ID_SECTOR equals se.ID_SECTOR
+                                                 join dc in con.DETALLE_CARACTERISTICA on se.ID_NOMBRE_SECTOR equals dc.ID_DETCAR
+
+                                                
+                                                 select new ReporteTurnos
+                                                 {
+                                                     ID_TUR = tu.ID_TURNO,
+                                                     RUT_PER = pe.RUT_PER,
+                                                     NOMBRE_PER = pe.NOMBRE_PER+ " " + pe.APPAT_PER,
+                                                     SECTOR = dc.DETALLE_CAR,
+                                                     FECHA_TUR = tu.FECHA_TURNO,
+                                                     DESCRIPCION_TUR = tu.DETALLE_TURNO
+
+                                                 }
+                                 ).ToList();
+                    return lista;
+
+
+
+                }
+            }
+
+        }
     }
+
+                  
+
             
             }
 
