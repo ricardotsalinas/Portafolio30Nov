@@ -14,14 +14,23 @@ namespace systemsri.Vistas.Administrador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccionar", ""));
-            ddlistGravedadAI.DataSource = NegocioAdministrador.instancia.listarOrientacion();
-            ddlistGravedadAI.DataBind();
-            ddlistTipoMonedaAI.Items.Insert(0, new ListItem("Seleccionar", ""));
-            ddlistTipoMonedaAI.DataSource = NegocioAdministrador.instancia.listarVelocidad();
-            ddlistTipoMonedaAI.DataBind();
-            lblInfoAdI.Visible = false;
-            chkActivoAIn.Checked = true;
+            if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+    !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 47))
+            {
+                Response.Redirect("../LoginUsuario/loginUsuario.aspx");
+
+            }
+            if (!Page.IsPostBack)
+            {
+                ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccionar", ""));
+                ddlistGravedadAI.DataSource = NegocioAdministrador.instancia.listarOrientacion();
+                ddlistGravedadAI.DataBind();
+                ddlistTipoMonedaAI.Items.Insert(0, new ListItem("Seleccionar", ""));
+                ddlistTipoMonedaAI.DataSource = NegocioAdministrador.instancia.listarVelocidad();
+                ddlistTipoMonedaAI.DataBind();
+                lblInfoAdI.Visible = false;
+                chkActivoAIn.Checked = true;
+            }
         }
 
 

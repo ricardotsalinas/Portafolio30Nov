@@ -19,6 +19,12 @@ namespace systemsri.Vistas.Administrador
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+    !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 47))
+            {
+                Response.Redirect("../LoginUsuario/loginUsuario.aspx");
+
+            }
             if (!Page.IsPostBack)
             {
                 ddlistCategoria.Items.Clear();

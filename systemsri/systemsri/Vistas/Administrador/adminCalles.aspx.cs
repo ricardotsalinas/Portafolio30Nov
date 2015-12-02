@@ -14,6 +14,12 @@ namespace systemsri.Vistas.Administrador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+    !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 47))
+            {
+                Response.Redirect("../LoginUsuario/loginUsuario.aspx");
+
+            }
             if (!Page.IsPostBack)
             {
                 ddlistNumPistas.Items.Insert(0, new ListItem("Seleccionar", ""));
@@ -239,13 +245,41 @@ namespace systemsri.Vistas.Administrador
 
         protected void gvCalles_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            int contador = 0;
             if (e.CommandName == "botonGV")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
                 GridViewRow row = gvCalles.Rows[index];
                 txtNombreCalle.Text = row.Cells[1].Text;
+                foreach(var item in ddlistOrient.Items)
+                {
+                    if (item.ToString().Equals(row.Cells[3].Text))
+                        ddlistOrient.SelectedIndex = contador;
+                    contador = contador + 1;
+                 }
+                contador = 0;
+                foreach (var item in ddlistVelMax.Items)
+                {
+                    if (item.ToString().Equals(row.Cells[4].Text))
+                        ddlistVelMax.SelectedIndex = contador;
+                    contador = contador + 1;
+                }
+                contador = 0;
+                foreach (var item in ddlistSentido.Items)
+                {
+                    if (item.ToString().Equals(row.Cells[5].Text))
+                        ddlistSentido.SelectedIndex = contador;
+                    contador = contador + 1;
+                }
+                contador = 0;
+                foreach (var item in ddlistSector.Items)
+                {
+                    if (item.ToString().Equals(row.Cells[6].Text))
+                        ddlistSector.SelectedIndex = contador;
+                    contador = contador + 1;
+                }
                 ddlistNumPistas.SelectedIndex = Convert.ToInt32(row.Cells[2].Text);
-            
+
             }
             
         }

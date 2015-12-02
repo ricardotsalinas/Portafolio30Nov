@@ -104,3 +104,12 @@ C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ConexionDatos\bin\D
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll.config
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ConexionDatos\bin\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ConexionDatos\bin\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ConexionDatos\bin\Debug\Oracle.DataAccess.dll
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb

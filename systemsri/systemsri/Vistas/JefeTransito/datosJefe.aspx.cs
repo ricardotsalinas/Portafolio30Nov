@@ -13,9 +13,10 @@ namespace systemsri.Vistas.JefeTransito
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["usuario"].Equals("") || Session["usuario"] == null)
+            if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+                !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 44))
             {
-                Response.Redirect("../LoginUsuario/loginInfractor.aspx");
+                Response.Redirect("../LoginUsuario/loginUsuario.aspx");
             }
 
             if (!Page.IsPostBack)
