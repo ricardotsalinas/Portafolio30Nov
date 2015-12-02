@@ -22,6 +22,15 @@ namespace systemsri.Vistas.Administrador {
         protected global::System.Web.UI.HtmlControls.HtmlForm formDatosAdmin;
         
         /// <summary>
+        /// Control validar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label validar;
+        
+        /// <summary>
         /// Control tblPassDA.
         /// </summary>
         /// <remarks>
@@ -47,15 +56,6 @@ namespace systemsri.Vistas.Administrador {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCambiaPass2DA;
-        
-        /// <summary>
-        /// Control validar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label validar;
         
         /// <summary>
         /// Control btnGuardarDA.

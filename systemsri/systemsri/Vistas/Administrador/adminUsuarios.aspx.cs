@@ -64,17 +64,23 @@ namespace systemsri.Vistas.Administrador
                         txtTelefono.Text = "";
                         txtEmail.Text = "";
                         chkActivoAU.Checked = true;
+                        ddlistCategoria.SelectedIndex = 0;
                         p.ID_TIPO_FUNCIONARIO = Convert.ToDecimal(ddlistCategoria.SelectedValue);
                         lblInfoAU.Text = "Los Datos han sido guardados exitosamente";
+                        lblInfoAU.Visible = true;
+                        lblInfoAU.ForeColor = System.Drawing.Color.Gray;
 
 
                     }
                     else
-                        lblInfoAU.Text = "Los Datos no han sido guardados exitosamente";
+                    
+                    lblInfoAU.Text = "Los Datos no han sido guardados";
+                    lblInfoAU.Visible = true;
+                    lblInfoAU.ForeColor = System.Drawing.Color.Red;
 
                 }
                 else
-                    lblInfoAU.Text = "El Usuario ya existe";
+                   lblInfoAU.Text = "El Usuario ya existe";
             }
             else
             {
@@ -224,7 +230,10 @@ namespace systemsri.Vistas.Administrador
             {
                 if (buscar.Count == 0)
                 {
-                    txtRutAU.Text = "";
+                    lblInfoAU.Visible = true;
+                    lblInfoAU.Text = "El rut consultado no existe o se encuentra mal escrito";
+                    lblInfoAU.ForeColor = System.Drawing.Color.Red;
+                  //  txtRutAU.Text = "";
                     txtNomAU.Text = "";
                     txtAppatAU.Text = "";
                     txtApmatAU.Text = "";
@@ -394,6 +403,8 @@ namespace systemsri.Vistas.Administrador
                     ddlistCategoria.SelectedIndex = 0;
                     chkActivoAU.Checked = true;
                     lblInfoAU.Text = "Los datos han sido guardados correctamente";
+                    lblInfoAU.Visible = true;
+                    lblInfoAU.ForeColor = System.Drawing.Color.Red;
                 }
                 else
                 {
@@ -473,6 +484,7 @@ namespace systemsri.Vistas.Administrador
                     {
                         lblInfoAU.Visible = true;
                         lblInfoAU.Text = "Los campos en Rojo son obligatorios";
+                        lblInfoAU.ForeColor = System.Drawing.Color.Red;
                     }
                 }
             }

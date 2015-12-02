@@ -49,5 +49,10 @@ namespace systemsri.Vistas.Administrador
                 validar.Visible = true;
             }
         }
+
+        protected void txtCambiaPass1DA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -24,7 +24,7 @@
                     NOMBRES:
                 </td>
                 <td class="c1b">
-                    <asp:TextBox ID="txtNomAU" runat="server" CssClass="input1"></asp:TextBox>
+                    <asp:TextBox ID="txtNomAU" runat="server" CssClass="input1" MaxLength="30"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -32,7 +32,7 @@
                     APELLIDO PATERNO:
                 </td>
                 <td class="c1b">
-                    <asp:TextBox ID="txtAppatAU" runat="server" CssClass="input1"></asp:TextBox>
+                    <asp:TextBox ID="txtAppatAU" runat="server" CssClass="input1" MaxLength="30"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -40,7 +40,7 @@
                     APELLIDO MATERNO:
                 </td>
                 <td class="c1b">
-                    <asp:TextBox ID="txtApmatAU" runat="server" CssClass="input1"></asp:TextBox>
+                    <asp:TextBox ID="txtApmatAU" runat="server" CssClass="input1" MaxLength="30"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -48,7 +48,7 @@
                     DIRECCIÓN:
                 </td>
                 <td class="c1b">
-                    <asp:TextBox ID="txtDireccion" runat="server" CssClass="input1"></asp:TextBox>
+                    <asp:TextBox ID="txtDireccion" runat="server" CssClass="input1" MaxLength="100"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -56,7 +56,7 @@
                     TELEFONO:
                 </td>
                 <td class="c1b">
-                    <asp:TextBox ID="txtTelefono" runat="server" CssClass="input1"></asp:TextBox>
+                    <asp:TextBox ID="txtTelefono" runat="server" CssClass="input1" MaxLength="15"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -64,7 +64,7 @@
                     EMAIL:
                 </td>
                 <td class="c1b">
-                    <asp:TextBox ID="txtEmail" runat="server" CssClass="input1"></asp:TextBox>
+                    <asp:TextBox ID="txtEmail" runat="server" CssClass="input1" MaxLength="70"></asp:TextBox>
                 </td>
             </tr>
             <tr>

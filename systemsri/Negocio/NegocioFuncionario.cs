@@ -62,6 +62,31 @@ namespace Negocio
             clave = GeneraMd5.instancia.md5(clave);
             return DaoPersonal.instancia.actualizaClavePropia(clave, rut);
         }
-   }
+
+        public int CrearPersonal(INFRACTOR p, int p_2)
+        {
+       
+        
+            if(p_2==1)
+                p.PASSWORD_INFR = GeneraMd5.instancia.md5(p.RUT_INFR.ToString().Substring(0,5));
+
+            return DaoInfractor.Instancia.CrearPersonal(p,p_2);
+        
+        }
+
+        public Boolean existeRut(String rut)
+        {
+            return DaoInfractor.Instancia.existeRut(rut);
+        }
+
+       
+        public int ReiniciarClave(String clave, String rut)
+        {
+            clave = GeneraMd5.instancia.md5(clave);
+            return DaoInfractor.Instancia.ReiniciarClave(clave, rut);
+
+        }
+
+    }
 
 }

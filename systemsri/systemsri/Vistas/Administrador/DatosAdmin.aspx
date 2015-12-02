@@ -5,6 +5,9 @@
      <form id="formDatosAdmin" runat="server">
          <div class="alinInicial">
              <h2>Datos Personales</h2>
+             <h2><a href="../homeSanBernardo.aspx"/>
+                    <asp:Label ID="validar" runat="server" Visible="False" CssClass="lbl"></asp:Label>
+                    </h2>
                <table id="tblPassDA" runat="server" width="70%">
                  <tr>
                      <td class="c3g" colspan="2">GENERE SU NUEVA CONTRASEÑA</td>
@@ -12,20 +15,20 @@
                  <tr>
                     <td class="ctxt2" >
                         <asp:TextBox runat="server" id="txtCambiaPass1DA" CssClass="input1" 
-                            TextMode="Password"  />
+                            TextMode="Password" MaxLength="25" 
+                            ontextchanged="txtCambiaPass1DA_TextChanged"  />
                         <h5 style="margin:auto">*Ingrese nueva contraseña</h5>
 
                     </td>
                     <td class="ctxt2">
                        <asp:TextBox runat="server" id="txtCambiaPass2DA" CssClass="input1" 
-                            TextMode="Password"  />
+                            TextMode="Password" MaxLength="25"  />
                         <h5 style="margin:auto">*Confirme nueva contraseña</h5>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                    <asp:Label ID="validar" runat="server" Visible="False" CssClass="lbl"></asp:Label>
-                    </td>
+                        &nbsp;</td>
                 </tr>
                    
              </table>

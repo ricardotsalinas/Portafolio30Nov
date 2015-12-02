@@ -102,7 +102,8 @@
         <asp:GridView ID="gvCalles" runat="server" AutoGenerateColumns="False" CssClass="Grilla"
             OnSelectedIndexChanged="gvCalles_SelectedIndexChanged" AllowPaging="True" PageSize="20"
             OnDataBound="gvCalles_SelectedIndexChanged" OnPageIndexChanging="gvCalles_PageIndexChanging"
-            OnRowDataBound="gvCalles_RowDataBound">
+            OnRowDataBound="gvCalles_RowDataBound" style="margin-right: 40px" 
+            onrowcommand="gvCalles_RowCommand">
             <Columns>
                 <asp:BoundField HeaderText="ID" DataField="ID_CALLE" />
                 <asp:BoundField HeaderText="NOMBRE" DataField="NOMBRE_CALLE" />
@@ -111,7 +112,10 @@
                 <asp:BoundField HeaderText="VEL_MAX" DataField="VEL_MAX" />
                 <asp:BoundField HeaderText="SENTIDO" DataField="SENTIDO" />
                 <asp:BoundField HeaderText="SECTOR" DataField="SECTOR" />
-                <asp:ButtonField ButtonType="Image" ImageUrl="~/Recursos/Imagenes/buscar.jpg" Text="REVISAR" />
+                <asp:ButtonField ButtonType="Image" CommandName="botonGV" 
+                    ImageUrl="~/Recursos/Imagenes/buscar.jpg" />
+
+
             </Columns>
             <PagerSettings Mode="NumericFirstLast" PageButtonCount="30" />
         </asp:GridView>

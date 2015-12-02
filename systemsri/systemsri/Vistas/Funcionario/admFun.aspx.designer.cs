@@ -94,15 +94,6 @@ namespace systemsri.Vistas.Funcionario {
         protected global::System.Web.UI.WebControls.TextBox txtApmatAF;
         
         /// <summary>
-        /// Control txtFnacAF.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFnacAF;
-        
-        /// <summary>
         /// Control txtDirAF.
         /// </summary>
         /// <remarks>
@@ -110,6 +101,15 @@ namespace systemsri.Vistas.Funcionario {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDirAF;
+        
+        /// <summary>
+        /// Control chkActivoAF.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkActivoAF;
         
         /// <summary>
         /// Control btnPassAF.
@@ -128,5 +128,23 @@ namespace systemsri.Vistas.Funcionario {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardarAF;
+        
+        /// <summary>
+        /// Control btnLimpiarAF.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLimpiarAF;
+        
+        /// <summary>
+        /// Control btnActualizarAF.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnActualizarAF;
     }
 }

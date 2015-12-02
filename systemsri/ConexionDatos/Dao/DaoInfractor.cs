@@ -40,7 +40,7 @@ namespace ConexionDatos.Dao
             }
         }
 
-        
+
 
 
 
@@ -64,6 +64,17 @@ namespace ConexionDatos.Dao
             }
         }
 
+
+
+        public List<INFRACTOR> BuscarInfractor(String rut)
+        {
+            using (SRI contex = new SRI())
+            {
+                List<INFRACTOR> lbuscar = new List<INFRACTOR>();
+                lbuscar = contex.INFRACTOR.Where(a => a.RUT_INFR == rut).ToList();
+                return lbuscar;
+            }
+        }
 
         public int ReiniciarClave(string clave, int id)
         {
@@ -158,7 +169,7 @@ namespace ConexionDatos.Dao
             }
         }
 
-        
+
 
 
         public List<HistorialInfractor> listaHistorial(String rut)
@@ -175,13 +186,13 @@ namespace ConexionDatos.Dao
                              where f.RUT_INFR == rut
                              select new HistorialInfractor
                               {
-                                  ID_MULTA      = m.ID_MULTA,
-                                  PATENTE       = v.PATENTE,
-                                  FECHA         = m.FECHA_CREACION,
-                                  TIPO_MULTA    =(m.CARABINERO_OPC.Value == 0 ? "EMPADRONADO" :
+                                  ID_MULTA = m.ID_MULTA,
+                                  PATENTE = v.PATENTE,
+                                  FECHA = m.FECHA_CREACION,
+                                  TIPO_MULTA = (m.CARABINERO_OPC.Value == 0 ? "EMPADRONADO" :
                                                   m.CARABINERO_OPC.Value == 1 ? "CONDUCTOR" : ""),
                                   VALOR_PESO = (e.VALOR_PESOS * i.MONTO) + m.MONTO_ADICIONAL ?? 0,
-                                  PAGADA        = m.PAGADA
+                                  PAGADA = m.PAGADA
                               }
                             ).ToList();
                 return historial;
@@ -197,39 +208,120 @@ namespace ConexionDatos.Dao
             decimal decimalMulta = Convert.ToDecimal(idMulta);
 
             using (SRI con = new SRI())
-            { 
-            
+            {
+
                 detalle = (from m in con.MULTA
-                           join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR 
+                           join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
                            join v in con.VEHICULO on i.ID_VEHICULO equals v.ID_VEHICULO
-                           join f in con.INFRACCION on m.ID_INFRACCION equals f.ID_INFRACCION 
-                           join d in con.DETALLE_CARACTERISTICA on  f.ID_GRAVEDAD equals d.ID_DETCAR
+                           join f in con.INFRACCION on m.ID_INFRACCION equals f.ID_INFRACCION
+                           join d in con.DETALLE_CARACTERISTICA on f.ID_GRAVEDAD equals d.ID_DETCAR
                            join dc in con.DETALLE_CARACTERISTICA on f.ID_DETALLE_INFRACCION equals dc.ID_DETCAR
-                           join o in con.MONEDA on  m.ID_MONEDA equals o.ID_MONEDA 
-                           join vc in con.VIA_CIRCULACION on  m.ID_VIA_CIRCULACION equals vc.ID_VIA_CIRCULACION
+                           join o in con.MONEDA on m.ID_MONEDA equals o.ID_MONEDA
+                           join vc in con.VIA_CIRCULACION on m.ID_VIA_CIRCULACION equals vc.ID_VIA_CIRCULACION
                            join dv in con.DETALLE_CARACTERISTICA on vc.ID_NOMBRE_CALLE equals dv.ID_DETCAR
                            where m.ID_MULTA == decimalMulta
                            select new DetalleMultaInfractor
                            {
-                                ID_MULTA            = m.ID_MULTA,
-                                GRAVEDAD            = d.DETALLE_CAR,
-                                MONTO               = ((f.MONTO * o.VALOR_PESOS) + m.MONTO_ADICIONAL??0),
-                                FECHA_MULTA         = m.FECHA_CREACION,
-                                HORA_MULTA          = m.HORA_MULTA,
-                                MOTIVO_MULTA        = dc.DETALLE_CAR,
-                                DETALLE_ADICIONAL   = m.DETALLE_ADICIONAL,
-                                LUGAR_INFRACCION    = dv.DETALLE_CAR,
-                                NOMBRE              = i.NOMBRE_INFR+" "+ i.APPAT_INFR+" "+i.APMAT_INFR,
-                                RUT                 = i.RUT_INFR,
-                                PATENTE             = v.PATENTE
+                               ID_MULTA = m.ID_MULTA,
+                               GRAVEDAD = d.DETALLE_CAR,
+                               MONTO = ((f.MONTO * o.VALOR_PESOS) + m.MONTO_ADICIONAL ?? 0),
+                               FECHA_MULTA = m.FECHA_CREACION,
+                               HORA_MULTA = m.HORA_MULTA,
+                               MOTIVO_MULTA = dc.DETALLE_CAR,
+                               DETALLE_ADICIONAL = m.DETALLE_ADICIONAL,
+                               LUGAR_INFRACCION = dv.DETALLE_CAR,
+                               NOMBRE = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                               RUT = i.RUT_INFR,
+                               PATENTE = v.PATENTE
                            }
                     ).ToList();
 
                 return detalle;
             }
-        
-        
+
+
         }
+
+
+        public int CrearPersonal(INFRACTOR dto, int tipo)
+        {
+            try
+            {
+                using (SRI sri = new SRI())
+                {
+                    if (!existeRut(dto.RUT_INFR.ToString()) && tipo == 2)
+                    {
+                        INFRACTOR per = new INFRACTOR();
+                        per = sri.INFRACTOR.Where(a => a.RUT_INFR == dto.RUT_INFR).FirstOrDefault();
+                        per.RUT_INFR = dto.RUT_INFR;
+                        per.NOMBRE_INFR = dto.NOMBRE_INFR;
+                        per.ACTIVO = dto.ACTIVO;
+                        per.APMAT_INFR = dto.APMAT_INFR;
+                        per.APPAT_INFR = dto.APPAT_INFR;
+                        per.TELEFONO_INFR = dto.TELEFONO_INFR;
+                        per.DIRECCION_INFR = dto.DIRECCION_INFR;
+                        per.EMAIL_INFR = dto.EMAIL_INFR;
+
+                        sri.SaveChanges();
+                        return 2;
+                    }
+                    else
+                    {
+                        if (tipo == 1)
+                        {
+                            dto.ID_INFRACTOR = RetornarNuevoId();
+                            sri.INFRACTOR.AddObject(dto);
+                            sri.SaveChanges();
+                            return 1;
+                        }
+                        else
+                            return 0;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+        }
+
+
+        public Boolean existeRut(String rut)
+        {
+            List<INFRACTOR> list = new List<INFRACTOR>();
+            using (SRI sri = new SRI())
+            {
+                list = sri.INFRACTOR.Where(p => p.RUT_INFR == rut).ToList();
+            }
+
+            if (list.Count > 0)
+                return false;
+            else
+                return true;
+
+        }
+
+
+        public int ReiniciarClave(String clave, String rut)
+        {
+            try
+            {
+                using (SRI contex = new SRI())
+                {
+                    INFRACTOR infr = new INFRACTOR();
+                    infr = contex.INFRACTOR.Where(p => p.RUT_INFR == rut).FirstOrDefault();
+                    infr.PASSWORD_INFR = clave;
+                    contex.SaveChanges();
+                    return 1;
+                }
+
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+        } 
        
     }
 }

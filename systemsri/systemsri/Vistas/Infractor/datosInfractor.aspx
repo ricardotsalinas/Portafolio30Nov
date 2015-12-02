@@ -27,7 +27,7 @@
                     <td class="c1g">EMAIL:</td> 
                     <td class="c1b">
                      <asp:TextBox runat="server" id="txtEmailDI" CssClass="input1" 
-                            Enabled="False"></asp:TextBox></td>
+                            Enabled="False" MaxLength="70"></asp:TextBox></td>
                            
                    <td>
                    
@@ -41,8 +41,9 @@
               
                 <tr>
                     <td class="c1g">TELÉFONO:</td> 
-                    <td class="c1b"><asp:TextBox runat="server" id="txtTelefonoDI" CssClass="input1" 
-                            Enabled="False"></asp:TextBox></td>
+                    <td class="c1b">
+                        <asp:TextBox runat="server" id="txtTelefonoDI" CssClass="input1" 
+                            Enabled="False" MaxLength="15"></asp:TextBox></td>
                     <td>
                         <asp:ImageButton ID="ImageTelefono" runat="server" 
                             ImageUrl="~/Recursos/Imagenes/editar.PNG" onclick="ImageTelefono_Click" />
@@ -72,13 +73,13 @@
                  <tr>
                     <td class="ctxt2" >
                         <asp:TextBox runat="server" id="txtCambiaPassDI1" CssClass="input1" 
-                            TextMode="Password"  />
+                            TextMode="Password" MaxLength="25"  />
                         <h5 style="margin:auto">*Ingrese nueva contraseña</h5>
 
                     </td>
                     <td class="ctxt2">
                        <asp:TextBox runat="server" id="txtCambiaPassDI2" CssClass="input1" 
-                            TextMode="Password"  />
+                            TextMode="Password" MaxLength="25"  />
                         <h5 style="margin:auto">*Confirme nueva contraseña</h5>
                     </td>
                 </tr>

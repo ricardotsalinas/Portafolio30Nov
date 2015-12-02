@@ -223,7 +223,7 @@ namespace systemsri.Vistas.Administrador
 
         protected void gvCalles_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-
+      
         }
 
         protected void btnListarAC_Click(object sender, EventArgs e)
@@ -235,6 +235,19 @@ namespace systemsri.Vistas.Administrador
         protected void chkActivoACa_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void gvCalles_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "botonGV")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = gvCalles.Rows[index];
+                txtNombreCalle.Text = row.Cells[1].Text;
+                ddlistNumPistas.SelectedIndex = Convert.ToInt32(row.Cells[2].Text);
+            
+            }
+            
         }
     }
 }

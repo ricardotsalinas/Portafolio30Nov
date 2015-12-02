@@ -18,6 +18,15 @@ namespace Negocio
         {
             return  DaoInfractor.Instancia.buscarInfractor(rut);
         }
+     
+        
+        public List<INFRACTOR> buscarPersona(String rut)
+        {
+            return DaoInfractor.Instancia.BuscarInfractor(rut);
+        }
+
+
+
 
         public int actualizaClave(String clave, String rut)
         {
@@ -62,5 +71,11 @@ namespace Negocio
                 return idApelacion.ToString();
         }
 
+
+
+        public Boolean existeRut(String rut)
+        {
+            return DaoPersonal.instancia.existeRut(rut);
+        }
     }
 }

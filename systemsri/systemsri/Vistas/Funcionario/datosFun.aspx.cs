@@ -81,54 +81,65 @@ namespace systemsri.Vistas.Funcionario
 
             if (tblPassDF.Visible)
             {
-                if (txtCambiaPassDF1.Text.Length > 3 && txtCambiaPassDF2.Text.Length > 3)
+                if (txtCambiaPassDF1.Text.Length > 25 && txtCambiaPassDF2.Text.Length > 25)
                 {
-                    if (txtCambiaPassDF1.Text.Equals(txtCambiaPassDF2.Text))
+                    if (txtCambiaPassDF1.Text.Length > 3 && txtCambiaPassDF2.Text.Length > 3)
                     {
-                        int resultado = NegocioFuncionario.instancia.actualizaClavePropia(txtCambiaPassDF1.Text, txtRutDF.Text);
-                        if (resultado == 1)
+                        if (txtCambiaPassDF1.Text.Equals(txtCambiaPassDF2.Text))
                         {
-                            tblPassDF.Visible = false;
-                            lblInfoDF.ForeColor = System.Drawing.Color.Gray;
+                            int resultado = NegocioFuncionario.instancia.actualizaClavePropia(txtCambiaPassDF1.Text, txtRutDF.Text);
+                            if (resultado == 1)
+                            {
+                                tblPassDF.Visible = false;
+                                lblInfoDF.ForeColor = System.Drawing.Color.Gray;
+                                lblInfoDF.Visible = true;
+                                lblInfoDF.Text = "La contraseña ha sido ingresada correctamente";
+                                btnModificaPassDF.Text = "MODIFICAR";
+                                txtCambiaPassDF1.Text = String.Empty;
+                                txtCambiaPassDF2.Text = String.Empty;
+                                txtCambiaPassDF1.BorderColor = System.Drawing.Color.LightGray;
+                                txtCambiaPassDF2.BorderColor = System.Drawing.Color.LightGray;
+                                txtCambiaPassDF1.BorderWidth = 1;
+                                txtCambiaPassDF2.BorderWidth = 1;
+
+
+
+                            }
+                        }
+                        else
+                        {
+                            lblInfoDF.ForeColor = System.Drawing.Color.Red;
                             lblInfoDF.Visible = true;
-                            lblInfoDF.Text = "La contraseña ha sido ingresada correctamente";
-                            btnModificaPassDF.Text = "MODIFICAR";
-                            txtCambiaPassDF1.Text = String.Empty;
-                            txtCambiaPassDF2.Text = String.Empty;
-                            txtCambiaPassDF1.BorderColor = System.Drawing.Color.LightGray;
-                            txtCambiaPassDF2.BorderColor = System.Drawing.Color.LightGray;
+                            lblInfoDF.Text = "Las contraseñas no coinciden";
+                            txtCambiaPassDF1.BorderColor = System.Drawing.Color.Red;
+                            txtCambiaPassDF2.BorderColor = System.Drawing.Color.Red;
                             txtCambiaPassDF1.BorderWidth = 1;
                             txtCambiaPassDF2.BorderWidth = 1;
-
-
-
                         }
+
                     }
                     else
                     {
                         lblInfoDF.ForeColor = System.Drawing.Color.Red;
                         lblInfoDF.Visible = true;
-                        lblInfoDF.Text = "Las contraseñas no coinciden";
+                        lblInfoDF.Text = "La contraseña es demasiado corta";
                         txtCambiaPassDF1.BorderColor = System.Drawing.Color.Red;
                         txtCambiaPassDF2.BorderColor = System.Drawing.Color.Red;
                         txtCambiaPassDF1.BorderWidth = 1;
                         txtCambiaPassDF2.BorderWidth = 1;
                     }
-
                 }
                 else
                 {
                     lblInfoDF.ForeColor = System.Drawing.Color.Red;
                     lblInfoDF.Visible = true;
-                    lblInfoDF.Text = "La contraseña es demasiado corta";
+                    lblInfoDF.Text = "La contraseña es demasiado larga";
                     txtCambiaPassDF1.BorderColor = System.Drawing.Color.Red;
                     txtCambiaPassDF2.BorderColor = System.Drawing.Color.Red;
                     txtCambiaPassDF1.BorderWidth = 1;
                     txtCambiaPassDF2.BorderWidth = 1;
                 }
             }
-
-
 
             if (txtEmailDF.Enabled || txtTelefonoDF.Enabled)
             {

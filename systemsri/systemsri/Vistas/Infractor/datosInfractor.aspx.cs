@@ -76,49 +76,63 @@ namespace systemsri.Vistas.Infractor
             {
                 if (txtCambiaPassDI1.Text.Length > 3 && txtCambiaPassDI2.Text.Length > 3)
                 {
-                    if (txtCambiaPassDI1.Text.Equals(txtCambiaPassDI2.Text))
+                    if (txtCambiaPassDI1.Text.Length < 25 && txtCambiaPassDI2.Text.Length < 25)
                     {
-                        int resultado = NegocioInfractor.instancia.actualizaClave(txtCambiaPassDI1.Text, txtRutDI.Text);
-                        if (resultado == 1)
+
+                        if (txtCambiaPassDI1.Text.Equals(txtCambiaPassDI2.Text))
                         {
-                            tblPassDI.Visible = false;
-                            lblInfoDI.ForeColor = System.Drawing.Color.Gray;
+                            int resultado = NegocioInfractor.instancia.actualizaClave(txtCambiaPassDI1.Text, txtRutDI.Text);
+                            if (resultado == 1)
+                            {
+                                tblPassDI.Visible = false;
+                                lblInfoDI.ForeColor = System.Drawing.Color.Gray;
+                                lblInfoDI.Visible = true;
+                                lblInfoDI.Text = "La contraseña ha sido ingresada correctamente";
+                                btnModificaPassDI.Text = "MODIFICAR";
+                                txtCambiaPassDI1.Text = String.Empty;
+                                txtCambiaPassDI2.Text = String.Empty;
+                                txtCambiaPassDI1.BorderColor = System.Drawing.Color.LightGray;
+                                txtCambiaPassDI2.BorderColor = System.Drawing.Color.LightGray;
+                                txtCambiaPassDI1.BorderWidth = 1;
+                                txtCambiaPassDI2.BorderWidth = 1;
+
+
+
+                            }
+                        }
+                        else
+                        {
+                            lblInfoDI.ForeColor = System.Drawing.Color.Red;
                             lblInfoDI.Visible = true;
-                            lblInfoDI.Text = "La contraseña ha sido ingresada correctamente";
-                            btnModificaPassDI.Text = "MODIFICAR";
-                            txtCambiaPassDI1.Text = String.Empty;
-                            txtCambiaPassDI2.Text = String.Empty;
-                            txtCambiaPassDI1.BorderColor = System.Drawing.Color.LightGray;
-                            txtCambiaPassDI2.BorderColor = System.Drawing.Color.LightGray;
+                            lblInfoDI.Text = "Las contraseñas no coinciden";
+                            txtCambiaPassDI1.BorderColor = System.Drawing.Color.Red;
+                            txtCambiaPassDI2.BorderColor = System.Drawing.Color.Red;
                             txtCambiaPassDI1.BorderWidth = 1;
                             txtCambiaPassDI2.BorderWidth = 1;
-
-
-
                         }
                     }
                     else
                     {
                         lblInfoDI.ForeColor = System.Drawing.Color.Red;
                         lblInfoDI.Visible = true;
-                        lblInfoDI.Text = "Las contraseñas no coinciden";
+                        lblInfoDI.Text = "La Contraseña debe contener menos de 25 caracteres";
                         txtCambiaPassDI1.BorderColor = System.Drawing.Color.Red;
                         txtCambiaPassDI2.BorderColor = System.Drawing.Color.Red;
                         txtCambiaPassDI1.BorderWidth = 1;
                         txtCambiaPassDI2.BorderWidth = 1;
                     }
-
-                }
-                else
-                {
-                    lblInfoDI.ForeColor = System.Drawing.Color.Red;
-                    lblInfoDI.Visible = true;
-                    lblInfoDI.Text = "La contraseña es demasiado corta";
-                    txtCambiaPassDI1.BorderColor = System.Drawing.Color.Red;
-                    txtCambiaPassDI2.BorderColor = System.Drawing.Color.Red;
-                    txtCambiaPassDI1.BorderWidth=1;
-                    txtCambiaPassDI1.BorderWidth = 1;
-                }
+                    }
+                    else
+                    {
+                        lblInfoDI.ForeColor = System.Drawing.Color.Red;
+                        lblInfoDI.Visible = true;
+                        lblInfoDI.Text = "La contraseña debe contener al menos 4 caracteres";
+                        txtCambiaPassDI1.BorderColor = System.Drawing.Color.Red;
+                        txtCambiaPassDI2.BorderColor = System.Drawing.Color.Red;
+                        txtCambiaPassDI1.BorderWidth = 1;
+                        txtCambiaPassDI1.BorderWidth = 1;
+                    }
+                
             }
 
 

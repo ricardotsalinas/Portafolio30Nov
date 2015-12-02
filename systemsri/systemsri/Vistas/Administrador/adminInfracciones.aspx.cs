@@ -14,12 +14,11 @@ namespace systemsri.Vistas.Administrador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ddlistGravedadAI.Items.Clear();
             ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccionar", ""));
-            ddlistGravedadAI.DataSource = NegocioAdministrador.instancia.listarGravedad();
+            ddlistGravedadAI.DataSource = NegocioAdministrador.instancia.listarOrientacion();
             ddlistGravedadAI.DataBind();
             ddlistTipoMonedaAI.Items.Insert(0, new ListItem("Seleccionar", ""));
-            ddlistTipoMonedaAI.DataSource = NegocioAdministrador.instancia.listarTipoMoneda();
+            ddlistTipoMonedaAI.DataSource = NegocioAdministrador.instancia.listarVelocidad();
             ddlistTipoMonedaAI.DataBind();
             lblInfoAdI.Visible = false;
             chkActivoAIn.Checked = true;
@@ -134,36 +133,15 @@ namespace systemsri.Vistas.Administrador
         
    protected void gvInfrAI_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            String dato = "";
             int index = Convert.ToInt32(e.CommandArgument);
-            List<DETALLE_CARACTERISTICA> buscar = NegocioAdministrador.instancia.buscarInfraccion(A);
             GridViewRow row = gvInfrAI.Rows[index];
-            String post = row.Cells[0].Text;
-           txtDescrInfraccionAI.Text =post;
-           
+            txtDescrInfraccionAI.Text = row.Cells[4].Text;
+            txtValorAI.Text = row.Cells[2].Text;
+            
             
                
 
 
-            if (row.Cells[5].Text.Equals("NO PAGADO"))
-            {
-                HttpHelper.RedirectAndPOST(this.Page, "detallePagarMulta.aspx", data);
-            }
-
-
-
-            if (e.CommandName == "detalle")
-            {
-                int index = Convert.ToInt32(e.CommandArgument);
-
-                NameValueCollection data = new NameValueCollection();
-                //GridViewRow row = gvInfrAI.Rows[index];
-                //String post = row.Cells[0].Text;
-               // data.Add("idInfraccion", post);
-                txtDescrInfraccionAI.Text = "Aqui ta";
-
-
-            }
         }
     
       
