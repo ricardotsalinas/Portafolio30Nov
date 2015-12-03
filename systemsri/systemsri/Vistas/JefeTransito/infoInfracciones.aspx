@@ -27,7 +27,7 @@
                     </td>
                  </tr>               
             </table>
-             <table style="width:90%; font-family:Arial; font-size:small">
+             <table style="width:90%; font-family:Arial; display:none; font-size:small">
                    <tr>
                     <td style= "height:30px; background-color:#bfbfbf; text-align:center"> 
                         <input type="checkbox"> Gravedad de la Infracción  
@@ -41,9 +41,14 @@
           
      
 
-          
-             asd&nbsp;<asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
-                 Text="Button" />
+          <table ><tr align=center>
+          <td style="width: 253px">
+          </td>
+          <td align=center>
+             &nbsp;<asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+                 Text="GENERAR" CssClass="boton" />
+                </td> </tr>
+                 </table>
            
              <rsweb:ReportViewer ID="ReportViewer1" runat="server" Width="664px" 
                  Font-Names="Verdana" Font-Size="8pt" InteractiveDeviceInfos="(Colección)" 

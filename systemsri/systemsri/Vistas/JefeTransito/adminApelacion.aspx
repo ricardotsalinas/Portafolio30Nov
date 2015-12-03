@@ -12,9 +12,10 @@
                            placeholder="Ej:12345678-9" Width="93px"/>
                        <asp:DropDownList ID="ddlistFiltro" runat="server" class="ddlist2" 
                            onselectedindexchanged="ddlist_SelectedIndexChanged">
-                           <asp:ListItem>Ver Todo</asp:ListItem>
-                           <asp:ListItem>Ver Leídos</asp:ListItem>
-                           <asp:ListItem>Ver No Leidos</asp:ListItem>
+                           <asp:ListItem Value="0">Ver Todo</asp:ListItem>
+                           <asp:ListItem Value="1">Ver Leídos</asp:ListItem>
+                           <asp:ListItem Value="2">Ver No Leidos</asp:ListItem>
+                           <asp:ListItem Value="3">Resueltos</asp:ListItem>
                        </asp:DropDownList>
                        <br /> Buscar Por Rut&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                        <asp:CheckBox ID="CheckBox1" runat="server" />

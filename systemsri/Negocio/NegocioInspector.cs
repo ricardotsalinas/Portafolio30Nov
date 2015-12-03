@@ -47,9 +47,9 @@ namespace Negocio
 
        }
 
-       public int moneda(int idInfraccion)
+       public int moneda(int tipoMoneda)
        {
-           int tipoMoneda = DaoInfraccion.instancia.tipoMoneda(idInfraccion);
+          // int tipoMoneda = DaoInfraccion.instancia.tipoMoneda(idInfraccion);
            return DaoMoneda.instancia.idMoneda(tipoMoneda);
        
        }

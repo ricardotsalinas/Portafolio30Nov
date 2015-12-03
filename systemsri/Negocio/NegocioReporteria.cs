@@ -19,9 +19,9 @@ namespace Negocio
         }
 
 
-        public object ListarInfractoresSinRut(string dato)
+        public object ListarInfractoresSinRut(string dato,int tipo)
         {
-            return ReportesDAO.Instancia.ReporteInfractoresSinRut(dato);
+            return ReportesDAO.Instancia.ReporteInfractoresSinRut(dato,tipo);
         }
 
         public List<ReporteCalles> ListarCalles()

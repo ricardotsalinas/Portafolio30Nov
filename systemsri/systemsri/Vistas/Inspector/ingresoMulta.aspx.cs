@@ -16,13 +16,12 @@ namespace systemsri.Vistas.Inspector
         public List<DETALLE_CARACTERISTICA> lts = new List<DETALLE_CARACTERISTICA>();
         protected void Page_Load(object sender, EventArgs e)
         {
-          /*if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+          if (Session["usuario"].Equals("") || Session["usuario"] == null ||
                 !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 42))
             {
                 Response.Redirect("../LoginUsuario/loginUsuario.aspx");
-
             }
-        */
+     
            lts = NegocioAdministrador.instancia.listarMotivo();
            if (!Page.IsPostBack)
            {
@@ -149,7 +148,8 @@ namespace systemsri.Vistas.Inspector
             objM.HORA_MULTA = txtHoraMultaIM.Text;
             objM.MONTO_ADICIONAL = 0;
             objM.PAGADA = "0";
-            objM.ACTIVO = "0";
+            objM.ACTIVO = "1";
+            objM.LICENCIA_ENTREGADA = "0";
             if (chkCarabIM.Checked)
             {
                 if (!String.IsNullOrEmpty(txtLicCarabIM.Text))
@@ -197,8 +197,8 @@ namespace systemsri.Vistas.Inspector
             objM.ID_VIA_CIRCULACION = NegocioInspector.instancia.idViaN(Convert.ToInt32(ddlistLugarInfIM.SelectedValue));
             int idMOneda = NegocioInspector.instancia.idInfraccion(Convert.ToInt32(ddlistMotivoIM.SelectedValue));
             int idInfraccion = NegocioInspector.instancia.idInfraccion2(Convert.ToInt32(ddlistMotivoIM.SelectedValue));
-            objM.ID_INFRACCION = NegocioInspector.instancia.moneda(idInfraccion);
-            objM.ID_MONEDA = idMOneda;
+            objM.ID_INFRACCION = idInfraccion; 
+            objM.ID_MONEDA = NegocioInspector.instancia.moneda(idMOneda);
             objM.DETALLE_ADICIONAL = txtDetalleAdicIM.Text;
             objM.ID_RESTRICCION = NegocioInspector.instancia.idRestriccion();
 

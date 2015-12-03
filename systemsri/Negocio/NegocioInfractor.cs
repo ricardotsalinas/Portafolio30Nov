@@ -13,6 +13,9 @@ namespace Negocio
 {
     public class NegocioInfractor
     {
+         
+
+
         public static NegocioInfractor instancia = new NegocioInfractor();
        
         public List<INFRACTOR> buscarInfractor(String rut)

@@ -12,59 +12,218 @@ namespace ConexionDatos.Dao
     {
         public static ReportesDAO Instancia = new ReportesDAO();
 
-        public List<ReporteInfractor> ReporteInfractores(String rut)
+        public List<ReporteInfractor> ReporteInfractores(String rut, int tipo)
         {
 
             using (SRI con = new SRI())
             {
-                List<ReporteInfractor> lista = (from m in con.MULTA
-                                                join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
-                                                join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
-                                                join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
-                                                join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
-                                                where i.RUT_INFR == rut
-                                                select new ReporteInfractor
-                                                {
-                                                    RESUELTO = a.ESTADO ?? 0,
-                                                    CASO_LEIDO = a.ESTADO ?? 0,
-                                                    RUT_INF = i.RUT_INFR,
-                                                    INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
-                                                    GRAVEDAD = inf.ID_GRAVEDAD,
-                                                    VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
-                                                    FECHA = m.FECHA_CREACION
-                                                }
 
-                    ).ToList();
+                List<ReporteInfractor> lista = new List<ReporteInfractor>();
 
+                switch (tipo)
+                {
+                    case 0:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where i.RUT_INFR == rut 
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+                    case 1:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where a.ESTADO == (int)1141 && a.ESTADO == (int)1143 && i.RUT_INFR == rut 
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+                    case 11:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where a.ESTADO == (int)1141 && i.RUT_INFR == rut 
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+                    case 2:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where a.ESTADO == (int)1142 && i.RUT_INFR == rut 
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+                    case 3:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where a.ESTADO == (int)1143 && i.RUT_INFR == rut 
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+
+                }
                 return lista;
 
 
             }
         }
 
-            public List<ReporteInfractor> ReporteInfractoresSinRut(String dato)
+            public List<ReporteInfractor> ReporteInfractoresSinRut(String dato, int tipo)
         {
             
             using (SRI con = new SRI())
             {
-                List<ReporteInfractor> lista = (from m in con.MULTA
-                                                join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
-                                                join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
-                                                join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
-                                                join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
-                                                
-                                                select new ReporteInfractor
-                                                {
-                                                    RESUELTO = a.ESTADO ?? 0,
-                                                    CASO_LEIDO = a.ESTADO ?? 0,
-                                                    RUT_INF = i.RUT_INFR,
-                                                    INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
-                                                    GRAVEDAD = inf.ID_GRAVEDAD,
-                                                    VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
-                                                    FECHA = m.FECHA_CREACION
-                                                }
+                List<ReporteInfractor> lista = new List<ReporteInfractor>();
 
-                    ).ToList();
+                switch (tipo)
+                {
+                    case 0:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+                    case 1:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where a.ESTADO == (int)1141 && a.ESTADO == (int)1143
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+                        case 11:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where a.ESTADO == (int)1141
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+                        case 2:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where a.ESTADO == (int)1142
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+                        case 3:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where a.ESTADO == (int)1143
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+                
+                }
+
+                    
+               
+
 
                 return lista;
 

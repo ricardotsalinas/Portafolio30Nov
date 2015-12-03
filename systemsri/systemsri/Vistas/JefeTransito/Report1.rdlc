@@ -73,19 +73,19 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>0.55717in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>0.98425in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>0.77617in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>0.703in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.98425in</Width>
+              <Width>0.66133in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.21342in</Width>
@@ -119,7 +119,7 @@
                               <Value>RUT</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -155,7 +155,7 @@
                               <Value>NOMBRE</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -191,7 +191,7 @@
                               <Value>GRAVEDAD</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -227,7 +227,7 @@
                               <Value>SECTOR</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -263,7 +263,7 @@
                               <Value>ESTADO</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -299,7 +299,7 @@
                               <Value>FECHA MULTA</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -335,7 +335,7 @@
                               <Value>INSPECTOR</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -371,7 +371,7 @@
                               <Value>INSPECTOR</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -407,7 +407,7 @@
                               <Value>RETENCION LICENCIA</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -443,7 +443,7 @@
                               <Value>TIPO INFRACCION</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
                               </Style>
@@ -484,6 +484,7 @@
                               <Value>=Fields!RUT.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -517,6 +518,7 @@
                               <Value>=Fields!NOMBRE.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -550,6 +552,7 @@
                               <Value>=Fields!GRAVEDAD.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -583,6 +586,7 @@
                               <Value>=Fields!SECTOR.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -616,6 +620,7 @@
                               <Value>=Fields!ESTADO.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -649,6 +654,7 @@
                               <Value>=Fields!FECHA_MULTA.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -682,6 +688,7 @@
                               <Value>=Fields!INSPECTOR.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -715,6 +722,7 @@
                               <Value>=Fields!INSPECTOR.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -748,6 +756,7 @@
                               <Value>=Fields!RETENCION_LICENCIA.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -781,6 +790,7 @@
                               <Value>=Fields!TIPO_INFRACCION.Value</Value>
                               <Style>
                                 <FontFamily>Tahoma</FontFamily>
+                                <FontSize>8pt</FontSize>
                                 <Color>#4d4d4d</Color>
                               </Style>
                             </TextRun>
@@ -831,10 +841,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>6.35cm</Top>
+        <Top>5.08cm</Top>
         <Left>0.635cm</Left>
         <Height>1.2cm</Height>
-        <Width>26.13771cm</Width>
+        <Width>22.98976cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -906,7 +916,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Título del eje</Caption>
+                  <Caption>Sectores</Caption>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -975,7 +985,7 @@
                   <FontSize>8pt</FontSize>
                 </Style>
                 <ChartAxisTitle>
-                  <Caption>Título del eje</Caption>
+                  <Caption>Gravedad</Caption>
                   <Style>
                     <FontSize>8pt</FontSize>
                   </Style>
@@ -1061,7 +1071,7 @@
         </ChartLegends>
         <ChartTitles>
           <ChartTitle Name="Default">
-            <Caption>Título del gráfico</Caption>
+            <Caption>Gravedad por Sectores</Caption>
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
               <FontWeight>Bold</FontWeight>
@@ -1087,10 +1097,10 @@
           </Style>
         </ChartNoDataMessage>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.14111cm</Top>
-        <Left>2.82257cm</Left>
-        <Height>5.69709cm</Height>
-        <Width>21.45013cm</Width>
+        <Top>0.10583cm</Top>
+        <Left>5.99757cm</Left>
+        <Height>4.58584cm</Height>
+        <Width>15.89449cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -1102,13 +1112,13 @@
         </Style>
       </Chart>
     </ReportItems>
-    <Height>3.72244in</Height>
+    <Height>3.04536in</Height>
     <Style />
   </Body>
-  <Width>11.0175in</Width>
+  <Width>9.45759in</Width>
   <Page>
     <PageHeader>
-      <Height>4.70958cm</Height>
+      <Height>3.81cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -1116,8 +1126,8 @@
           <Source>Embedded</Source>
           <Value>encabezado</Value>
           <Sizing>FitProportional</Sizing>
-          <Height>4.70958cm</Height>
-          <Width>27.98445cm</Width>
+          <Height>3.81cm</Height>
+          <Width>23.62476cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1140,9 +1150,9 @@
           <Source>Embedded</Source>
           <Value>pie</Value>
           <Sizing>FitProportional</Sizing>
-          <Top>0cm</Top>
-          <Height>2.16958cm</Height>
-          <Width>27.98445cm</Width>
+          <Top>0.10583cm</Top>
+          <Height>2.30188cm</Height>
+          <Width>23.62476cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1156,8 +1166,8 @@
         </Border>
       </Style>
     </PageFooter>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>29.7cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>

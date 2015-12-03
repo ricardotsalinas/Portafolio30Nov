@@ -13,6 +13,8 @@ namespace ConexionDatos.Dao
     {
         public static DaoInfractor Instancia = new DaoInfractor();
 
+
+
         private int RetornarNuevoId()
         {
             int id = 0;

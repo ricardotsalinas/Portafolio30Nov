@@ -112,3 +112,4 @@ C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ConexionDatos\bin\D
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ConexionDatos\bin\Debug\ClasesESpeciales.pdb
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ConexionDatos\obj\Debug\ConexionDatos.dll
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ConexionDatos\obj\Debug\ConexionDatos.pdb
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ConexionDatos\obj\Debug\ConexionDatos.csprojResolveAssemblyReference.cache

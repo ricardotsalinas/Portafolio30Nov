@@ -25,25 +25,43 @@ namespace systemsri.Vistas.JefeTransito
 
         protected void btnBuscarAA_Click(object sender, EventArgs e)
         {
-            if (ddlistFiltro.SelectedIndex == 0)
-            {
-                if (txtRutAA.Text == "" || txtRutAA.Text == null)
+             if (txtRutAA.Text == "" || txtRutAA.Text == null)
                 {
-                    gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text);
-                    gvReporte.DataBind();
-                }
-                else
+                    
+                    switch (Convert.ToInt32(ddlistFiltro.SelectedValue))
+                    { 
+                        case 0:
+                            gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text,0);
+                            gvReporte.DataBind();
+                            break;
+                        case 1:
+                            if (CheckBox1.Checked)
+                            {
+                                gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 11);
+                                gvReporte.DataBind();
+                            }
+                            else
+                            {
+                                gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 1);
+                                gvReporte.DataBind();
+                            }
+                            break;
+                        case 2:
+                                gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 2);
+                                gvReporte.DataBind();
+                            break;
+                        case 3:
+                                gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 3);
+                                gvReporte.DataBind();
+                            break;
+                    }
+
+                if(txtRutAA.Text.Length>7)
                 {
                     gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text);
                     gvReporte.DataBind();
                 }
-            }
-            if (ddlistFiltro.SelectedIndex == 1)
-            { 
-            
-            }
-        }
-
+           
 
 
         protected void ddlist_SelectedIndexChanged(object sender, EventArgs e)
