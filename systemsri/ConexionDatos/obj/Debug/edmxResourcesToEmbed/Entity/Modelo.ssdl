@@ -183,9 +183,7 @@
     <Property Name="ID_APELACION" Type="number" Nullable="false" />
     <Property Name="SOLICITUD_APELACION" Type="varchar2" MaxLength="250" />
     <Property Name="DESCRIPCION_AP" Type="varchar2" MaxLength="250" />
-    <Property Name="MONTO_AP" Type="number" Nullable="false" />
-    <Property Name="ACEPTADO" Type="char" Nullable="false" MaxLength="1" />
-    <Property Name="ROL_CAUSA" Type="number" Nullable="false" />
+    <Property Name="ACEPTADO" Type="char" MaxLength="1" />
     <Property Name="ID_ADJUNTO" Type="number" Nullable="false" />
     <Property Name="ID_MULTA" Type="number" Nullable="false" />
     <Property Name="ESTADO" Type="number" />
@@ -271,6 +269,7 @@
     <Property Name="ID_MONEDA" Type="number" Nullable="false" />
     <Property Name="DETALLE_ADICIONAL" Type="varchar2" MaxLength="250" />
     <Property Name="ID_RESTRICCION" Type="number" Nullable="false" />
+    <Property Name="ADJUNTO" Type="varchar2" Nullable="false" MaxLength="250" />
   </EntityType>
   <EntityType Name="PERSONAL">
     <Key>
@@ -315,16 +314,16 @@
     </Key>
     <Property Name="ID_SECTOR" Type="number" Nullable="false" />
     <Property Name="ID_NOMBRE_SECTOR" Type="number" Nullable="false" />
-    <Property Name="ID_CUAD_PUNTOA1" Type="number" Nullable="false" />
-    <Property Name="ID_CUAD_PUNTOA2" Type="number" Nullable="false" />
-    <Property Name="ID_CUAD_PUNTOB1" Type="number" Nullable="false" />
-    <Property Name="ID_CUAD_PUNTOB2" Type="number" Nullable="false" />
-    <Property Name="ID_CUAD_PUNTOC1" Type="number" Nullable="false" />
-    <Property Name="ID_CUAD_PUNTOC2" Type="number" Nullable="false" />
-    <Property Name="ID_CUAD_PUNTOD1" Type="number" Nullable="false" />
-    <Property Name="ID_CUAD_PUNTOD2" Type="number" Nullable="false" />
-    <Property Name="ID_CUAD_PUNTOE1" Type="number" Nullable="false" />
-    <Property Name="ID_CUAD_PUNTOE2" Type="number" Nullable="false" />
+    <Property Name="ID_CUAD_PUNTOA1" Type="number" />
+    <Property Name="ID_CUAD_PUNTOA2" Type="number" />
+    <Property Name="ID_CUAD_PUNTOB1" Type="number" />
+    <Property Name="ID_CUAD_PUNTOB2" Type="number" />
+    <Property Name="ID_CUAD_PUNTOC1" Type="number" />
+    <Property Name="ID_CUAD_PUNTOC2" Type="number" />
+    <Property Name="ID_CUAD_PUNTOD1" Type="number" />
+    <Property Name="ID_CUAD_PUNTOD2" Type="number" />
+    <Property Name="ID_CUAD_PUNTOE1" Type="number" />
+    <Property Name="ID_CUAD_PUNTOE2" Type="number" />
   </EntityType>
   <EntityType Name="TURNO">
     <Key>
@@ -343,7 +342,6 @@
     </Key>
     <Property Name="ID_VEHICULO" Type="number" Nullable="false" />
     <Property Name="PATENTE" Type="varchar2" Nullable="false" MaxLength="6" />
-    <Property Name="ANIO_VEHICULO" Type="varchar2" Nullable="false" MaxLength="4" />
     <Property Name="ID_TIPO_VEHICULO" Type="number" Nullable="false" />
   </EntityType>
   <EntityType Name="VIA_CIRCULACION">
@@ -409,7 +407,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DSDCA1">
-    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
     <End Role="SECTOR" Type="Model.Store.SECTOR" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_CARACTERISTICA">
@@ -421,7 +419,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DSDCA2">
-    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
     <End Role="SECTOR" Type="Model.Store.SECTOR" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_CARACTERISTICA">
@@ -433,7 +431,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DSDCB1">
-    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
     <End Role="SECTOR" Type="Model.Store.SECTOR" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_CARACTERISTICA">
@@ -445,7 +443,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DSDCB2">
-    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
     <End Role="SECTOR" Type="Model.Store.SECTOR" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_CARACTERISTICA">
@@ -457,7 +455,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DSDCC1">
-    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
     <End Role="SECTOR" Type="Model.Store.SECTOR" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_CARACTERISTICA">
@@ -469,7 +467,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DSDCC2">
-    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
     <End Role="SECTOR" Type="Model.Store.SECTOR" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_CARACTERISTICA">
@@ -481,7 +479,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DSDCD1">
-    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
     <End Role="SECTOR" Type="Model.Store.SECTOR" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_CARACTERISTICA">
@@ -493,7 +491,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DSDCD2">
-    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
     <End Role="SECTOR" Type="Model.Store.SECTOR" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_CARACTERISTICA">
@@ -505,7 +503,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DSDCE1">
-    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
     <End Role="SECTOR" Type="Model.Store.SECTOR" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_CARACTERISTICA">
@@ -517,7 +515,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="DSDCE2">
-    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="0..1" />
     <End Role="SECTOR" Type="Model.Store.SECTOR" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DETALLE_CARACTERISTICA">

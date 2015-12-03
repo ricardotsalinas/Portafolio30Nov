@@ -16,13 +16,13 @@ namespace systemsri.Vistas.Inspector
         public List<DETALLE_CARACTERISTICA> lts = new List<DETALLE_CARACTERISTICA>();
         protected void Page_Load(object sender, EventArgs e)
         {
-           if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+          if (Session["usuario"].Equals("") || Session["usuario"] == null ||
                 !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 42))
             {
                 Response.Redirect("../LoginUsuario/loginUsuario.aspx");
 
             }
-
+        
            lts = NegocioAdministrador.instancia.listarMotivo();
            if (!Page.IsPostBack)
            {
@@ -63,10 +63,6 @@ namespace systemsri.Vistas.Inspector
             
             //txtDetCompleto.Text = ddlistMotivoIM.SelectedItem.ToString();
             string val = ddlistMotivoIM.SelectedItem.Value;
-
-          
-
-
             foreach (DETALLE_CARACTERISTICA d in lts)
             {
                 if (val == d.ID_DETCAR.ToString())
@@ -107,6 +103,7 @@ namespace systemsri.Vistas.Inspector
                     txtPatIM.Text = datos[2].ToString();
                     txtAppatIM.Text = datos[3].ToString();
                     txtApmatIM.Text = datos[4].ToString();
+                    txtFechaNacimientoIM.Text = datos[5].ToString();
                 }
                 //error datos no encotrados
             }
@@ -139,8 +136,5 @@ namespace systemsri.Vistas.Inspector
         {
 
         }
-
-        
-     
     }
 }

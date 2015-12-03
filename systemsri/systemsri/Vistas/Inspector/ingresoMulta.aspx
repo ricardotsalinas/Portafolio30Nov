@@ -37,7 +37,9 @@
                  </tr>
                  <tr>
                      <td> </td> 
-                    <td ></td>
+                    <td >
+                        <asp:TextBox ID="txtFechaNacimientoIM" runat="server"></asp:TextBox>
+                     </td>
                     <td style="width:2%"></td>
                     <td class="c2g">APELLIDO MATERNO:</td> 
                     <td class="c2b"><asp:TextBox runat="server" id="txtApmatIM" CssClass="input1" disabled="disabled" /></td>
@@ -83,7 +85,7 @@
                       onclick="btnGuardarIM_Click1"/>
               </td>
               <td>
-              <asp:Button runat="server" Text="AGREGAR IMAGEN" CssClass="boton2" id="btnAgrImagenIM"/>
+                  <asp:FileUpload ID="FileUpload" runat="server" />
               </td>
               </tr></table>
      

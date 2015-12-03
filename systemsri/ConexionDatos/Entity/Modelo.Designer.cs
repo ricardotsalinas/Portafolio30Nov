@@ -23,16 +23,16 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("Model", "ADCA", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "APELACION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.APELACION), true)]
 [assembly: EdmRelationshipAttribute("Model", "AM", "MULTA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.MULTA), "APELACION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.APELACION), true)]
 [assembly: EdmRelationshipAttribute("Model", "DCC", "CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.CARACTERISTICA), "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), true)]
-[assembly: EdmRelationshipAttribute("Model", "DSDCA1", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
-[assembly: EdmRelationshipAttribute("Model", "DSDCA2", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
-[assembly: EdmRelationshipAttribute("Model", "DSDCB1", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
-[assembly: EdmRelationshipAttribute("Model", "DSDCB2", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
-[assembly: EdmRelationshipAttribute("Model", "DSDCC1", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
-[assembly: EdmRelationshipAttribute("Model", "DSDCC2", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
-[assembly: EdmRelationshipAttribute("Model", "DSDCD1", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
-[assembly: EdmRelationshipAttribute("Model", "DSDCD2", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
-[assembly: EdmRelationshipAttribute("Model", "DSDCE1", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
-[assembly: EdmRelationshipAttribute("Model", "DSDCE2", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
+[assembly: EdmRelationshipAttribute("Model", "DSDCA1", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
+[assembly: EdmRelationshipAttribute("Model", "DSDCA2", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
+[assembly: EdmRelationshipAttribute("Model", "DSDCB1", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
+[assembly: EdmRelationshipAttribute("Model", "DSDCB2", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
+[assembly: EdmRelationshipAttribute("Model", "DSDCC1", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
+[assembly: EdmRelationshipAttribute("Model", "DSDCC2", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
+[assembly: EdmRelationshipAttribute("Model", "DSDCD1", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
+[assembly: EdmRelationshipAttribute("Model", "DSDCD2", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
+[assembly: EdmRelationshipAttribute("Model", "DSDCE1", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
+[assembly: EdmRelationshipAttribute("Model", "DSDCE2", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.SECTOR), true)]
 [assembly: EdmRelationshipAttribute("Model", "DSDCS", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "SECTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ConexionDatos.Entity.SECTOR), true)]
 [assembly: EdmRelationshipAttribute("Model", "IDC", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "INFRACTOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.INFRACTOR), true)]
 [assembly: EdmRelationshipAttribute("Model", "INDC", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "INFRACCION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.INFRACCION), true)]
@@ -603,20 +603,14 @@ namespace ConexionDatos.Entity
         /// Crear un nuevo objeto APELACION.
         /// </summary>
         /// <param name="iD_APELACION">Valor inicial de la propiedad ID_APELACION.</param>
-        /// <param name="aCEPTADO">Valor inicial de la propiedad ACEPTADO.</param>
         /// <param name="iD_ADJUNTO">Valor inicial de la propiedad ID_ADJUNTO.</param>
         /// <param name="iD_MULTA">Valor inicial de la propiedad ID_MULTA.</param>
-        /// <param name="mONTO_AP">Valor inicial de la propiedad MONTO_AP.</param>
-        /// <param name="rOL_CAUSA">Valor inicial de la propiedad ROL_CAUSA.</param>
-        public static APELACION CreateAPELACION(global::System.Decimal iD_APELACION, global::System.String aCEPTADO, global::System.Decimal iD_ADJUNTO, global::System.Decimal iD_MULTA, global::System.Decimal mONTO_AP, global::System.Decimal rOL_CAUSA)
+        public static APELACION CreateAPELACION(global::System.Decimal iD_APELACION, global::System.Decimal iD_ADJUNTO, global::System.Decimal iD_MULTA)
         {
             APELACION aPELACION = new APELACION();
             aPELACION.ID_APELACION = iD_APELACION;
-            aPELACION.ACEPTADO = aCEPTADO;
             aPELACION.ID_ADJUNTO = iD_ADJUNTO;
             aPELACION.ID_MULTA = iD_MULTA;
-            aPELACION.MONTO_AP = mONTO_AP;
-            aPELACION.ROL_CAUSA = rOL_CAUSA;
             return aPELACION;
         }
 
@@ -702,7 +696,7 @@ namespace ConexionDatos.Entity
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String ACEPTADO
         {
@@ -714,7 +708,7 @@ namespace ConexionDatos.Entity
             {
                 OnACEPTADOChanging(value);
                 ReportPropertyChanging("ACEPTADO");
-                _ACEPTADO = StructuralObject.SetValidValue(value, false);
+                _ACEPTADO = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ACEPTADO");
                 OnACEPTADOChanged();
             }
@@ -794,54 +788,6 @@ namespace ConexionDatos.Entity
         private Nullable<global::System.Decimal> _ESTADO;
         partial void OnESTADOChanging(Nullable<global::System.Decimal> value);
         partial void OnESTADOChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal MONTO_AP
-        {
-            get
-            {
-                return _MONTO_AP;
-            }
-            set
-            {
-                OnMONTO_APChanging(value);
-                ReportPropertyChanging("MONTO_AP");
-                _MONTO_AP = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("MONTO_AP");
-                OnMONTO_APChanged();
-            }
-        }
-        private global::System.Decimal _MONTO_AP;
-        partial void OnMONTO_APChanging(global::System.Decimal value);
-        partial void OnMONTO_APChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Decimal ROL_CAUSA
-        {
-            get
-            {
-                return _ROL_CAUSA;
-            }
-            set
-            {
-                OnROL_CAUSAChanging(value);
-                ReportPropertyChanging("ROL_CAUSA");
-                _ROL_CAUSA = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ROL_CAUSA");
-                OnROL_CAUSAChanged();
-            }
-        }
-        private global::System.Decimal _ROL_CAUSA;
-        partial void OnROL_CAUSAChanging(global::System.Decimal value);
-        partial void OnROL_CAUSAChanged();
 
         #endregion
 
@@ -2916,7 +2862,8 @@ namespace ConexionDatos.Entity
         /// <param name="iD_INFRACCION">Valor inicial de la propiedad ID_INFRACCION.</param>
         /// <param name="iD_MONEDA">Valor inicial de la propiedad ID_MONEDA.</param>
         /// <param name="iD_RESTRICCION">Valor inicial de la propiedad ID_RESTRICCION.</param>
-        public static MULTA CreateMULTA(global::System.Decimal iD_MULTA, global::System.DateTime fECHA_CREACION, global::System.DateTime fECHA_INTEGRACION, global::System.String hORA_MULTA, global::System.String pAGADA, global::System.String aCTIVO, global::System.Decimal iD_PERSONAL, global::System.Decimal iD_INFRACTOR, global::System.Decimal iD_VIA_CIRCULACION, global::System.Decimal iD_INFRACCION, global::System.Decimal iD_MONEDA, global::System.Decimal iD_RESTRICCION)
+        /// <param name="aDJUNTO">Valor inicial de la propiedad ADJUNTO.</param>
+        public static MULTA CreateMULTA(global::System.Decimal iD_MULTA, global::System.DateTime fECHA_CREACION, global::System.DateTime fECHA_INTEGRACION, global::System.String hORA_MULTA, global::System.String pAGADA, global::System.String aCTIVO, global::System.Decimal iD_PERSONAL, global::System.Decimal iD_INFRACTOR, global::System.Decimal iD_VIA_CIRCULACION, global::System.Decimal iD_INFRACCION, global::System.Decimal iD_MONEDA, global::System.Decimal iD_RESTRICCION, global::System.String aDJUNTO)
         {
             MULTA mULTA = new MULTA();
             mULTA.ID_MULTA = iD_MULTA;
@@ -2931,6 +2878,7 @@ namespace ConexionDatos.Entity
             mULTA.ID_INFRACCION = iD_INFRACCION;
             mULTA.ID_MONEDA = iD_MONEDA;
             mULTA.ID_RESTRICCION = iD_RESTRICCION;
+            mULTA.ADJUNTO = aDJUNTO;
             return mULTA;
         }
 
@@ -3372,6 +3320,30 @@ namespace ConexionDatos.Entity
         private global::System.Decimal _ID_RESTRICCION;
         partial void OnID_RESTRICCIONChanging(global::System.Decimal value);
         partial void OnID_RESTRICCIONChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ADJUNTO
+        {
+            get
+            {
+                return _ADJUNTO;
+            }
+            set
+            {
+                OnADJUNTOChanging(value);
+                ReportPropertyChanging("ADJUNTO");
+                _ADJUNTO = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("ADJUNTO");
+                OnADJUNTOChanged();
+            }
+        }
+        private global::System.String _ADJUNTO;
+        partial void OnADJUNTOChanging(global::System.String value);
+        partial void OnADJUNTOChanged();
 
         #endregion
 
@@ -4546,31 +4518,11 @@ namespace ConexionDatos.Entity
         /// </summary>
         /// <param name="iD_SECTOR">Valor inicial de la propiedad ID_SECTOR.</param>
         /// <param name="iD_NOMBRE_SECTOR">Valor inicial de la propiedad ID_NOMBRE_SECTOR.</param>
-        /// <param name="iD_CUAD_PUNTOA1">Valor inicial de la propiedad ID_CUAD_PUNTOA1.</param>
-        /// <param name="iD_CUAD_PUNTOA2">Valor inicial de la propiedad ID_CUAD_PUNTOA2.</param>
-        /// <param name="iD_CUAD_PUNTOB1">Valor inicial de la propiedad ID_CUAD_PUNTOB1.</param>
-        /// <param name="iD_CUAD_PUNTOB2">Valor inicial de la propiedad ID_CUAD_PUNTOB2.</param>
-        /// <param name="iD_CUAD_PUNTOC1">Valor inicial de la propiedad ID_CUAD_PUNTOC1.</param>
-        /// <param name="iD_CUAD_PUNTOC2">Valor inicial de la propiedad ID_CUAD_PUNTOC2.</param>
-        /// <param name="iD_CUAD_PUNTOD1">Valor inicial de la propiedad ID_CUAD_PUNTOD1.</param>
-        /// <param name="iD_CUAD_PUNTOD2">Valor inicial de la propiedad ID_CUAD_PUNTOD2.</param>
-        /// <param name="iD_CUAD_PUNTOE1">Valor inicial de la propiedad ID_CUAD_PUNTOE1.</param>
-        /// <param name="iD_CUAD_PUNTOE2">Valor inicial de la propiedad ID_CUAD_PUNTOE2.</param>
-        public static SECTOR CreateSECTOR(global::System.Decimal iD_SECTOR, global::System.Decimal iD_NOMBRE_SECTOR, global::System.Decimal iD_CUAD_PUNTOA1, global::System.Decimal iD_CUAD_PUNTOA2, global::System.Decimal iD_CUAD_PUNTOB1, global::System.Decimal iD_CUAD_PUNTOB2, global::System.Decimal iD_CUAD_PUNTOC1, global::System.Decimal iD_CUAD_PUNTOC2, global::System.Decimal iD_CUAD_PUNTOD1, global::System.Decimal iD_CUAD_PUNTOD2, global::System.Decimal iD_CUAD_PUNTOE1, global::System.Decimal iD_CUAD_PUNTOE2)
+        public static SECTOR CreateSECTOR(global::System.Decimal iD_SECTOR, global::System.Decimal iD_NOMBRE_SECTOR)
         {
             SECTOR sECTOR = new SECTOR();
             sECTOR.ID_SECTOR = iD_SECTOR;
             sECTOR.ID_NOMBRE_SECTOR = iD_NOMBRE_SECTOR;
-            sECTOR.ID_CUAD_PUNTOA1 = iD_CUAD_PUNTOA1;
-            sECTOR.ID_CUAD_PUNTOA2 = iD_CUAD_PUNTOA2;
-            sECTOR.ID_CUAD_PUNTOB1 = iD_CUAD_PUNTOB1;
-            sECTOR.ID_CUAD_PUNTOB2 = iD_CUAD_PUNTOB2;
-            sECTOR.ID_CUAD_PUNTOC1 = iD_CUAD_PUNTOC1;
-            sECTOR.ID_CUAD_PUNTOC2 = iD_CUAD_PUNTOC2;
-            sECTOR.ID_CUAD_PUNTOD1 = iD_CUAD_PUNTOD1;
-            sECTOR.ID_CUAD_PUNTOD2 = iD_CUAD_PUNTOD2;
-            sECTOR.ID_CUAD_PUNTOE1 = iD_CUAD_PUNTOE1;
-            sECTOR.ID_CUAD_PUNTOE2 = iD_CUAD_PUNTOE2;
             return sECTOR;
         }
 
@@ -4632,9 +4584,9 @@ namespace ConexionDatos.Entity
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal ID_CUAD_PUNTOA1
+        public Nullable<global::System.Decimal> ID_CUAD_PUNTOA1
         {
             get
             {
@@ -4649,16 +4601,16 @@ namespace ConexionDatos.Entity
                 OnID_CUAD_PUNTOA1Changed();
             }
         }
-        private global::System.Decimal _ID_CUAD_PUNTOA1;
-        partial void OnID_CUAD_PUNTOA1Changing(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _ID_CUAD_PUNTOA1;
+        partial void OnID_CUAD_PUNTOA1Changing(Nullable<global::System.Decimal> value);
         partial void OnID_CUAD_PUNTOA1Changed();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal ID_CUAD_PUNTOA2
+        public Nullable<global::System.Decimal> ID_CUAD_PUNTOA2
         {
             get
             {
@@ -4673,16 +4625,16 @@ namespace ConexionDatos.Entity
                 OnID_CUAD_PUNTOA2Changed();
             }
         }
-        private global::System.Decimal _ID_CUAD_PUNTOA2;
-        partial void OnID_CUAD_PUNTOA2Changing(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _ID_CUAD_PUNTOA2;
+        partial void OnID_CUAD_PUNTOA2Changing(Nullable<global::System.Decimal> value);
         partial void OnID_CUAD_PUNTOA2Changed();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal ID_CUAD_PUNTOB1
+        public Nullable<global::System.Decimal> ID_CUAD_PUNTOB1
         {
             get
             {
@@ -4697,16 +4649,16 @@ namespace ConexionDatos.Entity
                 OnID_CUAD_PUNTOB1Changed();
             }
         }
-        private global::System.Decimal _ID_CUAD_PUNTOB1;
-        partial void OnID_CUAD_PUNTOB1Changing(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _ID_CUAD_PUNTOB1;
+        partial void OnID_CUAD_PUNTOB1Changing(Nullable<global::System.Decimal> value);
         partial void OnID_CUAD_PUNTOB1Changed();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal ID_CUAD_PUNTOB2
+        public Nullable<global::System.Decimal> ID_CUAD_PUNTOB2
         {
             get
             {
@@ -4721,16 +4673,16 @@ namespace ConexionDatos.Entity
                 OnID_CUAD_PUNTOB2Changed();
             }
         }
-        private global::System.Decimal _ID_CUAD_PUNTOB2;
-        partial void OnID_CUAD_PUNTOB2Changing(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _ID_CUAD_PUNTOB2;
+        partial void OnID_CUAD_PUNTOB2Changing(Nullable<global::System.Decimal> value);
         partial void OnID_CUAD_PUNTOB2Changed();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal ID_CUAD_PUNTOC1
+        public Nullable<global::System.Decimal> ID_CUAD_PUNTOC1
         {
             get
             {
@@ -4745,16 +4697,16 @@ namespace ConexionDatos.Entity
                 OnID_CUAD_PUNTOC1Changed();
             }
         }
-        private global::System.Decimal _ID_CUAD_PUNTOC1;
-        partial void OnID_CUAD_PUNTOC1Changing(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _ID_CUAD_PUNTOC1;
+        partial void OnID_CUAD_PUNTOC1Changing(Nullable<global::System.Decimal> value);
         partial void OnID_CUAD_PUNTOC1Changed();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal ID_CUAD_PUNTOC2
+        public Nullable<global::System.Decimal> ID_CUAD_PUNTOC2
         {
             get
             {
@@ -4769,16 +4721,16 @@ namespace ConexionDatos.Entity
                 OnID_CUAD_PUNTOC2Changed();
             }
         }
-        private global::System.Decimal _ID_CUAD_PUNTOC2;
-        partial void OnID_CUAD_PUNTOC2Changing(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _ID_CUAD_PUNTOC2;
+        partial void OnID_CUAD_PUNTOC2Changing(Nullable<global::System.Decimal> value);
         partial void OnID_CUAD_PUNTOC2Changed();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal ID_CUAD_PUNTOD1
+        public Nullable<global::System.Decimal> ID_CUAD_PUNTOD1
         {
             get
             {
@@ -4793,16 +4745,16 @@ namespace ConexionDatos.Entity
                 OnID_CUAD_PUNTOD1Changed();
             }
         }
-        private global::System.Decimal _ID_CUAD_PUNTOD1;
-        partial void OnID_CUAD_PUNTOD1Changing(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _ID_CUAD_PUNTOD1;
+        partial void OnID_CUAD_PUNTOD1Changing(Nullable<global::System.Decimal> value);
         partial void OnID_CUAD_PUNTOD1Changed();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal ID_CUAD_PUNTOD2
+        public Nullable<global::System.Decimal> ID_CUAD_PUNTOD2
         {
             get
             {
@@ -4817,16 +4769,16 @@ namespace ConexionDatos.Entity
                 OnID_CUAD_PUNTOD2Changed();
             }
         }
-        private global::System.Decimal _ID_CUAD_PUNTOD2;
-        partial void OnID_CUAD_PUNTOD2Changing(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _ID_CUAD_PUNTOD2;
+        partial void OnID_CUAD_PUNTOD2Changing(Nullable<global::System.Decimal> value);
         partial void OnID_CUAD_PUNTOD2Changed();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal ID_CUAD_PUNTOE1
+        public Nullable<global::System.Decimal> ID_CUAD_PUNTOE1
         {
             get
             {
@@ -4841,16 +4793,16 @@ namespace ConexionDatos.Entity
                 OnID_CUAD_PUNTOE1Changed();
             }
         }
-        private global::System.Decimal _ID_CUAD_PUNTOE1;
-        partial void OnID_CUAD_PUNTOE1Changing(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _ID_CUAD_PUNTOE1;
+        partial void OnID_CUAD_PUNTOE1Changing(Nullable<global::System.Decimal> value);
         partial void OnID_CUAD_PUNTOE1Changed();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal ID_CUAD_PUNTOE2
+        public Nullable<global::System.Decimal> ID_CUAD_PUNTOE2
         {
             get
             {
@@ -4865,8 +4817,8 @@ namespace ConexionDatos.Entity
                 OnID_CUAD_PUNTOE2Changed();
             }
         }
-        private global::System.Decimal _ID_CUAD_PUNTOE2;
-        partial void OnID_CUAD_PUNTOE2Changing(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _ID_CUAD_PUNTOE2;
+        partial void OnID_CUAD_PUNTOE2Changing(Nullable<global::System.Decimal> value);
         partial void OnID_CUAD_PUNTOE2Changed();
 
         #endregion
@@ -5560,14 +5512,12 @@ namespace ConexionDatos.Entity
         /// </summary>
         /// <param name="iD_VEHICULO">Valor inicial de la propiedad ID_VEHICULO.</param>
         /// <param name="pATENTE">Valor inicial de la propiedad PATENTE.</param>
-        /// <param name="aNIO_VEHICULO">Valor inicial de la propiedad ANIO_VEHICULO.</param>
         /// <param name="iD_TIPO_VEHICULO">Valor inicial de la propiedad ID_TIPO_VEHICULO.</param>
-        public static VEHICULO CreateVEHICULO(global::System.Decimal iD_VEHICULO, global::System.String pATENTE, global::System.String aNIO_VEHICULO, global::System.Decimal iD_TIPO_VEHICULO)
+        public static VEHICULO CreateVEHICULO(global::System.Decimal iD_VEHICULO, global::System.String pATENTE, global::System.Decimal iD_TIPO_VEHICULO)
         {
             VEHICULO vEHICULO = new VEHICULO();
             vEHICULO.ID_VEHICULO = iD_VEHICULO;
             vEHICULO.PATENTE = pATENTE;
-            vEHICULO.ANIO_VEHICULO = aNIO_VEHICULO;
             vEHICULO.ID_TIPO_VEHICULO = iD_TIPO_VEHICULO;
             return vEHICULO;
         }
@@ -5626,30 +5576,6 @@ namespace ConexionDatos.Entity
         private global::System.String _PATENTE;
         partial void OnPATENTEChanging(global::System.String value);
         partial void OnPATENTEChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ANIO_VEHICULO
-        {
-            get
-            {
-                return _ANIO_VEHICULO;
-            }
-            set
-            {
-                OnANIO_VEHICULOChanging(value);
-                ReportPropertyChanging("ANIO_VEHICULO");
-                _ANIO_VEHICULO = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("ANIO_VEHICULO");
-                OnANIO_VEHICULOChanged();
-            }
-        }
-        private global::System.String _ANIO_VEHICULO;
-        partial void OnANIO_VEHICULOChanging(global::System.String value);
-        partial void OnANIO_VEHICULOChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.

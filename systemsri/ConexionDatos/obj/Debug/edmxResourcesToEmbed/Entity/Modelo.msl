@@ -12,8 +12,6 @@
     <EntitySetMapping Name="APELACION">
       <EntityTypeMapping TypeName="Model.APELACION">
         <MappingFragment StoreEntitySet="APELACION">
-          <ScalarProperty Name="ROL_CAUSA" ColumnName="ROL_CAUSA" />
-          <ScalarProperty Name="MONTO_AP" ColumnName="MONTO_AP" />
           <ScalarProperty Name="ID_APELACION" ColumnName="ID_APELACION" />
           <ScalarProperty Name="SOLICITUD_APELACION" ColumnName="SOLICITUD_APELACION" />
           <ScalarProperty Name="DESCRIPCION_AP" ColumnName="DESCRIPCION_AP" />
@@ -109,6 +107,7 @@
           <ScalarProperty Name="ID_MONEDA" ColumnName="ID_MONEDA" />
           <ScalarProperty Name="DETALLE_ADICIONAL" ColumnName="DETALLE_ADICIONAL" />
           <ScalarProperty Name="ID_RESTRICCION" ColumnName="ID_RESTRICCION" />
+          <ScalarProperty Name="ADJUNTO" ColumnName="ADJUNTO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -187,7 +186,6 @@
         <MappingFragment StoreEntitySet="VEHICULO">
           <ScalarProperty Name="ID_VEHICULO" ColumnName="ID_VEHICULO" />
           <ScalarProperty Name="PATENTE" ColumnName="PATENTE" />
-          <ScalarProperty Name="ANIO_VEHICULO" ColumnName="ANIO_VEHICULO" />
           <ScalarProperty Name="ID_TIPO_VEHICULO" ColumnName="ID_TIPO_VEHICULO" />
         </MappingFragment>
       </EntityTypeMapping>
