@@ -15,6 +15,9 @@
                 </td>
                 <td class="c1b">
                     <asp:TextBox ID="txtNombreCalle" runat="server" CssClass="input1" OnTextChanged="txtNombreCalle_TextChanged"></asp:TextBox>
+                </td><td>
+                <asp:TextBox ID="txtNuevo" runat="server" CssClass="input1" 
+                        OnTextChanged="txtNuevo_TextChanged" Visible="False" Enabled="False">0</asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -73,6 +76,16 @@
                         DataValueField="ID_DETCAR" OnSelectedIndexChanged="ddlistSector_SelectedIndexChanged">
                     </asp:DropDownList>
                 </td>
+                </tr>
+                 <tr>
+                <td class="c1g">
+                    TIPO CALLE:
+                </td>
+                <td class="c1b">
+                    <asp:DropDownList ID="ddlistTipoCalle" runat="server" CssClass="ddlist" DataTextField="DETALLE_CAR"
+                        DataValueField="ID_DETCAR" OnSelectedIndexChanged="ddlistTipoCalle_SelectedIndexChanged">
+                    </asp:DropDownList>
+                </td>
             </tr>
             <tr>
                 <td class="c1g">
@@ -112,6 +125,7 @@
                 <asp:BoundField HeaderText="VEL_MAX" DataField="VEL_MAX" />
                 <asp:BoundField HeaderText="SENTIDO" DataField="SENTIDO" />
                 <asp:BoundField HeaderText="SECTOR" DataField="SECTOR" />
+                <asp:BoundField HeaderText="TIPO_CALLE" DataField="TIPO" />
                 <asp:ButtonField ButtonType="Image" CommandName="botonGV" 
                     ImageUrl="~/Recursos/Imagenes/buscar.jpg" HeaderText="VER" />
 

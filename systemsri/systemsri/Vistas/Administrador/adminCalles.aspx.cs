@@ -14,8 +14,8 @@ namespace systemsri.Vistas.Administrador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           if (Session["usuario"].Equals("") || Session["usuario"] == null ||
-    !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 47))
+            if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+     !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 47))
             {
                 Response.Redirect("../LoginUsuario/loginUsuario.aspx");
 
@@ -36,100 +36,13 @@ namespace systemsri.Vistas.Administrador
                 ddlistSector.DataBind();
                 ddlistSector.Items.Insert(0, new ListItem("Seleccionar", ""));
                 chkActivoACa.Checked = true;
+                ddlistTipoCalle.DataSource = NegocioAdministrador.instancia.listarTipoCalle();
+                ddlistTipoCalle.DataBind();
+                ddlistTipoCalle.Items.Insert(0, new ListItem("Seleccionar", ""));
+                chkActivoACa.Checked = true;
             }
         }
 
-
-
-        protected void btnGuardarAC_Click(object sender, EventArgs e)
-        {
-            lblInfoAC.Text = "La calle ha sido ingresada";
-            lblInfoAC.ForeColor = System.Drawing.Color.Gray;
-
-            int n = 0;
-            if (txtNombreCalle.Text == "" || txtNombreCalle.Text == null)
-            {
-                txtNombreCalle.BorderColor = System.Drawing.Color.Red;
-                txtNombreCalle.BorderWidth = 1;
-                n = 1;
-            }
-            else
-            {
-                txtNombreCalle.BorderColor = System.Drawing.Color.LightGray;
-                txtNombreCalle.BorderWidth = 1;
-                n = 0;
-            }
-
-            if (ddlistNumPistas.SelectedIndex == 0)
-            {
-
-                ddlistNumPistas.BorderColor = System.Drawing.Color.Red;
-                n = 1;
-            }
-            else
-            {
-                ddlistNumPistas.BorderColor = System.Drawing.Color.LightGray;
-                ddlistNumPistas.BorderWidth = 1;
-                n = 0;
-            }
-            if (ddlistOrient.SelectedIndex == 0)
-            {
-
-                ddlistOrient.BorderColor = System.Drawing.Color.Red;
-                n = 1;
-            }
-            else
-            {
-                ddlistOrient.BorderColor = System.Drawing.Color.LightGray;
-                ddlistOrient.BorderWidth = 1;
-                n = 0;
-            }
-            if (ddlistVelMax.SelectedIndex == 0)
-            {
-
-                ddlistVelMax.BorderColor = System.Drawing.Color.Red;
-                n = 1;
-            }
-            else
-            {
-                ddlistVelMax.BorderColor = System.Drawing.Color.LightGray;
-                ddlistVelMax.BorderWidth = 1;
-                n = 0;
-            }
-
-            if (ddlistSentido.SelectedIndex == 0)
-            {
-
-                ddlistSentido.BorderColor = System.Drawing.Color.Red;
-                n = 1;
-            }
-            else
-            {
-                ddlistSentido.BorderColor = System.Drawing.Color.LightGray;
-                ddlistSentido.BorderWidth = 1;
-                n = 0;
-            }
-            if (ddlistSector.SelectedIndex == 0)
-            {
-
-                ddlistSector.BorderColor = System.Drawing.Color.Red;
-                n = 1;
-            }
-            else
-            {
-                ddlistSector.BorderColor = System.Drawing.Color.LightGray;
-                ddlistSector.BorderWidth = 1;
-                n = 0;
-            }
-
-            if (n == 1)
-            {
-                lblInfoAC.Visible = true;
-                lblInfoAC.Text = "Los campos en Rojo son obligatorios";
-            }
-
-
-        }
 
 
         protected void btnBuscarAC_Click(object sender, EventArgs e)
@@ -150,6 +63,7 @@ namespace systemsri.Vistas.Administrador
                 v.ID_VELOC_MAXIMA = Convert.ToInt32(ddlistVelMax.SelectedItem.Value);
                 v.ID_SENTIDO = Convert.ToInt32(ddlistSentido.SelectedItem.Value);
                 v.ID_SECTOR = Convert.ToInt32(ddlistSector.SelectedItem.Value);
+                v.ID_TIPO_CALLE = Convert.ToInt32(ddlistTipoCalle.SelectedItem.Value);
                 ddlistNumPistas.SelectedItem.Value = v.CANT_PISTAS.ToString();
 
 
@@ -166,6 +80,9 @@ namespace systemsri.Vistas.Administrador
             ddlistVelMax.SelectedIndex = 0;
             ddlistSentido.SelectedIndex = 0;
             ddlistSector.SelectedIndex = 0;
+            ddlistTipoCalle.SelectedIndex = 0;
+            btnGuardarAC.Text = "GUARDAR";
+            txtNuevo.Text = "0";
 
             txtNombreCalle.BorderColor = System.Drawing.Color.LightGray;
             ddlistNumPistas.BorderColor = System.Drawing.Color.LightGray;
@@ -173,6 +90,7 @@ namespace systemsri.Vistas.Administrador
             ddlistVelMax.BorderColor = System.Drawing.Color.LightGray;
             ddlistSentido.BorderColor = System.Drawing.Color.LightGray;
             ddlistSector.BorderColor = System.Drawing.Color.LightGray;
+            ddlistTipoCalle.BorderColor = System.Drawing.Color.LightGray;
 
             txtNombreCalle.BorderWidth = 1;
             ddlistNumPistas.BorderWidth = 1;
@@ -180,6 +98,8 @@ namespace systemsri.Vistas.Administrador
             ddlistVelMax.BorderWidth = 1;
             ddlistSentido.BorderWidth = 1;
             ddlistSector.BorderWidth = 1;
+            ddlistTipoCalle.BorderWidth = 1;
+
         }
 
         protected void txtNombreCalle_TextChanged(object sender, EventArgs e)
@@ -229,14 +149,14 @@ namespace systemsri.Vistas.Administrador
 
         protected void gvCalles_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-      
+
         }
 
-        protected void btnListarAC_Click(object sender, EventArgs e)
-        {
-            gvCalles.DataSource = NegocioReporteria.Instancia.ListarCalles();
-            gvCalles.DataBind();
-        }
+        //protected void btnListarAC_Click(object sender, EventArgs e)
+        //{
+        //    gvCalles.DataSource = NegocioReporteria.Instancia.ListarCalles();
+        //    gvCalles.DataBind();
+        //}
 
         protected void chkActivoACa_CheckedChanged(object sender, EventArgs e)
         {
@@ -251,12 +171,13 @@ namespace systemsri.Vistas.Administrador
                 int index = Convert.ToInt32(e.CommandArgument);
                 GridViewRow row = gvCalles.Rows[index];
                 txtNombreCalle.Text = row.Cells[1].Text;
-                foreach(var item in ddlistOrient.Items)
+                txtNuevo.Text = row.Cells[0].Text;
+                foreach (var item in ddlistOrient.Items)
                 {
                     if (item.ToString().Equals(row.Cells[3].Text))
                         ddlistOrient.SelectedIndex = contador;
                     contador = contador + 1;
-                 }
+                }
                 contador = 0;
                 foreach (var item in ddlistVelMax.Items)
                 {
@@ -278,10 +199,112 @@ namespace systemsri.Vistas.Administrador
                         ddlistSector.SelectedIndex = contador;
                     contador = contador + 1;
                 }
+                contador = 0;
+                foreach (var item in ddlistTipoCalle.Items)
+                {
+                    if (item.ToString().Equals(row.Cells[7].Text))
+                        ddlistTipoCalle.SelectedIndex = contador;
+                    contador = contador + 1;
+                }
+                 contador = 0;
+       
                 ddlistNumPistas.SelectedIndex = Convert.ToInt32(row.Cells[2].Text);
+                btnGuardarAC.Text = "ACTUALIZAR";
+
 
             }
-            
+
+        }
+
+        protected void btnGuardarAC_Click(object sender, EventArgs e)
+        {
+            if (NegocioAdministrador.instancia.existeCalle(txtNombreCalle.Text) || Convert.ToInt32(txtNuevo.Text)>0)
+            {
+                DETALLE_CARACTERISTICA objCarac = new DETALLE_CARACTERISTICA();
+                int newPersonal=0;
+                objCarac.DETALLE_CAR = txtNombreCalle.Text;
+                objCarac.ID_CARACTERISTICA = 10;
+                String estado = "1";
+                if (chkActivoACa.Checked)
+                    estado = "1";
+                else
+                    estado = "0";
+                if(Convert.ToInt32(txtNuevo.Text)>0)
+                    newPersonal = NegocioAdministrador.instancia.CreaCalle(objCarac, Convert.ToInt32(ddlistNumPistas.SelectedValue), Convert.ToInt32(ddlistOrient.SelectedValue), Convert.ToInt32(ddlistVelMax.SelectedValue), Convert.ToInt32(ddlistSentido.SelectedValue), Convert.ToInt32(ddlistSector.SelectedValue), Convert.ToInt32(ddlistTipoCalle.SelectedValue), Convert.ToInt32(txtNuevo.Text), estado);
+
+                if (newPersonal == 1 || newPersonal == 2)
+                {
+                    txtNombreCalle.Text = "";
+                    ddlistSector.SelectedIndex = 0;
+                    ddlistNumPistas.SelectedIndex = 0;
+                    ddlistOrient.SelectedIndex = 0;
+                    ddlistSentido.SelectedIndex = 0;
+                    ddlistTipoCalle.SelectedIndex = 0;
+                    ddlistVelMax.SelectedIndex = 0;
+                    chkActivoACa.Checked = true;
+                    txtNuevo.Text = "0";
+                    lblInfoAC.ForeColor = System.Drawing.Color.Gray;
+                    if (newPersonal == 2)
+                        lblInfoAC.Text = "Los Datos han sido actualizado exitosamente";
+                    if (newPersonal == 1)
+                        lblInfoAC.Text = "Los Datos han sido guardados exitosamente";
+
+                    lblInfoAC.Visible = true;
+
+                    gvCalles.DataSource = NegocioReporteria.Instancia.ListarCalles();
+                    gvCalles.DataBind();
+
+                }
+                else
+                {
+                    lblInfoAC.ForeColor = System.Drawing.Color.Red;
+                    lblInfoAC.Text = "Los Datos no han sido guardados";
+                    lblInfoAC.Visible = true;
+                }
+
+            }
+           
+            else
+            {
+                int n = 0;
+                if (txtNombreCalle.Text == "" || txtNombreCalle.Text == null)
+                {
+                    txtNombreCalle.BorderColor = System.Drawing.Color.Red;
+                    txtNombreCalle.BorderWidth = 1;
+                    n = 1;
+                }
+                else
+                {
+                    txtNombreCalle.BorderColor = System.Drawing.Color.LightGray;
+                    txtNombreCalle.BorderWidth = 1;
+                    n = 0;
+                }
+
+                if (n == 1)
+                {
+                    lblInfoAC.Visible = true;
+                    lblInfoAC.Text = "Los campos en Rojo son obligatorios";
+                    lblInfoAC.ForeColor = System.Drawing.Color.Red;
+
+
+                }
+            }
+        }
+
+        protected void btnListarAC_Click(object sender, EventArgs e)
+        {
+            gvCalles.DataSource = NegocioReporteria.Instancia.ListarCalles();
+            gvCalles.DataBind();
+        }
+
+        protected void ddlistTipoCalle_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void txtNuevo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

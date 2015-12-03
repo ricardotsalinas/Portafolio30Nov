@@ -177,8 +177,20 @@ namespace ConexionDatos.Dao
             }
         }
 
-     
 
-      
+
+        public Boolean existeCalle(String calle)
+        {
+            List<DETALLE_CARACTERISTICA> list = new List<DETALLE_CARACTERISTICA>();
+            using (SRI sri = new SRI())
+            {
+                list = sri.DETALLE_CARACTERISTICA.Where(p => p.DETALLE_CAR== calle).ToList();
+            }
+
+            if (list.Count > 0)
+                return false;
+            else
+                return true;
+        }
     }
 }

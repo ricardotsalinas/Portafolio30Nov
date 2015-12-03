@@ -40,6 +40,15 @@ namespace systemsri.Vistas.Administrador {
         protected global::System.Web.UI.WebControls.TextBox txtNombreCalle;
         
         /// <summary>
+        /// Control txtNuevo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNuevo;
+        
+        /// <summary>
         /// Control ddlistNumPistas.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace systemsri.Vistas.Administrador {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlistSector;
+        
+        /// <summary>
+        /// Control ddlistTipoCalle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlistTipoCalle;
         
         /// <summary>
         /// Control chkActivoACa.

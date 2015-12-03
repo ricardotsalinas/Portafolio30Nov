@@ -56,6 +56,17 @@ namespace ConexionDatos.Dao
            }
        }
 
+       public List<DETALLE_CARACTERISTICA> listarTipoCalle()
+       {
+           using (SRI contex = new SRI())
+           {
+               List<DETALLE_CARACTERISTICA> lTipo = new List<DETALLE_CARACTERISTICA>();
+               lTipo = contex.DETALLE_CARACTERISTICA.Where(a => a.ID_CARACTERISTICA == 6).ToList();
+               return lTipo;
+
+           }
+       }
+
      
 
        private int RetornarNuevoId()
@@ -84,6 +95,27 @@ namespace ConexionDatos.Dao
            {
                return 0;
            }
+       }
+
+       public int actualizarCalle(int tipo, String nombreCalle)
+       {
+           try
+           {
+               using (SRI sri = new SRI())
+               {
+                   DETALLE_CARACTERISTICA objDetalle = new DETALLE_CARACTERISTICA();
+                   objDetalle = sri.DETALLE_CARACTERISTICA.Where(d => d.ID_DETCAR == tipo).FirstOrDefault();
+                   objDetalle.DETALLE_CAR = nombreCalle;
+                   sri.SaveChanges();
+                   return 1;
+
+               }
+           }
+           catch (Exception e)
+           {
+               return 0;
+           }
+       
        }
 
        public List<DETALLE_CARACTERISTICA> listarGravedad()

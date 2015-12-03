@@ -55,12 +55,21 @@ namespace Negocio
             return DaoDetalleCaracteristica.instancia.listarSentido();
         }
 
-       
-
-        public int CreaViaCirculacion(VIA_CIRCULACION dto)
+        public List<DETALLE_CARACTERISTICA> listarTipoCalle()
         {
-            return DaoViaCirculacion.instancia.CrearViaCirculacion(dto);
+            return DaoDetalleCaracteristica.instancia.listarTipoCalle();
         }
+
+
+        public Boolean existeCalle(String calle)
+        {
+            return DaoPersonal.instancia.existeCalle(calle);
+        }
+
+       public int CreaCalle(DETALLE_CARACTERISTICA dto, int pista, int orientacion, int velocidadMaxima, int sentido, int sector, int tipoCalle, int tipo, String estado)
+       {
+           return DaoViaCirculacion.instancia.grabarCalle(dto, pista, orientacion, velocidadMaxima, sentido, sector, tipoCalle,tipo, estado);
+       }
 
         public int CreaDetalleCaracteristica(DETALLE_CARACTERISTICA dto)
         {
@@ -123,5 +132,13 @@ namespace Negocio
         {
             return DaoDetalleCaracteristica.instancia.BuscarInfraccion(idinfr);
         }
+
+       
+
+        //public int CrearCalle(VIA_CIRCULACION vcir, int tipo)
+        //{
+
+        //  //  return DaoPersonal.instancia.CrearCalle(vcir, tipo);
+        //}
     }
 }

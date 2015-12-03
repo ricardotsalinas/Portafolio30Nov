@@ -23,90 +23,81 @@ namespace ConexionDatos.Dao
                 return id;
             }
         }
-        public int CrearViaCirculacion(VIA_CIRCULACION dto) 
-        {
-            try
-            {
-                using (SRI sri = new SRI())
-                {
-                    dto.ID_VIA_CIRCULACION = RetornarNuevoId();
-                    sri.VIA_CIRCULACION.AddObject(dto);
-                    sri.SaveChanges();
-                    return 1;
-                }
-            }
-            catch (Exception e)
-            {
-                return 0;
-            }
-        }
-        public List<VIA_CIRCULACION> BuscarCalleVC(int idcalle)
-        {
-            using (SRI contex = new SRI())
-            {
-                List<VIA_CIRCULACION> lbuscar = new List<VIA_CIRCULACION>();
-                lbuscar = contex.VIA_CIRCULACION.Where(a => a.ID_NOMBRE_CALLE == idcalle).ToList();
-                return lbuscar;
-            }
-        }
 
-
-        public Boolean existeCalle(String nombre)
+        public Boolean existeCalle(String calle)
         {
+
             List<DETALLE_CARACTERISTICA> list = new List<DETALLE_CARACTERISTICA>();
             using (SRI sri = new SRI())
             {
-                list = sri.DETALLE_CARACTERISTICA.Where(p => p.DETALLE_CAR== nombre).ToList();
+                list = sri.DETALLE_CARACTERISTICA.Where(p => p.DETALLE_CAR == calle).ToList();
             }
 
             if (list.Count > 0)
                 return false;
             else
-                return true;
+            return true;
 
+        
         }
 
-       /* public int CrearPersonal(PERSONAL dto, int tipo)
+        public int grabarCalle(DETALLE_CARACTERISTICA objDetalle, int pistas, int orientacion, int velocidadMaxima, int sentido, int sector, int tipoCalle, int tipo, String estado)
         {
-            try
+            int validacion = 0;
+            int idCalle = 0;
+            using (SRI con = new SRI())
             {
-                using (SRI sri = new SRI())
+                try
                 {
-                    if (!existeRut(dto.RUT_PER.ToString()) && tipo == 2)
+                    if (tipo > 0)
                     {
-                        PERSONAL per = new PERSONAL();
-                        per = sri.PERSONAL.Where(a => a.RUT_PER == dto.RUT_PER).FirstOrDefault();
-                        per.RUT_PER = dto.RUT_PER;
-                        per.NOMBRE_PER = dto.NOMBRE_PER;
-                        per.ACTIVO = dto.ACTIVO;
-                        per.APMAT_PER = dto.APMAT_PER;
-                        per.APPAT_PER = dto.APPAT_PER;
-                        per.TELEFONO_PER = dto.TELEFONO_PER;
-                        per.DIRECCION_PER = dto.DIRECCION_PER;
-                        per.EMAIL_PER = per.EMAIL_PER;
-                        per.ID_TIPO_FUNCIONARIO = dto.ID_TIPO_FUNCIONARIO;
-                        sri.SaveChanges();
-                        return 2;
+                        VIA_CIRCULACION via = new VIA_CIRCULACION();
+                        via = con.VIA_CIRCULACION.Where(v => v.ID_VIA_CIRCULACION == tipo).FirstOrDefault();
+                        via.ACTIVO = estado;
+                        via.CANT_PISTAS = pistas;
+                        via.ID_ORIENTACION = orientacion;
+                        via.ID_VELOC_MAXIMA = velocidadMaxima;
+                        via.ID_SENTIDO = sentido;
+                        via.ID_SECTOR = sector;
+                        via.ID_TIPO_CALLE = tipoCalle;
+                        con.SaveChanges();
+                         idCalle =  DaoDetalleCaracteristica.instancia.actualizarCalle((int)via.ID_NOMBRE_CALLE,objDetalle.DETALLE_CAR);
+                        validacion = 2;
                     }
                     else
                     {
-                        if (tipo == 1)
-                        {
-                            dto.ID_PERSONAL = retornarNuevoId();
-                            sri.PERSONAL.AddObject(dto);
-                            sri.SaveChanges();
-                            return 1;
-                        }
-                        else
-                            return 0;
+                        idCalle = DaoDetalleCaracteristica.instancia.CrearDetalleCaracteristica(objDetalle);
+
+
+                        VIA_CIRCULACION objVia = new VIA_CIRCULACION();
+                        int idVia = RetornarNuevoId();
+                        objVia.ACTIVO = estado;
+                        objVia.CANT_PISTAS = pistas;
+                        objVia.ID_ORIENTACION = orientacion;
+                        objVia.ID_VELOC_MAXIMA = velocidadMaxima;
+                        objVia.ID_SENTIDO = sentido;
+                        objVia.ID_SECTOR = sector;
+                        objVia.ID_TIPO_CALLE = tipoCalle;
+                        objVia.ID_VIA_CIRCULACION = idVia;
+                        objVia.ID_NOMBRE_CALLE = idCalle;
+                        con.VIA_CIRCULACION.AddObject(objVia);
+                        con.SaveChanges();
+                        validacion = 1;
                     }
+                  }
+                
+                catch (Exception e)
+                {
+                    validacion = 0;
                 }
+                
+            
             }
-            catch (Exception e)
-            {
-                return 0;
-            }
-        }*/
+            return validacion;
+        
+        }
+
+
 
     }
 }

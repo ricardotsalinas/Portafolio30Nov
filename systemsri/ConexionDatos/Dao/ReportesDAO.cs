@@ -55,13 +55,15 @@ namespace ConexionDatos.Dao
                                              join velmaxdc in con.DETALLE_CARACTERISTICA on vc.ID_VELOC_MAXIMA equals velmaxdc.ID_DETCAR
                                              join sendc in con.DETALLE_CARACTERISTICA on vc.ID_SENTIDO equals sendc.ID_DETCAR
                                              join secdc in con.DETALLE_CARACTERISTICA on vc.ID_SECTOR equals secdc.ID_DETCAR
+                                             join tcdc in con.DETALLE_CARACTERISTICA on vc.ID_TIPO_CALLE equals tcdc.ID_DETCAR
 
                                              where
                                              nomdc.ID_CARACTERISTICA == 10 &&
                                              oridc.ID_CARACTERISTICA == 5 &&
                                              velmaxdc.ID_CARACTERISTICA == 11 &&
                                              sendc.ID_CARACTERISTICA == 4 &&
-                                             secdc.ID_CARACTERISTICA == 7
+                                             secdc.ID_CARACTERISTICA == 7 &&
+                                             tcdc.ID_CARACTERISTICA == 6 
                                              select new ReporteCalles
                                              {
                                                  ID_CALLE = vc.ID_VIA_CIRCULACION,
@@ -70,7 +72,8 @@ namespace ConexionDatos.Dao
                                                  ORIENTACION = oridc.DETALLE_CAR,
                                                  VEL_MAX = velmaxdc.DETALLE_CAR,
                                                  SENTIDO = sendc.DETALLE_CAR,
-                                                 SECTOR = secdc.DETALLE_CAR
+                                                 SECTOR = secdc.DETALLE_CAR,
+                                                 TIPO = tcdc.DETALLE_CAR,
                                              }
                              ).ToList();
                 return lista;

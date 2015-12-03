@@ -14,5 +14,6 @@ namespace ClasesESpeciales
         public String VEL_MAX { set; get; }
         public String SENTIDO { set; get; }
         public String SECTOR { set; get; }
+        public String TIPO { set; get; }
     }
 }
