@@ -63,6 +63,7 @@ namespace systemsri.Vistas.Inspector
                     this.tblPassDIn.Visible = true;
                 }
             }
+            lblInfoDIn.Visible = false;
         }
 
         protected void btnGuardarDIn_Click(object sender, EventArgs e)
@@ -143,6 +144,7 @@ namespace systemsri.Vistas.Inspector
                     txtTelefonoDIn.Enabled = false;
                     lblInfoDIn.Text = "Los datos han sido actualizados";
                     lblInfoDIn.ForeColor = System.Drawing.Color.Gray;
+                    lblInfoDIn.Visible = true;
                 }
                 else
                 {
@@ -150,6 +152,7 @@ namespace systemsri.Vistas.Inspector
                     lblInfoDIn.Visible = true;
                     lblInfoDIn.Text = "Ha habido un error al actualizar los datos";
                     lblInfoDIn.ForeColor = System.Drawing.Color.Red;
+                    lblInfoDIn.Visible = true;
 
 
                 }

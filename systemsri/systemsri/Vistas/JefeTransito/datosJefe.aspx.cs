@@ -84,9 +84,9 @@ namespace systemsri.Vistas.JefeTransito
                             {
                                 tblPassDJ.Visible = false;
                                 lblInfoDJ.ForeColor = System.Drawing.Color.Gray;
-                                lblInfoDJ.Visible = true;
                                 lblInfoDJ.Text = "La contraseña ha sido ingresada correctamente";
                                 btnModificaPassDJ.Text = "MODIFICAR";
+                                lblInfoDJ.Visible = true;
                                 txtCambiaPassDJ1.Text = String.Empty;
                                 txtCambiaPassDJ2.Text = String.Empty;
                                 txtCambiaPassDJ1.BorderColor = System.Drawing.Color.LightGray;

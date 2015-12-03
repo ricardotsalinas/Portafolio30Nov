@@ -15,52 +15,50 @@ namespace systemsri.Vistas.JefeTransito
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["usuario"].Equals("") || Session["usuario"] == null ||
-            //    !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 44))
-            //{
-            //    Response.Redirect("../LoginUsuario/loginUsuario.aspx");
-            //}
+            if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+                !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 44))
+            {
+                Response.Redirect("../LoginUsuario/loginUsuario.aspx");
+            }
             btnErxporta.Visible = false;
         }
 
         protected void btnBuscarAA_Click(object sender, EventArgs e)
         {
-             if (txtRutAA.Text == "" || txtRutAA.Text == null)
-                {
-                    
-                    switch (Convert.ToInt32(ddlistFiltro.SelectedValue))
-                    { 
-                        case 0:
-                            gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text,0);
-                            gvReporte.DataBind();
-                            break;
-                        case 1:
-                            if (CheckBox1.Checked)
-                            {
-                                gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 11);
-                                gvReporte.DataBind();
-                            }
-                            else
-                            {
-                                gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 1);
-                                gvReporte.DataBind();
-                            }
-                            break;
-                        case 2:
-                                gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 2);
-                                gvReporte.DataBind();
-                            break;
-                        case 3:
-                                gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 3);
-                                gvReporte.DataBind();
-                            break;
-                    }
+            if (txtRutAA.Text == "" || txtRutAA.Text == null)
+            {
 
-                if(txtRutAA.Text.Length>7)
+                switch (Convert.ToInt32(ddlistFiltro.SelectedValue))
                 {
-                    gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text);
-                    gvReporte.DataBind();
+                    case 0:
+                        gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 0);
+                        gvReporte.DataBind();
+                        break;
+                    case 1:
+                        if (CheckBox1.Checked)
+                        {
+                            gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 11);
+                            gvReporte.DataBind();
+                        }
+                        else
+                        {
+                            gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 1);
+                            gvReporte.DataBind();
+                        }
+                        break;
+                    case 2:
+                        gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 2);
+                        gvReporte.DataBind();
+                        break;
+                    case 3:
+                        gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 3);
+                        gvReporte.DataBind();
+                        break;
                 }
+
+                
+            }
+        }
            
 
 

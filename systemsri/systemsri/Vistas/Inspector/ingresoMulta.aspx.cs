@@ -164,7 +164,7 @@ namespace systemsri.Vistas.Inspector
                
 
             }
-            objM.ID_PERSONAL = NegocioInspector.instancia.buscaInspector("111111111");
+            objM.ID_PERSONAL = NegocioInspector.instancia.buscaInspector(Session["usuario"].ToString());
             if (!NegocioInfractor.instancia.existeRut(txtRutIM.Text))
             {
                 objM.ID_INFRACTOR = NegocioInfractor.instancia.idInfractor(txtRutIM.Text);
@@ -225,7 +225,7 @@ namespace systemsri.Vistas.Inspector
                         {
                             objM.ADJUNTO = txtRutIM.Text + "_" + FileUpload.FileName;
                             int grabado = NegocioInspector.instancia.grabaMulta(objM);
-                            FileUpload.SaveAs(Server.MapPath("~/Upload/" + grabado + "_" + txtRutIM.Text + "_" + FileUpload.FileName));
+                            FileUpload.SaveAs(Server.MapPath("~/ArchivosMulta/" + grabado + "_" + txtRutIM.Text + "_" + FileUpload.FileName));
                             
                         }
                         else

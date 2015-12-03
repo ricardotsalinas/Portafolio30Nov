@@ -4,6 +4,8 @@
     <form id="formDatosInfractor" runat="server">
          <div class="alinInicial">
              <h2>Datos Personales</h2>
+            <asp:Label ID="lblInfoDI" runat="server" CssClass="lbl" Text="label" Visible="False" 
+                    Font-Underline="False" />
 
               <table style="width: 70%">
                 <tr>

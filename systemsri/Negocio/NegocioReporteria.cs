@@ -13,9 +13,9 @@ namespace Negocio
     {
         public static NegocioReporteria Instancia = new NegocioReporteria();
 
-        public List<ReporteInfractor> ListarInfractores(string rut)
+        public List<ReporteInfractor> ListarInfractores(string rut, int tipo)
         {
-            return ReportesDAO.Instancia.ReporteInfractores(rut);
+            return ReportesDAO.Instancia.ReporteInfractores(rut,tipo);
         }
 
 

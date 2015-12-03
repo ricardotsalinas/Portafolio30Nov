@@ -152,7 +152,7 @@ namespace ConexionDatos.Dao
                                  join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
                                  join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
                                  join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
-                                 where a.ESTADO == (int)1141 && a.ESTADO == (int)1143
+                                 where a.ESTADO == (int)1141 || a.ESTADO == (int)1143
                                  select new ReporteInfractor
                                  {
                                      RESUELTO = a.ESTADO ?? 0,
@@ -244,7 +244,6 @@ namespace ConexionDatos.Dao
                                              join sendc in con.DETALLE_CARACTERISTICA on vc.ID_SENTIDO equals sendc.ID_DETCAR
                                              join secdc in con.DETALLE_CARACTERISTICA on vc.ID_SECTOR equals secdc.ID_DETCAR
                                              join tcdc in con.DETALLE_CARACTERISTICA on vc.ID_TIPO_CALLE equals tcdc.ID_DETCAR
-
                                              where
                                              nomdc.ID_CARACTERISTICA == 10 &&
                                              oridc.ID_CARACTERISTICA == 5 &&
@@ -308,8 +307,7 @@ namespace ConexionDatos.Dao
                                                  join ps in con.PERSONAL_SECTOR on pe.ID_PERSONAL equals ps.ID_PERSONAL
                                                  join se in con.SECTOR on ps.ID_SECTOR equals se.ID_SECTOR
                                                  join dc in con.DETALLE_CARACTERISTICA on se.ID_NOMBRE_SECTOR equals dc.ID_DETCAR
-
-                                                
+                                                                                                 
                                                  select new ReporteTurnos
                                                  {
                                                      ID_TUR = tu.ID_TURNO,
