@@ -5,8 +5,9 @@ using System.Text;
 using ConexionDatos;
 using ConexionDatos.Entity;
 using ConexionDatos.Dao;
-using ClasesESpeciales;
+using Oracle.DataAccess;
 using ClasesESpeciales.Helper;
+using ClasesESpeciales;
 
 namespace Negocio
 {
@@ -23,6 +24,11 @@ namespace Negocio
         public List<INFRACTOR> buscarPersona(String rut)
         {
             return DaoInfractor.Instancia.BuscarInfractor(rut);
+        }
+
+        public int idInfractor(String rut)
+        {
+            return DaoInfractor.Instancia.idInfractor(rut);
         }
 
 
@@ -76,6 +82,12 @@ namespace Negocio
         public Boolean existeRut(String rut)
         {
             return DaoPersonal.instancia.existeRut(rut);
+        }
+
+        public int FunConId(INFRACTOR objInf)
+        {
+            objInf.PASSWORD_INFR = GeneraMd5.instancia.md5(objInf.RUT_INFR.ToString().Substring(0, 5));
+            return DaoInfractor.Instancia.funcionarioId(objInf);
         }
     }
 }

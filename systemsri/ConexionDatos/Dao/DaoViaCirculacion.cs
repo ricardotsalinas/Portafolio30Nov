@@ -24,6 +24,9 @@ namespace ConexionDatos.Dao
             }
         }
 
+
+
+
         public Boolean existeCalle(String calle)
         {
 
@@ -40,7 +43,18 @@ namespace ConexionDatos.Dao
 
         
         }
+        public int idVia(int idVia)
+        {
+            int id = 0;
+            using (SRI sri = new SRI())
+            {
+                VIA_CIRCULACION via = new VIA_CIRCULACION();
+                via = sri.VIA_CIRCULACION.Where(v => v.ID_NOMBRE_CALLE == idVia).FirstOrDefault();
+                return (int)via.ID_VIA_CIRCULACION;
+            }
+        }
 
+        
         public int grabarCalle(DETALLE_CARACTERISTICA objDetalle, int pistas, int orientacion, int velocidadMaxima, int sentido, int sector, int tipoCalle, int tipo, String estado)
         {
             int validacion = 0;

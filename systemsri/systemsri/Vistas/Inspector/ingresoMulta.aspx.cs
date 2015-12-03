@@ -16,13 +16,13 @@ namespace systemsri.Vistas.Inspector
         public List<DETALLE_CARACTERISTICA> lts = new List<DETALLE_CARACTERISTICA>();
         protected void Page_Load(object sender, EventArgs e)
         {
-          if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+          /*if (Session["usuario"].Equals("") || Session["usuario"] == null ||
                 !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 42))
             {
                 Response.Redirect("../LoginUsuario/loginUsuario.aspx");
 
             }
-        
+        */
            lts = NegocioAdministrador.instancia.listarMotivo();
            if (!Page.IsPostBack)
            {
@@ -91,25 +91,24 @@ namespace systemsri.Vistas.Inspector
 
         protected void btnBuscarRut_Click(object sender, EventArgs e)
         {
-            
-            if (!String.IsNullOrEmpty(txtPatIM.Text))
-            {
-                ArrayList datos = new ArrayList();
-                datos = NegocioInspector.instancia.datosRegistroCivil(txtPatIM.Text);
-                if (!datos[0].ToString().Equals("error"))
+
+                if (!String.IsNullOrEmpty(txtPatIM.Text))
                 {
-                    txtRutIM.Text = datos[0].ToString();
-                    txtNomIM.Text = datos[1].ToString();
-                    txtPatIM.Text = datos[2].ToString();
-                    txtAppatIM.Text = datos[3].ToString();
-                    txtApmatIM.Text = datos[4].ToString();
-                    txtFechaNacimientoIM.Text = datos[5].ToString();
+                    ArrayList datos = new ArrayList();
+                    datos = NegocioInspector.instancia.datosRegistroCivil(txtPatIM.Text);
+                    if (!datos[0].ToString().Equals("error"))
+                    {
+                        txtRutIM.Text = datos[0].ToString();
+                        txtNomIM.Text = datos[1].ToString();
+                        txtPatIM.Text = datos[2].ToString();
+                        txtAppatIM.Text = datos[3].ToString();
+                        txtApmatIM.Text = datos[4].ToString();
+                        txtFechaNacimientoIM.Text = datos[5].ToString();
+                        txtDireccion.Text = datos[6].ToString();
+                    }
+                    //error datos no encotrados
                 }
-                //error datos no encotrados
-            }
-            ///////// agregar un errro al momento de no tener nada escrito 
-
-
+                ///////// agregar un errro al momento de no tener nada escrito 
         }
 
       
@@ -124,6 +123,129 @@ namespace systemsri.Vistas.Inspector
 
         protected void btnGuardarIM_Click1(object sender, EventArgs e)
         {
+            String rut = "";
+            String NOMBRE_INFR = "";
+            String APPAT_INFR = "";
+            String APMAT_INFR = "";
+            String DIRECCION_INFR = "";
+            String FECHANACIMIENTO = "";
+            String patente ="";
+            ArrayList datos = new ArrayList();
+            datos = NegocioInspector.instancia.datosRegistroCivil(txtPatIM.Text);
+            if (!datos[0].ToString().Equals("error"))
+            {
+                rut = datos[0].ToString();
+                NOMBRE_INFR = datos[1].ToString();
+                patente = datos[2].ToString();
+                APPAT_INFR = datos[3].ToString();
+                APMAT_INFR = datos[4].ToString();
+                FECHANACIMIENTO = datos[5].ToString();
+                DIRECCION_INFR = datos[6].ToString();
+            }
+
+            MULTA objM = new MULTA();
+            objM.FECHA_CREACION =Convert.ToDateTime(txtFechaMultaIM.Text);
+            objM.FECHA_INTEGRACION = Convert.ToDateTime(txtFechaMultaIM.Text);
+            objM.HORA_MULTA = txtHoraMultaIM.Text;
+            objM.MONTO_ADICIONAL = 0;
+            objM.PAGADA = "0";
+            objM.ACTIVO = "0";
+            if (chkCarabIM.Checked)
+            {
+                if (!String.IsNullOrEmpty(txtLicCarabIM.Text))
+                {
+                    objM.CARABINERO_OPC = 1;
+                    objM.ID_LIC_CARAB = Convert.ToInt32(txtLicCarabIM.Text);
+                        if(chkRetLicIM.Checked)
+                            objM.RETENCION_LICENCIA = "1";
+                        else
+                            objM.RETENCION_LICENCIA = "0";
+                }
+               
+
+            }
+            objM.ID_PERSONAL = NegocioInspector.instancia.buscaInspector("111111111");
+            if (!NegocioInfractor.instancia.existeRut(txtRutIM.Text))
+            {
+                objM.ID_INFRACTOR = NegocioInfractor.instancia.idInfractor(txtRutIM.Text);
+            }
+            else
+            { 
+                    INFRACTOR inf = new INFRACTOR();
+                    inf.RUT_INFR = rut;
+                    inf.NOMBRE_INFR = NOMBRE_INFR;
+                    inf.APPAT_INFR = APPAT_INFR;
+                    inf.APMAT_INFR = APMAT_INFR;
+                    inf.DIRECCION_INFR = DIRECCION_INFR;
+                    inf.FECHA_NAC = Convert.ToDateTime(FECHANACIMIENTO);
+                    inf.TELEFONO_INFR = "";
+                    if (NegocioInspector.instancia.existeVehiculo(patente) > 0)
+                        inf.ID_VEHICULO = NegocioInspector.instancia.existeVehiculo(patente);
+                    else
+                        inf.ID_VEHICULO = NegocioInspector.instancia.creaVehiculo(patente);
+
+                    inf.ID_CLASE_LICENCIA = 6;
+                    int largoRut = rut.Length;
+                    rut = rut.Substring(0, largoRut - 1);
+                    inf.NUM_LICENCIA = Convert.ToInt32(rut);
+                    inf.ACTIVO = "1";
+
+                
+                    objM.ID_INFRACTOR = NegocioInfractor.instancia.FunConId(inf);
+            }
+
+            objM.ID_VIA_CIRCULACION = NegocioInspector.instancia.idViaN(Convert.ToInt32(ddlistLugarInfIM.SelectedValue));
+            int idMOneda = NegocioInspector.instancia.idInfraccion(Convert.ToInt32(ddlistMotivoIM.SelectedValue));
+            int idInfraccion = NegocioInspector.instancia.idInfraccion2(Convert.ToInt32(ddlistMotivoIM.SelectedValue));
+            objM.ID_INFRACCION = NegocioInspector.instancia.moneda(idInfraccion);
+            objM.ID_MONEDA = idMOneda;
+            objM.DETALLE_ADICIONAL = txtDetalleAdicIM.Text;
+            objM.ID_RESTRICCION = NegocioInspector.instancia.idRestriccion();
+
+            if (FileUpload.HasFile)
+            {
+                String Extension = System.IO.Path.GetExtension(FileUpload.FileName);
+                int peso = FileUpload.PostedFile.ContentLength;
+
+                if (Extension.ToLower() != ".doc" &&
+                    Extension.ToLower() != ".docx" &&
+                    Extension.ToLower() != ".pdf" &&
+                    Extension.ToLower() != ".jpg" &&
+                    Extension.ToLower() != ".png" &&
+                    Extension.ToLower() != ".zip" &&
+                    Extension.ToLower() != ".rar")
+                {
+                    //TEXTO ERROR EXTENCION
+                }
+                else
+                {
+                    if (peso <= 5242880)
+                    {
+                        if (FileUpload.FileName.Length < 50)
+                        {
+                            objM.ADJUNTO = txtRutIM.Text + "_" + FileUpload.FileName;
+                            int grabado = NegocioInspector.instancia.grabaMulta(objM);
+                            FileUpload.SaveAs(Server.MapPath("~/Upload/" + grabado + "_" + txtRutIM.Text + "_" + FileUpload.FileName));
+                            
+                        }
+                        else
+                        {
+                            ///////
+                        }
+                    }
+                    else
+                    {
+                        // TEXTO DE MAXIMO DE PESO 
+                    }
+
+                }
+            }
+            else
+            {
+                objM.ADJUNTO = "ARCHIVO EN BLANCO O NO ADJUNTADO";
+                int grabado = NegocioInspector.instancia.grabaMulta(objM);
+               
+            }
 
         }
 

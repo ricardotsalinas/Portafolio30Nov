@@ -243,7 +243,7 @@ namespace ConexionDatos.Dao
         }
 
 
-        public int CrearPersonal(INFRACTOR dto, int tipo)
+        public int CrearFuncionario(INFRACTOR dto, int tipo)
         {
             try
             {
@@ -261,7 +261,6 @@ namespace ConexionDatos.Dao
                         per.TELEFONO_INFR = dto.TELEFONO_INFR;
                         per.DIRECCION_INFR = dto.DIRECCION_INFR;
                         per.EMAIL_INFR = dto.EMAIL_INFR;
-
                         sri.SaveChanges();
                         return 2;
                     }
@@ -302,6 +301,17 @@ namespace ConexionDatos.Dao
         }
 
 
+        public int idInfractor(String rut)
+        {
+            INFRACTOR objInfrac = new INFRACTOR();
+            using (SRI sri = new SRI())
+            {
+                objInfrac = sri.INFRACTOR.Where(p => p.RUT_INFR == rut).FirstOrDefault();
+                return (int)objInfrac.ID_INFRACTOR;
+
+            }
+        }
+
         public int ReiniciarClave(String clave, String rut)
         {
             try
@@ -321,7 +331,27 @@ namespace ConexionDatos.Dao
                 return 0;
             }
 
-        } 
-       
+        }
+
+
+    
+        public int funcionarioId(INFRACTOR dto)
+        {
+            try
+            {
+                using (SRI sri = new SRI())
+                {
+                    dto.ID_INFRACTOR = RetornarNuevoId();
+                    sri.INFRACTOR.AddObject(dto);
+                    sri.SaveChanges();
+                    return (int)dto.ID_INFRACTOR;
+                }
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+        }
+  
     }
 }

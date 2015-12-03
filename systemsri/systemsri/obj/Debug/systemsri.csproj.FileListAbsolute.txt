@@ -149,6 +149,9 @@ C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\systemsri\obj\Debug
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\systemsri\obj\Debug\RdlCompile.compiled
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\systemsri\obj\Debug\systemsri.dll
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\systemsri\obj\Debug\systemsri.pdb
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\obj\Debug\RdlCompile.cache
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\obj\Debug\RdlCompile.compiled
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\bin\systemsri.dll
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\bin\systemsri.pdb
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\bin\ClasesESpeciales.dll
@@ -157,8 +160,5 @@ C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\bin\Ne
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\bin\ClasesESpeciales.pdb
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\bin\ConexionDatos.pdb
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\bin\Negocio.pdb
-C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\obj\Debug\systemsri.csprojResolveAssemblyReference.cache
-C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\obj\Debug\RdlCompile.cache
-C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\obj\Debug\RdlCompile.compiled
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\obj\Debug\systemsri.dll
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\systemsri\obj\Debug\systemsri.pdb

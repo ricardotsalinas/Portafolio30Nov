@@ -4,7 +4,8 @@
         <form id="formIngresaMulta" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server">   </asp:ScriptManager>
              <div class="alinInicial">
-                 <h2 >Ingresar Multa</h2>
+                 <h2 >Ingresar Multa<asp:TextBox ID="txtDireccion" runat="server" Visible="False"></asp:TextBox>
+                 </h2>
                
               <table>
                  <tr>
@@ -57,7 +58,11 @@
                     CssClass="input1" DataTextField="DETALLE_CAR" DataValueField="ID_DETCAR" 
                             onselectedindexchanged="ddlistLugarInfIM_SelectedIndexChanged"></asp:DropDownList></td>
                  </tr>
-                  
+                  <tr>
+  <td>                <asp:CheckBox runat="server" id="chkCarabIM" Text="Agregar Carabinero"/>
+     </td><td><asp:TextBox runat="server" ID="txtLicCarabIM"/></td>             
+     <td><asp:CheckBox runat="server" id="chkRetLicIM" Text="Retener Licencia"/></td>
+                  </tr>
               </table>
               <table>
             

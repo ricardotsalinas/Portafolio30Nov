@@ -38,7 +38,7 @@ namespace systemsri.Vistas.Funcionario
                         p.ACTIVO = "0";
 
                  
-                    int newPersonal = NegocioFuncionario.instancia.CrearPersonal(p, 1);
+                    int newPersonal = NegocioFuncionario.instancia.CrearFuncionario(p, 1);
                     if (newPersonal == 1)
                     {
                         txtRutAF.Text = "";

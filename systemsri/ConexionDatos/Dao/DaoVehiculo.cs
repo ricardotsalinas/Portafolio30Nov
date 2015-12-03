@@ -19,6 +19,52 @@ namespace ConexionDatos.Dao
                 return lbuscar;
             }
         }
+        private int retornarNuevoId()
+        {
+            int id = 0;
+            using (SRI sri = new SRI())
+            {
+                id = (int)sri.VEHICULO.DefaultIfEmpty().Max(p => p == null ? 0 : p.ID_VEHICULO) + 1;
+                return id;
+            }
+        }
+
+
+        public int existeVehiculo(String patente)
+        {
+            int id = 0;
+            List<VEHICULO> ve = new List<VEHICULO>();
+            using (SRI con = new SRI())
+            {
+                ve = con.VEHICULO.Where(v => v.PATENTE == patente).ToList();
+            }
+            foreach(var item in ve)
+            {
+                id = (int)item.ID_VEHICULO;
+            }
+            return id;
+        }
+
+        public int crearVehiculo(String patente)
+        {
+            try
+            {
+                using (SRI con = new SRI())
+                {
+                    VEHICULO v = new VEHICULO();
+                    v.ID_VEHICULO = retornarNuevoId();
+                    v.PATENTE = patente;
+                    v.ID_TIPO_VEHICULO = 16;
+                    con.VEHICULO.AddObject(v);
+                    con.SaveChanges();
+                    return (int)v.ID_VEHICULO;
+                }
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+        }
 
 
     }

@@ -24,10 +24,10 @@ namespace ConexionDatos.Dao
 
         public  Boolean existeRut(String rut)
         {
-            List<PERSONAL> list =new List<PERSONAL>();
+            List<INFRACTOR> list = new List<INFRACTOR>();
             using (SRI sri = new SRI())
             {
-                list = sri.PERSONAL.Where(p => p.RUT_PER==rut).ToList();
+                list = sri.INFRACTOR.Where(p => p.RUT_INFR == rut).ToList();
             }
 
             if (list.Count > 0)
@@ -191,6 +191,17 @@ namespace ConexionDatos.Dao
                 return false;
             else
                 return true;
+        }
+
+
+        public int buscarInspector(String rut)
+        {
+            using (SRI con = new SRI())
+            {
+                PERSONAL pe = new PERSONAL();
+                pe = con.PERSONAL.Where(p => p.RUT_PER == rut).FirstOrDefault();
+                return (int)pe.ID_PERSONAL;
+            }
         }
     }
 }

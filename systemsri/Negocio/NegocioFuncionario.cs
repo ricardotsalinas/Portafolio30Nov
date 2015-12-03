@@ -63,15 +63,12 @@ namespace Negocio
             return DaoPersonal.instancia.actualizaClavePropia(clave, rut);
         }
 
-        public int CrearPersonal(INFRACTOR p, int p_2)
+        public int CrearFuncionario(INFRACTOR p, int p_2)
         {
-       
-        
             if(p_2==1)
                 p.PASSWORD_INFR = GeneraMd5.instancia.md5(p.RUT_INFR.ToString().Substring(0,5));
 
-            return DaoInfractor.Instancia.CrearPersonal(p,p_2);
-        
+            return DaoInfractor.Instancia.CrearFuncionario(p, p_2);
         }
 
         public Boolean existeRut(String rut)

@@ -31,6 +31,15 @@ namespace systemsri.Vistas.Inspector {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// Control txtDireccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDireccion;
+        
+        /// <summary>
         /// Control txtPatIM.
         /// </summary>
         /// <remarks>
@@ -128,6 +137,33 @@ namespace systemsri.Vistas.Inspector {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlistLugarInfIM;
+        
+        /// <summary>
+        /// Control chkCarabIM.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkCarabIM;
+        
+        /// <summary>
+        /// Control txtLicCarabIM.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtLicCarabIM;
+        
+        /// <summary>
+        /// Control chkRetLicIM.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkRetLicIM;
         
         /// <summary>
         /// Control UpdatePanel1.
