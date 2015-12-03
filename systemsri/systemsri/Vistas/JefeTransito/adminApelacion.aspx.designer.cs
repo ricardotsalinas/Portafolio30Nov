@@ -22,15 +22,6 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.HtmlControls.HtmlForm contact_form;
         
         /// <summary>
-        /// Control btnMagico.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMagico;
-        
-        /// <summary>
         /// Control txtRutAA.
         /// </summary>
         /// <remarks>
@@ -67,15 +58,6 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.Button btnBuscarAA;
         
         /// <summary>
-        /// Control btnErxporta.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnErxporta;
-        
-        /// <summary>
         /// Control gvReporte.
         /// </summary>
         /// <remarks>
@@ -83,5 +65,14 @@ namespace systemsri.Vistas.JefeTransito {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvReporte;
+        
+        /// <summary>
+        /// Control btnErxporta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnErxporta;
     }
 }

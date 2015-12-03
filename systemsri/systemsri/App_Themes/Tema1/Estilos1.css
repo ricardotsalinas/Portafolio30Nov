@@ -487,8 +487,6 @@ c1g, .c2g , .c3g{
 }
 /*Input pequeño */
 .input4 {
-    width:20%;
-    height:20px;
     text-transform:uppercase;
 }
 /*Input Grande textos extensos*/

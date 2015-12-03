@@ -65,6 +65,7 @@
     <Compile Include="Dao\DaoVehiculo.cs" />
     <Compile Include="Dao\DaoViaCirculacion.cs" />
     <Compile Include="Dao\ReporteInfracciones.cs" />
+    <Compile Include="Dao\ReporteInfractores.cs" />
     <Compile Include="Dao\ReportesDAO.cs" />
     <Compile Include="Dao\WebService.cs" />
     <Compile Include="Entity\Modelo.Designer.cs">

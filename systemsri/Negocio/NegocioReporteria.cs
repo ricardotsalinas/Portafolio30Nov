@@ -13,9 +13,15 @@ namespace Negocio
     {
         public static NegocioReporteria Instancia = new NegocioReporteria();
 
-        public List<ReporteInfractor> ListarInfractores( string rut)
+        public List<ReporteInfractor> ListarInfractores(string rut)
         {
             return ReportesDAO.Instancia.ReporteInfractores(rut);
+        }
+
+
+        public object ListarInfractoresSinRut(string dato)
+        {
+            return ReportesDAO.Instancia.ReporteInfractoresSinRut(dato);
         }
 
         public List<ReporteCalles> ListarCalles()
@@ -27,11 +33,15 @@ namespace Negocio
             return ReportesDAO.Instancia.ReporteInfracciones();
         }
 
-
+     
         public List<ReporteTurnos> ListarTurnos()
         {
             return ReportesDAO.Instancia.ReporteTurnos();
         }
+
+
+
+
 
     }
 }

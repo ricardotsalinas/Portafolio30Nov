@@ -1,22 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/JefeTransito/MPJefe.master" AutoEventWireup="true" CodeBehind="adminApelacion.aspx.cs" Inherits="systemsri.Vistas.JefeTransito.adminApelacion" %>
  <%@ OutputCache Location="None" NoStore="true"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="contenidoAdmin" runat="server">
-            <script type="text/ecmascript">
-                function ventana(dato) {
-                    alert(dato);
-                    document.getElementById('<%= btnMagico.ClientID %>').click();
-                }
-            
-            </script>
-
-           <form id="contact_form" runat="server">
+           
+       <form id="contact_form" runat="server">
          <div class="alinInicial" > 
-         <asp:Button runat="server" ID="btnMagico" onclick="btnMagico_Click" />
 
            <table style="width:100%; font-family:Arial; font-size:small" class="table">
                <tr>
                    <td style="width:42%"> <h2>Administrar Apelación</h2></td>
-                   <td style="width:42%"><asp:TextBox runat="server"  id="txtRutAA"  CssClass="input4" placeholder="Ej:12345678-9"/>
+                   <td style="width:42%"><asp:TextBox runat="server"  id="txtRutAA"  CssClass="input4" 
+                           placeholder="Ej:12345678-9" Width="93px"/>
                        <asp:DropDownList ID="ddlistFiltro" runat="server" class="ddlist2" 
                            onselectedindexchanged="ddlist_SelectedIndexChanged">
                            <asp:ListItem>Ver Todo</asp:ListItem>
@@ -28,33 +21,55 @@
                         &nbsp;Omitir Resueltos</td>
                     <td style="width:16%; text-align:left"><asp:Button ID="btnBuscarAA" 
                             class="boton" runat="server" Text="FILTRAR" onclick="btnBuscarAA_Click" />
-                            <asp:Button ID="btnErxporta" 
-                            class="boton" runat="server" Text="Exportar" 
-                            onclick="btnErxporta_Click"  />
                             
                             </td>
                </tr>   
             </table>
             <asp:GridView runat="server" ID="gvReporte" CssClass="Grilla" 
-                 AutoGenerateColumns="false" 
-                 onselectedindexchanged="gvReporte_SelectedIndexChanged">
+                 AutoGenerateColumns="False" 
+                 onselectedindexchanged="gvReporte_SelectedIndexChanged" 
+                 onrowcommand="gvReporte_RowCommand" 
+                 onrowdatabound="gvReporte_RowDataBound1">
                 <Columns>
-                    <asp:BoundField  HeaderText="RESUELTO" DataField="ESTADO" ItemStyle-Width="10%"/>
-                    <asp:BoundField  HeaderText="CASO LEIDO" DataField="ESTADO" ItemStyle-Width="10%"/>   
-                      <asp:TemplateField HeaderText="REVISAR"> <ItemTemplate>
-                            <asp:Image   ItemStyle-Width="10%" runat="server" ID="imgGrilla" src="../../Recursos/Imagenes/ver.jpg"/>
-                        </ItemTemplate>
-                    </asp:TemplateField>             
-                    <asp:BoundField  HeaderText="RUT" DataField="RUT_INF" ItemStyle-Width="10%"/>
-                    <asp:BoundField  HeaderText="NOMBRE" DataField="INFR" ItemStyle-Width="30%"/>
-                    <asp:BoundField  HeaderText="GRAVEDAD" DataField="GRAVEDAD" ItemStyle-Width="10%"/>
-                    <asp:BoundField  HeaderText="MONTO" DataField="VALOR" ItemStyle-Width="10%"/>
-                    <asp:BoundField  HeaderText="FECHA MULTA" DataField="FECHA" ItemStyle-Width="10%"/>
+                    <asp:BoundField  HeaderText="RESUELTO" DataField="RESUELTO" 
+                        ItemStyle-Width="10%">
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField  HeaderText="CASO LEIDO" DataField="CASO_LEIDO" 
+                        ItemStyle-Width="10%">   
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:ButtonField ButtonType="Image" CommandName="botonGV" HeaderText="REVISAR" 
+                        ImageUrl="~/Recursos/Imagenes/buscar.jpg" />
+                    <asp:BoundField  HeaderText="RUT" DataField="RUT_INF" ItemStyle-Width="10%">
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField  HeaderText="NOMBRE" DataField="INFR" ItemStyle-Width="30%">
+<ItemStyle Width="30%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField  HeaderText="GRAVEDAD" DataField="GRAVEDAD" 
+                        ItemStyle-Width="10%">
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField  HeaderText="MONTO" DataField="VALOR" ItemStyle-Width="10%">
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
+                    <asp:BoundField  HeaderText="FECHA MULTA" DataField="FECHA" 
+                        ItemStyle-Width="10%" DataFormatString="{0:M-dd-yyyy}">
+                   
+<ItemStyle Width="10%"></ItemStyle>
+                    </asp:BoundField>
                    
                 </Columns>
             </asp:GridView>
 
 
+                <a href="../homeSanBernardo.aspx"/>
+                            <asp:Button ID="btnErxporta" 
+                            class="boton" runat="server" Text="Exportar" 
+                            onclick="btnErxporta_Click"  />
+                            
+                            
          </div> 
         </form>
 </asp:Content>

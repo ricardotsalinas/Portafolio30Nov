@@ -203,5 +203,55 @@ namespace ConexionDatos.Dao
                 return (int)pe.ID_PERSONAL;
             }
         }
+
+        
+        public List<DetalleApelacion> detalleApelacion(String rut)
+        {
+            List<DetalleApelacion> detalle = new List<DetalleApelacion>();
+
+            using (SRI con = new SRI())
+            {
+                detalle = ( from inft in con.INFRACTOR
+                            join  dc in con.DETALLE_CARACTERISTICA on inft.ID_CLASE_LICENCIA  equals dc.ID_DETCAR                                 
+                            join mu in con.MULTA on inft.ID_INFRACTOR equals mu.ID_INFRACTOR
+                            join pers in con.PERSONAL on mu.ID_PERSONAL equals pers.ID_PERSONAL
+                            join incc in con.INFRACCION on mu.ID_INFRACCION equals incc.ID_INFRACCION
+                            join dci in con.DETALLE_CARACTERISTICA on incc.ID_GRAVEDAD equals dci.ID_DETCAR
+                            join mon in con.MONEDA on mu.ID_MONEDA equals mon.ID_MONEDA
+                            join dcin in con.DETALLE_CARACTERISTICA on incc.ID_DETALLE_INFRACCION equals dcin.ID_DETCAR
+                            join vc in con.VIA_CIRCULACION on mu.ID_VIA_CIRCULACION equals vc.ID_VIA_CIRCULACION
+                            join dcvc in con.DETALLE_CARACTERISTICA on vc.ID_NOMBRE_CALLE equals dcvc.ID_DETCAR
+                            join ma in con.APELACION on mu.ID_MULTA equals ma.ID_MULTA
+
+                            
+                               where inft.RUT_INFR==rut 
+ 
+                           select new DetalleApelacion
+                           {
+                               NOMBRE = inft.NOMBRE_INFR,
+                               RUT = inft.RUT_INFR,
+                               EMAIL = inft.EMAIL_INFR,
+                               FONO  =inft.TELEFONO_INFR,
+                               CLASE_LIC =  dc.DETALLE_CAR,
+                               INSPECTOR = pers.NOMBRE_PER+" "+pers.APPAT_PER+" "+pers.APMAT_PER,
+                               COD_MULTA = mu.ID_MULTA,
+                               GRAVEDAD = dci.DETALLE_CAR,
+                               VALOR  = incc.MONTO,
+                                ID_MULTA = mu.ID_MULTA,
+                                MONTO  = (incc.MONTO*mon.VALOR_PESOS+mu.MONTO_ADICIONAL)??0,
+                               FECHA_MULTA = mu.FECHA_CREACION,
+                               HORA_MULTA = mu.HORA_MULTA,
+                               MOTIVO_MULTA = dcin.DETALLE_CAR,
+                               DETALLE_ADICIONAL= mu.DETALLE_ADICIONAL,
+                               LUGAR_INFRACCION =dcvc.DETALLE_CAR,
+                               ESTADO_MULTA = mu.PAGADA,
+                               MENSAJE = ma.SOLICITUD_APELACION
+
+                                   }
+                            ).ToList();
+                return detalle;
+            }
+        }
     }
-}
+    }
+

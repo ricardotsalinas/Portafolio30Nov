@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DatosPersonalesFuncionario.cs" />
     <Compile Include="DatosPersonalesInfractor.cs" />
+    <Compile Include="DetalleApelacion.cs" />
     <Compile Include="DetalleMultaInfractor.cs" />
     <Compile Include="Helper\Datos.cs" />
     <Compile Include="Helper\Exportar.cs" />

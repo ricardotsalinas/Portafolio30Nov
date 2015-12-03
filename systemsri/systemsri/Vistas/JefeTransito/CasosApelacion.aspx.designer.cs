@@ -58,13 +58,13 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.Label lblGravCA;
         
         /// <summary>
-        /// Control lblEdadCA.
+        /// Control lbldirCA.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEdadCA;
+        protected global::System.Web.UI.WebControls.Label lbldirCA;
         
         /// <summary>
         /// Control lblValorCA.
@@ -76,13 +76,13 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.Label lblValorCA;
         
         /// <summary>
-        /// Control lbldirCA.
+        /// Control lblEmailCA.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbldirCA;
+        protected global::System.Web.UI.WebControls.Label lblEmailCA;
         
         /// <summary>
         /// Control lblMontoPesosCA.
@@ -94,13 +94,13 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.Label lblMontoPesosCA;
         
         /// <summary>
-        /// Control lblEmailCA.
+        /// Control txtDetCompletoCA.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEmailCA;
+        protected global::System.Web.UI.WebControls.Label txtDetCompletoCA;
         
         /// <summary>
         /// Control lblFechaMultaCA.
@@ -112,13 +112,13 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.Label lblFechaMultaCA;
         
         /// <summary>
-        /// Control txtDetCompletoCA.
+        /// Control lblClaseLicCA.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtDetCompletoCA;
+        protected global::System.Web.UI.WebControls.Label lblClaseLicCA;
         
         /// <summary>
         /// Control lblHoraMultaCA.
@@ -130,13 +130,13 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.Label lblHoraMultaCA;
         
         /// <summary>
-        /// Control lblClaseLicCA.
+        /// Control Label6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblClaseLicCA;
+        protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
         /// Control lblMotMultaCA.
@@ -148,15 +148,6 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.Label lblMotMultaCA;
         
         /// <summary>
-        /// Control lblPatCA.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPatCA;
-        
-        /// <summary>
         /// Control lblLugarInfrCA.
         /// </summary>
         /// <remarks>
@@ -164,15 +155,6 @@ namespace systemsri.Vistas.JefeTransito {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLugarInfrCA;
-        
-        /// <summary>
-        /// Control Label6.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
         /// Control lblEstadoMultaCA.

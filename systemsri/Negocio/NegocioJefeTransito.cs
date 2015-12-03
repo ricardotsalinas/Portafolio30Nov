@@ -6,6 +6,7 @@ using ConexionDatos;
 using ConexionDatos.Entity;
 using ConexionDatos.Dao;
 using ClasesESpeciales.Helper;
+using ClasesESpeciales;
 namespace Negocio
 {
     public class NegocioJefeTransito
@@ -18,6 +19,11 @@ namespace Negocio
             clave = GeneraMd5.instancia.md5(clave);
             return DaoPersonal.instancia.actualizaClavePropia(clave, rut);
         }
+        public List<DetalleApelacion> detalleApelacion(String rut)
+        {
+            return DaoPersonal.instancia.detalleApelacion(rut);
+        }
+
     }
 
 }

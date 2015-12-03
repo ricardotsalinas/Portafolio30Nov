@@ -37,7 +37,7 @@ namespace Negocio
                    case "INSPECTOR MUNICIPAL":
                        url = "../Inspector/datosInspector.aspx";
                        break;
-                   case "JEFE DE TRÁNSITO":
+                   case "JEFE DE TRANSITO":
                        url = "../JefeTransito/inicioJefe.aspx";
                        break;
                    case "FUNCIONARIO":
