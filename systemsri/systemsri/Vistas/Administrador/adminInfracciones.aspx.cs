@@ -99,8 +99,6 @@ namespace systemsri.Vistas.Administrador
                     n = 0;
                 }
 
-
-
                 if (n == 1)
                 {
                     lblInfoAdI.Visible = true;
@@ -111,13 +109,11 @@ namespace systemsri.Vistas.Administrador
                 }
                 else
                 {
-                    //CASO NO VACIOS
                     lblInfoAdI.Visible = true;
-                    lblInfoAdI.Text = "xxxxxxxxxxxxxxxxxx";
+                    lblInfoAdI.Text = "Datos guardados";
                     lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
-
-
                 }
+
    
 
 

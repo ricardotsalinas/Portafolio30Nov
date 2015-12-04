@@ -37,13 +37,30 @@ namespace ConexionDatos.Dao
 
         }
 
+
+        public Boolean existeRut2(String rut)
+        {
+            List<PERSONAL> list = new List<PERSONAL>();
+            using (SRI sri = new SRI())
+            {
+                list = sri.PERSONAL.Where(p => p.RUT_PER == rut).ToList();
+            }
+
+            if (list.Count > 0)
+                return false;
+            else
+                return true;
+
+        }
+
+
         public int CrearPersonal(PERSONAL dto,int tipo)
         {
             try
             {
                 using (SRI sri = new SRI())
                 {
-                    if (!existeRut(dto.RUT_PER.ToString()) && tipo ==2)
+                    if (!existeRut2(dto.RUT_PER.ToString()) && tipo ==2)
                     {
                         PERSONAL per = new PERSONAL();
                         per = sri.PERSONAL.Where(a => a.RUT_PER == dto.RUT_PER).FirstOrDefault();
@@ -54,7 +71,7 @@ namespace ConexionDatos.Dao
                         per.APPAT_PER = dto.APPAT_PER;
                         per.TELEFONO_PER = dto.TELEFONO_PER;
                         per.DIRECCION_PER = dto.DIRECCION_PER;
-                        per.EMAIL_PER = per.EMAIL_PER;
+                        per.EMAIL_PER = dto.EMAIL_PER;
                         per.ID_TIPO_FUNCIONARIO = dto.ID_TIPO_FUNCIONARIO;
                         sri.SaveChanges();
                         return 2;

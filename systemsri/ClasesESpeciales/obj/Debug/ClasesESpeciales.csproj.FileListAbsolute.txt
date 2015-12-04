@@ -39,3 +39,7 @@ C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ClasesESpeciales\bi
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
 C:\Users\Portafolio\Desktop\GITHUB\Portafolio30Nov\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb

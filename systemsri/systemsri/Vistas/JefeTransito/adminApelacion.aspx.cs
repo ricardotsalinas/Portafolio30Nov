@@ -55,9 +55,39 @@ namespace systemsri.Vistas.JefeTransito
                         gvReporte.DataBind();
                         break;
                 }
-
-                
             }
+
+                if (txtRutAA.Text.Length > 7)
+                {
+                switch (Convert.ToInt32(ddlistFiltro.SelectedValue))
+                {
+                    case 0:
+                        gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 0);
+                        gvReporte.DataBind();
+                        break;
+                    case 1:
+                        if (CheckBox1.Checked)
+                        {
+                            gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 11);
+                            gvReporte.DataBind();
+                        }
+                        else
+                        {
+                            gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 1);
+                            gvReporte.DataBind();
+                        }
+                        break;
+                    case 2:
+                        gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 2);
+                        gvReporte.DataBind();
+                        break;
+                    case 3:
+                        gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 3);
+                        gvReporte.DataBind();
+                        break;
+                }
+                }
+            
         }
            
 

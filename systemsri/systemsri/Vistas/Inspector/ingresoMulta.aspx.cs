@@ -223,9 +223,9 @@ namespace systemsri.Vistas.Inspector
                     {
                         if (FileUpload.FileName.Length < 50)
                         {
-                            objM.ADJUNTO = txtRutIM.Text + "_" + FileUpload.FileName;
+                            objM.ADJUNTO = txtRutIM.Text +"_multa_"+ "_" + FileUpload.FileName;
                             int grabado = NegocioInspector.instancia.grabaMulta(objM);
-                            FileUpload.SaveAs(Server.MapPath("~/ArchivosMulta/" + grabado + "_" + txtRutIM.Text + "_" + FileUpload.FileName));
+                            FileUpload.SaveAs(Server.MapPath("~/Upload/" + grabado + "_" + txtRutIM.Text + "_multa_" + FileUpload.FileName));
                             
                         }
                         else

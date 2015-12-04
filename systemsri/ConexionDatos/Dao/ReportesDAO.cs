@@ -46,7 +46,7 @@ namespace ConexionDatos.Dao
                                  join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
                                  join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
                                  join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
-                                 where a.ESTADO == (int)1141 && a.ESTADO == (int)1143 && i.RUT_INFR == rut 
+                                 where a.ESTADO == (int)1141 || a.ESTADO == (int)1143 || i.RUT_INFR == rut 
                                  select new ReporteInfractor
                                  {
                                      RESUELTO = a.ESTADO ?? 0,
@@ -64,7 +64,7 @@ namespace ConexionDatos.Dao
                                  join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
                                  join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
                                  join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
-                                 where a.ESTADO == (int)1141 && i.RUT_INFR == rut 
+                                 where a.ESTADO == (int)1141 || i.RUT_INFR == rut 
                                  select new ReporteInfractor
                                  {
                                      RESUELTO = a.ESTADO ?? 0,
@@ -82,7 +82,7 @@ namespace ConexionDatos.Dao
                                  join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
                                  join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
                                  join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
-                                 where a.ESTADO == (int)1142 && i.RUT_INFR == rut 
+                                 where a.ESTADO == (int)1142 || i.RUT_INFR == rut 
                                  select new ReporteInfractor
                                  {
                                      RESUELTO = a.ESTADO ?? 0,
@@ -100,7 +100,7 @@ namespace ConexionDatos.Dao
                                  join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
                                  join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
                                  join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
-                                 where a.ESTADO == (int)1143 && i.RUT_INFR == rut 
+                                 where a.ESTADO == (int)1143 || i.RUT_INFR == rut 
                                  select new ReporteInfractor
                                  {
                                      RESUELTO = a.ESTADO ?? 0,
@@ -112,7 +112,6 @@ namespace ConexionDatos.Dao
                                      FECHA = m.FECHA_CREACION
                                  }).ToList();
                         break;
-
                 }
                 return lista;
 

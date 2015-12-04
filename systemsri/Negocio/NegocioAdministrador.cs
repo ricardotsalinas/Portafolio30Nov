@@ -103,6 +103,10 @@ namespace Negocio
             return DaoPersonal.instancia.existeRut(rut);
         }
 
+        public Boolean existeRut2(String rut)
+        {
+            return DaoPersonal.instancia.existeRut2(rut);
+        }
 
 
         public List<DETALLE_CARACTERISTICA> listarCalle()
