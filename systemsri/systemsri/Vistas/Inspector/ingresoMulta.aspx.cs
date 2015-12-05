@@ -35,7 +35,7 @@ namespace systemsri.Vistas.Inspector
                 ddlistMotivoIM.DataValueField = "ID_DETCAR";
                 ddlistMotivoIM.DataBind();
                 ddlistMotivoIM.Items.Insert(0, new ListItem("Seleccionar", ""));
-  
+                lblInfoIM.Visible = false;
            }
 
            txtHoraMultaIM.Text = DateTime.Now.ToShortTimeString();
@@ -105,9 +105,13 @@ namespace systemsri.Vistas.Inspector
                         txtFechaNacimientoIM.Text = datos[5].ToString();
                         txtDireccion.Text = datos[6].ToString();
                     }
-                    //error datos no encotrados
+                    lblInfoIM.Text = "La patente no ha sido encontrada";
+                    lblInfoIM.ForeColor = System.Drawing.Color.Red;
+                    lblInfoIM.Visible = true;
                 }
-                ///////// agregar un errro al momento de no tener nada escrito 
+                lblInfoIM.Text = "Debe escribir la patente para busqueda";
+                lblInfoIM.ForeColor = System.Drawing.Color.Red;
+                lblInfoIM.Visible = true;
         }
 
       
@@ -152,15 +156,17 @@ namespace systemsri.Vistas.Inspector
             objM.LICENCIA_ENTREGADA = "0";
             if (chkCarabIM.Checked)
             {
+              
                 if (!String.IsNullOrEmpty(txtLicCarabIM.Text))
                 {
                     objM.CARABINERO_OPC = 1;
                     objM.ID_LIC_CARAB = Convert.ToInt32(txtLicCarabIM.Text);
-                        if(chkRetLicIM.Checked)
-                            objM.RETENCION_LICENCIA = "1";
-                        else
-                            objM.RETENCION_LICENCIA = "0";
+                    if (chkRetLicIM.Checked)
+                        objM.RETENCION_LICENCIA = "1";
+                    else
+                        objM.RETENCION_LICENCIA = "0";
                 }
+               
                
 
             }
@@ -215,7 +221,9 @@ namespace systemsri.Vistas.Inspector
                     Extension.ToLower() != ".zip" &&
                     Extension.ToLower() != ".rar")
                 {
-                    //TEXTO ERROR EXTENCION
+                    lblInfoIM.Text = "El archivo no cumple con los formatos solicitados";
+                    lblInfoIM.ForeColor = System.Drawing.Color.Red;
+                    lblInfoIM.Visible = true;
                 }
                 else
                 {
@@ -235,14 +243,16 @@ namespace systemsri.Vistas.Inspector
                     }
                     else
                     {
-                        // TEXTO DE MAXIMO DE PESO 
+                        lblInfoIM.Text = "El archivo supera los 5mb permitidos";
+                        lblInfoIM.ForeColor = System.Drawing.Color.Red;
+                        lblInfoIM.Visible = true;
                     }
 
                 }
             }
             else
             {
-                objM.ADJUNTO = "ARCHIVO EN BLANCO O NO ADJUNTADO";
+                objM.ADJUNTO = "ARCHIVO EN BLANCO O NO ADJUNTO";
                 int grabado = NegocioInspector.instancia.grabaMulta(objM);
                
             }
@@ -258,5 +268,29 @@ namespace systemsri.Vistas.Inspector
         {
 
         }
+
+        
+          
+
+       
+
+        protected void chkCarabIM_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        
+        }
+
+        protected void txtLicCarabIM_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void chkRetLicIM_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
     }
 }

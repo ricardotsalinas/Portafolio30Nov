@@ -6,8 +6,8 @@
              <div class="alinInicial">
                  <h2 >Ingresar Multa<asp:TextBox ID="txtDireccion" runat="server" Visible="False"></asp:TextBox>
                  </h2>
-              
-              <table style="width:700px">
+              <asp:Label runat="server" ID="lblInfoIM" Visible="false" Text="" CssClass="lbl"/>
+              <table style="width:100">
                  <tr>
                     <td class="c2g">PATENTE:</td> 
                     <td class="c2b"><asp:TextBox id="txtPatIM" runat="server" CssClass="input3" MaxLength="6" 
@@ -38,9 +38,8 @@
                             disabled="disabled"/></td>
                  </tr>
                  <tr>
-                     <td> </td> 
-                    <td >
-                        <asp:TextBox ID="txtFechaNacimientoIM" runat="server"></asp:TextBox>
+                     <td class="c2g">FECHA NACIMIENTO:</td> 
+                    <td class="c2b"><asp:TextBox ID="txtFechaNacimientoIM" runat="server" CssClass="input1" disabled="disabled"></asp:TextBox>
                      </td>
                     
                     <td class="c2g">APELLIDO MATERNO:</td> 
@@ -49,9 +48,7 @@
                  </tr>
                  <tr>
                     <td class="c2g">MOTIVO:</td> 
-                    <td class="c2b"> 
-                    
-                  <asp:DropDownList runat="server" id="ddlistMotivoIM" AutoPostBack="true" 
+                    <td class="c2b"> <asp:DropDownList runat="server" id="ddlistMotivoIM" AutoPostBack="true" 
                             CssClass="input1" OnSelectedIndexChanged="ddlistMotivoIM_SelectedIndexChanged"></asp:DropDownList></td>
                              
                     <td class="c2g">LUGAR DE <br/> LA INFRACCIÓN:</td> 
@@ -59,11 +56,7 @@
                     CssClass="input1" DataTextField="DETALLE_CAR" DataValueField="ID_DETCAR" 
                             onselectedindexchanged="ddlistLugarInfIM_SelectedIndexChanged"></asp:DropDownList></td>
                  </tr>
-                  <tr>
-  <td>                <asp:CheckBox runat="server" id="chkCarabIM" Text="Agregar Carabinero"/>
-     </td><td><asp:TextBox runat="server" ID="txtLicCarabIM"/></td>             
-     <td><asp:CheckBox runat="server" id="chkRetLicIM" Text="Retener Licencia"/></td>
-                  </tr>
+     
               </table>
               <table>
             
@@ -78,24 +71,39 @@
                             <td class="c2g">DETALLE ADICIONAL <br/> (OPCIONAL):</td> 
                     <td class="c2b"><asp:TextBox runat="server" id="txtDetalleAdicIM" CssClass="input2" 
                             placeholder="P.Ej: Altura calle, lugar referencial, etc" TextMode="MultiLine" ></asp:TextBox></td>
-
-                           
+                                                       
               </tr>
+              </table>
+              <table>
+                           <tr>
+  <td><asp:CheckBox runat="server" id="chkCarabIM" Text="Agregar Carabinero"  CssClass="ctxt"
+          onclick="chkCarabIM_Click1" oncheckedchanged="chkCarabIM_CheckedChanged" /></td><td>&nbsp;</td>             
+     <td>
+         <asp:Panel ID="pnlCarab" runat="server" Width="279px" Visible="False">
+           
+             <asp:TextBox ID="txtLicCarabIM" runat="server" label="Id Carabinero" 
+                 ontextchanged="txtLicCarabIM_TextChanged" />
+             <asp:CheckBox runat="server" id="chkRetLicIM" Text="Retener Licencia" 
+                 oncheckedchanged="chkRetLicIM_CheckedChanged" CssClass="ctxt"/>
+         </asp:Panel>
+                    </td>
+                  </tr>
               </table>
               <table><tr><td>
               <asp:Button runat="server" Text="LIMPIAR" CssClass="boton" ID="btnLimpiarIM" 
                       onclick="btnLimpiarIM_Click"/>
               </td>
               <td>
-              <asp:Button runat="server" Text="GUARDAR" CssClass="boton" ID="btnGuardarIM" 
-                      onclick="btnGuardarIM_Click1"/>
+              <asp:Button runat="server" Text="GUARDAR" CssClass="boton" ID="btnGuardarIM" onclick="btnGuardarIM_Click1"/>
               </td>
-              <td>
-                  <asp:FileUpload ID="FileUpload" runat="server" />
+              <td><asp:FileUpload ID="FileUpload" runat="server" />
               </td>
-              </tr></table>
-     
-          </div>
-        </form>
-     
-</asp:Content>
+              </tr>
+              </table> 
+              <h5> Entre los formatos permitidos se encuentran imagenes en .jpg y .png, </h5>
+              
+                                                                             
+          </div>                                                             
+        </form>                                                              
+                                                                  
+</asp:Content>                                                    
