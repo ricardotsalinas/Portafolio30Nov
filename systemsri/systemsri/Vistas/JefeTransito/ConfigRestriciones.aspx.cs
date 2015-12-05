@@ -70,5 +70,7 @@ namespace systemsri.Vistas.JefeTransito
         {
             calculo();
         }
+
+       
     }
 }

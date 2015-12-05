@@ -9,15 +9,25 @@
                     <td  class="ctxt">En este apartado se configura la condicion para prohibición temporal o permanente </td>
                 </tr>
             </table>
-            <table style="font-family:Arial; font-size:small">
+            <table style="font-family:Arial; font-size:small; width: 360px;">
                 <tr>
-                    <td><asp:Panel ID="pnlTipoProh" runat="server">Tipo de Prohibición<br />
-                        &nbsp;<asp:RadioButtonList ID="RadioButtonList1" runat="server" Height="46px" 
-                            onselectedindexchanged="RadioButtonList1_SelectedIndexChanged">
+                    <td style="width: 84px">Tipo de Prohibición<br />
+                        &nbsp;
+                        </a>
+                        <asp:RadioButtonList ID="RadioButtonList1" runat="server" Height="46px" 
+                            onselectedindexchanged="RadioButtonList1_SelectedIndexChanged" 
+                            Width="127px">
                             <asp:ListItem>Temporal</asp:ListItem>
                             <asp:ListItem>Permanente</asp:ListItem>
                         </asp:RadioButtonList>
-                        </asp:Panel></td>
+                       </td>
+                       <td style="width: 111px">&nbsp;<asp:Panel ID="Panel1" runat="server" Height="62px" 
+                               Width="217px">
+                           La prohibición será establecida en:<br /><a href="../homeSanBernardo.aspx"/>&nbsp;<asp:TextBox 
+                               ID="txtDiasTempCR" runat="server" ontextchanged="TextBox1_TextChanged" 
+                               style="margin-bottom: 0px" Width="61px"></asp:TextBox>
+                           </a>&nbsp;días</asp:Panel>
+                    </td><td>&nbsp;</td>
                 </tr>               
             </table>
                <h3 style="font-style:italic">Limite Cantidad de Multas por gravedad</h3>
@@ -38,7 +48,7 @@
                          ontextchanged="txtLeveCR_TextChanged" ></asp:TextBox></td>
                    
                 </tr>
-               <tr><td> Por lo tanto se consideran </td><td><asp:Label runat="server" id="lblPuntosLeve" Text="0"/> Puntos para la prohibición definida</td>
+               <tr><td> Por lo tanto se consideran&nbsp; </td><td><asp:Label runat="server" id="lblPuntosLeve" Text="0"/> &nbsp; Puntos para la prohibición definida</td>
                  </tr>
                  <tr> 
                    <td class="cbtn"><asp:Button ID="btnGenerarRestrCR" class="boton" runat="server" 

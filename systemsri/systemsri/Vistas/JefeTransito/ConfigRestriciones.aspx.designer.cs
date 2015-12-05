@@ -22,15 +22,6 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.HtmlControls.HtmlForm contact_form;
         
         /// <summary>
-        /// Control pnlTipoProh.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlTipoProh;
-        
-        /// <summary>
         /// Control RadioButtonList1.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,24 @@ namespace systemsri.Vistas.JefeTransito {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        
+        /// <summary>
+        /// Control Panel1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
+        
+        /// <summary>
+        /// Control txtDiasTempCR.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDiasTempCR;
         
         /// <summary>
         /// Control txtGravisimaCR.
