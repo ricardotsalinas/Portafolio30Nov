@@ -23,15 +23,19 @@
                <h3 style="font-style:italic">Limite Cantidad de Multas por gravedad</h3>
             <table style="font-family:Arial; font-size:small">
                 <tr>
-                   <td> Gravísima </td><td><input type="text" class="input4" id="txtGravisimaCR"/></td>
+                   <td style="height: 26px"> Gravísima </td><td style="height: 26px">
+                    <asp:TextBox runat="server"  ID="txtGravisimaCR" AutoPostBack="True" 
+                        ontextchanged="txtGravisimaCR_TextChanged" ></asp:TextBox></td>
                    
                 </tr>
                 <tr>
-                    <td>Grave </td><td><input type="text" class="input4" id="txtGraveCR"/></td>
+                    <td>Grave </td><td><asp:TextBox runat="server" ID="txtGraveCR" 
+                        AutoPostBack="True" ontextchanged="txtGraveCR_TextChanged"></asp:TextBox></td>
                   
                 </tr>
                  <tr>
-                    <td>Leve </td><td><input type="text" class="input4" id="txtLeveCR"/></td>
+                    <td>Leve </td><td><asp:TextBox runat="server" ID="txtLeveCR" AutoPostBack="True" 
+                         ontextchanged="txtLeveCR_TextChanged" ></asp:TextBox></td>
                    
                 </tr>
                <tr><td> Por lo tanto se consideran </td><td><asp:Label runat="server" id="lblPuntosLeve" Text="0"/> Puntos para la prohibición definida</td>

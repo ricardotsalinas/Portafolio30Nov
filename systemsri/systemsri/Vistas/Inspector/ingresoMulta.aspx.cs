@@ -276,8 +276,10 @@ namespace systemsri.Vistas.Inspector
 
         protected void chkCarabIM_CheckedChanged(object sender, EventArgs e)
         {
-           
-        
+            if (chkCarabIM.Checked)
+            pnlCarab.Visible = true;
+            else
+                pnlCarab.Visible = false;
         }
 
         protected void txtLicCarabIM_TextChanged(object sender, EventArgs e)

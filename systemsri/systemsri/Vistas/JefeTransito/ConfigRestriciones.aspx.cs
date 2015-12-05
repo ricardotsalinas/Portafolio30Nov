@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Negocio;
+using ConexionDatos.Entity;
 
 namespace systemsri.Vistas.JefeTransito
 {
@@ -21,12 +22,53 @@ namespace systemsri.Vistas.JefeTransito
 
         protected void btnGenerarRestrCR_Click(object sender, EventArgs e)
         {
+            RESTRICCION restriccion = new RESTRICCION();
 
+
+            restriccion.TIPO_GRAVE = Convert.ToInt32(txtGraveCR.Text);
+
+
+            int idRestriccion = NegocioRestriccion.Instancia.InsertarRestriccion(restriccion);
         }
 
         protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void calculo()
+        {
+            int intGravisima = 0;
+            int intGrave = 0;
+            int intLeve = 0;
+            int Total = 0;
+
+            int.TryParse(txtGravisimaCR.Text, out intGravisima);
+            int.TryParse(txtGraveCR.Text, out intGrave);
+            int.TryParse(txtLeveCR.Text, out intLeve);
+
+            intGravisima = intGravisima * 3;
+            intGrave = intGrave * 2;
+            Total = intGravisima + intGrave + intLeve;
+
+            lblPuntosLeve.Text = Total.ToString();
+
+        }
+
+        protected void txtGravisimaCR_TextChanged(object sender, EventArgs e)
+        {
+            calculo();
+        }
+
+        protected void txtGraveCR_TextChanged(object sender, EventArgs e)
+        {
+            calculo();
+        }
+
+        protected void txtLeveCR_TextChanged(object sender, EventArgs e)
+        {
+            calculo();
         }
     }
 }

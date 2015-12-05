@@ -77,7 +77,8 @@
               <table>
                            <tr>
   <td><asp:CheckBox runat="server" id="chkCarabIM" Text="Agregar Carabinero"  CssClass="ctxt"
-          onclick="chkCarabIM_Click1" oncheckedchanged="chkCarabIM_CheckedChanged" /></td><td>&nbsp;</td>             
+          oncheckedchanged="chkCarabIM_CheckedChanged" 
+          AutoPostBack="True" /></td><td>&nbsp;</td>             
      <td>
          <asp:Panel ID="pnlCarab" runat="server" Width="279px" Visible="False">
            
