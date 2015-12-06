@@ -16,7 +16,7 @@ namespace systemsri.Vistas.Inspector
         public List<DETALLE_CARACTERISTICA> lts = new List<DETALLE_CARACTERISTICA>();
         protected void Page_Load(object sender, EventArgs e)
         {
-          if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+        if (Session["usuario"].Equals("") || Session["usuario"] == null ||
                 !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 42))
             {
                 Response.Redirect("../LoginUsuario/loginUsuario.aspx");
@@ -156,7 +156,7 @@ namespace systemsri.Vistas.Inspector
             objM.LICENCIA_ENTREGADA = "0";
             if (chkCarabIM.Checked)
             {
-              
+
                 if (!String.IsNullOrEmpty(txtLicCarabIM.Text))
                 {
                     objM.CARABINERO_OPC = 1;
@@ -166,14 +166,17 @@ namespace systemsri.Vistas.Inspector
                     else
                         objM.RETENCION_LICENCIA = "0";
                 }
-               
-               
+
+
+
 
             }
+            else
+                objM.CARABINERO_OPC = 0;
             objM.ID_PERSONAL = NegocioInspector.instancia.buscaInspector(Session["usuario"].ToString());
-            if (!NegocioInfractor.instancia.existeRut(txtRutIM.Text))
+            if (!NegocioInfractor.instancia.existeRut(rut))
             {
-                objM.ID_INFRACTOR = NegocioInfractor.instancia.idInfractor(txtRutIM.Text);
+                objM.ID_INFRACTOR = NegocioInfractor.instancia.idInfractor(rut);
             }
             else
             { 

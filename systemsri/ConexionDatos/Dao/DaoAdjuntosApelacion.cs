@@ -42,5 +42,19 @@ namespace ConexionDatos.Dao
             }
 
         }
+
+        public String traeAdjunto(int idAdjunto)
+        {
+            String nombreAdjunto = "";
+            using (SRI con = new SRI())
+            {
+                ADJUNTOS_APELACION adjunto = new ADJUNTOS_APELACION();
+
+                adjunto = con.ADJUNTOS_APELACION.Where(a => a.ID_ADJUNTO == idAdjunto).FirstOrDefault();
+                nombreAdjunto = adjunto.ADJUNTO.ToString();
+            }
+            return nombreAdjunto;
+        }
+
     }
 }

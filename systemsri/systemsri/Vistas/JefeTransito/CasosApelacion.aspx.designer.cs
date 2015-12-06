@@ -22,6 +22,15 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.HtmlControls.HtmlForm formIngresaMulta;
         
         /// <summary>
+        /// Control txtAdjunto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAdjunto;
+        
+        /// <summary>
         /// Control lblNomCA.
         /// </summary>
         /// <remarks>

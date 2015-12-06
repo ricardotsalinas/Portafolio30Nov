@@ -7,7 +7,9 @@
     
     <div class="alinInicial">
         <h2>
-            Crear y/o Editar Infracciones</h2>
+            Crear y/o Editar Infracciones<asp:TextBox ID="TxtID" runat="server" 
+                Enabled="False"></asp:TextBox>
+        </h2>
         <asp:Label ID="lblInfoAdI" runat="server" Text="" CssClass="lbl" Visible="false"></asp:Label>
         <asp:Label ID="lblcodInfraccionAI" runat="server" Text="" CssClass="lbl" Visible="false"></asp:Label>
 

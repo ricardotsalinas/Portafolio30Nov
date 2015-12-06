@@ -43,3 +43,4 @@ C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ClasesESpeciales
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ClasesESpeciales\bin\Debug\ClasesESpeciales.pdb
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.dll
 C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.pdb
+C:\Users\javier\Desktop\v2_Portafolio\Portafolio30Nov\systemsri\ClasesESpeciales\obj\Debug\ClasesESpeciales.csprojResolveAssemblyReference.cache

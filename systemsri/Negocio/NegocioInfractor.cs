@@ -84,7 +84,7 @@ namespace Negocio
 
         public Boolean existeRut(String rut)
         {
-            return DaoPersonal.instancia.existeRut(rut);
+            return DaoInfractor.Instancia.existeRut(rut);
         }
 
         public int FunConId(INFRACTOR objInf)

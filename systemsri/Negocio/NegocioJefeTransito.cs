@@ -24,6 +24,12 @@ namespace Negocio
             return DaoPersonal.instancia.detalleApelacion(rut);
         }
 
+        public String trarAdjunto(int idAdjunto)
+        {
+           
+            return DaoAdjuntosApelacion.instancia.traeAdjunto(DaoApelacion.instancia.traeAdjunto(idAdjunto));
+        }
+
     }
 
 }

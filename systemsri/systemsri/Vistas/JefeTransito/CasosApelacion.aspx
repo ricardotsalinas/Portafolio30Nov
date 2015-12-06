@@ -6,7 +6,9 @@
     <form id="formIngresaMulta" runat="server">
     <div class="alinInicial">
         <h2>
-            Casos Apelaciones</h2>
+            Casos Apelaciones<asp:TextBox 
+                ID="txtAdjunto" runat="server" Enabled="False"></asp:TextBox>
+        </h2>
         <table>
             <tr>
                 <td class="c5g">

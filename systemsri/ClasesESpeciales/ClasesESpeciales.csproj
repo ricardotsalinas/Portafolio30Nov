@@ -46,9 +46,11 @@
     <Compile Include="DetalleApelacion.cs" />
     <Compile Include="DetalleMultaInfractor.cs" />
     <Compile Include="Helper\Datos.cs" />
+    <Compile Include="Helper\Descargar.cs" />
     <Compile Include="Helper\Exportar.cs" />
     <Compile Include="Helper\GeneraMd5.cs" />
     <Compile Include="Helper\HttpHelper.cs" />
+    <Compile Include="Helper\ValidaCorreo.cs" />
     <Compile Include="Helper\ValidaRut.cs" />
     <Compile Include="HistorialInfractor.cs" />
     <Compile Include="LoginUsuario.cs" />

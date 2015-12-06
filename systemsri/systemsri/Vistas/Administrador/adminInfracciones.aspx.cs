@@ -14,12 +14,12 @@ namespace systemsri.Vistas.Administrador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+          /*  if (Session["usuario"].Equals("") || Session["usuario"] == null ||
     !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 47))
             {
                 Response.Redirect("../LoginUsuario/loginUsuario.aspx");
 
-            }
+            }*/
             if (!Page.IsPostBack)
             {
                 
@@ -162,6 +162,7 @@ namespace systemsri.Vistas.Administrador
         {
             gvInfrAI.DataSource = NegocioReporteria.Instancia.listarInfracciones();
             gvInfrAI.DataBind();
+            gvInfrAI.Visible = true;
         }
 
         protected void btnBorrarAI_Click(object sender, EventArgs e)
@@ -171,6 +172,7 @@ namespace systemsri.Vistas.Administrador
             ddlistTipoMonedaAI.SelectedIndex = 0;
 
             txtDescrInfraccionAI.Text = "";
+            TxtID.Text = String.Empty;
             txtValorAI.Text = "";
             ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccione", ""));
 
@@ -179,11 +181,12 @@ namespace systemsri.Vistas.Administrador
             txtValorAI.BorderColor = System.Drawing.Color.LightGray;
             txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
 
+            gvInfrAI.Visible = false;
+
             ddlistGravedadAI.BorderWidth = 1;
             ddlistTipoMonedaAI.BorderWidth = 1;
             txtValorAI.BorderWidth = 1;
             txtDescrInfraccionAI.BorderWidth = 1;
-
 
         }
 
@@ -215,6 +218,8 @@ namespace systemsri.Vistas.Administrador
                 GridViewRow row = gvInfrAI.Rows[index];
                 txtDescrInfraccionAI.Text = row.Cells[4].Text;
                 txtValorAI.Text = row.Cells[2].Text;
+                TxtID.Text = row.Cells[0].Text;
+
 
                 foreach (var item in ddlistGravedadAI.Items)
                 {
@@ -230,11 +235,6 @@ namespace systemsri.Vistas.Administrador
                     contador = contador + 1;
                 }
                 contador = 0;
-
-
-
-
-
             }
 
 

@@ -48,7 +48,7 @@ namespace systemsri.Vistas.Infractor
                     fechaParaApelar = item.FECHA_MULTA;
                 }
                 TimeSpan ts = DateTime.Now - fechaParaApelar;
-                if (ts.Days==3)
+                if (ts.Days<=3)
                 {
                     Panel1.Visible = true;
                     Panel1.Enabled = true;

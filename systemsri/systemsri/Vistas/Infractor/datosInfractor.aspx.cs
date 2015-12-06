@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using ClasesESpeciales;
 using Negocio;
 using ConexionDatos.Entity;
+using ClasesESpeciales.Helper;
 
 namespace systemsri.Vistas.Infractor
 {
@@ -71,6 +72,7 @@ namespace systemsri.Vistas.Infractor
 
         protected void btnGuardarDI_Click(object sender, EventArgs e)
         {
+            int validar = 0;
 
             if (tblPassDI.Visible)
             {
@@ -121,48 +123,78 @@ namespace systemsri.Vistas.Infractor
                         txtCambiaPassDI1.BorderWidth = 1;
                         txtCambiaPassDI2.BorderWidth = 1;
                     }
-                    }
-                    else
-                    {
-                        lblInfoDI.ForeColor = System.Drawing.Color.Red;
-                        lblInfoDI.Visible = true;
-                        lblInfoDI.Text = "La contraseña debe contener al menos 4 caracteres";
-                        txtCambiaPassDI1.BorderColor = System.Drawing.Color.Red;
-                        txtCambiaPassDI2.BorderColor = System.Drawing.Color.Red;
-                        txtCambiaPassDI1.BorderWidth = 1;
-                        txtCambiaPassDI2.BorderWidth = 1;
-                    }
-                
+                }
+                else
+                {
+                    lblInfoDI.ForeColor = System.Drawing.Color.Red;
+                    lblInfoDI.Visible = true;
+                    lblInfoDI.Text = "La contraseña debe contener al menos 4 caracteres";
+                    txtCambiaPassDI1.BorderColor = System.Drawing.Color.Red;
+                    txtCambiaPassDI2.BorderColor = System.Drawing.Color.Red;
+                    txtCambiaPassDI1.BorderWidth = 1;
+                    txtCambiaPassDI2.BorderWidth = 1;
+                }
+
             }
 
 
 
             if (txtEmailDI.Enabled || txtTelefonoDI.Enabled)
             {
-                int resul = NegocioInfractor.instancia.actualizaDatosPersonales(txtEmailDI.Text, txtTelefonoDI.Text, txtRutDI.Text);
-                if (resul == 1)
+                
+                if (!ValidaCorreo.instancia.email_bien_escrito(txtEmailDI.Text))
                 {
-
-                    txtEmailDI.Enabled = false;
-                    txtTelefonoDI.Enabled = false;
-                    lblInfoDI.Visible = true;
-                    lblInfoDI.Text = "Los datos han sido actualizados";
-                    lblInfoDI.ForeColor = System.Drawing.Color.LightGray;
+                    txtEmailDI.BorderColor = System.Drawing.Color.Red;
+                    txtEmailDI.BorderWidth = 1;
+                    validar = 1;
+                }
+                else 
+                {
+                    txtEmailDI.BorderColor = System.Drawing.Color.LightGray;
+                    txtEmailDI.BorderWidth = 1;
+                }
+                if (String.IsNullOrEmpty(txtTelefonoDI.Text))
+                {
+                    txtTelefonoDI.BorderColor = System.Drawing.Color.Red;
+                    txtTelefonoDI.BorderWidth = 1;
+                    validar = 1;
                 }
                 else
                 {
-
-                    lblInfoDI.Visible = true;
-                    lblInfoDI.Text = "Ha habido un error al actualizar los datos";
-                    lblInfoDI.ForeColor = System.Drawing.Color.Red;
-
-
+                    txtTelefonoDI.BorderColor = System.Drawing.Color.LightGray;
+                    txtTelefonoDI.BorderWidth = 1;
                 }
 
+
+                if (validar == 1)
+                {
+                    lblInfoDI.ForeColor = System.Drawing.Color.Red;
+                    lblInfoDI.Visible = true;
+                    lblInfoDI.Text = "Los campos en rojo son obligatorio";
+                }
+                else
+                {
+                    int resul = NegocioInfractor.instancia.actualizaDatosPersonales(txtEmailDI.Text, txtTelefonoDI.Text, txtRutDI.Text);
+                    if (resul == 1)
+                    {
+
+                        txtEmailDI.Enabled = false;
+                        txtTelefonoDI.Enabled = false;
+                        lblInfoDI.Visible = true;
+                        lblInfoDI.Text = "Los datos han sido actualizados";
+                        lblInfoDI.ForeColor = System.Drawing.Color.Gray;
+                    }
+                    else
+                    {
+                        lblInfoDI.Visible = true;
+                        lblInfoDI.Text = "Ha habido un error al actualizar los datos";
+                        lblInfoDI.ForeColor = System.Drawing.Color.Red;
+                    }
+
+                    
+
+                }
             }
-
-
-
         }
 
 
