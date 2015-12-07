@@ -92,5 +92,8 @@ namespace Negocio
             objInf.PASSWORD_INFR = GeneraMd5.instancia.md5(objInf.RUT_INFR.ToString().Substring(0, 5));
             return DaoInfractor.Instancia.funcionarioId(objInf);
         }
+
+     
+     
     }
 }

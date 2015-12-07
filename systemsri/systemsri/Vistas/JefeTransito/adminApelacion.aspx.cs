@@ -122,10 +122,6 @@ namespace systemsri.Vistas.JefeTransito
                 data.Add("rut_infr", post);
                 HttpHelper.RedirectAndPOST(this.Page, "CasosApelacion.aspx", data);
 
-
-
-
-
             }
         }
 

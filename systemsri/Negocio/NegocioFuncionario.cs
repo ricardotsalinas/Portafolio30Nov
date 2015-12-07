@@ -7,6 +7,7 @@ using ConexionDatos.Entity;
 using ConexionDatos.Dao;
 using Oracle.DataAccess;
 using ClasesESpeciales.Helper;
+using ClasesESpeciales;
 
 namespace Negocio
 {
@@ -84,6 +85,12 @@ namespace Negocio
 
         }
 
+
+        public List<DetalleInfractorPagar> detalleInfractorPagar(String rut)
+        {
+            return DaoPersonal.instancia.detalleInfractorPagar(rut);
+
+        }
     }
 
 }

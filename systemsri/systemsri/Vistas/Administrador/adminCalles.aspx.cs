@@ -45,7 +45,7 @@ namespace systemsri.Vistas.Administrador
 
 
 
-        protected void btnBuscarAC_Click(object sender, EventArgs e)
+        /*protected void btnBuscarAC_Click(object sender, EventArgs e)
         {
 
             VIA_CIRCULACION v = new VIA_CIRCULACION();
@@ -69,7 +69,7 @@ namespace systemsri.Vistas.Administrador
 
             }
 
-        }
+        }*/
 
         protected void btnBorrarAC_Click(object sender, EventArgs e)
         {
@@ -206,8 +206,8 @@ namespace systemsri.Vistas.Administrador
                         ddlistTipoCalle.SelectedIndex = contador;
                     contador = contador + 1;
                 }
-                 contador = 0;
-       
+                contador = 0;
+
                 ddlistNumPistas.SelectedIndex = Convert.ToInt32(row.Cells[2].Text);
                 btnGuardarAC.Text = "ACTUALIZAR";
 
@@ -218,10 +218,12 @@ namespace systemsri.Vistas.Administrador
 
         protected void btnGuardarAC_Click(object sender, EventArgs e)
         {
-            if (NegocioAdministrador.instancia.existeCalle(txtNombreCalle.Text) || Convert.ToInt32(txtNuevo.Text)>0)
+
+            int n = 0;
+            if (NegocioAdministrador.instancia.existeCalle(txtNombreCalle.Text) || Convert.ToInt32(txtNuevo.Text) > 0)
             {
                 DETALLE_CARACTERISTICA objCarac = new DETALLE_CARACTERISTICA();
-                int newPersonal=0;
+                int newPersonal = 0;
                 objCarac.DETALLE_CAR = txtNombreCalle.Text;
                 objCarac.ID_CARACTERISTICA = 10;
                 String estado = "1";
@@ -229,7 +231,7 @@ namespace systemsri.Vistas.Administrador
                     estado = "1";
                 else
                     estado = "0";
-                if(Convert.ToInt32(txtNuevo.Text)>0)
+                if (Convert.ToInt32(txtNuevo.Text) > 0)
                     newPersonal = NegocioAdministrador.instancia.CreaCalle(objCarac, Convert.ToInt32(ddlistNumPistas.SelectedValue), Convert.ToInt32(ddlistOrient.SelectedValue), Convert.ToInt32(ddlistVelMax.SelectedValue), Convert.ToInt32(ddlistSentido.SelectedValue), Convert.ToInt32(ddlistSector.SelectedValue), Convert.ToInt32(ddlistTipoCalle.SelectedValue), Convert.ToInt32(txtNuevo.Text), estado);
 
                 if (newPersonal == 1 || newPersonal == 2)
@@ -263,32 +265,98 @@ namespace systemsri.Vistas.Administrador
                 }
 
             }
-           
+            if (txtNombreCalle.Text == "" || txtNombreCalle.Text == null)
+            {
+                txtNombreCalle.BorderColor = System.Drawing.Color.Red;
+                txtNombreCalle.BorderWidth = 1;
+                n = 1;
+            }
             else
             {
-                int n = 0;
-                if (txtNombreCalle.Text == "" || txtNombreCalle.Text == null)
-                {
-                    txtNombreCalle.BorderColor = System.Drawing.Color.Red;
-                    txtNombreCalle.BorderWidth = 1;
-                    n = 1;
-                }
-                else
-                {
-                    txtNombreCalle.BorderColor = System.Drawing.Color.LightGray;
-                    txtNombreCalle.BorderWidth = 1;
-                    n = 0;
-                }
-
-                if (n == 1)
-                {
-                    lblInfoAC.Visible = true;
-                    lblInfoAC.Text = "Los campos en Rojo son obligatorios";
-                    lblInfoAC.ForeColor = System.Drawing.Color.Red;
-
-
-                }
+                txtNombreCalle.BorderColor = System.Drawing.Color.LightGray;
+                txtNombreCalle.BorderWidth = 1;
+                n = 0;
             }
+            if (ddlistNumPistas.SelectedIndex == 0)
+            {
+
+                ddlistNumPistas.BorderColor = System.Drawing.Color.Red;
+                n = 1;
+            }
+            else
+            {
+                ddlistNumPistas.BorderColor = System.Drawing.Color.LightGray;
+                ddlistNumPistas.BorderWidth = 1;
+                n = 0;
+            }
+            if (ddlistOrient.SelectedIndex == 0)
+            {
+
+                ddlistOrient.BorderColor = System.Drawing.Color.Red;
+                n = 1;
+            }
+            else
+            {
+                ddlistOrient.BorderColor = System.Drawing.Color.LightGray;
+                ddlistOrient.BorderWidth = 1;
+                n = 0;
+            }
+            if (ddlistVelMax.SelectedIndex == 0)
+            {
+
+                ddlistVelMax.BorderColor = System.Drawing.Color.Red;
+                n = 1;
+            }
+            else
+            {
+                ddlistVelMax.BorderColor = System.Drawing.Color.LightGray;
+                ddlistVelMax.BorderWidth = 1;
+                n = 0;
+            }
+            if (ddlistSentido.SelectedIndex == 0)
+            {
+
+                ddlistSentido.BorderColor = System.Drawing.Color.Red;
+                n = 1;
+            }
+            else
+            {
+                ddlistSentido.BorderColor = System.Drawing.Color.LightGray;
+                ddlistSentido.BorderWidth = 1;
+                n = 0;
+            }
+            if (ddlistSector.SelectedIndex == 0)
+            {
+
+                ddlistSector.BorderColor = System.Drawing.Color.Red;
+                n = 1;
+            }
+            else
+            {
+                ddlistSector.BorderColor = System.Drawing.Color.LightGray;
+                ddlistSector.BorderWidth = 1;
+                n = 0;
+            }
+            if (ddlistTipoCalle.SelectedIndex == 0)
+            {
+
+                ddlistTipoCalle.BorderColor = System.Drawing.Color.Red;
+                n = 1;
+            }
+            else
+            {
+                ddlistTipoCalle.BorderColor = System.Drawing.Color.LightGray;
+                ddlistTipoCalle.BorderWidth = 1;
+                n = 0;
+            }
+
+            if (n == 1)
+            {
+                lblInfoAC.Visible = true;
+                lblInfoAC.Text = "Los campos en Rojo son obligatorios";
+                lblInfoAC.ForeColor = System.Drawing.Color.Red;
+            }
+
         }
 
         protected void btnListarAC_Click(object sender, EventArgs e)

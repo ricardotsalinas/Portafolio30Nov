@@ -254,8 +254,8 @@ namespace ConexionDatos.Dao
                                COD_MULTA = mu.ID_MULTA,
                                GRAVEDAD = dci.DETALLE_CAR,
                                VALOR  = incc.MONTO,
-                                ID_MULTA = mu.ID_MULTA,
-                                MONTO  = (incc.MONTO*mon.VALOR_PESOS+mu.MONTO_ADICIONAL)??0,
+                               ID_MULTA = mu.ID_MULTA,
+                               MONTO  = (incc.MONTO*mon.VALOR_PESOS+mu.MONTO_ADICIONAL)??0,
                                FECHA_MULTA = mu.FECHA_CREACION,
                                HORA_MULTA = mu.HORA_MULTA,
                                MOTIVO_MULTA = dcin.DETALLE_CAR,
@@ -269,6 +269,36 @@ namespace ConexionDatos.Dao
                 return detalle;
             }
         }
+
+        public List<DetalleInfractorPagar> detalleInfractorPagar(String rut)
+        {
+            List<DetalleInfractorPagar> detalle = new List<DetalleInfractorPagar>();
+
+            using (SRI con = new SRI())
+            {
+                detalle = (from inf in con.INFRACTOR
+                           join mu in con.MULTA on inf.ID_INFRACTOR equals mu.ID_INFRACTOR
+                           join incc in con.INFRACCION on mu.ID_INFRACCION equals incc.ID_INFRACCION
+                           join mumo in con.MONEDA on mu.ID_MONEDA equals mumo.ID_MONEDA
+                           where inf.RUT_INFR == rut
+
+                           select new DetalleInfractorPagar
+                           {
+                               RUT = inf.RUT_INFR,
+                               NOMBRE = inf.NOMBRE_INFR,
+                               APPAT = inf.APPAT_INFR,
+                               APMAT = inf.APMAT_INFR,
+                               MONTO = (incc.MONTO * mumo.VALOR_PESOS + mu.MONTO_ADICIONAL) ?? 0,
+                               ESTADO = mu.PAGADA,
+                               NUMMULTA = mu.ID_MULTA
+
+                           }
+                            ).ToList();
+                return detalle;
+            }
+        }
+
+
     }
     }
 

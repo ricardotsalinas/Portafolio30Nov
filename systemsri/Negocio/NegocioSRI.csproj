@@ -51,6 +51,7 @@
     <Compile Include="NegocioReporteria.cs" />
     <Compile Include="NegocioRestriccion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteMulta.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClasesESpeciales\ClasesESpeciales.csproj">

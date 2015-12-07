@@ -336,7 +336,7 @@ namespace ConexionDatos.Dao
         }
 
 
-    
+
         public int funcionarioId(INFRACTOR dto)
         {
             try
@@ -353,7 +353,10 @@ namespace ConexionDatos.Dao
             {
                 return 0;
             }
+
+
+
+
         }
-  
     }
 }

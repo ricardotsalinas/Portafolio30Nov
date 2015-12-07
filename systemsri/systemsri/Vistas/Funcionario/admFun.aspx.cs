@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using ConexionDatos.Entity;
 using Negocio;
 using ClasesESpeciales.Helper;
+using System.Collections.Specialized;
+using System.Drawing;
 
 namespace systemsri.Vistas.Funcionario
 {
@@ -14,7 +16,14 @@ namespace systemsri.Vistas.Funcionario
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+              !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 43))
+            {
+                Response.Redirect("../LoginUsuario/loginUsuario.aspx");
 
+            }
+            if (!Page.IsPostBack)
+            { }
         }
 
         protected void btnGuardarAF_Click(object sender, EventArgs e)
@@ -37,7 +46,7 @@ namespace systemsri.Vistas.Funcionario
                     else
                         p.ACTIVO = "0";
 
-                 
+
                     int newPersonal = NegocioFuncionario.instancia.CrearFuncionario(p, 1);
                     if (newPersonal == 1)
                     {
@@ -58,8 +67,8 @@ namespace systemsri.Vistas.Funcionario
                     else
 
                         lblInfoAF.Text = "Los Datos no han sido guardados";
-                        lblInfoAF.Visible = true;
-                        lblInfoAF.ForeColor = System.Drawing.Color.Red;
+                    lblInfoAF.Visible = true;
+                    lblInfoAF.ForeColor = System.Drawing.Color.Red;
 
                 }
                 else
@@ -131,7 +140,7 @@ namespace systemsri.Vistas.Funcionario
                     txtDirAF.BorderWidth = 1;
                     n = 0;
                 }
-               
+
 
                 if (n == 1)
                 {
@@ -149,8 +158,8 @@ namespace systemsri.Vistas.Funcionario
 
         protected void btnBuscarAF_Click(object sender, EventArgs e)
         {
-            List<INFRACTOR> buscar = NegocioInfractor.instancia.buscarPersona(txtRutAF.Text);  //buscarPersona(txtRutAF.Text);
-         
+            List<INFRACTOR> buscar = NegocioInfractor.instancia.buscarPersona(txtRutAF.Text); 
+
 
             lblInfoAF.Visible = false;
 
@@ -176,7 +185,7 @@ namespace systemsri.Vistas.Funcionario
                     txtDirAF.Text = "";
                     txtEmailAF.Text = "";
                     txtFonoAF.Text = "";
-                  
+
 
 
                 }
@@ -184,9 +193,8 @@ namespace systemsri.Vistas.Funcionario
                     if (buscar.Count > 0)
                     {
                         btnPassAF.Style.Add("display", "yes");
-
-                        btnActualizarAF.Visible = true;
-                        btnGuardarAF.Visible = false;
+                        btnGuardarAF.Text = "ACTUALIZAR";
+                        btnRevMultasAF.Visible = true;
 
                     }
 
@@ -218,7 +226,7 @@ namespace systemsri.Vistas.Funcionario
                     txtDirAF.BorderWidth = 1;
                     txtFonoAF.BorderWidth = 1;
                     txtEmailAF.BorderWidth = 1;
-                   
+
 
 
                 }
@@ -253,15 +261,13 @@ namespace systemsri.Vistas.Funcionario
             }
         }
 
-        protected void btnActualizarAF_Click(object sender, EventArgs e)
-        {
 
-        }
 
         protected void btnLimpiarAF_Click(object sender, EventArgs e)
         {
             lblInfoAF.Visible = false;
-            btnActualizarAF.Style.Add("display", "none");
+            btnRevMultasAF.Visible = true;
+            btnPassAF.Style.Add("display", "none");
             txtRutAF.Text = String.Empty;
             txtNomAF.Text = String.Empty;
             txtAppatAF.Text = String.Empty;
@@ -271,8 +277,8 @@ namespace systemsri.Vistas.Funcionario
             txtEmailAF.Text = String.Empty;
             chkActivoAF.Checked = true;
             btnGuardarAF.Visible = true;
-            btnActualizarAF.Visible = false;
-         
+
+
 
 
             txtRutAF.BorderColor = System.Drawing.Color.LightGray;
@@ -282,7 +288,7 @@ namespace systemsri.Vistas.Funcionario
             txtDirAF.BorderColor = System.Drawing.Color.LightGray;
             txtFonoAF.BorderColor = System.Drawing.Color.LightGray;
             txtEmailAF.BorderColor = System.Drawing.Color.LightGray;
-          
+
 
             txtRutAF.BorderWidth = 1;
             txtNomAF.BorderWidth = 1;
@@ -291,8 +297,93 @@ namespace systemsri.Vistas.Funcionario
             txtDirAF.BorderWidth = 1;
             txtFonoAF.BorderWidth = 1;
             txtEmailAF.BorderWidth = 1;
-            
+
 
         }
+
+        protected void btnRevMultasAF_Click(object sender, EventArgs e)
+        {
+            gvMultas.DataSource = NegocioReporteria.Instancia.ListarMulta(txtRutAF.Text);
+            gvMultas.DataBind();
+
+
+
+        }
+
+        protected void gvMultas_DataBound(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gvMultas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void gvMultas_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "BotonGV")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                NameValueCollection data = new NameValueCollection();
+                GridViewRow row = gvMultas.Rows[index];
+                String post = txtRutAF.Text;
+                data.Add("rut_infr", post);
+                HttpHelper.RedirectAndPOST(this.Page, "pagarFun.aspx", data);
+
+            }
+        }
+
+        protected void gvMultas_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                if (e.Row.Cells[6].Text == "0")
+                {
+                    e.Row.Cells[6].Text = "SI";
+                }
+                else
+                {
+                    e.Row.Cells[6].Text = "NO";
+
+                }
+                if (e.Row.Cells[7].Text == "0")
+                {
+                    e.Row.Cells[7].Text = "NO PAGADA";
+                    e.Row.Cells[7].ForeColor = Color.Red;
+                }
+                else
+                {
+                    e.Row.Cells[7].Text = "PAGADA";
+                }
+                if (e.Row.Cells[8].Text == "0")
+                {
+                    e.Row.Cells[8].Text = "NO ENTREGADA";
+                    e.Row.Cells[8].ForeColor = Color.Red;
+                }
+                else
+                {
+                    e.Row.Cells[8].Text = "ENTREGADA";
+                }
+                if (e.Row.Cells[7].Text == "PAGADA")
+                {
+                    e.Row.Cells[9].Visible = false;
+
+                }
+                else
+                {
+                    e.Row.Cells[9].Visible = true; ;
+                }
+
+
+
+
+            }
+
+        }
+
+       
+
+        
     }
 }

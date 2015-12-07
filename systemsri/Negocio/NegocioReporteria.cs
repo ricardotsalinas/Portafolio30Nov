@@ -6,6 +6,7 @@ using ClasesESpeciales;
 using ConexionDatos.Dao;
 using ClasesESpeciales.Helper;
 using System.Collections;
+using ClasesESpeciales;
 
 namespace Negocio
 {
@@ -39,9 +40,13 @@ namespace Negocio
             return ReportesDAO.Instancia.ReporteTurnos();
         }
 
+      
 
+        public List<ReporteMultas> ListarMulta(String rut)
+        {
+            return ReportesDAO.Instancia.ReporteMultas(rut);
+        }
 
-
-
+        
     }
 }

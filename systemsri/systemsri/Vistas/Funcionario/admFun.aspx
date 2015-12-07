@@ -11,7 +11,7 @@
         <table>
             <tr>
                 <td class="c1g">
-                    RUT :
+                    RUT:
                 </td>
                 <td class="c1b">
                     <asp:TextBox type="text" ID="txtRutAF" runat="server" CssClass="input1" />
@@ -29,30 +29,25 @@
                 <td class="c2b">
                     <asp:TextBox ID="txtNomAF" runat="server" CssClass="input1" Enabled="false" />
                 </td>
-               
-                </td>
                 <td class="c2g">
                     EMAIL:
                 </td>
                 <td class="c2b">
                     <asp:TextBox ID="txtEmailAF" runat="server" CssClass="input1" TextMode="Email" />
-                </td>
-                <td style="width: 3%">
-                </td>
+               </td>
             </tr>
             <tr>
                 <td class="c2g">
                     APELLIDO PATERNO:
                 </td>
                 <td class="c2b">
-                    <asp:TextBox ID="txtAppatAF" runat="server" CssClass="input1" Enabled="false" /></td>
+                    <asp:TextBox ID="txtAppatAF" runat="server" CssClass="input1" Enabled="false" />
+                </td>
                 <td class="c2g">
                     TELEFONO:
                 </td>
                 <td class="c2b">
                     <asp:TextBox ID="txtFonoAF" runat="server" CssClass="input1" TextMode="Phone" />
-                </td>
-                <td style="width: 3%">
                 </td>
             </tr>
             <tr>
@@ -62,15 +57,11 @@
                 <td class="c2b">
                     <asp:TextBox ID="txtApmatAF" runat="server" CssClass="input1" Enabled="false" />
                 </td>
-                
-             
                 <td class="c2g">
                     DIRECCIÓN:
                 </td>
                 <td class="c2b">
                     <asp:TextBox ID="txtDirAF" runat="server" class="input1" Enabled="false" />
-                </td>
-                <td style="width: 3%">
                 </td>
             </tr>
             <tr>
@@ -80,34 +71,46 @@
                 <td class="c2b">
                     <asp:CheckBox ID="chkActivoAF" runat="server" Font-Names="Arial" Text="Activo" />
                 </td>
-              
-                <td class="c1g">
+                <td class="c2g">
                     CONTRASEÑA:
                 </td>
-                <td class="c1b">
+                <td class="c2b">
                     <asp:Button ID="btnPassAF" runat="server" Text="REESTABLECER" CssClass="boton2" EnableTheming="True"
                         OnClick="btnPassAF_Click" />
                 </td>
             </tr>
+        </table>
+        <table>
             <tr>
-                <td style="text-align: center; width: 24%;">
-                </td>
                 <td class="cbtn">
-                    <asp:Button ID="btnGuardarAF" CssClass="boton" runat="server" Text="GUARDAR" OnClick="btnGuardarAF_Click"  />
-                </td>
-                <td class="cbtn">
-                    <asp:Button ID="btnLimpiarAF" CssClass="boton" runat="server" Text="LIMPIAR" OnClick="btnLimpiarAF_Click" />
-                </td>
-                <td style="text-align: center; width: 24%;">
-                    <a href="../homeSanBernardo.aspx" />
-                    <asp:Button ID="btnActualizarAF" CssClass="boton" runat="server" Text="ACTUALIZAR" Visible="false"
-                        OnClick="btnActualizarAF_Click" />
-                </td>
-                <td class="cbtn">
-                    &nbsp;
+                    <asp:Button ID="btnGuardarAF" CssClass="boton" runat="server" Text="GUARDAR" OnClick="btnGuardarAF_Click" />
+                    &nbsp;&nbsp;<asp:Button ID="btnLimpiarAF" CssClass="boton" runat="server" Text="LIMPIAR"
+                        OnClick="btnLimpiarAF_Click" />
+                    &nbsp;&nbsp;<asp:Button ID="btnRevMultasAF" CssClass="boton2" runat="server" Text="REVISAR MULTAS"
+                        OnClick="btnRevMultasAF_Click" Visible="False" />
                 </td>
             </tr>
         </table>
+        <asp:GridView ID="gvMultas" runat="server" OnSelectedIndexChanged="gvMultas_SelectedIndexChanged"
+            AutoGenerateColumns="False" CssClass="Grilla" OnDataBound="gvMultas_DataBound"
+            OnRowCommand="gvMultas_RowCommand" OnRowDataBound="gvMultas_RowDataBound">
+            <Columns>
+                <asp:BoundField HeaderText="FOLIO" DataField="FOLIO" />
+                <asp:BoundField HeaderText="GRAVEDAD" DataField="GRAVEDAD" />
+                <asp:BoundField HeaderText="VALOR" DataField="VALOR" />
+                <asp:BoundField HeaderText="VALOR APELACIÓN" DataField="VALOR_APEL" DataFormatString="${0:N0}" />
+                <asp:BoundField HeaderText="VALOR FINAL" DataField="VALOR_PESOS" DataFormatString="${0:N0}" />
+                <asp:BoundField HeaderText="FECHA MULTA" DataField="FECHA_MULTA" DataFormatString="{0:M-dd-yyyy}" />
+                <asp:BoundField HeaderText="LICENCIA RETENIDA" DataField="LIC_RET" />
+                <asp:BoundField HeaderText="ESTADO DE PAGO" DataField="EST_PAGO" />
+                <asp:BoundField HeaderText="LICENCIA ENTREGADA" DataField="LIC_ENTR" />
+                <asp:ButtonField ButtonType="Button" CommandName="BotonGV" HeaderText="PAGAR" 
+                    Text="PAGAR" >
+                <ControlStyle BackColor="#528204" Font-Bold="True" ForeColor="White" />
+                </asp:ButtonField>
+            </Columns>
+        </asp:GridView>
+        <br />
     </div>
     </form>
 </asp:Content>

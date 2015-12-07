@@ -10,150 +10,105 @@
 namespace systemsri.Vistas.Funcionario {
     
     
-    public partial class admFun {
+    public partial class pagarFun {
         
         /// <summary>
-        /// Control formAdmfun.
+        /// Control formAdminCalles.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm formAdmfun;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formAdminCalles;
         
         /// <summary>
-        /// Control lblInfoAF.
+        /// Control lblInfoPF.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblInfoAF;
+        protected global::System.Web.UI.WebControls.Label lblInfoPF;
         
         /// <summary>
-        /// Control txtRutAF.
+        /// Control lblNombrePF.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRutAF;
+        protected global::System.Web.UI.WebControls.Label lblNombrePF;
         
         /// <summary>
-        /// Control btnBuscarAF.
+        /// Control lblRutPF.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBuscarAF;
+        protected global::System.Web.UI.WebControls.Label lblRutPF;
         
         /// <summary>
-        /// Control txtNomAF.
+        /// Control lblMontoPF.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNomAF;
+        protected global::System.Web.UI.WebControls.Label lblMontoPF;
         
         /// <summary>
-        /// Control txtEmailAF.
+        /// Control lblFechaPagoPF.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmailAF;
+        protected global::System.Web.UI.WebControls.Label lblFechaPagoPF;
         
         /// <summary>
-        /// Control txtAppatAF.
+        /// Control RadioButtonList1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAppatAF;
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
         
         /// <summary>
-        /// Control txtFonoAF.
+        /// Control lblTipoPago.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFonoAF;
+        protected global::System.Web.UI.WebControls.Label lblTipoPago;
         
         /// <summary>
-        /// Control txtApmatAF.
+        /// Control lblEstadoPago.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApmatAF;
+        protected global::System.Web.UI.WebControls.Label lblEstadoPago;
         
         /// <summary>
-        /// Control txtDirAF.
+        /// Control lblNumMulta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDirAF;
+        protected global::System.Web.UI.WebControls.Label lblNumMulta;
         
         /// <summary>
-        /// Control chkActivoAF.
+        /// Control btnPagarPF.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkActivoAF;
-        
-        /// <summary>
-        /// Control btnPassAF.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPassAF;
-        
-        /// <summary>
-        /// Control btnGuardarAF.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardarAF;
-        
-        /// <summary>
-        /// Control btnLimpiarAF.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLimpiarAF;
-        
-        /// <summary>
-        /// Control btnRevMultasAF.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRevMultasAF;
-        
-        /// <summary>
-        /// Control gvMultas.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvMultas;
+        protected global::System.Web.UI.WebControls.Button btnPagarPF;
     }
 }

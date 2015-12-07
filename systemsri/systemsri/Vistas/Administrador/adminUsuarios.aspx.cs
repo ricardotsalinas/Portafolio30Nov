@@ -8,9 +8,10 @@ using ConexionDatos.Entity;
 using Negocio;
 using ClasesESpeciales.Helper;
 
+
 namespace systemsri.Vistas.Administrador
-     // prar imprimir un alert para probar lo que devuelven las cosas 
-     //Response.Write("<script language=javascript>alert('mensaje');</script>");
+// prar imprimir un alert para probar lo que devuelven las cosas 
+//Response.Write("<script language=javascript>alert('mensaje');</script>");
 {
 
     public partial class adminUsuarios : System.Web.UI.Page
@@ -43,6 +44,7 @@ namespace systemsri.Vistas.Administrador
             {
                 if (NegocioAdministrador.instancia.existeRut2(txtRutAU.Text))
                 {
+
                     PERSONAL p = new PERSONAL();
                     p.RUT_PER = txtRutAU.Text;
                     p.NOMBRE_PER = txtNomAU.Text;
@@ -181,6 +183,7 @@ namespace systemsri.Vistas.Administrador
 
         protected void btnBorrarAU_Click(object sender, EventArgs e)
         {
+            txtRutAU.Enabled = true;
             lblInfoAU.Visible = false;
             reiniciarClave.Style.Add("display", "none");
             txtRutAU.Text = String.Empty;
@@ -220,7 +223,7 @@ namespace systemsri.Vistas.Administrador
         {
 
 
-            List<PERSONAL> buscar = NegocioAdministrador.instancia.buscarPersona(txtRutAU.Text);
+            List<PERSONAL> buscar = NegocioAdministrador.instancia.buscarPersona(txtRutAU.Text.ToUpper());
 
             lblInfoAU.Visible = false;
 
@@ -251,6 +254,7 @@ namespace systemsri.Vistas.Administrador
                 else
                     if (buscar.Count > 0)
                     {
+                        txtRutAU.Enabled = false;
                         reiniciarClave.Style.Add("display", "yes");
                         btnActualizarAU.Visible = true;
                         btnGuardarAU.Visible = false;
@@ -334,24 +338,151 @@ namespace systemsri.Vistas.Administrador
         protected void btnActualizarAU_Click(object sender, EventArgs e)
         {
 
-            PERSONAL p = new PERSONAL();
-            p.RUT_PER = txtRutAU.Text;
-            p.NOMBRE_PER = txtNomAU.Text;
-            p.APPAT_PER = txtAppatAU.Text;
-            p.APMAT_PER = txtApmatAU.Text;
-            p.DIRECCION_PER = txtDireccion.Text;
-            p.TELEFONO_PER = txtTelefono.Text;
-            p.EMAIL_PER = txtEmail.Text;
-            p.ID_TIPO_FUNCIONARIO = Convert.ToDecimal(ddlistCategoria.SelectedValue);
-            if (chkActivoAU.Checked)
-                p.ACTIVO = "1";
+
+            int n = 0;
+            if (txtRutAU.Text == "" || txtRutAU.Text == null)
+            {
+                txtRutAU.BorderColor = System.Drawing.Color.Red;
+                txtRutAU.BorderWidth = 1;
+                n = n + 1;
+            }
             else
-                p.ACTIVO = "0";
+            {
+                txtRutAU.BorderColor = System.Drawing.Color.LightGray;
+                txtRutAU.BorderWidth = 1;
 
-            int actulizar = NegocioAdministrador.instancia.CrearPersonal(p, 2);
+
+
+                if (txtNomAU.Text == "" || txtNomAU.Text == null)
+                {
+                    txtNomAU.BorderColor = System.Drawing.Color.Red;
+                    txtNomAU.BorderWidth = 1;
+                    n = n + 1;
+                }
+                else
+                {
+                    txtNomAU.BorderColor = System.Drawing.Color.LightGray;
+                    txtNomAU.BorderWidth = 1;
+
+                }
+                if (txtAppatAU.Text == "" || txtAppatAU.Text == null)
+                {
+
+                    txtAppatAU.BorderColor = System.Drawing.Color.Red;
+                    txtAppatAU.BorderWidth = 1;
+                    n = n + 1;
+                }
+                else
+                {
+                    txtAppatAU.BorderColor = System.Drawing.Color.LightGray;
+                    txtAppatAU.BorderWidth = 1;
+
+                }
+                if (txtApmatAU.Text == "" || txtApmatAU.Text == null)
+                {
+                    txtApmatAU.BorderColor = System.Drawing.Color.Red;
+                    txtApmatAU.BorderWidth = 1;
+                    n = n + 1;
+                }
+                else
+                {
+                    txtApmatAU.BorderColor = System.Drawing.Color.LightGray;
+                    txtApmatAU.BorderWidth = 1;
+
+                }
+                if (txtDireccion.Text == "" || txtDireccion.Text == null)
+                {
+
+                    txtDireccion.BorderColor = System.Drawing.Color.Red;
+                    txtDireccion.BorderWidth = 1;
+                    n = n + 1;
+                }
+                else
+                {
+                    txtDireccion.BorderColor = System.Drawing.Color.LightGray;
+                    txtDireccion.BorderWidth = 1;
+
+                }
+                if (txtTelefono.Text == "" || txtTelefono.Text == null)
+                {
+                    txtTelefono.BorderColor = System.Drawing.Color.Red;
+                    txtTelefono.BorderWidth = 1;
+                    n = n + 1;
+                }
+                else
+                {
+                    txtTelefono.BorderColor = System.Drawing.Color.LightGray;
+                    txtTelefono.BorderWidth = 1;
+
+                }
+                if (txtEmail.Text == "" || txtEmail.Text == null)
+                {
+                    txtEmail.BorderColor = System.Drawing.Color.Red;
+                    txtEmail.BorderWidth = 1;
+                    n = n + 1;
+                }
+                else
+                {
+                    if (!ValidaCorreo.instancia.email_bien_escrito(txtEmail.Text))
+                    {
+                        txtEmail.BorderColor = System.Drawing.Color.Red;
+                        txtEmail.BorderWidth = 1;
+                        n = n + 1;
+                    }
+                    else
+                    {
+                        txtEmail.BorderColor = System.Drawing.Color.LightGray;
+                        txtEmail.BorderWidth = 1;
+
+                    }
+
+                }
+                if (ddlistCategoria.SelectedIndex == 0)
+                {
+
+                    ddlistCategoria.BorderColor = System.Drawing.Color.Red;
+                    n = n + 1;
+                }
+                else
+                {
+                    ddlistCategoria.BorderColor = System.Drawing.Color.LightGray;
+                    ddlistCategoria.BorderWidth = 1;
+
+                }
+                if (n > 0)
+                {
+
+                    lblInfoAU.ForeColor = System.Drawing.Color.Red;
+                    lblInfoAU.Text = "Los campos en Rojo son obligatorios.";
+                    lblInfoAU.Visible = true;
+
+                }
+                else
+                {
+                    PERSONAL p = new PERSONAL();
+                    p.RUT_PER = txtRutAU.Text.ToUpper();
+                    p.NOMBRE_PER = txtNomAU.Text.ToUpper();
+                    p.APPAT_PER = txtAppatAU.Text.ToUpper();
+                    p.APMAT_PER = txtApmatAU.Text.ToUpper();
+                    p.DIRECCION_PER = txtDireccion.Text.ToUpper();
+                    p.TELEFONO_PER = txtTelefono.Text.ToUpper();
+                    p.EMAIL_PER = txtEmail.Text.ToUpper();
+                    p.ID_TIPO_FUNCIONARIO = Convert.ToDecimal(ddlistCategoria.SelectedValue);
+                    if (chkActivoAU.Checked)
+                        p.ACTIVO = "1";
+                    else
+                        p.ACTIVO = "0";
+
+                    int actualizar = NegocioAdministrador.instancia.CrearPersonal(p, 2);
+                    lblInfoAU.ForeColor = System.Drawing.Color.Gray;
+                    lblInfoAU.Text = "Los datos guardados correctamente.";
+                    lblInfoAU.Visible = true;
+                }
+
+            }
+
 
         }
 
-        }
-    
+    }
 }

@@ -327,6 +327,46 @@ namespace ConexionDatos.Dao
 
         }
 
+
+        public List<ReporteMultas> ReporteMultas(String rut)
+        {
+
+            {
+                using (SRI con = new SRI())
+                {
+
+
+
+                    List<ReporteMultas> lista = (from mu in con.MULTA
+                                                 join infcc in con.INFRACCION on mu.ID_INFRACCION equals infcc.ID_INFRACCION
+                                                 join dc in con.DETALLE_CARACTERISTICA on infcc.ID_GRAVEDAD equals dc.ID_DETCAR
+                                                 join dcm in con.DETALLE_CARACTERISTICA on infcc.ID_TIPO_MONEDA equals dcm.ID_DETCAR
+                                                 join mo in con.MONEDA on mu.ID_MONEDA equals mo.ID_MONEDA
+                                                 join infx in con.INFRACCION on mu.ID_INFRACCION equals infx.ID_INFRACCION
+                                                 join inft in con.INFRACTOR on mu.ID_INFRACTOR equals inft.ID_INFRACTOR
+                                                 where inft.RUT_INFR == rut
+                                                 select new ReporteMultas
+                                                 {
+                                                     FOLIO = mu.ID_MULTA,
+                                                     GRAVEDAD = dc.DETALLE_CAR,
+                                                     VALOR = infcc.MONTO,
+                                                     VALOR_APEL=mu.MONTO_ADICIONAL??0,
+                                                     VALOR_PESOS = (mo.VALOR_PESOS * infx.MONTO + mu.MONTO_ADICIONAL) ?? 0,
+                                                     FECHA_MULTA = mu.FECHA_CREACION,
+                                                     LIC_RET = mu.RETENCION_LICENCIA,
+                                                     EST_PAGO = mu.PAGADA,
+                                                     LIC_ENTR = mu.LICENCIA_ENTREGADA
+
+
+                                                 }
+                                 ).ToList();
+                    return lista;
+
+
+
+                }
+            }
+        }
     }
 
                   

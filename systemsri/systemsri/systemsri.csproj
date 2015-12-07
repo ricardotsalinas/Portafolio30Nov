@@ -112,6 +112,7 @@
     <Content Include="Vistas\Funcionario\datosFun.aspx" />
     <Content Include="Vistas\Funcionario\generaFun.aspx" />
     <Content Include="Vistas\Funcionario\inicioFun.aspx" />
+    <Content Include="Vistas\Funcionario\pagarFun.aspx" />
     <Content Include="Vistas\homeSanBernardo.aspx" />
     <Content Include="Vistas\Infractor\datosInfractor.aspx" />
     <Content Include="Vistas\Infractor\detalleMultasInfractor.aspx" />
@@ -260,6 +261,13 @@
     </Compile>
     <Compile Include="Vistas\Funcionario\MPFuncionario.master.designer.cs">
       <DependentUpon>MPFuncionario.master</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\pagarFun.aspx.cs">
+      <DependentUpon>pagarFun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Funcionario\pagarFun.aspx.designer.cs">
+      <DependentUpon>pagarFun.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\homeSanBernardo.aspx.cs">
       <DependentUpon>homeSanBernardo.aspx</DependentUpon>

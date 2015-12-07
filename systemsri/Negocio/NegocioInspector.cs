@@ -82,5 +82,8 @@ namespace Negocio
        {
            return DaoInfraccion.instancia.idInfraccion(idMotivo);
        }
+
+     
+
     }
 }
