@@ -14,23 +14,23 @@ namespace systemsri.Vistas.Administrador
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          /*  if (Session["usuario"].Equals("") || Session["usuario"] == null ||
-    !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 47))
+            if (Session["usuario"].Equals("") || Session["usuario"] == null ||
+             !NegocioLoginUsuario.instancia.validaPagina(Session["usuario"].ToString(), 47))
             {
                 Response.Redirect("../LoginUsuario/loginUsuario.aspx");
 
-            }*/
+            }
             if (!Page.IsPostBack)
             {
-                
+
                 ddlistGravedadAI.DataSource = NegocioAdministrador.instancia.listarGravedad();
-               ddlistGravedadAI.DataBind();
-               ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccionar", ""));
-               
-                
+                ddlistGravedadAI.DataBind();
+                ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccionar", ""));
+
+
                 ddlistTipoMonedaAI.DataSource = NegocioAdministrador.instancia.listarTipoMoneda();
-               ddlistTipoMonedaAI.DataBind();
-               ddlistTipoMonedaAI.Items.Insert(0, new ListItem("Seleccionar", ""));
+                ddlistTipoMonedaAI.DataBind();
+                ddlistTipoMonedaAI.Items.Insert(0, new ListItem("Seleccionar", ""));
                 lblInfoAdI.Visible = false;
                 chkActivoAIn.Checked = true;
             }
@@ -45,78 +45,169 @@ namespace systemsri.Vistas.Administrador
 
         protected void btnGuardarAI_Click(object sender, EventArgs e)
         {
+            int n = 0;
+            if (txtDescrInfraccionAI.Text == "" || txtDescrInfraccionAI.Text == null)
+            {
+                txtDescrInfraccionAI.BorderColor = System.Drawing.Color.Red;
+                txtDescrInfraccionAI.BorderWidth = 1;
+                n = 1;
+            }
+            else
+            {
+                txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
+                txtDescrInfraccionAI.BorderWidth = 1;
+                n = 0;
+            }
 
-          
-                int n = 0;
-                if (txtDescrInfraccionAI.Text == "" || txtDescrInfraccionAI.Text == null)
+            if (txtValorAI.Text == "" || txtValorAI.Text == null)
+            {
+                txtValorAI.BorderColor = System.Drawing.Color.Red;
+                txtValorAI.BorderWidth = 1;
+                n = 1;
+            }
+            else
+            {
+                txtValorAI.BorderColor = System.Drawing.Color.LightGray;
+                txtValorAI.BorderWidth = 1;
+                n = 0;
+            }
+            if (ddlistGravedadAI.SelectedIndex == 0)
+            {
+
+                ddlistGravedadAI.BorderColor = System.Drawing.Color.Red;
+                n = 1;
+            }
+            else
+            {
+                ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
+                ddlistGravedadAI.BorderWidth = 1;
+                n = 0;
+            }
+
+            if (ddlistGravedadAI.SelectedIndex == 0)
+            {
+
+                ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.Red;
+                n = 1;
+            }
+            else
+            {
+                ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
+                ddlistTipoMonedaAI.BorderWidth = 1;
+                n = 0;
+            }
+
+            if (n == 1)
+            {
+                lblInfoAdI.Visible = true;
+                lblInfoAdI.Text = "Los campos en Rojo son obligatorios";
+                lblInfoAdI.ForeColor = System.Drawing.Color.Red;
+
+
+            }
+            else
+            {
+                INFRACCION objinfra = new INFRACCION();
+                objinfra.ID_TIPO_MONEDA = Convert.ToInt32(ddlistTipoMonedaAI.SelectedValue);
+                decimal monto = 0;
+                try
                 {
-                    txtDescrInfraccionAI.BorderColor = System.Drawing.Color.Red;
-                    txtDescrInfraccionAI.BorderWidth = 1;
-                    n = 1;
+                    monto = Convert.ToDecimal(txtValorAI.Text);
+                objinfra.MONTO = monto;
+                objinfra.ID_GRAVEDAD = Convert.ToInt32(ddlistGravedadAI.SelectedValue);
+                switch (ddlistGravedadAI.SelectedValue)
+                { //21 = GRAVISIMA
+                    //22  =GRAVE
+                    //23 LEVE
+                    case "21":
+                        objinfra.PUNTAJE_GRAV = 6;
+                        break;
+                    case "22":
+                        objinfra.PUNTAJE_GRAV = 3;
+                        break;
+                    case "23":
+                        objinfra.PUNTAJE_GRAV = 1;
+                        break;
                 }
+
+                // tipo 1 actualiza
+                int tipo = 0;
+                if (!String.IsNullOrEmpty(TxtID.Text))
+                    tipo = 1;
                 else
-                {
-                    txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
-                    txtDescrInfraccionAI.BorderWidth = 1;
-                    n = 0;
-                }
+                    tipo = 0;
 
-                if (txtValorAI.Text == "" || txtValorAI.Text == null)
+                int newInfraccion = NegocioAdministrador.instancia.crearInfraccion(objinfra, txtDescrInfraccionAI.Text, tipo);
+                switch (newInfraccion)
                 {
-                    txtValorAI.BorderColor = System.Drawing.Color.Red;
-                    txtValorAI.BorderWidth = 1;
-                    n = 1;
-                }
-                else
-                {
-                    txtValorAI.BorderColor = System.Drawing.Color.LightGray;
-                    txtValorAI.BorderWidth = 1;
-                    n = 0;
-                }
-                if (ddlistGravedadAI.SelectedIndex == 0)
-                {
+                    case 1:
+                        lblInfoAdI.Visible = true;
+                        lblInfoAdI.Text = "Datos guardados";
+                        lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
+                        ddlistGravedadAI.SelectedIndex = 0;
+                        ddlistTipoMonedaAI.SelectedIndex = 0;
 
-                    ddlistGravedadAI.BorderColor = System.Drawing.Color.Red;
-                    n = 1;
-                }
-                else
-                {
-                    ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
-                    ddlistGravedadAI.BorderWidth = 1;
-                    n = 0;
-                }
+                        txtDescrInfraccionAI.Text = "";
+                        TxtID.Text = String.Empty;
+                        txtValorAI.Text = "";
+                        ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccione", ""));
 
-                if (ddlistGravedadAI.SelectedIndex == 0)
-                {
+                        ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
+                        ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
+                        txtValorAI.BorderColor = System.Drawing.Color.LightGray;
+                        txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
 
-                    ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.Red;
-                    n = 1;
-                }
-                else
-                {
-                    ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
-                    ddlistTipoMonedaAI.BorderWidth = 1;
-                    n = 0;
-                }
+                        gvInfrAI.Visible = false;
 
-                if (n == 1)
+                        ddlistGravedadAI.BorderWidth = 1;
+                        ddlistTipoMonedaAI.BorderWidth = 1;
+                        txtValorAI.BorderWidth = 1;
+                        txtDescrInfraccionAI.BorderWidth = 1;
+                        btnGuardarAI.Text = "GUARDAR";
+                        break;
+                    case 2:
+                        lblInfoAdI.Visible = true;
+                        lblInfoAdI.Text = "Datos actualizados";
+                        lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
+                        gvInfrAI.Visible = false;
+                        btnGuardarAI.Text = "GUARDAR";
+                        lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
+                        ddlistGravedadAI.SelectedIndex = 0;
+                        ddlistTipoMonedaAI.SelectedIndex = 0;
+
+                        txtDescrInfraccionAI.Text = "";
+                        TxtID.Text = String.Empty;
+                        txtValorAI.Text = "";
+                        ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccione", ""));
+
+                        ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
+                        ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
+                        txtValorAI.BorderColor = System.Drawing.Color.LightGray;
+                        txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
+
+                        gvInfrAI.Visible = false;
+
+                        ddlistGravedadAI.BorderWidth = 1;
+                        ddlistTipoMonedaAI.BorderWidth = 1;
+                        txtValorAI.BorderWidth = 1;
+                        txtDescrInfraccionAI.BorderWidth = 1;
+                        btnGuardarAI.Text = "GUARDAR";
+                        break;
+                    default:
+                        lblInfoAdI.Visible = true;
+                        lblInfoAdI.Text = "Datos no guardados";
+                        lblInfoAdI.ForeColor = System.Drawing.Color.Red;
+                        break;
+
+                }
+                }
+                catch (Exception)
                 {
                     lblInfoAdI.Visible = true;
-                    lblInfoAdI.Text = "Los campos en Rojo son obligatorios";
+                    lblInfoAdI.Text = "Monto no valido";
                     lblInfoAdI.ForeColor = System.Drawing.Color.Red;
-
-
                 }
-                else
-                {
-                    lblInfoAdI.Visible = true;
-                    lblInfoAdI.Text = "Datos guardados";
-                    lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
-                }
-
-   
-
-
+            }
         }
 
         protected void ddlistGravedad_SelectedIndexChanged(object sender, EventArgs e)
@@ -163,6 +254,7 @@ namespace systemsri.Vistas.Administrador
             gvInfrAI.DataSource = NegocioReporteria.Instancia.listarInfracciones();
             gvInfrAI.DataBind();
             gvInfrAI.Visible = true;
+            btnGuardarAI.Text = "ACTUALIZAR";
         }
 
         protected void btnBorrarAI_Click(object sender, EventArgs e)
@@ -187,7 +279,7 @@ namespace systemsri.Vistas.Administrador
             ddlistTipoMonedaAI.BorderWidth = 1;
             txtValorAI.BorderWidth = 1;
             txtDescrInfraccionAI.BorderWidth = 1;
-
+            btnGuardarAI.Text = "GUARDAR";
         }
 
 
@@ -210,7 +302,7 @@ namespace systemsri.Vistas.Administrador
 
         protected void gvInfrAI_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            
+
             int contador = 0;
             if (e.CommandName == "BotonGV")
             {
@@ -238,6 +330,16 @@ namespace systemsri.Vistas.Administrador
             }
 
 
+
+        }
+
+        protected void txtValorAI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TxtID_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

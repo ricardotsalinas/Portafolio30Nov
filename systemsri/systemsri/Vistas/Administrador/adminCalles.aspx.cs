@@ -324,8 +324,9 @@ namespace systemsri.Vistas.Administrador
                         estado = "1";
                     else
                         estado = "0";
-                    if (Convert.ToInt32(txtNuevo.Text) > 0)
+
                         newPersonal = NegocioAdministrador.instancia.CreaCalle(objCarac, Convert.ToInt32(ddlistNumPistas.SelectedValue), Convert.ToInt32(ddlistOrient.SelectedValue), Convert.ToInt32(ddlistVelMax.SelectedValue), Convert.ToInt32(ddlistSentido.SelectedValue), Convert.ToInt32(ddlistSector.SelectedValue), Convert.ToInt32(ddlistTipoCalle.SelectedValue), Convert.ToInt32(txtNuevo.Text), estado);
+                   
 
                     if (newPersonal == 1 || newPersonal == 2)
                     {

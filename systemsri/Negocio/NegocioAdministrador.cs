@@ -137,6 +137,13 @@ namespace Negocio
             return DaoDetalleCaracteristica.instancia.BuscarInfraccion(idinfr);
         }
 
+
+        public int crearInfraccion(INFRACCION objinfra, String descripcion, int tipo)
+        {
+
+            return DaoInfraccion.instancia.crearInfraccion(objinfra, descripcion,tipo);
+        }
+
        
 
         //public int CrearCalle(VIA_CIRCULACION vcir, int tipo)
