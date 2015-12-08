@@ -93,6 +93,10 @@ namespace Negocio
             return DaoInfractor.Instancia.funcionarioId(objInf);
         }
 
+        public int pagarMulta(int idMulta)
+        {
+            return DaoMulta.instancia.pagarMulta(idMulta);
+        }
      
      
     }

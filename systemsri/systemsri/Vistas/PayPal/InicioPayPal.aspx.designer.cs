@@ -22,22 +22,13 @@ namespace systemsri.Vistas.PayPal {
         protected global::System.Web.UI.HtmlControls.HtmlForm logPaypal;
         
         /// <summary>
-        /// Control casillaEmail.
+        /// Control lblIdmulta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox casillaEmail;
-        
-        /// <summary>
-        /// Control casillaPass.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox casillaPass;
+        protected global::System.Web.UI.WebControls.Label lblIdmulta;
         
         /// <summary>
         /// Control bot_LogPayPal.
@@ -49,12 +40,12 @@ namespace systemsri.Vistas.PayPal {
         protected global::System.Web.UI.WebControls.Button bot_LogPayPal;
         
         /// <summary>
-        /// Control forgotPass.
+        /// Control btnVolver.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label forgotPass;
+        protected global::System.Web.UI.WebControls.Button btnVolver;
     }
 }

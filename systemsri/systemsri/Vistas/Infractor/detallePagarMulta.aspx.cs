@@ -8,6 +8,7 @@ using ClasesESpeciales;
 using Negocio;
 using ConexionDatos.Entity;
 using ClasesESpeciales.Helper;
+using System.Collections.Specialized;
 
 namespace systemsri.Vistas.Infractor
 {
@@ -69,7 +70,10 @@ namespace systemsri.Vistas.Infractor
 
         protected void btnPagarDPM_Click1(object sender, EventArgs e)
         {
-
+            NameValueCollection data = new NameValueCollection();
+            String multa = lblCodMultaDMI.Text;
+            data.Add("idMulta", multa);
+            HttpHelper.RedirectAndPOST(this.Page, "../Paypal/InicioPaypal.aspx", data);
         }
 
         protected void btnEnviarDPM_Click(object sender, EventArgs e)
@@ -146,9 +150,6 @@ namespace systemsri.Vistas.Infractor
             { 
                 ///error
             }
-
-
-
            
         }
 

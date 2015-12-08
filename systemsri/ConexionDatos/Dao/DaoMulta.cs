@@ -43,6 +43,29 @@ namespace ConexionDatos.Dao
             }
         }
 
+        public int pagarMulta(int idMulta)
+        {
+            try
+            {
+                using (SRI con = new SRI())
+                {
+                    MULTA objmulta = new MULTA();
+
+                    objmulta = con.MULTA.Where(m => m.ID_MULTA == idMulta).FirstOrDefault();
+                    objmulta.PAGADA = "1";
+                    objmulta.ID_TIPO_PAGO = 1148;
+                    objmulta.FECHA_PAGO = DateTime.Now;
+                    con.SaveChanges();
+                    return 1;
+
+                }
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+        }
 
         }
 

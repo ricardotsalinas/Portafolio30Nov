@@ -220,51 +220,6 @@ namespace systemsri.Vistas.Administrador
         {
 
             int n = 0;
-            if (NegocioAdministrador.instancia.existeCalle(txtNombreCalle.Text) || Convert.ToInt32(txtNuevo.Text) > 0)
-            {
-                DETALLE_CARACTERISTICA objCarac = new DETALLE_CARACTERISTICA();
-                int newPersonal = 0;
-                objCarac.DETALLE_CAR = txtNombreCalle.Text;
-                objCarac.ID_CARACTERISTICA = 10;
-                String estado = "1";
-                if (chkActivoACa.Checked)
-                    estado = "1";
-                else
-                    estado = "0";
-                if (Convert.ToInt32(txtNuevo.Text) > 0)
-                    newPersonal = NegocioAdministrador.instancia.CreaCalle(objCarac, Convert.ToInt32(ddlistNumPistas.SelectedValue), Convert.ToInt32(ddlistOrient.SelectedValue), Convert.ToInt32(ddlistVelMax.SelectedValue), Convert.ToInt32(ddlistSentido.SelectedValue), Convert.ToInt32(ddlistSector.SelectedValue), Convert.ToInt32(ddlistTipoCalle.SelectedValue), Convert.ToInt32(txtNuevo.Text), estado);
-
-                if (newPersonal == 1 || newPersonal == 2)
-                {
-                    txtNombreCalle.Text = "";
-                    ddlistSector.SelectedIndex = 0;
-                    ddlistNumPistas.SelectedIndex = 0;
-                    ddlistOrient.SelectedIndex = 0;
-                    ddlistSentido.SelectedIndex = 0;
-                    ddlistTipoCalle.SelectedIndex = 0;
-                    ddlistVelMax.SelectedIndex = 0;
-                    chkActivoACa.Checked = true;
-                    txtNuevo.Text = "0";
-                    lblInfoAC.ForeColor = System.Drawing.Color.Gray;
-                    if (newPersonal == 2)
-                        lblInfoAC.Text = "Los Datos han sido actualizado exitosamente";
-                    if (newPersonal == 1)
-                        lblInfoAC.Text = "Los Datos han sido guardados exitosamente";
-
-                    lblInfoAC.Visible = true;
-
-                    gvCalles.DataSource = NegocioReporteria.Instancia.ListarCalles();
-                    gvCalles.DataBind();
-
-                }
-                else
-                {
-                    lblInfoAC.ForeColor = System.Drawing.Color.Red;
-                    lblInfoAC.Text = "Los Datos no han sido guardados";
-                    lblInfoAC.Visible = true;
-                }
-
-            }
             if (txtNombreCalle.Text == "" || txtNombreCalle.Text == null)
             {
                 txtNombreCalle.BorderColor = System.Drawing.Color.Red;
@@ -355,6 +310,54 @@ namespace systemsri.Vistas.Administrador
                 lblInfoAC.Visible = true;
                 lblInfoAC.Text = "Los campos en Rojo son obligatorios";
                 lblInfoAC.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                if (NegocioAdministrador.instancia.existeCalle(txtNombreCalle.Text) || Convert.ToInt32(txtNuevo.Text) > 0)
+                {
+                    DETALLE_CARACTERISTICA objCarac = new DETALLE_CARACTERISTICA();
+                    int newPersonal = 0;
+                    objCarac.DETALLE_CAR = txtNombreCalle.Text;
+                    objCarac.ID_CARACTERISTICA = 10;
+                    String estado = "1";
+                    if (chkActivoACa.Checked)
+                        estado = "1";
+                    else
+                        estado = "0";
+                    if (Convert.ToInt32(txtNuevo.Text) > 0)
+                        newPersonal = NegocioAdministrador.instancia.CreaCalle(objCarac, Convert.ToInt32(ddlistNumPistas.SelectedValue), Convert.ToInt32(ddlistOrient.SelectedValue), Convert.ToInt32(ddlistVelMax.SelectedValue), Convert.ToInt32(ddlistSentido.SelectedValue), Convert.ToInt32(ddlistSector.SelectedValue), Convert.ToInt32(ddlistTipoCalle.SelectedValue), Convert.ToInt32(txtNuevo.Text), estado);
+
+                    if (newPersonal == 1 || newPersonal == 2)
+                    {
+                        txtNombreCalle.Text = "";
+                        ddlistSector.SelectedIndex = 0;
+                        ddlistNumPistas.SelectedIndex = 0;
+                        ddlistOrient.SelectedIndex = 0;
+                        ddlistSentido.SelectedIndex = 0;
+                        ddlistTipoCalle.SelectedIndex = 0;
+                        ddlistVelMax.SelectedIndex = 0;
+                        chkActivoACa.Checked = true;
+                        txtNuevo.Text = "0";
+                        lblInfoAC.ForeColor = System.Drawing.Color.Gray;
+                        if (newPersonal == 2)
+                            lblInfoAC.Text = "Los Datos han sido actualizado exitosamente";
+                        if (newPersonal == 1)
+                            lblInfoAC.Text = "Los Datos han sido guardados exitosamente";
+
+                        lblInfoAC.Visible = true;
+
+                        gvCalles.DataSource = NegocioReporteria.Instancia.ListarCalles();
+                        gvCalles.DataBind();
+
+                    }
+                    else
+                    {
+                        lblInfoAC.ForeColor = System.Drawing.Color.Red;
+                        lblInfoAC.Text = "Los Datos no han sido guardados";
+                        lblInfoAC.Visible = true;
+                    }
+
+                }
             }
 
         }

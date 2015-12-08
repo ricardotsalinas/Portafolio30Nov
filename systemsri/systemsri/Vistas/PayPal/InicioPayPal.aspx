@@ -15,22 +15,22 @@
             <table>
                  <tr>
                     <td>
-                        <asp:TextBox ID="casillaEmail"  class="casillaEmail" type="email" runat="server" placeholder="Email"></asp:TextBox>
+                        <asp:Label ID="lblIdmulta" runat="server"></asp:Label>
                     </td>
                  </tr>
                  <tr>
                     <td>
-                        <asp:TextBox ID="casillaPass"  class="casillaPass" runat="server" placeholder="Password"></asp:TextBox>
-                    </td>
+                        &nbsp;</td>
                  </tr>
                  <tr>
                    <td><asp:Button ID="bot_LogPayPal" class="bot_LogPayPal" runat="server" 
-                           Text="Iniciar sesión"/>
+                           Text="Pagar" onclick="bot_LogPayPal_Click" Width="209px"/>
                    </td>
                  </tr>
                  <tr>
                     <td>
-                        <asp:Label ID="forgotPass"  class="forgotPass" runat="server" Text="¿Olvidaste tu correo electrónico o contraseña?"></asp:Label>
+                        <asp:Button ID="btnVolver" runat="server" CssClass="boton" 
+                            onclick="btnVolver_Click" Text="Volver" />
                     </td>
                  </tr>
              </table>     
