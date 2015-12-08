@@ -12,17 +12,19 @@ namespace systemsri.Vistas.PayPal
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
             if (!Page.IsPostBack)
             {
                 String multaID = Request.Form["idMulta"];
                 lblIdmulta.Text = "Multa a pagar : "+multaID;
+                lblID.Text = multaID;
             }
         }
 
         protected void bot_LogPayPal_Click(object sender, EventArgs e)
         {
 
-            int pagarMUlta = NegocioInfractor.instancia.pagarMulta(Convert.ToInt32(Request.Form["idMulta"]));
+            int pagarMUlta = NegocioInfractor.instancia.pagarMulta(Convert.ToInt32(lblID.Text));
         }
         
 

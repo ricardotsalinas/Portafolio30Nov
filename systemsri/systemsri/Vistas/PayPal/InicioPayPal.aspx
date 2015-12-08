@@ -10,8 +10,9 @@
     <form id="logPaypal" runat="server">
     <div>
         <div id="cabeceraInPayPal" class="cabeceraInPayPal">
-            <img src="../../Recursos/Home/paypalLogo.png" />
-            <center>
+            <img src="../../Recursos/Home/paypalLogo.png" /><asp:Label ID="lblID" 
+                runat="server" Visible="False"></asp:Label>
+&nbsp;<center>
             <table>
                  <tr>
                     <td>
