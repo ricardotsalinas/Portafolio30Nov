@@ -15,10 +15,12 @@
                            <asp:ListItem Value="0">Ver Todo</asp:ListItem>
                            <asp:ListItem Value="1">Ver Leídos</asp:ListItem>
                            <asp:ListItem Value="2">Ver No Leidos</asp:ListItem>
-                           <asp:ListItem Value="3">Resueltos</asp:ListItem>
+                           <asp:ListItem Value="3">Solo Resueltos</asp:ListItem>
+                           <asp:ListItem Value="4">Omitir Resueltos</asp:ListItem>
                        </asp:DropDownList>
                        <br /> Buscar Por Rut&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <asp:CheckBox ID="CheckBox1" runat="server" />
+                       <asp:CheckBox ID="CheckBox1" runat="server" 
+                           oncheckedchanged="CheckBox1_CheckedChanged" />
                         &nbsp;Omitir Resueltos</td>
                     <td style="width:16%; text-align:left"><asp:Button ID="btnBuscarAA" 
                             class="boton" runat="server" Text="FILTRAR" onclick="btnBuscarAA_Click" />

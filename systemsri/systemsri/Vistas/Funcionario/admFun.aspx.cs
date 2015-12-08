@@ -195,6 +195,11 @@ namespace systemsri.Vistas.Funcionario
                         btnPassAF.Style.Add("display", "yes");
                         btnGuardarAF.Text = "ACTUALIZAR";
                         btnRevMultasAF.Visible = true;
+                        txtEmailAF.Enabled = true;
+                        txtFonoAF.Enabled = true;
+                        btnPassAF.Visible = true;
+                        chkActivoAF.Visible = true;
+
 
                     }
 

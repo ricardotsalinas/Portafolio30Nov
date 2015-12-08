@@ -36,9 +36,11 @@ AutoEventWireup="true" CodeBehind="pagarFun.aspx.cs" Inherits="systemsri.Vistas.
                 </td>
             </tr>
             <tr>
-                <td class="c1b">
-                    <asp:Label ID="lblFechaPagoPF" runat="server" CssClass="input1" 
-                        Font-Names="Arial" Font-Size="Small"/>
+                <td class="c1g">
+                    FECHA MULTA:
+                </td>
+                 <td class="c1b">
+                    <asp:Label ID="lblFechaPagoPF" runat="server" CssClass="input1" Font-Names="Arial" Font-Size="Small"/>
                 </td>
             </tr>
             <tr>
@@ -55,7 +57,7 @@ AutoEventWireup="true" CodeBehind="pagarFun.aspx.cs" Inherits="systemsri.Vistas.
                 
                     <asp:Label ID="lblTipoPago" runat="server" Font-Names="Arial" Visible="false" />
                     <asp:Label ID="lblEstadoPago" runat="server" Font-Names="Arial" Visible="false" />
-                    <asp:Label ID="lblNumMulta" runat="server" Font-Names="Arial" Visible="false" />
+                    <asp:Label ID="lblNumMulta" runat="server" Font-Names="Arial" Visible="false" />    
                     </td>
             </tr>
             

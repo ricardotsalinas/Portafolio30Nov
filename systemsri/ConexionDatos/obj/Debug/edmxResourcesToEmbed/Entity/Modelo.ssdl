@@ -108,6 +108,10 @@
       <End Role="PERSONAL" EntitySet="PERSONAL" />
       <End Role="MULTA" EntitySet="MULTA" />
     </AssociationSet>
+    <AssociationSet Name="MUDC" Association="Model.Store.MUDC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="MULTA" EntitySet="MULTA" />
+    </AssociationSet>
     <AssociationSet Name="MUMO" Association="Model.Store.MUMO">
       <End Role="MONEDA" EntitySet="MONEDA" />
       <End Role="MULTA" EntitySet="MULTA" />
@@ -270,6 +274,8 @@
     <Property Name="DETALLE_ADICIONAL" Type="varchar2" MaxLength="250" />
     <Property Name="ID_RESTRICCION" Type="number" Nullable="false" />
     <Property Name="ADJUNTO" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="ID_TIPO_PAGO" Type="number" Nullable="false" />
+    <Property Name="FECHA_PAGO" Type="date" />
   </EntityType>
   <EntityType Name="PERSONAL">
     <Key>
@@ -331,8 +337,8 @@
     </Key>
     <Property Name="ID_TURNO" Type="number" Nullable="false" />
     <Property Name="FECHA_TURNO" Type="date" Nullable="false" />
-    <Property Name="HORA_INICIO" Type="number" Nullable="false" />
-    <Property Name="HORA_FIN" Type="number" Nullable="false" />
+    <Property Name="HORA_INICIO" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="HORA_FIN" Type="varchar2" Nullable="false" MaxLength="5" />
     <Property Name="DETALLE_TURNO" Type="varchar2" MaxLength="250" />
     <Property Name="ID_PERSONAL" Type="number" Nullable="false" />
   </EntityType>
@@ -631,6 +637,18 @@
       </Principal>
       <Dependent Role="MULTA">
         <PropertyRef Name="ID_PERSONAL" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MUDC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.Store.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="MULTA" Type="Model.Store.MULTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="MULTA">
+        <PropertyRef Name="ID_TIPO_PAGO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

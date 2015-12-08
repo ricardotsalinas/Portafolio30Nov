@@ -20,7 +20,17 @@ namespace systemsri.Vistas.Funcionario
 
         protected void btnGuardarGF_Click(object sender, EventArgs e)
         {
+            lblInfoGF.Text = txtHoraIniGF.Text;
+            lblInfoGF.ForeColor = System.Drawing.Color.Red;
+            lblInfoGF.Visible = true;
 
+            //if (Convert.ToInt32(txtHoraIniGF.Text) > Convert.ToInt32(txtHoraTermGF.Text))
+            //{
+            //    lblInfoGF.Text="La hora de entrada es anterior a la hora de salida";
+            //    lblInfoGF.ForeColor = System.Drawing.Color.Red;
+            //    lblInfoGF.Visible = true;
+                
+            //}
         }
 
         protected void btnBuscarGF_Click(object sender, EventArgs e)
@@ -40,6 +50,12 @@ namespace systemsri.Vistas.Funcionario
             {
                 txtRutGF.Text = list.RUT_PER.ToString();
                 txtNomGF.Text = list.NOMBRE_PER + " " + list.APPAT_PER;
+                ddlistSectorGF.Enabled = true;
+                txtFechaGF.Enabled = true;
+                txtHoraIniGF.Enabled = true;
+                txtHoraTermGF.Enabled = true;
+                txtDetAdicGF.Enabled = true;
+
             }
 
         }

@@ -108,6 +108,8 @@
           <ScalarProperty Name="DETALLE_ADICIONAL" ColumnName="DETALLE_ADICIONAL" />
           <ScalarProperty Name="ID_RESTRICCION" ColumnName="ID_RESTRICCION" />
           <ScalarProperty Name="ADJUNTO" ColumnName="ADJUNTO" />
+          <ScalarProperty Name="ID_TIPO_PAGO" ColumnName="ID_TIPO_PAGO" />
+          <ScalarProperty Name="FECHA_PAGO" ColumnName="FECHA_PAGO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -33,7 +33,7 @@
                     EMAIL:
                 </td>
                 <td class="c2b">
-                    <asp:TextBox ID="txtEmailAF" runat="server" CssClass="input1" TextMode="Email" />
+                    <asp:TextBox ID="txtEmailAF" runat="server" CssClass="input1" TextMode="Email" Enabled="False" />
                </td>
             </tr>
             <tr>
@@ -47,7 +47,7 @@
                     TELEFONO:
                 </td>
                 <td class="c2b">
-                    <asp:TextBox ID="txtFonoAF" runat="server" CssClass="input1" TextMode="Phone" />
+                    <asp:TextBox ID="txtFonoAF" runat="server" CssClass="input1" TextMode="Phone" Enabled="False"/>
                 </td>
             </tr>
             <tr>
@@ -69,14 +69,14 @@
                     ACTIVO:
                 </td>
                 <td class="c2b">
-                    <asp:CheckBox ID="chkActivoAF" runat="server" Font-Names="Arial" Text="Activo" />
+                    <asp:CheckBox ID="chkActivoAF" runat="server" Font-Names="Arial" Text="Activo" Visible="false" />
                 </td>
                 <td class="c2g">
                     CONTRASEÑA:
                 </td>
                 <td class="c2b">
                     <asp:Button ID="btnPassAF" runat="server" Text="REESTABLECER" CssClass="boton2" EnableTheming="True"
-                        OnClick="btnPassAF_Click" />
+                        OnClick="btnPassAF_Click" Visible="false"/>
                 </td>
             </tr>
         </table>

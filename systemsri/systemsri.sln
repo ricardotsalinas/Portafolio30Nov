@@ -16,8 +16,26 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesESpeciales", "ClasesESpeciales\ClasesESpeciales.csproj", "{FB20BE01-6566-49F0-A38A-FD52D182DF08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Upload", "Upload", "{97F8668A-D9FE-4C98-8D64-075B561948F0}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Nueva carpeta\adjunto1.jpg = ..\..\..\Nueva carpeta\adjunto1.jpg
+		..\..\..\Nueva carpeta\adjunto2.jpg = ..\..\..\Nueva carpeta\adjunto2.jpg
+		..\..\..\Nueva carpeta\adjunto3.jpg = ..\..\..\Nueva carpeta\adjunto3.jpg
+		..\..\..\Nueva carpeta\adjunto4.jpg = ..\..\..\Nueva carpeta\adjunto4.jpg
+		..\..\..\Nueva carpeta\adjunto5.jpg = ..\..\..\Nueva carpeta\adjunto5.jpg
+		..\..\..\Nueva carpeta\adjunto6.jpg = ..\..\..\Nueva carpeta\adjunto6.jpg
+		..\..\..\Nueva carpeta\adjunto7.jpg = ..\..\..\Nueva carpeta\adjunto7.jpg
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArchivosMulta", "ArchivosMulta", "{4FE24AD6-C2E3-47D2-8757-003A725F7730}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Nueva carpeta\adjunto1.jpg = ..\..\..\Nueva carpeta\adjunto1.jpg
+		..\..\..\Nueva carpeta\adjunto2.jpg = ..\..\..\Nueva carpeta\adjunto2.jpg
+		..\..\..\Nueva carpeta\adjunto3.jpg = ..\..\..\Nueva carpeta\adjunto3.jpg
+		..\..\..\Nueva carpeta\adjunto4.jpg = ..\..\..\Nueva carpeta\adjunto4.jpg
+		..\..\..\Nueva carpeta\adjunto5.jpg = ..\..\..\Nueva carpeta\adjunto5.jpg
+		..\..\..\Nueva carpeta\adjunto6.jpg = ..\..\..\Nueva carpeta\adjunto6.jpg
+		..\..\..\Nueva carpeta\adjunto7.jpg = ..\..\..\Nueva carpeta\adjunto7.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

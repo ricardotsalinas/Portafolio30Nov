@@ -38,6 +38,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("Model", "INDC", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "INFRACCION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.INFRACCION), true)]
 [assembly: EdmRelationshipAttribute("Model", "INDCMO", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "INFRACCION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.INFRACCION), true)]
 [assembly: EdmRelationshipAttribute("Model", "MODC", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "MONEDA", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.MONEDA), true)]
+[assembly: EdmRelationshipAttribute("Model", "MUDC", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "MULTA", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.MULTA), true)]
 [assembly: EdmRelationshipAttribute("Model", "PDC", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "PERSONAL", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.PERSONAL), true)]
 [assembly: EdmRelationshipAttribute("Model", "RDC", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "RESTRICCION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.RESTRICCION), true)]
 [assembly: EdmRelationshipAttribute("Model", "VCDC", "DETALLE_CARACTERISTICA", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ConexionDatos.Entity.DETALLE_CARACTERISTICA), "VIA_CIRCULACION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ConexionDatos.Entity.VIA_CIRCULACION), true)]
@@ -1614,6 +1615,28 @@ namespace ConexionDatos.Entity
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "MUDC", "MULTA")]
+        public EntityCollection<MULTA> MULTA
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MULTA>("Model.MUDC", "MULTA");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MULTA>("Model.MUDC", "MULTA", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("Model", "PDC", "PERSONAL")]
         public EntityCollection<PERSONAL> PERSONAL
         {
@@ -2863,7 +2886,8 @@ namespace ConexionDatos.Entity
         /// <param name="iD_MONEDA">Valor inicial de la propiedad ID_MONEDA.</param>
         /// <param name="iD_RESTRICCION">Valor inicial de la propiedad ID_RESTRICCION.</param>
         /// <param name="aDJUNTO">Valor inicial de la propiedad ADJUNTO.</param>
-        public static MULTA CreateMULTA(global::System.Decimal iD_MULTA, global::System.DateTime fECHA_CREACION, global::System.DateTime fECHA_INTEGRACION, global::System.String hORA_MULTA, global::System.String pAGADA, global::System.String aCTIVO, global::System.Decimal iD_PERSONAL, global::System.Decimal iD_INFRACTOR, global::System.Decimal iD_VIA_CIRCULACION, global::System.Decimal iD_INFRACCION, global::System.Decimal iD_MONEDA, global::System.Decimal iD_RESTRICCION, global::System.String aDJUNTO)
+        /// <param name="iD_TIPO_PAGO">Valor inicial de la propiedad ID_TIPO_PAGO.</param>
+        public static MULTA CreateMULTA(global::System.Decimal iD_MULTA, global::System.DateTime fECHA_CREACION, global::System.DateTime fECHA_INTEGRACION, global::System.String hORA_MULTA, global::System.String pAGADA, global::System.String aCTIVO, global::System.Decimal iD_PERSONAL, global::System.Decimal iD_INFRACTOR, global::System.Decimal iD_VIA_CIRCULACION, global::System.Decimal iD_INFRACCION, global::System.Decimal iD_MONEDA, global::System.Decimal iD_RESTRICCION, global::System.String aDJUNTO, global::System.Decimal iD_TIPO_PAGO)
         {
             MULTA mULTA = new MULTA();
             mULTA.ID_MULTA = iD_MULTA;
@@ -2879,6 +2903,7 @@ namespace ConexionDatos.Entity
             mULTA.ID_MONEDA = iD_MONEDA;
             mULTA.ID_RESTRICCION = iD_RESTRICCION;
             mULTA.ADJUNTO = aDJUNTO;
+            mULTA.ID_TIPO_PAGO = iD_TIPO_PAGO;
             return mULTA;
         }
 
@@ -3344,6 +3369,54 @@ namespace ConexionDatos.Entity
         private global::System.String _ADJUNTO;
         partial void OnADJUNTOChanging(global::System.String value);
         partial void OnADJUNTOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Decimal ID_TIPO_PAGO
+        {
+            get
+            {
+                return _ID_TIPO_PAGO;
+            }
+            set
+            {
+                OnID_TIPO_PAGOChanging(value);
+                ReportPropertyChanging("ID_TIPO_PAGO");
+                _ID_TIPO_PAGO = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ID_TIPO_PAGO");
+                OnID_TIPO_PAGOChanged();
+            }
+        }
+        private global::System.Decimal _ID_TIPO_PAGO;
+        partial void OnID_TIPO_PAGOChanging(global::System.Decimal value);
+        partial void OnID_TIPO_PAGOChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.DateTime> FECHA_PAGO
+        {
+            get
+            {
+                return _FECHA_PAGO;
+            }
+            set
+            {
+                OnFECHA_PAGOChanging(value);
+                ReportPropertyChanging("FECHA_PAGO");
+                _FECHA_PAGO = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("FECHA_PAGO");
+                OnFECHA_PAGOChanged();
+            }
+        }
+        private Nullable<global::System.DateTime> _FECHA_PAGO;
+        partial void OnFECHA_PAGOChanging(Nullable<global::System.DateTime> value);
+        partial void OnFECHA_PAGOChanged();
 
         #endregion
 
@@ -3368,6 +3441,44 @@ namespace ConexionDatos.Entity
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<APELACION>("Model.AM", "APELACION", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("Model", "MUDC", "DETALLE_CARACTERISTICA")]
+        public DETALLE_CARACTERISTICA DETALLE_CARACTERISTICA
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DETALLE_CARACTERISTICA>("Model.MUDC", "DETALLE_CARACTERISTICA").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DETALLE_CARACTERISTICA>("Model.MUDC", "DETALLE_CARACTERISTICA").Value = value;
+            }
+        }
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<DETALLE_CARACTERISTICA> DETALLE_CARACTERISTICAReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<DETALLE_CARACTERISTICA>("Model.MUDC", "DETALLE_CARACTERISTICA");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<DETALLE_CARACTERISTICA>("Model.MUDC", "DETALLE_CARACTERISTICA", value);
                 }
             }
         }
@@ -5288,7 +5399,7 @@ namespace ConexionDatos.Entity
         /// <param name="hORA_INICIO">Valor inicial de la propiedad HORA_INICIO.</param>
         /// <param name="hORA_FIN">Valor inicial de la propiedad HORA_FIN.</param>
         /// <param name="iD_PERSONAL">Valor inicial de la propiedad ID_PERSONAL.</param>
-        public static TURNO CreateTURNO(global::System.Decimal iD_TURNO, global::System.DateTime fECHA_TURNO, global::System.Decimal hORA_INICIO, global::System.Decimal hORA_FIN, global::System.Decimal iD_PERSONAL)
+        public static TURNO CreateTURNO(global::System.Decimal iD_TURNO, global::System.DateTime fECHA_TURNO, global::System.String hORA_INICIO, global::System.String hORA_FIN, global::System.Decimal iD_PERSONAL)
         {
             TURNO tURNO = new TURNO();
             tURNO.ID_TURNO = iD_TURNO;
@@ -5359,7 +5470,7 @@ namespace ConexionDatos.Entity
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Decimal HORA_INICIO
+        public global::System.String HORA_INICIO
         {
             get
             {
@@ -5369,13 +5480,13 @@ namespace ConexionDatos.Entity
             {
                 OnHORA_INICIOChanging(value);
                 ReportPropertyChanging("HORA_INICIO");
-                _HORA_INICIO = StructuralObject.SetValidValue(value);
+                _HORA_INICIO = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("HORA_INICIO");
                 OnHORA_INICIOChanged();
             }
         }
-        private global::System.Decimal _HORA_INICIO;
-        partial void OnHORA_INICIOChanging(global::System.Decimal value);
+        private global::System.String _HORA_INICIO;
+        partial void OnHORA_INICIOChanging(global::System.String value);
         partial void OnHORA_INICIOChanged();
     
         /// <summary>
@@ -5383,7 +5494,7 @@ namespace ConexionDatos.Entity
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Decimal HORA_FIN
+        public global::System.String HORA_FIN
         {
             get
             {
@@ -5393,13 +5504,13 @@ namespace ConexionDatos.Entity
             {
                 OnHORA_FINChanging(value);
                 ReportPropertyChanging("HORA_FIN");
-                _HORA_FIN = StructuralObject.SetValidValue(value);
+                _HORA_FIN = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("HORA_FIN");
                 OnHORA_FINChanged();
             }
         }
-        private global::System.Decimal _HORA_FIN;
-        partial void OnHORA_FINChanging(global::System.Decimal value);
+        private global::System.String _HORA_FIN;
+        partial void OnHORA_FINChanging(global::System.String value);
         partial void OnHORA_FINChanged();
     
         /// <summary>

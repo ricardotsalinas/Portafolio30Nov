@@ -112,6 +112,24 @@ namespace ConexionDatos.Dao
                                      FECHA = m.FECHA_CREACION
                                  }).ToList();
                         break;
+                    case 4:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where a.ESTADO != (int)1143 || i.RUT_INFR == rut
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
                 }
                 return lista;
 
@@ -141,7 +159,7 @@ namespace ConexionDatos.Dao
                                      RUT_INF = i.RUT_INFR,
                                      INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
                                      GRAVEDAD = inf.ID_GRAVEDAD,
-                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     VALOR = (m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO),
                                      FECHA = m.FECHA_CREACION
                                  }).ToList();
                         break;
@@ -195,7 +213,7 @@ namespace ConexionDatos.Dao
                                      RUT_INF = i.RUT_INFR,
                                      INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
                                      GRAVEDAD = inf.ID_GRAVEDAD,
-                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     VALOR = (m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO),
                                      FECHA = m.FECHA_CREACION
                                  }).ToList();
                         break;
@@ -206,6 +224,24 @@ namespace ConexionDatos.Dao
                                  join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
                                  join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
                                  where a.ESTADO == (int)1143
+                                 select new ReporteInfractor
+                                 {
+                                     RESUELTO = a.ESTADO ?? 0,
+                                     CASO_LEIDO = a.ESTADO ?? 0,
+                                     RUT_INF = i.RUT_INFR,
+                                     INFR = i.NOMBRE_INFR + " " + i.APPAT_INFR + " " + i.APMAT_INFR,
+                                     GRAVEDAD = inf.ID_GRAVEDAD,
+                                     VALOR = m.MONTO_ADICIONAL ?? 0 + mm.VALOR_PESOS * inf.MONTO,
+                                     FECHA = m.FECHA_CREACION
+                                 }).ToList();
+                        break;
+                        case 4:
+                        lista = (from m in con.MULTA
+                                 join a in con.APELACION on m.ID_MULTA equals a.ID_MULTA
+                                 join i in con.INFRACTOR on m.ID_INFRACTOR equals i.ID_INFRACTOR
+                                 join mm in con.MONEDA on m.ID_MONEDA equals mm.ID_MONEDA
+                                 join inf in con.INFRACCION on m.ID_INFRACCION equals inf.ID_INFRACCION
+                                 where a.ESTADO != (int)1143
                                  select new ReporteInfractor
                                  {
                                      RESUELTO = a.ESTADO ?? 0,

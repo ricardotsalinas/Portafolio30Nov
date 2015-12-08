@@ -13,33 +13,33 @@
                    </tr>
                  <tr>
                     <td class="c1g">NOMBRE:</td> 
-                    <td class="c1b"><asp:TextBox ID="txtNomGF" runat="server" CssClass="input1" disabled="disabled" ReadOnly="True"/></td>
+                    <td class="c1b"><asp:TextBox ID="txtNomGF" runat="server" CssClass="input1" disabled="disabled" ReadOnly="True" /></td>
                  </tr>
                  <tr>
                     <td class="c1g">SECTOR:</td> 
                     <td class="c1b"><asp:DropDownList ID="ddlistSectorGF" runat="server" CssClass="ddlist" 
                             DataTextField="DETALLE_CAR" DataValueField="ID_DETCAR" 
-                            onselectedindexchanged="ddlistSectorGF_SelectedIndexChanged"/></td>
+                            onselectedindexchanged="ddlistSectorGF_SelectedIndexChanged" Enabled="false"/></td>
                  </tr>
                  <tr>
                     <td class="c1g">FECHA DEL TURNO:</td> 
                     <td class="c1b"><asp:TextBox ID="txtFechaGF" runat="server" CssClass="input1" 
-                            TextMode="Date"/></td>
+                            TextMode="Date" Enabled="false"/></td>
                  </tr>
                  <tr>
                     <td class="c1g">HORA INICIO TURNO:</td> 
                     <td class="c1b"><asp:TextBox ID="txtHoraIniGF" runat="server" CssClass="input3" 
-                            TextMode="Time"/></td>
+                            TextMode="Time" Enabled="false"/></td>
                  </tr>
                  <tr>
                     <td class="c1g">HORA TÉRMINO TURNO:</td>
                     <td class="c1b"><asp:TextBox ID="txtHoraTermGF" runat="server" CssClass="input3" 
-                            TextMode="Time"/></td>
+                            TextMode="Time" Enabled="false"/></td>
                  </tr>
                  <tr>
                     <td class="c1g">DETALLE ADICIONAL <br/> (OPCIONAL):</td> 
                     <td class="c1b"><asp:TextBox ID="txtDetAdicGF" CssClass="input2" runat="server" 
-                            placeholder="Ingrese detalle adicional" MaxLength="2" TextMode="MultiLine"/></td>
+                            placeholder="Ingrese detalle adicional" MaxLength="2" TextMode="MultiLine"  Enabled="false"/></td>
                  </tr>
               </table>
               <table style="height: 61px">

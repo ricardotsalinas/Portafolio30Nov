@@ -92,6 +92,10 @@
       <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
       <End Role="MONEDA" EntitySet="MONEDA" />
     </AssociationSet>
+    <AssociationSet Name="MUDC" Association="Model.MUDC">
+      <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
+      <End Role="MULTA" EntitySet="MULTA" />
+    </AssociationSet>
     <AssociationSet Name="PDC" Association="Model.PDC">
       <End Role="DETALLE_CARACTERISTICA" EntitySet="DETALLE_CARACTERISTICA" />
       <End Role="PERSONAL" EntitySet="PERSONAL" />
@@ -227,6 +231,7 @@
     <NavigationProperty Name="INFRACCION" Relationship="Model.INDC" FromRole="DETALLE_CARACTERISTICA" ToRole="INFRACCION" />
     <NavigationProperty Name="INFRACCION1" Relationship="Model.INDCMO" FromRole="DETALLE_CARACTERISTICA" ToRole="INFRACCION" />
     <NavigationProperty Name="MONEDA" Relationship="Model.MODC" FromRole="DETALLE_CARACTERISTICA" ToRole="MONEDA" />
+    <NavigationProperty Name="MULTA" Relationship="Model.MUDC" FromRole="DETALLE_CARACTERISTICA" ToRole="MULTA" />
     <NavigationProperty Name="PERSONAL" Relationship="Model.PDC" FromRole="DETALLE_CARACTERISTICA" ToRole="PERSONAL" />
     <NavigationProperty Name="RESTRICCION" Relationship="Model.RDC" FromRole="DETALLE_CARACTERISTICA" ToRole="RESTRICCION" />
     <NavigationProperty Name="VIA_CIRCULACION" Relationship="Model.VCDC" FromRole="DETALLE_CARACTERISTICA" ToRole="VIA_CIRCULACION" />
@@ -309,7 +314,10 @@
     <Property Name="DETALLE_ADICIONAL" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
     <Property Name="ID_RESTRICCION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
     <Property Name="ADJUNTO" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="ID_TIPO_PAGO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FECHA_PAGO" Type="DateTime" />
     <NavigationProperty Name="APELACION" Relationship="Model.AM" FromRole="MULTA" ToRole="APELACION" />
+    <NavigationProperty Name="DETALLE_CARACTERISTICA" Relationship="Model.MUDC" FromRole="MULTA" ToRole="DETALLE_CARACTERISTICA" />
     <NavigationProperty Name="INFRACCION" Relationship="Model.MIDC" FromRole="MULTA" ToRole="INFRACCION" />
     <NavigationProperty Name="INFRACTOR" Relationship="Model.MI" FromRole="MULTA" ToRole="INFRACTOR" />
     <NavigationProperty Name="MONEDA" Relationship="Model.MUMO" FromRole="MULTA" ToRole="MONEDA" />
@@ -397,8 +405,8 @@
     </Key>
     <Property Name="ID_TURNO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
     <Property Name="FECHA_TURNO" Type="DateTime" Nullable="false" />
-    <Property Name="HORA_INICIO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
-    <Property Name="HORA_FIN" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="HORA_INICIO" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="HORA_FIN" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
     <Property Name="DETALLE_TURNO" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
     <Property Name="ID_PERSONAL" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
     <NavigationProperty Name="PERSONAL" Relationship="Model.TP" FromRole="TURNO" ToRole="PERSONAL" />
@@ -659,6 +667,18 @@
       </Principal>
       <Dependent Role="MONEDA">
         <PropertyRef Name="ID_TIPO_MONEDA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MUDC">
+    <End Role="DETALLE_CARACTERISTICA" Type="Model.DETALLE_CARACTERISTICA" Multiplicity="1" />
+    <End Role="MULTA" Type="Model.MULTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DETALLE_CARACTERISTICA">
+        <PropertyRef Name="ID_DETCAR" />
+      </Principal>
+      <Dependent Role="MULTA">
+        <PropertyRef Name="ID_TIPO_PAGO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -24,8 +24,26 @@ namespace systemsri.Vistas.JefeTransito
         {
             RESTRICCION restriccion = new RESTRICCION();
 
+            if (RadioButtonList1.SelectedValue.ToString().Equals("Temporal"))
+            {
+                restriccion.TIPO_PROHIBICION = 1144;
+            }
+            else if (RadioButtonList1.SelectedValue.ToString().Equals("Permanente"))
+            {
+                restriccion.TIPO_PROHIBICION = 1145;
+            }
 
+            restriccion.TIPO_GRAVISIMA = Convert.ToInt32(txtGravisimaCR.Text);
             restriccion.TIPO_GRAVE = Convert.ToInt32(txtGraveCR.Text);
+            restriccion.TIPO_LEVE = Convert.ToInt32(txtLeveCR.Text);
+            if (txtDiasTempCR.Text == null || txtDiasTempCR.Text == "")
+            {
+                restriccion.DIAS_PROH = 0;
+            }
+            else
+            {
+                restriccion.DIAS_PROH = Convert.ToInt32(txtDiasTempCR.Text);
+            }
 
 
             int idRestriccion = NegocioRestriccion.Instancia.InsertarRestriccion(restriccion);
@@ -34,6 +52,11 @@ namespace systemsri.Vistas.JefeTransito
         protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            if (RadioButtonList1.SelectedIndex == 0)
+                Panel1.Visible = true;
+            else if (RadioButtonList1.SelectedIndex == 1)
+                Panel1.Visible = false;
+           
         }
 
 
@@ -69,6 +92,11 @@ namespace systemsri.Vistas.JefeTransito
         protected void txtLeveCR_TextChanged(object sender, EventArgs e)
         {
             calculo();
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
        

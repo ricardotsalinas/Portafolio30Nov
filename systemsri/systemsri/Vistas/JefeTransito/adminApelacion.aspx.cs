@@ -54,6 +54,10 @@ namespace systemsri.Vistas.JefeTransito
                         gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 3);
                         gvReporte.DataBind();
                         break;
+                    case 4:
+                        gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 4);
+                        gvReporte.DataBind();
+                        break;
                 }
             }
 
@@ -83,6 +87,10 @@ namespace systemsri.Vistas.JefeTransito
                         break;
                     case 3:
                         gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 3);
+                        gvReporte.DataBind();
+                        break;
+                    case 4:
+                        gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 4);
                         gvReporte.DataBind();
                         break;
                 }
@@ -159,5 +167,10 @@ namespace systemsri.Vistas.JefeTransito
 
 
             }
+
+        protected void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
         }
     }
