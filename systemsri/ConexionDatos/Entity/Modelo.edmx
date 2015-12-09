@@ -1984,7 +1984,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="Modelo">
+      <Diagram Name="Modelo" ZoomLevel="82">
         <EntityTypeShape EntityType="Model.ADJUNTOS_APELACION" Width="1.5" PointX="6" PointY="18.25" Height="1.5956835937500031" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.APELACION" Width="1.5" PointX="8.25" PointY="20.625" Height="2.9417936197916674" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.CARACTERISTICA" Width="1.5" PointX="0.75" PointY="21.25" Height="1.595683593749996" IsExpanded="true" />
@@ -1994,15 +1994,17 @@
         <EntityTypeShape EntityType="Model.MONEDA" Width="1.5" PointX="5.25" PointY="20.875" Height="2.172587890624996" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.MULTA" Width="1.5" PointX="12.75" PointY="24.125" Height="6.5955208333333388" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.PERSONAL" Width="1.5" PointX="5.25" PointY="23.75" Height="3.903300781249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.PERSONAL_SECTOR" Width="1.5" PointX="10.5" PointY="29.375" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PERSONAL_SECTOR" Width="2.25" PointX="10" PointY="28.875" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.RESTRICCION" Width="1.5" PointX="5.25" PointY="28.5" Height="2.5571907552083317" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.SECTOR" Width="1.5" PointX="5.25" PointY="31.75" Height="5.6340136718750067" IsExpanded="true" />
-        <EntityTypeShape EntityType="Model.TURNO" Width="1.5" PointX="7.5" PointY="24.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.TURNO" Width="1.5" PointX="7.625" PointY="24.625" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.VEHICULO" Width="1.5" PointX="5.25" PointY="38.125" Height="1.9802864583333388" IsExpanded="true" />
         <EntityTypeShape EntityType="Model.VIA_CIRCULACION" Width="1.5" PointX="5.25" PointY="40.875" Height="4.0956022135416674" IsExpanded="true" />
         <AssociationConnector Association="Model.AAA" ManuallyRouted="false">
           <ConnectorPoint PointX="7.15625" PointY="19.845683593750003" />
           <ConnectorPoint PointX="7.15625" PointY="23.338440755208332" />
+          <ConnectorPoint PointX="7.916666666666667" PointY="23.338440755208332" />
+          <ConnectorPoint PointX="8.0833333333333339" PointY="23.338440755208332" />
           <ConnectorPoint PointX="8.25" PointY="23.338440755208332" />
         </AssociationConnector>
         <AssociationConnector Association="Model.ADCA" ManuallyRouted="false">
@@ -2013,10 +2015,10 @@
         </AssociationConnector>
         <AssociationConnector Association="Model.AM" ManuallyRouted="false">
           <ConnectorPoint PointX="12.75" PointY="27.432444661458334" />
-          <ConnectorPoint PointX="11.333333333333334" PointY="27.432444661458334" />
-          <ConnectorPoint PointX="11.166666666666666" PointY="27.432444661458334" />
-          <ConnectorPoint PointX="9.40625" PointY="27.432444661458334" />
-          <ConnectorPoint PointX="9.40625" PointY="23.566793619791667" />
+          <ConnectorPoint PointX="11.208333333333334" PointY="27.432444661458334" />
+          <ConnectorPoint PointX="11.041666666666666" PointY="27.432444661458334" />
+          <ConnectorPoint PointX="9.46875" PointY="27.432444661458334" />
+          <ConnectorPoint PointX="9.46875" PointY="23.566793619791667" />
         </AssociationConnector>
         <AssociationConnector Association="Model.DCC" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="22.047841796874998" />
@@ -2124,10 +2126,8 @@
           <ConnectorPoint PointX="4.5" PointY="20.235341796875" />
           <ConnectorPoint PointX="7.072916666666667" PointY="20.235341796875" />
           <ConnectorPoint PointX="7.239583333333333" PointY="20.235341796875" />
-          <ConnectorPoint PointX="13.010414166666665" PointY="20.235341796875" />
-          <ConnectorPoint PointX="13.177080833333333" PointY="20.235341796875" />
-          <ConnectorPoint PointX="13.5" PointY="20.235341796875" />
-          <ConnectorPoint PointX="13.5" PointY="24.125" />
+          <ConnectorPoint PointX="13.093748" PointY="20.235341796875" />
+          <ConnectorPoint PointX="13.093748" PointY="24.125" />
         </AssociationConnector>
         <AssociationConnector Association="Model.PDC" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="24.744863281249998" />
@@ -2185,8 +2185,8 @@
         </AssociationConnector>
         <AssociationConnector Association="Model.MIDC" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="13.37474609375" />
-          <ConnectorPoint PointX="13.0937475" PointY="13.37474609375" />
-          <ConnectorPoint PointX="13.0937475" PointY="24.125" />
+          <ConnectorPoint PointX="13.5" PointY="13.37474609375" />
+          <ConnectorPoint PointX="13.5" PointY="24.125" />
         </AssociationConnector>
         <AssociationConnector Association="Model.IV" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="39.115143229166669" />
@@ -2194,35 +2194,38 @@
           <ConnectorPoint PointX="8.25" PointY="32.547506510416667" />
         </AssociationConnector>
         <AssociationConnector Association="Model.MI" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="28.59375" />
-          <ConnectorPoint PointX="11.166666666666666" PointY="28.59375" />
-          <ConnectorPoint PointX="11.333333333333334" PointY="28.59375" />
-          <ConnectorPoint PointX="12.75" PointY="28.59375" />
+          <ConnectorPoint PointX="9" PointY="28.34375" />
+          <ConnectorPoint PointX="11.041666666666666" PointY="28.34375" />
+          <ConnectorPoint PointX="11.208333333333334" PointY="28.34375" />
+          <ConnectorPoint PointX="12.75" PointY="28.34375" />
         </AssociationConnector>
         <AssociationConnector Association="Model.MUMO" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="23.047587890624996" />
-          <ConnectorPoint PointX="7.375" PointY="23.672587890624996" />
-          <ConnectorPoint PointX="7.375" PointY="24.3437505" />
-          <ConnectorPoint PointX="9.3229166666666661" PointY="24.3437505" />
-          <ConnectorPoint PointX="9.4895833333333339" PointY="24.3437505" />
-          <ConnectorPoint PointX="11.166666666666666" PointY="24.3437505" />
-          <ConnectorPoint PointX="11.333333333333334" PointY="24.3437505" />
-          <ConnectorPoint PointX="12.75" PointY="24.3437505" />
+          <ConnectorPoint PointX="6.75" PointY="21.961293945312498" />
+          <ConnectorPoint PointX="7.072916666666667" PointY="21.961293945312498" />
+          <ConnectorPoint PointX="7.239583333333333" PointY="21.961293945312498" />
+          <ConnectorPoint PointX="8" PointY="21.961293945312498" />
+          <ConnectorPoint PointX="8" PointY="23.816793619791667" />
+          <ConnectorPoint PointX="9.3854166666666661" PointY="23.816793619791667" />
+          <ConnectorPoint PointX="9.5520833333333339" PointY="23.816793619791667" />
+          <ConnectorPoint PointX="13.010414666666666" PointY="23.816793619791667" />
+          <ConnectorPoint PointX="13.177081333333334" PointY="23.816793619791667" />
+          <ConnectorPoint PointX="13.5" PointY="23.816793619791667" />
+          <ConnectorPoint PointX="13.5" PointY="24.125" />
         </AssociationConnector>
         <AssociationConnector Association="Model.MP" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="27.1799169921875" />
-          <ConnectorPoint PointX="9.3229166666666661" PointY="27.1799169921875" />
-          <ConnectorPoint PointX="9.4895833333333339" PointY="27.1799169921875" />
-          <ConnectorPoint PointX="11.166666666666666" PointY="27.1799169921875" />
-          <ConnectorPoint PointX="11.333333333333334" PointY="27.1799169921875" />
-          <ConnectorPoint PointX="12.75" PointY="27.1799169921875" />
+          <ConnectorPoint PointX="6.75" PointY="24.34375" />
+          <ConnectorPoint PointX="9.3854166666666661" PointY="24.34375" />
+          <ConnectorPoint PointX="9.5520833333333339" PointY="24.34375" />
+          <ConnectorPoint PointX="11.041666666666666" PointY="24.34375" />
+          <ConnectorPoint PointX="11.208333333333334" PointY="24.34375" />
+          <ConnectorPoint PointX="12.75" PointY="24.34375" />
         </AssociationConnector>
         <AssociationConnector Association="Model.MURES" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="29.778595377604166" />
           <ConnectorPoint PointX="7.125" PointY="29.778595377604166" />
           <ConnectorPoint PointX="7.125" PointY="27.653724830729161" />
-          <ConnectorPoint PointX="11.166666666666666" PointY="27.653724830729161" />
-          <ConnectorPoint PointX="11.333333333333334" PointY="27.653724830729161" />
+          <ConnectorPoint PointX="11.041666666666666" PointY="27.653724830729161" />
+          <ConnectorPoint PointX="11.208333333333334" PointY="27.653724830729161" />
           <ConnectorPoint PointX="12.75" PointY="27.653724830729161" />
         </AssociationConnector>
         <AssociationConnector Association="Model.MVC" ManuallyRouted="false">
@@ -2231,24 +2234,22 @@
           <ConnectorPoint PointX="13.5" PointY="30.720520833333339" />
         </AssociationConnector>
         <AssociationConnector Association="Model.PSP" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="24.04687525" />
-          <ConnectorPoint PointX="7.291666666666667" PointY="24.04687525" />
-          <ConnectorPoint PointX="7.458333333333333" PointY="24.04687525" />
-          <ConnectorPoint PointX="9.3229166666666661" PointY="24.04687525" />
-          <ConnectorPoint PointX="9.4895833333333339" PointY="24.04687525" />
-          <ConnectorPoint PointX="11.25" PointY="24.04687525" />
-          <ConnectorPoint PointX="11.25" PointY="29.375" />
+          <ConnectorPoint PointX="6.75" PointY="24.049019309895833" />
+          <ConnectorPoint PointX="9.3854166666666661" PointY="24.049019309895833" />
+          <ConnectorPoint PointX="9.5520833333333339" PointY="24.049019309895833" />
+          <ConnectorPoint PointX="11.125" PointY="24.049019309895833" />
+          <ConnectorPoint PointX="11.125" PointY="28.875" />
         </AssociationConnector>
         <AssociationConnector Association="Model.TP" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="25.807444661458334" />
-          <ConnectorPoint PointX="7.5" PointY="25.807444661458334" />
+          <ConnectorPoint PointX="7.625" PointY="25.807444661458334" />
         </AssociationConnector>
         <AssociationConnector Association="Model.PSS" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="34.997010091145839" />
           <ConnectorPoint PointX="8.1666666666666661" PointY="34.997010091145839" />
           <ConnectorPoint PointX="8.3333333333333339" PointY="34.997010091145839" />
-          <ConnectorPoint PointX="11.25" PointY="34.997010091145839" />
-          <ConnectorPoint PointX="11.25" PointY="31.739889322916667" />
+          <ConnectorPoint PointX="11.125" PointY="34.997010091145839" />
+          <ConnectorPoint PointX="11.125" PointY="31.239889322916667" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

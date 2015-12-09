@@ -91,6 +91,30 @@ namespace Negocio
             return DaoPersonal.instancia.detalleInfractorPagar(rut);
 
         }
+
+
+        public int buscarID(String rut)
+        {
+
+            return DaoPersonal.instancia.buscarID(rut);
+        }
+
+
+        public void creaPersonalSector(PERSONAL_SECTOR perso)
+        {
+            DaoPersonalSector.instancia.creaPersonalSector(perso);
+        }
+
+
+        public int grabarTurno(TURNO tur)
+        {
+            return DaoTurno.instanacia.grabarTurno(tur);
+        }
+
+        public int buscarSector(int sector)
+        {
+            return DaoTurno.instanacia.buscarSector(sector);
+        }
     }
 
 }

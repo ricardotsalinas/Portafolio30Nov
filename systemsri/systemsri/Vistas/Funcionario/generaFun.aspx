@@ -26,6 +26,12 @@
                     <td class="c1b"><asp:TextBox ID="txtFechaGF" runat="server" CssClass="input1" 
                             TextMode="Date" Enabled="false"/></td>
                  </tr>
+                                  <tr>
+                    <td class="c1g">FECHA FIN:</td> 
+                    <td class="c1b">
+                        <asp:TextBox ID="FechaFin" runat="server" CssClass="input1" 
+                            TextMode="Date"/></td>
+                 </tr>
                  <tr>
                     <td class="c1g">HORA INICIO TURNO:</td> 
                     <td class="c1b"><asp:TextBox ID="txtHoraIniGF" runat="server" CssClass="input3" 
@@ -46,7 +52,8 @@
                  <tr>
                     <td style="text-align: center; width: 22%;"></td>
                     <td class="cbtn">
-                    <asp:Button ID="btnGuardarGF" class="boton" runat="server" Text="GUARDAR" onclick="btnGuardarGF_Click"/></td>
+                    <asp:Button ID="btnGuardarGF" class="boton" runat="server" Text="GUARDAR" 
+                            onclick="btnGuardarGF_Click" Visible="False"/></td>
                     <td class="cbtn">
                     <asp:Button ID="btnBorrarGF" class="boton" runat="server" Text="BORRAR" onclick="btnBorrarGF_Click"  /></td>
                              <td class="cbtn">

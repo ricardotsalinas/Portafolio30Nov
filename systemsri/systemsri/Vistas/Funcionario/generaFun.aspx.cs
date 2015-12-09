@@ -14,96 +14,39 @@ namespace systemsri.Vistas.Funcionario
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ddlistSectorGF.DataSource = NegocioFuncionario.instancia.listarSector();
-            ddlistSectorGF.DataBind();
-            ddlistSectorGF.Items.Insert(0, new ListItem("Seleccionar", ""));
+            if (!Page.IsPostBack)
+            {
+                ddlistSectorGF.DataSource = NegocioFuncionario.instancia.listarSector();
+                ddlistSectorGF.DataBind();
+                ddlistSectorGF.Items.Insert(0, new ListItem("Seleccionar", ""));
+            }
         }
 
         protected void btnGuardarGF_Click(object sender, EventArgs e)
         {
-            DetalleTurno dt = new DetalleTurno();
-            dt.ID_TUR= Convert.ToInt32(ddlistSectorGF.SelectedValue);
-         //   int newTurno = NegocioFuncionario.instancia.crearTurno()
 
+         
+            int encontrarID =  NegocioFuncionario.instancia.buscarID(txtRutGF.Text);
 
-//    int newInfraccion = NegocioAdministrador.instancia.crearInfraccion(objinfra, txtDescrInfraccionAI.Text, tipo);
-            //    switch (newInfraccion)
-            //    {
-            //        case 1:
-            //            lblInfoAdI.Visible = true;
-            //            lblInfoAdI.Text = "Datos guardados";
-            //            lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
-            //            ddlistGravedadAI.SelectedIndex = 0;
-            //            ddlistTipoMonedaAI.SelectedIndex = 0;
+            PERSONAL_SECTOR perso = new PERSONAL_SECTOR();
+            perso.ID_PERSONAL = encontrarID;
+            int sector = NegocioFuncionario.instancia.buscarSector(Convert.ToInt32(ddlistSectorGF.SelectedValue));
+            perso.ID_SECTOR = sector;
+            perso.FECHA_INICIO =  Convert.ToDateTime(txtFechaGF.Text);
+            perso.FECHA_TERMINO = Convert.ToDateTime(FechaFin.Text);
 
-            //            txtDescrInfraccionAI.Text = "";
-            //            TxtID.Text = String.Empty;
-            //            txtValorAI.Text = "";
-            //            ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccione", ""));
+            NegocioFuncionario.instancia.creaPersonalSector(perso);
 
-            //            ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
-            //            ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
-            //            txtValorAI.BorderColor = System.Drawing.Color.LightGray;
-            //            txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
+            TURNO tur = new TURNO();
+            tur.FECHA_TURNO = Convert.ToDateTime(txtFechaGF.Text);
+            tur.HORA_INICIO = txtHoraIniGF.Text;
+            tur.HORA_FIN = txtHoraTermGF.Text;
+            tur.DETALLE_TURNO = txtDetAdicGF.Text;
+            tur.ID_PERSONAL = encontrarID;
 
-            //            gvInfrAI.Visible = false;
+            int grabarTurno = NegocioFuncionario.instancia.grabarTurno(tur);
 
-            //            ddlistGravedadAI.BorderWidth = 1;
-            //            ddlistTipoMonedaAI.BorderWidth = 1;
-            //            txtValorAI.BorderWidth = 1;
-            //            txtDescrInfraccionAI.BorderWidth = 1;
-            //            btnGuardarAI.Text = "GUARDAR";
-            //            break;
-            //        case 2:
-            //            lblInfoAdI.Visible = true;
-            //            lblInfoAdI.Text = "Datos actualizados";
-            //            lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
-            //            gvInfrAI.Visible = false;
-            //            btnGuardarAI.Text = "GUARDAR";
-            //            lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
-            //            ddlistGravedadAI.SelectedIndex = 0;
-            //            ddlistTipoMonedaAI.SelectedIndex = 0;
-
-            //            txtDescrInfraccionAI.Text = "";
-            //            TxtID.Text = String.Empty;
-            //            txtValorAI.Text = "";
-            //            ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccione", ""));
-
-            //            ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
-            //            ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
-            //            txtValorAI.BorderColor = System.Drawing.Color.LightGray;
-            //            txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
-
-            //            gvInfrAI.Visible = false;
-
-            //            ddlistGravedadAI.BorderWidth = 1;
-            //            ddlistTipoMonedaAI.BorderWidth = 1;
-            //            txtValorAI.BorderWidth = 1;
-            //            txtDescrInfraccionAI.BorderWidth = 1;
-            //            btnGuardarAI.Text = "GUARDAR";
-            //            break;
-            //        default:
-            //            lblInfoAdI.Visible = true;
-            //            lblInfoAdI.Text = "Datos no guardados";
-            //            lblInfoAdI.ForeColor = System.Drawing.Color.Red;
-            //            break;
-
-            //    }
-            //    }
-            //    catch (Exception)
-            //    {
-            //        lblInfoAdI.Visible = true;
-            //        lblInfoAdI.Text = "Monto no valido";
-            //        lblInfoAdI.ForeColor = System.Drawing.Color.Red;
-            //    }
-            //}
-
-
-
-
-            lblInfoGF.Text = txtHoraIniGF.Text;
-            lblInfoGF.ForeColor = System.Drawing.Color.Red;
-            lblInfoGF.Visible = true;
+ 
 
            
         }
@@ -118,21 +61,28 @@ namespace systemsri.Vistas.Funcionario
                 lblInfoGF.Visible = true;
                 lblInfoGF.ForeColor = System.Drawing.Color.Red;
                 ddlistSectorGF.Items.Insert(0, new ListItem("Seleccionar", ""));
-            
+
+
             }
-            
-            foreach (var list in buscar)
+            else
             {
-                txtRutGF.Text = list.RUT_PER.ToString();
-                txtNomGF.Text = list.NOMBRE_PER + " " + list.APPAT_PER;
-                ddlistSectorGF.Enabled = true;
-                txtFechaGF.Enabled = true;
-                txtHoraIniGF.Enabled = true;
-                txtHoraTermGF.Enabled = true;
-                txtDetAdicGF.Enabled = true;
-
+                btnGuardarGF.Visible = true;
             }
 
+
+                foreach (var list in buscar)
+                {
+                    txtRutGF.Text = list.RUT_PER.ToString();
+                    txtNomGF.Text = list.NOMBRE_PER + " " + list.APPAT_PER;
+                    ddlistSectorGF.Enabled = true;
+                    txtFechaGF.Enabled = true;
+                    txtHoraIniGF.Enabled = true;
+                    txtHoraTermGF.Enabled = true;
+                    txtDetAdicGF.Enabled = true;
+
+                }
+
+           
         }
 
         protected void ddlistSectorGF_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,6 +99,7 @@ namespace systemsri.Vistas.Funcionario
             txtHoraIniGF.Text = "";
             txtHoraTermGF.Text = "";
             txtDetAdicGF.Text = "";
+            btnGuardarGF.Visible = false;
         }
 
         protected void btnListarGF_Click(object sender, EventArgs e)

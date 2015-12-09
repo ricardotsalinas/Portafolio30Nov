@@ -61,6 +61,7 @@
     <Compile Include="Dao\DaoMoneda.cs" />
     <Compile Include="Dao\DaoMulta.cs" />
     <Compile Include="Dao\DaoPersonal.cs" />
+    <Compile Include="Dao\DaoPersonalSector.cs" />
     <Compile Include="Dao\DaoRestriccion.cs" />
     <Compile Include="Dao\DaoTurno.cs" />
     <Compile Include="Dao\DaoVehiculo.cs" />

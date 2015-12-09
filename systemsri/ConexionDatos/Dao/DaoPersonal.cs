@@ -304,6 +304,16 @@ namespace ConexionDatos.Dao
             }
         }
 
+        public int buscarID(String rut)
+        {
+            using (SRI con = new SRI())
+            {
+                PERSONAL per = new PERSONAL();
+                per = con.PERSONAL.Where(p => p.RUT_PER == rut).FirstOrDefault();
+                return (int)per.ID_PERSONAL;
+            }
+        
+        }
 
     }
     }
