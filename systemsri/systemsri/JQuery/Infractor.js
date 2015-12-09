@@ -6,7 +6,7 @@
 
 
 
-    //*Keypress validación de campos formulario 'admFun'
+    /*Keypress validación de campos formulario 'admFun'*/
 
     $('[id$=fono_infractor]').keypress(function (event) {
         if (event.keyCode >= 48 && event.keyCode <= 57) {

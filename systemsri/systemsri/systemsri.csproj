@@ -70,6 +70,8 @@
     <Content Include="JQuery\Funcionario.js" />
     <Content Include="JQuery\Infractor.js" />
     <Content Include="JQuery\Inspector.js" />
+    <Content Include="JQuery\jefe.js" />
+    <Content Include="JQuery\jquery-1.11.3.js" />
     <Content Include="JQuery\LoginUsuario.js" />
     <Content Include="Recursos\Imagenes\buscar.jpg" />
     <Content Include="Recursos\Imagenes\consulta.jpg" />
@@ -97,7 +99,6 @@
     <Content Include="Recursos\Imagenes\sri colores blanco.png" />
     <Content Include="Recursos\Imagenes\sri colores circulo.png" />
     <Content Include="Recursos\Imagenes\sri colores.png" />
-    <Content Include="JQuery\jquery-1.11.3.js" />
     <Content Include="Recursos\Imagenes\ver.jpg" />
     <Content Include="Vistas\Administrador\adminCalles.aspx" />
     <Content Include="Vistas\Administrador\adminInfracciones.aspx" />
