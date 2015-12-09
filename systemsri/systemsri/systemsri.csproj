@@ -131,7 +131,7 @@
     <Content Include="Vistas\LoginUsuario\loginUsuario.aspx" />
     <Content Include="Vistas\Maestro\Formulario web1.aspx" />
     <Content Include="Vistas\PayPal\InicioPayPal.aspx" />
-    <Content Include="Vistas\PayPal\pagoPayPal.aspx" />
+    <Content Include="Vistas\PayPal\PayPalFunc.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -430,12 +430,12 @@
     <Compile Include="Vistas\PayPal\InicioPayPal.aspx.designer.cs">
       <DependentUpon>InicioPayPal.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\PayPal\pagoPayPal.aspx.cs">
-      <DependentUpon>pagoPayPal.aspx</DependentUpon>
+    <Compile Include="Vistas\PayPal\PayPalFunc.aspx.cs">
+      <DependentUpon>PayPalFunc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Vistas\PayPal\pagoPayPal.aspx.designer.cs">
-      <DependentUpon>pagoPayPal.aspx</DependentUpon>
+    <Compile Include="Vistas\PayPal\PayPalFunc.aspx.designer.cs">
+      <DependentUpon>PayPalFunc.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -8,6 +8,8 @@ namespace ClasesESpeciales
     public class DetalleApelacion
     {
         public String NOMBRE { set; get; }
+        public String APPAT { set; get; }
+        public String APMAT { set; get; }
         public String RUT { set; get; }
         public decimal EDAD { set; get; }
         public String DIRECCION { set; get; }
@@ -18,6 +20,7 @@ namespace ClasesESpeciales
         public decimal COD_MULTA { set; get; }
         public String GRAVEDAD { set; get; }
         public decimal VALOR { set; get; }
+        public String TIPO_MONEDA { set; get; }
         public decimal ID_MULTA { set; get; }
         public decimal MONTO { set; get; }
         public DateTime FECHA_MULTA { set; get; }
@@ -27,6 +30,7 @@ namespace ClasesESpeciales
         public String LUGAR_INFRACCION { set; get; }
         public String ESTADO_MULTA { set; get; }
         public String MENSAJE { set; get; }
+        public String TIPO_CALLE { set; get; }
 
 
     }

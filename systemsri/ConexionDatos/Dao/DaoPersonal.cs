@@ -239,14 +239,18 @@ namespace ConexionDatos.Dao
                             join vc in con.VIA_CIRCULACION on mu.ID_VIA_CIRCULACION equals vc.ID_VIA_CIRCULACION
                             join dcvc in con.DETALLE_CARACTERISTICA on vc.ID_NOMBRE_CALLE equals dcvc.ID_DETCAR
                             join ma in con.APELACION on mu.ID_MULTA equals ma.ID_MULTA
-
+                            join indc in con.DETALLE_CARACTERISTICA on incc.ID_TIPO_MONEDA equals indc.ID_DETCAR
+                            join cadc in con.DETALLE_CARACTERISTICA on vc.ID_TIPO_CALLE equals cadc.ID_DETCAR
                             
                                where inft.RUT_INFR==rut 
  
                            select new DetalleApelacion
                            {
                                NOMBRE = inft.NOMBRE_INFR,
+                               APPAT = inft.APPAT_INFR,
+                               APMAT = inft.APMAT_INFR,
                                RUT = inft.RUT_INFR,
+                               DIRECCION= inft.DIRECCION_INFR,
                                EMAIL = inft.EMAIL_INFR,
                                FONO  =inft.TELEFONO_INFR,
                                CLASE_LIC =  dc.DETALLE_CAR,
@@ -254,6 +258,7 @@ namespace ConexionDatos.Dao
                                COD_MULTA = mu.ID_MULTA,
                                GRAVEDAD = dci.DETALLE_CAR,
                                VALOR  = incc.MONTO,
+                               TIPO_MONEDA = indc.DETALLE_CAR,
                                ID_MULTA = mu.ID_MULTA,
                                MONTO  = (incc.MONTO*mon.VALOR_PESOS+mu.MONTO_ADICIONAL)??0,
                                FECHA_MULTA = mu.FECHA_CREACION,
@@ -261,6 +266,7 @@ namespace ConexionDatos.Dao
                                MOTIVO_MULTA = dcin.DETALLE_CAR,
                                DETALLE_ADICIONAL= mu.DETALLE_ADICIONAL,
                                LUGAR_INFRACCION =dcvc.DETALLE_CAR,
+                               TIPO_CALLE=cadc.DETALLE_CAR,
                                ESTADO_MULTA = mu.PAGADA,
                                MENSAJE = ma.SOLICITUD_APELACION
 

@@ -57,7 +57,7 @@
                   <asp:Label ID="lblInfoDF" runat="server" CssClass="lbl" 
                     Text="label" Visible="False" 
                     Font-Underline="False" />
-                <br/> </div>  
+                <br/> 
 
             <table id="tblPassDF" runat="server" width="70%">
                  <tr>
@@ -77,13 +77,13 @@
                     </td>
                 </tr>
              </table>
-             <div><br /></div>
+            <br/>
              <table style="margin: 0 auto;">
                 <tr>
                     <td><asp:Button ID="btnGuardarDF" CssClass="boton" runat="server" Text="GUARDAR" 
                             onclick="btnGuardarDF_Click" /></td>
                 </tr>
              </table>
-
+             </div>  
         </form>
 </asp:Content>

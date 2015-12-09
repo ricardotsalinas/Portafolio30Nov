@@ -46,6 +46,7 @@
     <Compile Include="DetalleApelacion.cs" />
     <Compile Include="DetalleInfractorPagar.cs" />
     <Compile Include="DetalleMultaInfractor.cs" />
+    <Compile Include="DetalleTurno.cs" />
     <Compile Include="Helper\Datos.cs" />
     <Compile Include="Helper\Descargar.cs" />
     <Compile Include="Helper\Exportar.cs" />

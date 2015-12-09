@@ -62,6 +62,7 @@
     <Compile Include="Dao\DaoMulta.cs" />
     <Compile Include="Dao\DaoPersonal.cs" />
     <Compile Include="Dao\DaoRestriccion.cs" />
+    <Compile Include="Dao\DaoTurno.cs" />
     <Compile Include="Dao\DaoVehiculo.cs" />
     <Compile Include="Dao\DaoViaCirculacion.cs" />
     <Compile Include="Dao\ReporteInfracciones.cs" />

@@ -47,6 +47,9 @@ namespace systemsri.Vistas.JefeTransito
 
 
             int idRestriccion = NegocioRestriccion.Instancia.InsertarRestriccion(restriccion);
+            lblInfoCR.Text = "La restricción ha sido creada satisfactoriamente";
+            lblInfoCR.ForeColor=System.Drawing.Color.Gray;
+            lblInfoCR.Visible = true;
         }
 
         protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,8 +74,8 @@ namespace systemsri.Vistas.JefeTransito
             int.TryParse(txtGraveCR.Text, out intGrave);
             int.TryParse(txtLeveCR.Text, out intLeve);
 
-            intGravisima = intGravisima * 3;
-            intGrave = intGrave * 2;
+            intGravisima = intGravisima * 6;
+            intGrave = intGrave * 3;
             Total = intGravisima + intGrave + intLeve;
 
             lblPuntosLeve.Text = Total.ToString();

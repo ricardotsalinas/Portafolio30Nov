@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InicioPayPal.aspx.cs" Inherits="systemsri.Vistas.PayPal.InicioPayPal" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PayPalFunc.aspx.cs" Inherits="systemsri.Vistas.PayPal.PayPalFunc" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -10,18 +10,18 @@
     <form id="logPaypal" runat="server">
     <div>
         <div id="cabeceraInPayPal" class="cabeceraInPayPal">
-            <img src="../../Recursos/Home/paypalLogo.png" /><asp:Label ID="lblID" 
+            <img src="../../Recursos/Home/paypalLogo.png" /><asp:Label ID="lblID2" 
                 runat="server" Visible="False"></asp:Label>
 &nbsp;<center>
             <table>
                  <tr>
                     <td>
-                        <asp:Label ID="lblIdmulta" runat="server"></asp:Label>
+                        <asp:Label ID="lblIdmulta2" runat="server"></asp:Label>
                     </td>
-                 </tr
-                  <tr>
+                 </tr>
+                 <tr>
                     <td>
-                        <asp:Label ID="lblInfoIPP" runat="server" Visible="false"></asp:Label>
+                        <asp:Label ID="lblMonto2" runat="server"></asp:Label>
                     </td>
                  </tr>
                  <tr>
@@ -29,14 +29,20 @@
                         &nbsp;</td>
                  </tr>
                  <tr>
-                   <td><asp:Button ID="bot_LogPayPal" class="bot_LogPayPal" runat="server" 
-                           Text="Pagar" onclick="bot_LogPayPal_Click" Width="209px"/>
+                   <td><asp:Button ID="bot_LogPayPal2" class="bot_LogPayPal" runat="server" 
+                           Text="Pagar" onclick="bot_LogPayPal2_Click" Width="209px"/>
+                   </td>
+                 </tr>
+               
+                 <tr>
+                   <td><asp:Label ID="lblInfoPPF" class="lbl" runat="server" Visible="false"
+                           Text="El pago ha sido realizado correctamente"/>
                    </td>
                  </tr>
                  <tr>
                     <td>
-                        <asp:Button ID="btnVolver" runat="server" CssClass="boton" 
-                            onclick="btnVolver_Click" Text="Volver" />
+                        <asp:Button ID="btnVolver2" runat="server" CssClass="boton" 
+                            onclick="btnVolver2_Click" Text="Volver" />
                     </td>
                  </tr>
              </table>     

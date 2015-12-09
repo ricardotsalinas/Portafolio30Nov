@@ -55,7 +55,7 @@
               </table>
               <asp:GridView ID="gvTurnos" runat="server" AutoGenerateColumns="False" 
              CssClass="Grilla" OnSelectedIndexChanged="gvTurnos_SelectedIndexChanged" 
-             AllowPaging="True" ondatabound="gvTurnos_DataBound" Visible="true"
+             AllowPaging="True" ondatabound="gvTurnos_DataBound"
              OnPageIndexChanging="gvTurnos_PageIndexChanging" 
              onrowcommand="gvTurnos_RowCommand" onrowdatabound="gvTurnos_RowDataBound" 
              PageSize="20" CellPadding="5">
@@ -65,6 +65,8 @@
                       <asp:BoundField HeaderText="NOMBRE"      DataField="NOMBRE_PER"/>
                       <asp:BoundField HeaderText="SECTOR"      DataField="SECTOR"/>
                       <asp:BoundField HeaderText="FECHA"       DataField="FECHA_TUR"/>
+                      <asp:BoundField HeaderText="HORA INICIO" DataField="HORA_INICIO"/>
+                      <asp:BoundField HeaderText="HORA FIN"    DataField="HORA_FIN"/>
                       <asp:BoundField HeaderText="DESCRIPCION" DataField="DESCRIPCION_TUR"/>
                   </Columns>
                     <PagerSettings Mode="NumericFirstLast" PageButtonCount="30" />

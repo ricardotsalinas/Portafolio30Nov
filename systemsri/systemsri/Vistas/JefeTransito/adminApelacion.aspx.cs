@@ -35,16 +35,8 @@ namespace systemsri.Vistas.JefeTransito
                         gvReporte.DataBind();
                         break;
                     case 1:
-                        if (CheckBox1.Checked)
-                        {
-                            gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 11);
-                            gvReporte.DataBind();
-                        }
-                        else
-                        {
-                            gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 1);
-                            gvReporte.DataBind();
-                        }
+                        gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 1);
+                        gvReporte.DataBind();
                         break;
                     case 2:
                         gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractoresSinRut(txtRutAA.Text, 2);
@@ -70,16 +62,10 @@ namespace systemsri.Vistas.JefeTransito
                         gvReporte.DataBind();
                         break;
                     case 1:
-                        if (CheckBox1.Checked)
-                        {
-                            gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 11);
-                            gvReporte.DataBind();
-                        }
-                        else
-                        {
-                            gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 1);
-                            gvReporte.DataBind();
-                        }
+                        
+                        gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 1);
+                        gvReporte.DataBind();
+                       
                         break;
                     case 2:
                         gvReporte.DataSource = NegocioReporteria.Instancia.ListarInfractores(txtRutAA.Text, 2);
@@ -146,6 +132,8 @@ namespace systemsri.Vistas.JefeTransito
                 {   e.Row.Cells[1].Text = "LEIDO";
                     e.Row.Cells[1].ForeColor = Color.Green;
                 }
+
+
                 if (e.Row.Cells[0].Text == "1143")
                 {
                     e.Row.Cells[0].Text = "RESUELTO";
@@ -156,6 +144,27 @@ namespace systemsri.Vistas.JefeTransito
                     e.Row.Cells[0].Text = "NO RESUELTO";
                     e.Row.Cells[0].ForeColor = Color.Red;
                 }
+
+
+
+                if (e.Row.Cells[5].Text == "21")
+                {
+                    e.Row.Cells[5].Text = "GRAVISIMA";
+                    
+                }
+                else if(e.Row.Cells[5].Text=="22")
+                {
+                    e.Row.Cells[5].Text = "GRAVE";
+
+                }
+                else if (e.Row.Cells[5].Text == "23")
+                {
+                    e.Row.Cells[5].Text = "LEVE";
+
+                }
+
+
+
                 
 
 

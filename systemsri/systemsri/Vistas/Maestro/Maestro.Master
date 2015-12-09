@@ -14,9 +14,14 @@
     </asp:ContentPlaceHolder>
  
 
-     <script language="JavaScript" type="text/javascript">
-         javascript: window.history.forward(1);
+
+<script type="text/javascript">
+    if (history.forward(1)) {
+        location.replace(history.forward(1));
+    }
 </script>
+
+
 
 </head>
 <body>

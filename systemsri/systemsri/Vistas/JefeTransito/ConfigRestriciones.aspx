@@ -4,6 +4,9 @@
    <form id="contact_form" runat="server">
            <div class="alinInicial"> 
              <h2 >Configurar Restricciones</h2>
+             <asp:Label runat="server" ID="lblInfoCR" CssClass="lbl" Visible="false"></asp:Label>
+
+
             <table>
                 <tr>
                     <td  class="ctxt">En este apartado se configura la condicion para prohibición temporal o permanente </td>

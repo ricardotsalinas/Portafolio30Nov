@@ -40,6 +40,11 @@ namespace Negocio
             return DaoApelacion.instancia.apelacion(id,descripcion,aceptado, monto);
         }
 
+
+        public int apelacion0(int id, String descripcion, int aceptado)
+        {
+            return DaoApelacion.instancia.apelacion0(id, descripcion, aceptado);
+        }
     }
 
 }

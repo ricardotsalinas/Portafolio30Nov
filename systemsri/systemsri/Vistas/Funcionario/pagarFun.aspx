@@ -10,10 +10,10 @@ AutoEventWireup="true" CodeBehind="pagarFun.aspx.cs" Inherits="systemsri.Vistas.
         <asp:Label runat="server" ID="lblInfoPF" Text="" CssClass="input1" Visible="false" />
         <table>
             <tr>
-                <td class="c1g">
+                <td class="c1g" style="height: 36px">
                     NOMBRE:
                 </td>
-                <td class="c1b">
+                <td class="c1b" style="height: 36px">
                     <asp:Label ID="lblNombrePF" runat="server" CssClass="input1" Font-Names="Arial" 
                         Font-Size="Small"/>
                 </td>
@@ -52,12 +52,12 @@ AutoEventWireup="true" CodeBehind="pagarFun.aspx.cs" Inherits="systemsri.Vistas.
                         Font-Size="Small" Width="201px" CssClass="c1b" AutoPostBack="True" 
                         onselectedindexchanged="RadioButtonList1_SelectedIndexChanged">
                         <asp:ListItem Value="0">Por Caja</asp:ListItem>
-                        <asp:ListItem Value="1">Por Tarjeta Red Compra</asp:ListItem>
+                        <asp:ListItem Value="1">Por Tarjeta</asp:ListItem>
                     </asp:RadioButtonList>
                 
-                    <asp:Label ID="lblTipoPago" runat="server" Font-Names="Arial" Visible="false" />
+                    <asp:Label ID="lblTipoPago" runat="server" Font-Names="Arial"   Visible="false" />
                     <asp:Label ID="lblEstadoPago" runat="server" Font-Names="Arial" Visible="false" />
-                    <asp:Label ID="lblNumMulta" runat="server" Font-Names="Arial" Visible="false" />    
+                    <asp:Label ID="lblNumMulta" runat="server" Font-Names="Arial"    />    
                     </td>
             </tr>
             

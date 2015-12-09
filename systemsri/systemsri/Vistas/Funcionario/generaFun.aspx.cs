@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Negocio;
 using ConexionDatos.Entity;
+using ClasesESpeciales;
 
 namespace systemsri.Vistas.Funcionario
 {
@@ -20,17 +21,91 @@ namespace systemsri.Vistas.Funcionario
 
         protected void btnGuardarGF_Click(object sender, EventArgs e)
         {
+            DetalleTurno dt = new DetalleTurno();
+            dt.ID_TUR= Convert.ToInt32(ddlistSectorGF.SelectedValue);
+         //   int newTurno = NegocioFuncionario.instancia.crearTurno()
+
+
+//    int newInfraccion = NegocioAdministrador.instancia.crearInfraccion(objinfra, txtDescrInfraccionAI.Text, tipo);
+            //    switch (newInfraccion)
+            //    {
+            //        case 1:
+            //            lblInfoAdI.Visible = true;
+            //            lblInfoAdI.Text = "Datos guardados";
+            //            lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
+            //            ddlistGravedadAI.SelectedIndex = 0;
+            //            ddlistTipoMonedaAI.SelectedIndex = 0;
+
+            //            txtDescrInfraccionAI.Text = "";
+            //            TxtID.Text = String.Empty;
+            //            txtValorAI.Text = "";
+            //            ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccione", ""));
+
+            //            ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
+            //            ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
+            //            txtValorAI.BorderColor = System.Drawing.Color.LightGray;
+            //            txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
+
+            //            gvInfrAI.Visible = false;
+
+            //            ddlistGravedadAI.BorderWidth = 1;
+            //            ddlistTipoMonedaAI.BorderWidth = 1;
+            //            txtValorAI.BorderWidth = 1;
+            //            txtDescrInfraccionAI.BorderWidth = 1;
+            //            btnGuardarAI.Text = "GUARDAR";
+            //            break;
+            //        case 2:
+            //            lblInfoAdI.Visible = true;
+            //            lblInfoAdI.Text = "Datos actualizados";
+            //            lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
+            //            gvInfrAI.Visible = false;
+            //            btnGuardarAI.Text = "GUARDAR";
+            //            lblInfoAdI.ForeColor = System.Drawing.Color.Gray;
+            //            ddlistGravedadAI.SelectedIndex = 0;
+            //            ddlistTipoMonedaAI.SelectedIndex = 0;
+
+            //            txtDescrInfraccionAI.Text = "";
+            //            TxtID.Text = String.Empty;
+            //            txtValorAI.Text = "";
+            //            ddlistGravedadAI.Items.Insert(0, new ListItem("Seleccione", ""));
+
+            //            ddlistGravedadAI.BorderColor = System.Drawing.Color.LightGray;
+            //            ddlistTipoMonedaAI.BorderColor = System.Drawing.Color.LightGray;
+            //            txtValorAI.BorderColor = System.Drawing.Color.LightGray;
+            //            txtDescrInfraccionAI.BorderColor = System.Drawing.Color.LightGray;
+
+            //            gvInfrAI.Visible = false;
+
+            //            ddlistGravedadAI.BorderWidth = 1;
+            //            ddlistTipoMonedaAI.BorderWidth = 1;
+            //            txtValorAI.BorderWidth = 1;
+            //            txtDescrInfraccionAI.BorderWidth = 1;
+            //            btnGuardarAI.Text = "GUARDAR";
+            //            break;
+            //        default:
+            //            lblInfoAdI.Visible = true;
+            //            lblInfoAdI.Text = "Datos no guardados";
+            //            lblInfoAdI.ForeColor = System.Drawing.Color.Red;
+            //            break;
+
+            //    }
+            //    }
+            //    catch (Exception)
+            //    {
+            //        lblInfoAdI.Visible = true;
+            //        lblInfoAdI.Text = "Monto no valido";
+            //        lblInfoAdI.ForeColor = System.Drawing.Color.Red;
+            //    }
+            //}
+
+
+
+
             lblInfoGF.Text = txtHoraIniGF.Text;
             lblInfoGF.ForeColor = System.Drawing.Color.Red;
             lblInfoGF.Visible = true;
 
-            //if (Convert.ToInt32(txtHoraIniGF.Text) > Convert.ToInt32(txtHoraTermGF.Text))
-            //{
-            //    lblInfoGF.Text="La hora de entrada es anterior a la hora de salida";
-            //    lblInfoGF.ForeColor = System.Drawing.Color.Red;
-            //    lblInfoGF.Visible = true;
-                
-            //}
+           
         }
 
         protected void btnBuscarGF_Click(object sender, EventArgs e)

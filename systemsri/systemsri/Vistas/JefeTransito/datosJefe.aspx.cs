@@ -145,6 +145,7 @@ namespace systemsri.Vistas.JefeTransito
                     txtTelefonoDJ.Enabled = false;
                     lblInfoDJ.Text = "Los datos han sido actualizados";
                     lblInfoDJ.ForeColor = System.Drawing.Color.Gray;
+                    lblInfoDJ.Visible = true;
                 }
                 else
                 {
@@ -152,7 +153,7 @@ namespace systemsri.Vistas.JefeTransito
                     lblInfoDJ.Visible = true;
                     lblInfoDJ.Text = "Ha habido un error al actualizar los datos";
                     lblInfoDJ.ForeColor = System.Drawing.Color.Red;
-
+                    lblInfoDJ.Visible = true;
 
                 }
 

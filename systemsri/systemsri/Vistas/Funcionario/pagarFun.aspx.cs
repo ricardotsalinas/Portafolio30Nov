@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Negocio;
 using ClasesESpeciales;
+using System.Collections.Specialized;
 
 namespace systemsri.Vistas.Funcionario
 {
@@ -44,18 +45,18 @@ namespace systemsri.Vistas.Funcionario
 
         protected void btnPagarPF_Click(object sender, EventArgs e)
         {
-           // int resul = NegocioInfractor.instancia.actualizaPago(lblFechaPagoPF.Text, txtTelefonoDI.Text, txtRutDI.Text);
+            int pagarMUlta = NegocioInfractor.instancia.pagarMulta(Convert.ToInt32(lblNumMulta.Text));
+            lblInfoPF.Text = "El pago se ha realizado Correctamente";
+            lblInfoPF.ForeColor = System.Drawing.Color.Gray;
+            lblInfoPF.Visible = true;
+
+            
         }
 
         protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
         {
           
-            if (RadioButtonList1.SelectedIndex==0)
-                lblTipoPago.Text = "1146";
-            else if (RadioButtonList1.SelectedIndex == 1)
-                lblTipoPago.Text = "1147";
-           
-           
+          
         }
 
 

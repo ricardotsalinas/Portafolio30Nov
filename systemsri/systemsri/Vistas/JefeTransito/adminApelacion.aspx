@@ -19,9 +19,7 @@
                            <asp:ListItem Value="4">Omitir Resueltos</asp:ListItem>
                        </asp:DropDownList>
                        <br /> Buscar Por Rut&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                       <asp:CheckBox ID="CheckBox1" runat="server" 
-                           oncheckedchanged="CheckBox1_CheckedChanged" />
-                        &nbsp;Omitir Resueltos</td>
+                      
                     <td style="width:16%; text-align:left"><asp:Button ID="btnBuscarAA" 
                             class="boton" runat="server" Text="FILTRAR" onclick="btnBuscarAA_Click" />
                             
@@ -54,7 +52,7 @@
                         ItemStyle-Width="10%">
 <ItemStyle Width="10%"></ItemStyle>
                     </asp:BoundField>
-                    <asp:BoundField  HeaderText="MONTO" DataField="VALOR" ItemStyle-Width="10%">
+                    <asp:BoundField  HeaderText="MONTO" DataField="VALOR" DataFormatString="${0:N0}" ItemStyle-Width="10%">
 <ItemStyle Width="10%"></ItemStyle>
                     </asp:BoundField>
                     <asp:BoundField  HeaderText="FECHA MULTA" DataField="FECHA" 

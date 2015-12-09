@@ -23,7 +23,14 @@ namespace systemsri.Vistas.Funcionario
 
             }
             if (!Page.IsPostBack)
-            { }
+            {
+                txtRutAF.Enabled = true;
+                txtEmailAF.Enabled = true;
+                txtFonoAF.Enabled = true;
+                chkActivoAF.Enabled = true;
+            
+            
+            }
         }
 
         protected void btnGuardarAF_Click(object sender, EventArgs e)
@@ -170,6 +177,8 @@ namespace systemsri.Vistas.Funcionario
                 lblInfoAF.Text = "Debe introducir el rut para la búsqueda";
                 txtRutAF.BorderColor = System.Drawing.Color.Red;
                 txtRutAF.BorderWidth = 1;
+                txtRutAF.Enabled = true;
+                gvMultas.Visible = false;
             }
             else
             {
@@ -185,8 +194,8 @@ namespace systemsri.Vistas.Funcionario
                     txtDirAF.Text = "";
                     txtEmailAF.Text = "";
                     txtFonoAF.Text = "";
-
-
+                    txtRutAF.Enabled = true;
+                    gvMultas.Visible = false;
 
                 }
                 else
@@ -199,8 +208,13 @@ namespace systemsri.Vistas.Funcionario
                         txtFonoAF.Enabled = true;
                         btnPassAF.Visible = true;
                         chkActivoAF.Visible = true;
-
-
+                        btnGuardarAF.Visible = true;
+                        btnLimpiarAF.Visible= true;
+                        txtRutAF.Enabled = true;
+                        txtEmailAF.Enabled = true;
+                        txtFonoAF.Enabled = true;
+                        chkActivoAF.Enabled = true;
+                        gvMultas.Visible = false;
                     }
 
                 foreach (var list in buscar)
@@ -231,7 +245,7 @@ namespace systemsri.Vistas.Funcionario
                     txtDirAF.BorderWidth = 1;
                     txtFonoAF.BorderWidth = 1;
                     txtEmailAF.BorderWidth = 1;
-
+                    gvMultas.Visible = false;
 
 
                 }
@@ -310,6 +324,8 @@ namespace systemsri.Vistas.Funcionario
         {
             gvMultas.DataSource = NegocioReporteria.Instancia.ListarMulta(txtRutAF.Text);
             gvMultas.DataBind();
+            gvMultas.Visible = true;
+
 
 
 
@@ -332,10 +348,15 @@ namespace systemsri.Vistas.Funcionario
                 int index = Convert.ToInt32(e.CommandArgument);
                 NameValueCollection data = new NameValueCollection();
                 GridViewRow row = gvMultas.Rows[index];
-                String post = txtRutAF.Text;
-                data.Add("rut_infr", post);
-                HttpHelper.RedirectAndPOST(this.Page, "pagarFun.aspx", data);
-
+                int pagarMUlta = NegocioInfractor.instancia.pagarMulta(Convert.ToInt32(row.Cells[0].Text));
+                lblPagoExitosoAF.Text = "La multa codigo "+row.Cells[0].Text+" ha sido exitosamente pagada";
+                lblPagoExitosoAF.Visible = true;
+                lblPagoExitosoAF.ForeColor = System.Drawing.Color.Gray;
+                btnDeshPagoaF.Visible = true;
+                gvMultas.Visible = false;
+                lblNumMulta.Text = row.Cells[0].Text;
+                btnOKAF.Visible = true;
+                
             }
         }
 
@@ -385,6 +406,103 @@ namespace systemsri.Vistas.Funcionario
 
             }
 
+        }
+
+        protected void btnDeshPagoaF_Click(object sender, EventArgs e)
+        {
+            int DeshpagarMUlta = NegocioInfractor.instancia.deshacerPagarMulta(Convert.ToInt32(lblNumMulta.Text));
+            lblInfoAF.Text = "La deuda ha quedado como impaga nuevamente";
+            lblInfoAF.ForeColor=System.Drawing.Color.Gray;
+            lblInfoAF.Visible = true;
+            btnDeshPagoaF.Visible = false;
+            lblNumMulta.Visible = false;
+            lblPagoExitosoAF.Visible = false;
+
+            btnRevMultasAF.Visible = true;
+            btnPassAF.Style.Add("display", "none");
+            txtRutAF.Text = String.Empty;
+            txtNomAF.Text = String.Empty;
+            txtAppatAF.Text = String.Empty;
+            txtApmatAF.Text = String.Empty;
+            txtDirAF.Text = String.Empty;
+            txtFonoAF.Text = String.Empty;
+            txtEmailAF.Text = String.Empty;
+            chkActivoAF.Checked = true;
+            btnGuardarAF.Visible = true;
+            
+            txtRutAF.BorderColor = System.Drawing.Color.LightGray;
+            txtNomAF.BorderColor = System.Drawing.Color.LightGray;
+            txtAppatAF.BorderColor = System.Drawing.Color.LightGray;
+            txtApmatAF.BorderColor = System.Drawing.Color.LightGray;
+            txtDirAF.BorderColor = System.Drawing.Color.LightGray;
+            txtFonoAF.BorderColor = System.Drawing.Color.LightGray;
+            txtEmailAF.BorderColor = System.Drawing.Color.LightGray;
+
+
+            txtRutAF.BorderWidth = 1;
+            txtNomAF.BorderWidth = 1;
+            txtAppatAF.BorderWidth = 1;
+            txtApmatAF.BorderWidth = 1;
+            txtDirAF.BorderWidth = 1;
+            txtFonoAF.BorderWidth = 1;
+            txtEmailAF.BorderWidth = 1;
+
+            txtRutAF.Enabled= true;
+            txtEmailAF.Enabled = false;
+            txtFonoAF.Enabled = false;
+            chkActivoAF.Enabled = false;
+            btnOKAF.Visible = false;
+
+            btnGuardarAF.Visible = false;
+            btnLimpiarAF.Visible = false;
+            btnRevMultasAF.Visible = false;
+
+        }
+
+        protected void btnOKAF_Click(object sender, EventArgs e)
+        {
+            lblInfoAF.Visible = false;
+            btnRevMultasAF.Visible = true;
+            btnPassAF.Style.Add("display", "none");
+            txtRutAF.Text = String.Empty;
+            txtNomAF.Text = String.Empty;
+            txtAppatAF.Text = String.Empty;
+            txtApmatAF.Text = String.Empty;
+            txtDirAF.Text = String.Empty;
+            txtFonoAF.Text = String.Empty;
+            txtEmailAF.Text = String.Empty;
+            chkActivoAF.Checked = true;
+            btnGuardarAF.Visible = true;
+            btnDeshPagoaF.Visible = false;
+            lblPagoExitosoAF.Visible = false;
+            lblNumMulta.Visible = false;
+
+            txtRutAF.BorderColor = System.Drawing.Color.LightGray;
+            txtNomAF.BorderColor = System.Drawing.Color.LightGray;
+            txtAppatAF.BorderColor = System.Drawing.Color.LightGray;
+            txtApmatAF.BorderColor = System.Drawing.Color.LightGray;
+            txtDirAF.BorderColor = System.Drawing.Color.LightGray;
+            txtFonoAF.BorderColor = System.Drawing.Color.LightGray;
+            txtEmailAF.BorderColor = System.Drawing.Color.LightGray;
+
+
+            txtRutAF.BorderWidth = 1;
+            txtNomAF.BorderWidth = 1;
+            txtAppatAF.BorderWidth = 1;
+            txtApmatAF.BorderWidth = 1;
+            txtDirAF.BorderWidth = 1;
+            txtFonoAF.BorderWidth = 1;
+            txtEmailAF.BorderWidth = 1;
+
+            txtRutAF.Enabled = true;
+            txtEmailAF.Enabled = true;
+            txtFonoAF.Enabled = true;
+            chkActivoAF.Enabled = true;
+
+            btnOKAF.Visible = false;
+            btnGuardarAF.Visible = false;
+            btnLimpiarAF.Visible = false;
+            btnRevMultasAF.Visible = false;
         }
 
        

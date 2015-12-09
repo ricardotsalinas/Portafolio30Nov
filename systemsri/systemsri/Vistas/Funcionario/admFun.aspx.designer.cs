@@ -148,6 +148,42 @@ namespace systemsri.Vistas.Funcionario {
         protected global::System.Web.UI.WebControls.Button btnRevMultasAF;
         
         /// <summary>
+        /// Control lblPagoExitosoAF.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPagoExitosoAF;
+        
+        /// <summary>
+        /// Control lblNumMulta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNumMulta;
+        
+        /// <summary>
+        /// Control btnDeshPagoaF.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDeshPagoaF;
+        
+        /// <summary>
+        /// Control btnOKAF.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnOKAF;
+        
+        /// <summary>
         /// Control gvMultas.
         /// </summary>
         /// <remarks>

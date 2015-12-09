@@ -64,7 +64,7 @@
                   <asp:Label ID="lblInfoDI" runat="server" CssClass="lbl" 
                     Text="label" Visible="False" 
                     Font-Underline="False" />
-                <br/> </div>  
+                <br/> 
 
             <table id="tblPassDI" runat="server" width="70%">
                  <tr>
@@ -84,13 +84,13 @@
                     </td>
                 </tr>
              </table>
-             <div><br /></div>
+          <br/>
              <table style="margin: 0 auto;">
                 <tr>
                     <td><asp:Button ID="btnGuardarDI" CssClass="boton" runat="server" Text="GUARDAR" 
                             onclick="btnGuardarDI_Click" /></td>
                 </tr>
              </table>
-
+             </div>
         </form>
 </asp:Content>

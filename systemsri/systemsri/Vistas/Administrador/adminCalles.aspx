@@ -14,7 +14,8 @@
                     NOMBRE CALLE:
                 </td>
                 <td class="c1b">
-                    <asp:TextBox ID="txtNombreCalle" runat="server" CssClass="input1" OnTextChanged="txtNombreCalle_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="txtNombreCalle" runat="server" CssClass="input1" 
+                        OnTextChanged="txtNombreCalle_TextChanged" MaxLength="100"></asp:TextBox>
                 </td><td>
                 <asp:TextBox ID="txtNuevo" runat="server" CssClass="input1" 
                         OnTextChanged="txtNuevo_TextChanged" Visible="False" Enabled="False">0</asp:TextBox>

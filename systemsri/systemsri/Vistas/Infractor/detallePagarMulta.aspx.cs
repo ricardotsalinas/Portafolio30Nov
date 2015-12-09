@@ -61,7 +61,7 @@ namespace systemsri.Vistas.Infractor
                     Panel1.Visible = false;
                     Panel1.Enabled = false;
 
-                    noPuedeApelar.Text = "Supera los dias maximos para apelar";
+                    noPuedeApelar.Text = "Supera los dias maximos para apelar (3 días a partir de la creación de la multa)";
                     noPuedeApelar.ForeColor = System.Drawing.Color.Red;
                     noPuedeApelar.Visible = true;
                 }
@@ -93,7 +93,7 @@ namespace systemsri.Vistas.Infractor
                     Extension.ToLower() != ".zip"  &&
                     Extension.ToLower() != ".rar")
                 {
-                    //TEXTO/**********
+                    
                 }
                 else
                 {
@@ -106,19 +106,27 @@ namespace systemsri.Vistas.Infractor
                         }
                         else
                         {
-                           ///////
+                            lblInfoDPM.ForeColor = System.Drawing.Color.Red;
+                            lblInfoDPM.Text = "El Nombre del archivo es muy largo";
+                            lblInfoDPM.Visible = true;
                         }
                     }
                     else
                     {
-                        // TEXTO DE MAXIMO DE PESO 
+                        lblInfoDPM.ForeColor = System.Drawing.Color.Red;
+                        lblInfoDPM.Text = "El maximo peso permitido es de 5mb";
+                        lblInfoDPM.Visible = true;
                     }
 
                 }
             }
             else
             {
-                // TEXTO NO EXISTE EL ARCHIVO
+               
+                adjApelacion.ID_ADJUNTO= 1;
+                lblInfoDPM.ForeColor = System.Drawing.Color.Red;
+                lblInfoDPM.Text = "Para un mejor servicio es obligatorio adjuntar documentos, así, es mucho mas factible una respuesta oportuna";
+                lblInfoDPM.Visible = true;
             }
 
 
@@ -136,12 +144,17 @@ namespace systemsri.Vistas.Infractor
                     if (nuevaApleacion.Equals("ERROR"))
                     {
                         FileUpload1.SaveAs(Server.MapPath("~/Upload/" + "ERROR" + nuevaApleacion + "_" + lblRutDPM.Text + "_" + FileUpload1.FileName));
-                        // ERROR AL GENERAR LA APELACION
+                        lblInfoDPM.ForeColor = System.Drawing.Color.Red;
+                        lblInfoDPM.Text = "adjuntoadjuntoadjuntoadjuntoadjuntoadjuntoadjuntoadjuntoadjuntoadjunto";
+                        lblInfoDPM.Visible = true;
                     }
                     else
                     {
                         FileUpload1.SaveAs(Server.MapPath("~/Upload/" + nuevaApleacion + "_" + lblRutDPM.Text + "_" + FileUpload1.FileName));
-
+                        FileUpload1.SaveAs(Server.MapPath("~/Upload/" + "ERROR" + nuevaApleacion + "_" + lblRutDPM.Text + "_" + FileUpload1.FileName));
+                        lblInfoDPM.ForeColor = System.Drawing.Color.Red;
+                        lblInfoDPM.Text = "okokokkokoko";
+                        lblInfoDPM.Visible = true;
                     }
                     txtApelDPM.Text = String.Empty;
                 }

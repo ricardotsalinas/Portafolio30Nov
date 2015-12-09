@@ -31,6 +31,15 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.TextBox txtAdjunto;
         
         /// <summary>
+        /// Control lblInfoCA.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblInfoCA;
+        
+        /// <summary>
         /// Control lblNomCA.
         /// </summary>
         /// <remarks>
@@ -103,13 +112,13 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.Label lblMontoPesosCA;
         
         /// <summary>
-        /// Control txtDetCompletoCA.
+        /// Control lblFonoAC.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label txtDetCompletoCA;
+        protected global::System.Web.UI.WebControls.Label lblFonoAC;
         
         /// <summary>
         /// Control lblFechaMultaCA.
@@ -139,13 +148,13 @@ namespace systemsri.Vistas.JefeTransito {
         protected global::System.Web.UI.WebControls.Label lblHoraMultaCA;
         
         /// <summary>
-        /// Control Label6.
+        /// Control lblInfractorCA.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lblInfractorCA;
         
         /// <summary>
         /// Control lblMotMultaCA.

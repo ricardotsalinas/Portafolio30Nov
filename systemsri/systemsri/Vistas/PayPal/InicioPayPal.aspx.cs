@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +26,10 @@ namespace systemsri.Vistas.PayPal
         {
 
             int pagarMUlta = NegocioInfractor.instancia.pagarMulta(Convert.ToInt32(lblID.Text));
+            lblInfoIPP.ForeColor = System.Drawing.Color.Black;
+            lblInfoIPP.Text = "El pago ha sido realizado correctamente";
+            lblInfoIPP.Visible = true;
+
         }
         
 

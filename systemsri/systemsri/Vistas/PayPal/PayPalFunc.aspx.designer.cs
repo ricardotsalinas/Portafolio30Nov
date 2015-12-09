@@ -10,60 +10,69 @@
 namespace systemsri.Vistas.PayPal {
     
     
-    public partial class pagoPayPal {
+    public partial class PayPalFunc {
         
         /// <summary>
-        /// Control pagoPaypal.
+        /// Control logPaypal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm pagoPaypal;
+        protected global::System.Web.UI.HtmlControls.HtmlForm logPaypal;
         
         /// <summary>
-        /// Control visaBoton.
+        /// Control lblID2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton visaBoton;
+        protected global::System.Web.UI.WebControls.Label lblID2;
         
         /// <summary>
-        /// Control masterboton.
+        /// Control lblIdmulta2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton masterboton;
+        protected global::System.Web.UI.WebControls.Label lblIdmulta2;
         
         /// <summary>
-        /// Control CheckBox1.
+        /// Control lblMonto2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.Label lblMonto2;
         
         /// <summary>
-        /// Control CheckBox2.
+        /// Control bot_LogPayPal2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
+        protected global::System.Web.UI.WebControls.Button bot_LogPayPal2;
         
         /// <summary>
-        /// Control bot_confirmarPago.
+        /// Control lblInfoPPF.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button bot_confirmarPago;
+        protected global::System.Web.UI.WebControls.Label lblInfoPPF;
+        
+        /// <summary>
+        /// Control btnVolver2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnVolver2;
     }
 }

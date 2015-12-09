@@ -9,6 +9,8 @@
             Casos Apelaciones<asp:TextBox 
                 ID="txtAdjunto" runat="server" Enabled="False" Visible="False"></asp:TextBox>
         </h2>
+        <asp:Label runat="server" ID="lblInfoCA" CssClass="lbl" Visible="false"/>
+
         <table>
             <tr>
                 <td class="c5g">
@@ -77,11 +79,11 @@
                 </td>
             </tr>
             <tr>
-                <td class="c5g">
+                <td class="c5g" >
                     TELÉFONO:
                 </td>
                 <td class="c5b">
-                    <asp:Label runat="server" ID="txtDetCompletoCA" CssClass="input1" Text="No Tiene" />
+                    <asp:Label runat="server" ID="lblFonoAC" CssClass="input1" Text="No Tiene" />
                 </td>
                 <td style="width: 2%">
                 </td>
@@ -113,7 +115,7 @@
                     INFRACTOR:
                 </td>
                 <td class="c5b">
-                    <asp:Label runat="server" ID="Label6" CssClass="input1" Text="No Tiene" />
+                    <asp:Label runat="server" ID="lblInfractorCA" CssClass="input1" Text="No Tiene" />
                 </td>
                 <td style="width: 2%">
                 </td>
@@ -148,7 +150,7 @@
             </tr>
             <tr>
                 <td class="c3g">
-                    MENSAJE APELACIÓN:
+                    MENSAJE SOLICITUD APELACIÓN:
                 </td>
                 <td class="c3b">
                     <asp:TextBox ID="txtMjeApelCA" runat="server" CssClass="input2" Text="No Tiene" Enabled="false"
@@ -172,13 +174,13 @@
             <tr>
                 <td>
                     <asp:RadioButtonList ID="RadioButtonList1" runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged"
-                        Font-Names="Arial" Font-Size="Small" Width="98px">
+                        Font-Names="Arial" Font-Size="Small" Width="98px" AutoPostBack="True">
                         <asp:ListItem Value="Aprobar">Aprobar</asp:ListItem>
                         <asp:ListItem>Rechazar</asp:ListItem>
                     </asp:RadioButtonList>
                 </td>
                 <td style="font-family: Arial">
-                    <asp:Panel ID="pnlRebaja" runat="server" Height="49px" Style="margin-top: 0px" Width="378px">
+                    <asp:Panel ID="pnlRebaja" runat="server" Visible="false" Height="49px" Style="margin-top: 0px" Width="378px">
                         Rebaja:
                         <asp:TextBox ID="txtRebajaCA" runat="server" CssClass="input4"></asp:TextBox>
                     </asp:Panel>

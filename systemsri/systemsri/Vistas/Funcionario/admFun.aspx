@@ -14,7 +14,8 @@
                     RUT:
                 </td>
                 <td class="c1b">
-                    <asp:TextBox type="text" ID="txtRutAF" runat="server" CssClass="input1" />
+                    <asp:TextBox type="text" ID="txtRutAF" runat="server" CssClass="input1" 
+                        MaxLength="10" />
                 </td>
                 <td class="cbtn">
                     <asp:Button ID="btnBuscarAF" class="boton" runat="server" Text="BUSCAR" OnClick="btnBuscarAF_Click" />
@@ -27,13 +28,15 @@
                     NOMBRE:
                 </td>
                 <td class="c2b">
-                    <asp:TextBox ID="txtNomAF" runat="server" CssClass="input1" Enabled="false" />
+                    <asp:TextBox ID="txtNomAF" runat="server" CssClass="input1" Enabled="false" 
+                        MaxLength="30" />
                 </td>
                 <td class="c2g">
                     EMAIL:
                 </td>
                 <td class="c2b">
-                    <asp:TextBox ID="txtEmailAF" runat="server" CssClass="input1" TextMode="Email" Enabled="False" />
+                    <asp:TextBox ID="txtEmailAF" runat="server" CssClass="input1" TextMode="Email" 
+                        Enabled="False" MaxLength="60" />
                </td>
             </tr>
             <tr>
@@ -41,13 +44,15 @@
                     APELLIDO PATERNO:
                 </td>
                 <td class="c2b">
-                    <asp:TextBox ID="txtAppatAF" runat="server" CssClass="input1" Enabled="false" />
+                    <asp:TextBox ID="txtAppatAF" runat="server" CssClass="input1" Enabled="false" 
+                        MaxLength="30" />
                 </td>
                 <td class="c2g">
                     TELEFONO:
                 </td>
                 <td class="c2b">
-                    <asp:TextBox ID="txtFonoAF" runat="server" CssClass="input1" TextMode="Phone" Enabled="False"/>
+                    <asp:TextBox ID="txtFonoAF" runat="server" CssClass="input1" TextMode="Phone" 
+                        Enabled="False" MaxLength="15"/>
                 </td>
             </tr>
             <tr>
@@ -55,13 +60,15 @@
                     APELLIDO MATERNO:
                 </td>
                 <td class="c2b">
-                    <asp:TextBox ID="txtApmatAF" runat="server" CssClass="input1" Enabled="false" />
+                    <asp:TextBox ID="txtApmatAF" runat="server" CssClass="input1" Enabled="false" 
+                        MaxLength="30" />
                 </td>
                 <td class="c2g">
                     DIRECCIÓN:
                 </td>
                 <td class="c2b">
-                    <asp:TextBox ID="txtDirAF" runat="server" class="input1" Enabled="false" />
+                    <asp:TextBox ID="txtDirAF" runat="server" class="input1" Enabled="false" 
+                        MaxLength="50" />
                 </td>
             </tr>
             <tr>
@@ -83,13 +90,29 @@
         <table>
             <tr>
                 <td class="cbtn">
-                    <asp:Button ID="btnGuardarAF" CssClass="boton" runat="server" Text="GUARDAR" OnClick="btnGuardarAF_Click" />
+                    <asp:Button ID="btnGuardarAF" CssClass="boton" runat="server" Text="GUARDAR" 
+                        OnClick="btnGuardarAF_Click" Visible="False" />
                     &nbsp;&nbsp;<asp:Button ID="btnLimpiarAF" CssClass="boton" runat="server" Text="LIMPIAR"
-                        OnClick="btnLimpiarAF_Click" />
+                        OnClick="btnLimpiarAF_Click" Visible="False" />
                     &nbsp;&nbsp;<asp:Button ID="btnRevMultasAF" CssClass="boton2" runat="server" Text="REVISAR MULTAS"
                         OnClick="btnRevMultasAF_Click" Visible="False" />
                 </td>
             </tr>
+        </table>
+        
+        <table>
+        <tr><td style="height: 23px"></td>
+        </tr>
+        <tr>
+        <td><asp:Label runat="server" CssClass="lbl" ID="lblPagoExitosoAF" Visible="false"/></td><td><asp:Label runat="server" CssClass="lbl" ID="lblNumMulta" Visible="false"/></td>
+        </tr>
+        <tr>
+        <td><asp:Button runat="server" ID="btnDeshPagoaF" CssClass="boton2" Text="DESHACER PAGO" Visible="false" onclick="btnDeshPagoaF_Click"/></td>
+        <td></td>
+        <td><asp:Button runat="server" ID="btnOKAF" CssClass="boton" Text="ACEPTAR" Visible="false" onclick="btnOKAF_Click"/></td>
+        </tr>
+        
+        
         </table>
         <asp:GridView ID="gvMultas" runat="server" OnSelectedIndexChanged="gvMultas_SelectedIndexChanged"
             AutoGenerateColumns="False" CssClass="Grilla" OnDataBound="gvMultas_DataBound"

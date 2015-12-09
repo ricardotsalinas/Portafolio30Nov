@@ -12,6 +12,8 @@ namespace ClasesESpeciales
         public String     NOMBRE_PER        { set; get; }
         public String     SECTOR            { set; get; }
         public DateTime   FECHA_TUR         { set; get; }
+        public String     HORA_INICIO       { set; get; }
+        public String     HORA_FIN          { set; get; }
         public String     DESCRIPCION_TUR   { set; get; }
     }
 }

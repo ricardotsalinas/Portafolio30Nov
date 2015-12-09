@@ -97,6 +97,7 @@ namespace ConexionDatos.Dao
                         objMulta.MONTO_ADICIONAL = (monto * -1);
                         con.SaveChanges();
                     }
+                 
                     return 1;
                 
                 }
@@ -107,5 +108,39 @@ namespace ConexionDatos.Dao
             }
             
         }
+
+        public int apelacion0(int id, String descripcion, int aceptado)
+        {
+            try
+            {
+                using (SRI con = new SRI())
+                {
+                    APELACION objAple = new APELACION();
+                    objAple = con.APELACION.Where(a => a.ID_APELACION == id).FirstOrDefault();
+                    objAple.ESTADO = 1143;
+                    objAple.ACEPTADO = aceptado.ToString();
+                    objAple.DESCRIPCION_AP = descripcion;
+                    con.SaveChanges();
+                    if (aceptado == 1)
+                    {
+                        MULTA objMulta = new MULTA();
+                        objMulta = con.MULTA.Where(m => m.ID_MULTA == objAple.ID_MULTA).FirstOrDefault();
+                        objMulta.MONTO_ADICIONAL = 0;
+                        con.SaveChanges();
+                    }
+
+                    return 1;
+
+                }
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+        }
+
+
+
     }
 }

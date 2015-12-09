@@ -97,6 +97,11 @@ namespace Negocio
         {
             return DaoMulta.instancia.pagarMulta(idMulta);
         }
+        public int deshacerPagarMulta(int idMulta)
+        {
+            return DaoMulta.instancia.deshacerPagarMulta(idMulta);
+        }
+     
      
      
     }

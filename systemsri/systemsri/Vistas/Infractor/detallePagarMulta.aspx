@@ -5,6 +5,8 @@
     <form id="form1" runat="server">
 <div class="alinInicial">    
                  <h2 >Pagar o Apelar a Multa&nbsp; </h2>
+                 <asp:Label runat="server" ID="lblInfoDPM" CssClass="lbl" Visible="false"></asp:Label>
+
                <table width="70%">
                 <tr>
                     <td class="c4g">CÓDIGO MULTA:</td> 
