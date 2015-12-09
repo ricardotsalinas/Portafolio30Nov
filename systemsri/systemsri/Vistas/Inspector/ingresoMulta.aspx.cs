@@ -153,6 +153,7 @@ namespace systemsri.Vistas.Inspector
             objM.MONTO_ADICIONAL = 0;
             objM.PAGADA = "0";
             objM.ACTIVO = "1";
+            objM.ID_TIPO_PAGO = 1146;
             objM.LICENCIA_ENTREGADA = "0";
             if (chkCarabIM.Checked)
             {

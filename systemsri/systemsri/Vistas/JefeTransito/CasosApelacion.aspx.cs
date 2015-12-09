@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Negocio;
 using ClasesESpeciales;
 using ClasesESpeciales.Helper;
+using ConexionDatos.Entity;
 
 namespace systemsri.Vistas.JefeTransito
 {
@@ -26,14 +27,17 @@ namespace systemsri.Vistas.JefeTransito
 
                 List<DetalleApelacion> detalleApelacion = new List<DetalleApelacion>();
                 detalleApelacion = NegocioJefeTransito.instancia.detalleApelacion(infractor);
+                int idmulta = 0;
                 foreach (var item in detalleApelacion)
-                {
+                    
+                { 
                     lblNomCA.Text = item.NOMBRE;
                     lblRutCA.Text = item.RUT;
                    // lbldirCA.Text = item.DIRECCION.ToString();
                     lblEmailCA.Text = item.EMAIL;
                     lblClaseLicCA.Text = item.CLASE_LIC;
                     lblCodMulCA.Text = item.COD_MULTA.ToString();
+                    idmulta = Convert.ToInt32(item.COD_MULTA.ToString());
                     lblGravCA.Text = item.GRAVEDAD;
                     lblValorCA.Text = item.VALOR.ToString();
                     lblMontoPesosCA.Text = item.MONTO.ToString();
@@ -46,6 +50,8 @@ namespace systemsri.Vistas.JefeTransito
                    // txtComentarioCA.Text = item.MENSAJE.ToString();
               
                 }
+                NegocioJefeTransito.instancia.actualizaEstado(idmulta, 1141);
+
             }     
         
         }
@@ -63,6 +69,18 @@ namespace systemsri.Vistas.JefeTransito
         protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnEnviarCA_Click(object sender, EventArgs e)
+        {
+            int aceptado = 0;
+            if(RadioButtonList1.SelectedValue.Equals("Aprobar"))
+                aceptado =1;
+            if(RadioButtonList1.SelectedValue.Equals("Rechazar"))
+                aceptado = 0;
+
+            int apelacion = NegocioJefeTransito.instancia.apelacion(Convert.ToInt32(lblCodMulCA.Text) ,txtComentarioCA.Text ,aceptado, Convert.ToInt32(txtRebajaCA.Text));
+       
         }
     }
 }

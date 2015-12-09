@@ -7,7 +7,7 @@
     <div class="alinInicial">
         <h2>
             Casos Apelaciones<asp:TextBox 
-                ID="txtAdjunto" runat="server" Enabled="False"></asp:TextBox>
+                ID="txtAdjunto" runat="server" Enabled="False" Visible="False"></asp:TextBox>
         </h2>
         <table>
             <tr>
@@ -181,8 +181,6 @@
                     <asp:Panel ID="pnlRebaja" runat="server" Height="49px" Style="margin-top: 0px" Width="378px">
                         Rebaja:
                         <asp:TextBox ID="txtRebajaCA" runat="server" CssClass="input4"></asp:TextBox>
-                        Monto Final:
-                        <asp:TextBox ID="txtMontoFinalCA" runat="server" CssClass="input4" Enabled="false"></asp:TextBox>
                     </asp:Panel>
                 </td>
             </tr>
@@ -200,7 +198,8 @@
                         Font-Names="Arial" OnTextChanged="txtMjeApelCA_TextChanged" TextMode="MultiLine" />
                 </td>
                 <td>
-                    <asp:Button runat="server" Text="ENVIAR" ID="btnEnviarCA" CssClass="boton" />
+                    <asp:Button runat="server" Text="ENVIAR" ID="btnEnviarCA" CssClass="boton" 
+                        onclick="btnEnviarCA_Click" />
                 </td>
             </tr>
         </table>

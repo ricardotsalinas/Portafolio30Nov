@@ -30,6 +30,16 @@ namespace Negocio
             return DaoAdjuntosApelacion.instancia.traeAdjunto(DaoApelacion.instancia.traeAdjunto(idAdjunto));
         }
 
+        public void actualizaEstado(int id, int estado)
+        {
+            DaoApelacion.instancia.actualizaEstado(id,estado);    
+        }
+
+        public int apelacion(int id, String descripcion, int aceptado, int monto)
+        {
+            return DaoApelacion.instancia.apelacion(id,descripcion,aceptado, monto);
+        }
+
     }
 
 }
